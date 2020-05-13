@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Abbhorence</p>
+            <img src="../img/staff/06.png" alt="" class="itemIcon">
+            <p class="itemText">
+                220 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +40% Physical Damage<br />
+                    270 - 450 Bleeding Damage over 3.0 Seconds<br />
+                    +40% Bleeding Damage<br />
+                    40% Bleeding Resistance<br />
+                    40% Vitality Damage Resistance<br />
+                    +15% Strength<br />
+                    +2.0 Energy Regeneration per second<br />
+                    -10% Recharge<br />
+                    40% Increase in Projectile Speed<br />
+                    +4 to Hemorrhage<br />
+                    +2 to all skills in Barbarism Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 66, STR 390, INT 390
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Arctic Desolator</p>
+            <img src="../img/staff/14.png" alt="" class="itemIcon">
+            <p class="itemText">
+                180 Damage <br />
+                150 Cold Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +35% Physical Damage<br />
+                    +35% Cold Damage<br />
+                    +35% Frostburn Damage<br />
+                    8.0% Chance of 2.0 second(s) of Stun<br />
+                    8.0% Chance of 2.0 second(s) of Freeze<br />
+                    14% Slowed for 3.0 Seconds<br />
+                    60% Cold Resistance<br />
+                    +70 Intelligence<br />
+                    -18% Energy Cost<br />
+                    +3.0 Energy Regeneration per second<br />
+                    +1 to all skills in Aqua Mastery<br />
+                    +1 to all skills in Geomancy Mastery<br />
+                    <br />
+                    Grants Skill : Arctic Beam
+                </p>
+                <p class="itemText3">
+                    LVL 61, INT 588
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Bandit's Clutch</p>
+            <img src="../img/staff/7.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Normal <br />
+                60 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    168 Bleeding Damage over 3.0 Seconds<br />
+                    +1.4 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Stone Form
+                </p>
+                <p class="itemText3">
+                    LVL 34, INT 305
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Bandit's Clutch</p>
+            <img src="../img/staff/7.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Epic <br />
+                120 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    354 Bleeding Damage over 3.0 Seconds<br />
+                    +1.5 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Stone Form
+                </p>
+                <p class="itemText3">
+                    LVL 46, INT 458
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Bandit's Clutch</p>
+            <img src="../img/staff/7.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Legendary <br />
+                180 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    552 Bleeding Damage over 3.0 Seconds<br />
+                    +1.7 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Stone Form
+                </p>
+                <p class="itemText3">
+                    LVL 56, INT 572
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Blackening of Valor</p>
+            <img src="../img/staff/15.png" alt="" class="itemIcon">
+            <p class="itemText">
+                150 Damage <br />
+                65 Fire Damage <br />
+                65 Cold Damage <br />
+                65 Lightning Damage <br />
+                <br />
+                <p class="itemText2">
+                    +45% Physical Damage<br />
+                    +10% Total Damage<br />
+                    4 - 6% Reduction to Enemy's Health<br />
+                    10.0% Chance of 3.0 second(s) of Skill Disruption<br />
+                    +15% Armor Protection<br />
+                    10% Physical Resistance<br />
+                    80% Vitality Damage Resistance<br />
+                    +1.7 Energy Regeneration per second<br />
+                    -30% Strength Requirement for Armor
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 62, INT 592
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Burning Ice</p>
+            <img src="../img/staff/10.png" alt="" class="itemIcon">
+            <p class="itemText">
+                182 - 200 Cold Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    246 Burn Damage over 3.0 Seconds<br />
+                    +36% Burn Damage<br />
+                    +36% Cold Damage<br />
+                    18% Chance to Fumble attacks for 3.0 Seconds<br />
+                    18% Chance to Impaired Aim for 3.0 Seconds<br />
+                    +80% Frostburn Retaliation<br />
+                    +80% Burn Retaliation<br />
+                    +3.0 Energy Regeneration per second<br />
+                    -8% Energy Cost<br />
+                    +1 to all skills in Aqua Mastery<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    Grants Skill : Aspect of Elemental Forces
+                </p>
+                <p class="itemText3">
+                    LVL 58, INT 570
+                </p>
+        </div>
+        <div class="itemBox rarityMI" id="newItem28">
+            <p class="itemName">Cocytean Embrace</p>
+            <img src="../img/staff/25.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Epic <br />
+                200 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    25.0% Chance of 390 Bleeding Damage over 3.0 Seconds<br />
+                    +20% Stun Duration<br />
+                    10.0% Chance of 1.0 - 3.0 second(s) of Stun<br />
+                    +2.7 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Triplicate
+                </p>
+                <p class="itemText3">
+                    LVL 46, STR 250, INT 250
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Cocytean Embrace</p>
+            <img src="../img/staff/25.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Legendary <br />
+                300 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    25.0% Chance of 630 Bleeding Damage over 3.0 Seconds<br />
+                    +30% Stun Duration<br />
+                    15.0% Chance of 1.0 - 3.0 second(s) of Stun<br />
+                    +4.0 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Triplicate
+                </p>
+                <p class="itemText3">
+                    LVL 56, STR 300, INT 300
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Druidic Heirloom</p>
+            <img src="../img/staff/21.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Normal <br />
+                90 Instant Poison Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +1.4 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Herbal Remedy
+                </p>
+                <p class="itemText3">
+                    LVL 34, INT 305
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Druidic Heirloom</p>
+            <img src="../img/staff/21.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Epic <br />
+                180 Instant Poison Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +1.5 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Herbal Remedy
+                </p>
+                <p class="itemText3">
+                    LVL 46, INT 458
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Druidic Heirloom</p>
+            <img src="../img/staff/21.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Difficulty : Legendary <br />
+                280 Instant Poison Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +1.7 Energy Regeneration per second<br />
+                    <br />
+                    Grants Skill : Herbal Remedy
+                </p>
+                <p class="itemText3">
+                    LVL 56, INT 572
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Etherborn Reverie</p>
+            <img src="../img/staff/09.png" alt="" class="itemIcon">
+            <p class="itemText">
+                120 Fire Damage <br />
+                120 Lightning Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +30% Fire Damage<br />
+                    +60% Burn Damage<br />
+                    +30% Lightning Damage<br />
+                    +60% Electrical Burn Damage<br />
+                    39 Energy Leech over 3.0 Seconds<br />
+                    +15% Intelligence<br />
+                    +1.5 Energy Regeneration per second<br />
+                    +40% Casting Speed<br />
+                    7% Chance to Dodge Attacks<br />
+                    7% Chance to Avoid Projectiles<br />
+                    <br />
+                    Grants Skill: Ether Ring (Activated on attack)<br />
+                    Overflowing etherborn energy bursts from the staff in all directions and explodes upon contact, briefly immobilizing enemies.<br />
+                    <br />
+                    3.0 Second(s) Recharge<br />
+                    8 Projectile(s)<br />
+                    1.5 Meter Radius<br />
+                    50 Damage<br />
+                    90 Fire Damage<br />
+                    90 Lightning Damage<br />
+                    1.0 second(s) of Immobilization
+                </p>
+                <p class="itemText3">
+                    LVL 55, INT 560
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">God Freezer</p>
+            <img src="../img/staff/04.png" alt="" class="itemIcon">
+            <p class="itemText">
+                235 - 243 Cold Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +35% Cold Damage<br />
+                    +35% Frostburn Damage<br />
+                    30 Cold Damage<br />
+                    30 Lightning Damage<br />
+                    12.0% Chance of 1.0 - 5.0 second(s) of Freeze<br />
+                    15.0% Chance of 45% Slowed for 3.0 Seconds<br />
+                    +15% Energy<br />
+                    +3.2 Energy Regeneration per second<br />
+                    +20% Attack Speed<br />
+                    +20% Casting Speed<br />
+                    +3 to Torrential Flow<br />
+                    +3 to Ire of Storms<br />
+                    +1 to all skills in Aqua Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 62, INT 702
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Guiding Light</p>
+            <img src="../img/staff/11.png" alt="" class="itemIcon">
+            <p class="itemText">
+                140 Lightning Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +55% Pierce Damage<br />
+                    +55% Lightning Damage<br />
+                    140 Piercing Damage<br />
+                    8.0% Chance of 2.0 second(s) of Petrify<br />
+                    75% Poison Resistance<br />
+                    +250 Health<br />
+                    +180% Health Regeneration<br />
+                    +200 Energy<br />
+                    +180% Energy Regeneration<br />
+                    +30% Attack Speed<br />
+                    +2 to Electrostatic Veil<br />
+                    +2 to Outburst<br />
+                    <br />
+                    Grants Skill : Titanic Bolt
+                </p>
+                <p class="itemText3">
+                    LVL 58, INT 570
+                </p>
+        </div>
+        <div class="itemBox rarityLeg" id="newItem5">
+            <p class="itemName">Hailstorm Rod</p>
+            <img src="../img/staff/23.png" alt="" class="itemIcon">
+            <p class="itemText">
+                110 Cold Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +30% Cold Damage<br />
+                    90 Piercing Damage<br />
+                    15% Reduced Offensive Ability Retaliation for 3.0 Seconds<br />
+                    15% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    +42 Dexterity<br />
+                    +25% Attack Speed<br />
+                    80% Increase in Projectile Speed<br />
+                    +2 to Oceanic Might<br />
+                    +2 to Flash Freeze<br />
+                    +1 to all skills in Archery Mastery<br />
+                    <br />
+                    Grants Skill : Torrent (Activated on attack)<br />
+                    Hail numerous ice shards towards enemies. Each projectile has a chance of piercing through the first target to seek another.<br />
+                    <br />
+                    38 Energy Cost<br />
+                    6 Projectile(s)<br />
+                    25% Chance to pass through Enemies<br />
+                    90 Piercing Damage<br />
+                    110 Cold Damage
+                </p>
+                <p class="itemText3">
+                    LVL 47, INT 530
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Hestia's Fire</p>
+            <img src="../img/staff/22.png" alt="" class="itemIcon">
+            <p class="itemText">
+                92 Fire Damage <br />
+                Speed: Very Slow
+                <br />
+                <p class="itemText2">
+                    75 Burn Damage over 3.0 Seconds<br />
+                    8% Physical Resistance<br />
+                    15% Fire Resistance<br />
+                    15.0% Chance of 400 Burn Retaliation over 8.0 Seconds<br />
+                    75% Increased Projectile Speed<br />
+                    +5 to Fiery Strikes<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    33 Burn Damage over 3.0 Seconds<br />
+                    33 Burn Retaliation over 3.0 Seconds
+                </p>
+                <p class="itemText3">
+                    LVL 36, INT 374
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Hungering Scythe</p>
+            <img src="../img/staff/02.png" alt="" class="itemIcon">
+            <p class="itemText">
+                94 - 103 Vitality Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +10% Total Damage<br />
+                    20.0% Chance of 177 Vitality Decay over 3.0 Seconds<br />
+                    75 Life Leech over 3.0 Seconds<br />
+                    +20% Life Leech with +100% Improved Duration<br />
+                    20% Cold Resistance<br />
+                    20% Vitality Damage Resistance<br />
+                    +5.0 Energy Regeneration per second<br />
+                    +1 to Cold Hand of Death<br />
+                    +1 to Degeneracy
+                </p>
+                <p class="itemText3">
+                    LVL 37, INT 422
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Lug, the Goomaker</p>
+            <img src="../img/staff/03.png" alt="" class="itemIcon">
+            <p class="itemText">
+                75 Instant Poison Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    750 Poison Damage over 3.0 Seconds<br />
+                    +75% Poison Damage<br />
+                    15.0% Chance of 40 Reduced Resistances for 3.0 Seconds<br />
+                    33% Slowed for 3.0 Seconds<br />
+                    100% Poison Resistance<br />
+                    15% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;200 Instant Poison Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;1.0 Stun Retaliation<br />
+                    50% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    50% Slowed Movement Retaliation for 3.0 Seconds<br />
+                    +3 to Poison Weapons<br />
+                    +3 to Eternize<br />
+                    <br />
+                    Grants Skill : Mucky Air (Activated when equipped)<br />
+                    The Goomaker's power has its drawbacks, as seen by the sticky trail it leaves all around it, slowing both nearby allies and enemies.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    10.0 Meter Radius<br />
+                    10% Slowed for 1.5 Seconds<br />
+                    -10% Total Speed
+                </p>
+                <p class="itemText3">
+                    LVL 64, INT 650
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Mournful Rose</p>
+            <img src="../img/staff/12.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    300 - 600 Bleeding Damage over 3.0 Seconds<br />
+                    300 - 600 Poison Damage over 3.0 Seconds<br />
+                    80 Piercing Damage<br />
+                    +24% Armor Protection<br />
+                    75% Pierce Resistance<br />
+                    75% Bleeding Resistance<br />
+                    75% Poison Resistance<br />
+                    +80% Pierce Damage Retaliation<br />
+                    +80% Instant Poison Retaliation<br />
+                    66 - 77 Piercing Retaliation<br />
+                    +80% Bleeding Retaliation<br />
+                    66 - 77 Instant Poison Retaliation<br />
+                    +80% Instant Poison Retaliation<br />
+                    +1.8 Energy Regeneration per second<br />
+                    +50% Damage to Undead
+                </p>
+                <p class="itemText3">
+                    LVL 65, INT 612
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Naturespeaker's Staff</p>
+            <img src="../img/staff/01.png" alt="" class="itemIcon">
+            <p class="itemText">
+                20 Instant Poison Damage <br />
+                Speed: Very Slow <br />
+                Set : Naturespeaker's Outfit
+                <br />
+                <p class="itemText2">
+                    63 Poison Damage over 3.0 Seconds<br />
+                    +25% Poison Damage<br />
+                    10.0% Chance of 2.0 - 5.0 second(s) of Confusion<br />
+                    +15 Intelligence<br />
+                    +20% Health Regeneration<br />
+                    +1.5 Energy Regeneration per second<br />
+                    +20% Energy Regeneration
+                </p>
+                <p class="itemText3">
+                    LVL 14, INT 222
+                </p>
+        </div>
+        <div class="itemBox rarityMU" id="newItem23">
+            <p class="itemName">Night's Ravaging Kiss</p>
+            <img src="../img/staff/24.png" alt="" class="itemIcon">
+            <p class="itemText">
+                60 Lightning Damage <br />
+                60 Vitality Damage <br />
+                Speed: Very Slow <br />
+                Set : Night Eternal<br />
+                <br />
+                <p class="itemText2">
+                    110 Burn Damage over 2.0 Seconds<br />
+                    110 Frostburn Damage over 2.0 Seconds<br />
+                    110 Electrical Burn Damage over 2.0 Seconds<br />
+                    110 Vitality Decay over 2.0 Seconds<br />
+                    110 Life Leech over 2.0 Seconds<br />
+                    10% Reduction to Enemy's Health<br />
+                    +15% Intelligence<br />
+                    +3.0 Energy Regeneration per second<br />
+                    +50% Energy Regeneration per second<br />
+                    +50% Casting Speed<br />
+                    80% Increase in Projectile Speed<br />
+                    <br />
+                    Grants Skill : Haunting Dreams
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 62, INT 638
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Pestilence</p>
+            <img src="../img/staff/17.png" alt="" class="itemIcon">
+            <p class="itemText">
+                130 Instant Poison Damage <br />
+                130 Vitality Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    30 Reduced Resistances for 3.0 Seconds<br />
+                    -30% Poison Resistance<br />
+                    +30% Poison Retaliation<br />
+                    350 Vitality Decay Retaliation over 3.0 Seconds<br />
+                    +30% Vitality Decay Retaliation<br />
+                    +350 Energy<br />
+                    +1.7 Energy Regeneration per second<br />
+                    +32% Attack Speed<br />
+                    +40% Damage to Beastmen<br />
+                    +40% Damage to Humans<br />
+                    <br />
+                    Grants Skill : Pestilence (Activated on attack)<br />
+                    The accursed staff spreads a pernicious plague all around you, devastating all the living things it infects.<br />
+                    <br />
+                    24.0 Second(s) Recharge<br />
+                    6.0 Second Duration<br />
+                    60 Poison Damage per Second<br />
+                    60 Vitality Decay per Second<br />
+                    15% reduced Offensive Ability for 1.0 Seconds<br />
+                    15% reduced Defensive Ability for 1.0 Seconds<br />
+                    10% Slowed for 1.0 Seconds
+                </p>
+                <p class="itemText3">
+                    LVL 66, INT 602
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Rockbender's Staff</p>
+            <img src="../img/staff/19.png" alt="" class="itemIcon">
+            <p class="itemText">
+                34 Damage <br />
+                Speed: Very Slow
+                <br />
+                <p class="itemText2">
+                    +15% Physical Damage<br />
+                    5.0% Chance of 1.5 second(s) of Stun<br />
+                    +20 Strength<br />
+                    +20 Intelligence<br />
+                    -12 Dexterity<br />
+                    +125 Health<br />
+                    +2 to Boulder Toss
+                </p>
+                <p class="itemText3">
+                    LVL 12, INT 144
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Sceptre of Lamashtu</p>
+            <img src="../img/staff/08.png" alt="" class="itemIcon">
+            <p class="itemText">
+                157 Fire Damage <br />
+                149 - 160 Vitality Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    <i>"The root of pain and torture instills disgust in your heart."</i><br />
+                    <br />
+                    +38% Fire Damage<br />
+                    +30% Burn Damage<br />
+                    +38% Vitality Damage<br />
+                    +30% Vitality Decay<br />
+                    70 Life Leech Retaliation per Second<br />
+                    +32 Intelligence<br />
+                    +60% Casting Speed<br />
+                    10% Chance to Avoid Projectiles<br />
+                    +20% Less Damage from Demons<br />
+                    +2 to Cone of Flames<br />
+                    +2 to Dividing Magic
+                </p>
+                <p class="itemText3">
+                    LVL 60, INT 604
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Sinister Effigy</p>
+            <img src="../img/staff/20.png" alt="" class="itemIcon">
+            <p class="itemText">
+                164 Fire Damage <br />
+                164 Vitality Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    400 Burn Damage over 4.0 Seconds<br />
+                    400 Vitality Decay over 4.0 Seconds<br />
+                    300 Life Leech over 4.0 Seconds<br />
+                    60 Energy Leech over 4.0 Seconds<br />
+                    -16% Recharge<br />
+                    +1 to all Skills<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    80 Vitality Damage<br />
+                    8% of Attack damage converted to Health
+                </p>
+                <p class="itemText3">
+                    LVL 62, INT 699
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Skeletal Agonizer</p>
+            <img src="../img/staff/16.png" alt="" class="itemIcon">
+            <p class="itemText">
+                130 Vitality Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +30% Pierce Damage<br />
+                    +30% Vitality Damage<br />
+                    130 Piercing Damage<br />
+                    +150 Health<br />
+                    +50% Health Regeneration<br />
+                    +300 Energy<br />
+                    +100% Energy Regeneration<br />
+                    +2 to Summon Undead Archer<br />
+                    +4 to Early Grave<br />
+                    <br />
+                    Grants Skill : Bone Stakes<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +25% Pierce Damage<br />
+                    30 Piercing Damage<br />
+                    +120 Health
+                </p>
+                <p class="itemText3">
+                    LVL 47, INT 536
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Staff of Bouzyges</p>
+            <img src="../img/staff/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                142 - 215 Lightning Damage <br />
+                130 Instant Poison Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +60% Lightning Damage<br />
+                    +60% Instant Poison Damage<br />
+                    90 Life Leech over 3.0 Seconds<br />
+                    +60% Life Leech<br />
+                    26% reduced Offensive Ability for 3.0 Seconds<br />
+                    15.0% Chance of 1.0 Stun Retaliation<br />
+                    20% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    -3.0 Health Regeneration per second<br />
+                    +5.0 Energy Regeneration per second<br />
+                    +2 to all skills in Science Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 52, INT 570
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Staff of the Jiangshi</p>
+            <img src="../img/staff/18.png" alt="" class="itemIcon">
+            <p class="itemText">
+                56 Vitality Damage <br />
+                Speed: Very Slow
+                <br />
+                <p class="itemText2">
+                    +15% Vitality Damage<br />
+                    35 Life Leech per Second<br />
+                    +15% Life Leech<br />
+                    5% of Attack damage converted to Health<br />
+                    +50% Damage to Plants<br />
+                    +1 to Degeneracy<br />
+                    +1 to all skills in Choas Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 29, INT 314
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Wand of Dead Sailors</p>
+            <img src="../img/staff/05.png" alt="" class="itemIcon">
+            <p class="itemText">
+                175 Cold Damage <br />
+                175 Vitality Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +33% Cold Damage<br />
+                    +33% Vitality Damage<br />
+                    10% Reduction to Enemy's Health<br />
+                    35% Cold Resistance<br />
+                    30% Poison Resistance<br />
+                    35% Vitality Damage Resistance<br />
+                    +110 Energy<br />
+                    +1.7 Energy Regeneration per second<br />
+                    10% Absorption of Spell Energy<br />
+                    20% increase in Projectile Speed<br />
+                    +10% Damage to Undead<br />
+                    +15% Less Damage from Undead<br />
+                    <br />
+                    Grants Skill : Ghostly Shores
+                </p>
+                <p class="itemText3">
+                    LVL 51, INT 578
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html">
+                <p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p>
+                <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            </a>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Affliction</p>
+            <img src="../img/ring/02.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    40% Poison Resistance<br />
+                    30% Reduction in Poison Duration<br />
+                    30% Reduction in Vitality Decay Duration<br />
+                    +50% Instant Poison Damage<br />
+                    +30% Poison Damage with +50% Improved Duration<br />
+                    +30% Vitality Decay with +40% Improved Duration<br />
+                    24 Instant Poison Damage<br />
+                    -2.0 Health Regeneration per second<br />
+                    +250 Energy<br />
+                    +20% Damage to Undead<br />
+                    +25% Less Damage from Undead
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 54
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Band of Illusions</p>
+            <img src="../img/ring/27.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +4% Total Speed<br />
+                    4% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Band of Illusions</p>
+            <img src="../img/ring/27.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +8% Total Speed<br />
+                    8% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 42
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Band of Illusions</p>
+            <img src="../img/ring/27.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +12% Total Speed<br />
+                    12% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Blaze Ring</p>
+            <img src="../img/ring/25.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Fire Damage<br />
+                    10 Fire Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Blaze Ring</p>
+            <img src="../img/ring/25.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Fire Damage<br />
+                    20 Fire Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 40
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Blaze Ring</p>
+            <img src="../img/ring/25.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    +25% Fire Damage<br />
+                    32 Fire Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Bloodcrazed's Craving</p>
+            <img src="../img/ring/35.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    25% Bleeding Resistance<br />
+                    25% Life Leech Resistance<br />
+                    +30% Increased Pierce Ratio<br />
+                    60 Bleeding Damage over 3.0 Seconds<br />
+                    +30% Life Leech<br />
+                    +22 Dexterity<br />
+                    +1 to all skills in Barbarism Mastery<br />
+                    +1 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Bonedust Ring</p>
+            <img src="../img/ring/16.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    +36 Offensive Ability<br />
+                    +36 Defensive Ability<br />
+                    +10% Attack Speed<br />
+                    +1 to Summon Undead Minion<br />
+                    +1 to Summon Undead Archer<br />
+                    +1 to Summon Undead Wizard<br />
+                    +1 to Summon Undead Captain<br />
+                    <i>(+1 to Random Skeleton)<br /></i>
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Chill Ring</p>
+            <img src="../img/ring/26.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Cold Damage<br />
+                    10 Cold Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Chill Ring</p>
+            <img src="../img/ring/26.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Cold Damage<br />
+                    20 Cold Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 40
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Chill Ring</p>
+            <img src="../img/ring/26.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    +25% Cold Damage<br />
+                    32 Cold Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Commando's Lucky Charm</p>
+            <img src="../img/ring/13.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    +10% Pierce Damage<br />
+                    +10 Strength<br />
+                    +25 Offensive Ability<br />
+                    +10% Attack Speed<br />
+                    10% Increase in Projectile Speed<br />
+                    +1 to all skills in Barbarism Mastery<br />
+                    +1 to all skills in Archery Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN" id="newItem36">
+            <p class="itemName">Crest of Warfare</p>
+            <img src="../img/ring/41.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    15% Pierce Resistance<br />
+                    +15% Offensive Ability<br />
+                    -5% Defensive Ability<br />
+                    +4 to Ambidexterity
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Crest of Warfare</p>
+            <img src="../img/ring/41.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    30% Pierce Resistance<br />
+                    +15% Offensive Ability<br />
+                    -5% Defensive Ability<br />
+                    +4 to Slash Flurry
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 40
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Crest of Warfare</p>
+            <img src="../img/ring/41.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    45% Pierce Resistance<br />
+                    +15% Offensive Ability<br />
+                    -5% Defensive Ability<br />
+                    +4 to Whirling Blades
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Crystal Spire</p>
+            <img src="../img/ring/33.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    8% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    10% Chance of :<br />
+                    &nbsp;&nbsp;&nbsp;100 Damage<br />
+                    &nbsp;&nbsp;&nbsp;50 Cold Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Crystal Spire</p>
+            <img src="../img/ring/33.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    12% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    10% Chance of :<br />
+                    &nbsp;&nbsp;&nbsp;200 Damage<br />
+                    &nbsp;&nbsp;&nbsp;125 Cold Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Crystal Spire</p>
+            <img src="../img/ring/33.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    16% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    10% Chance of :<br />
+                    &nbsp;&nbsp;&nbsp;300 Damage<br />
+                    &nbsp;&nbsp;&nbsp;200 Cold Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 56
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Everwinter</p>
+            <img src="../img/ring/29.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    100% Cold Resistance<br />
+                    +30% Cold Damage<br />
+                    +30% Frostburn Damage<br />
+                    +499 Health<br />
+                    +100% Health Regeneration<br />
+                    +100% Energy Regeneration<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    60 Frostburn Damage over 3.0 Seconds<br />
+                    15 Cold Damage<br />
+                    5.0% Chance of 1.0 - 3.0 second(s) of Freeze<br />
+                    12% Slowed for 3.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 55
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Fastlearner's Signet</p>
+            <img src="../img/ring/14.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    -15% Strength Requirement for Melee Weapons<br />
+                    -15% Strength Requirement for Shields<br />
+                    -15% Dexterity Requirement for Hunting Weapons<br />
+                    -15% Intelligence Requirement for Staff Weapons<br />
+                    -12% Player Level Requirement for Items<br />
+                    +10% Increased Experience
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 33
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Grace of the Creators</p>
+            <img src="../img/ring/38.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    <i>"We imposed a great burden upon you, though this might lift its weight a bit."<br /></i>
+                    <br />
+                    20% Pierce Resistance<br />
+                    20% Elemental Resistance<br />
+                    20% Poison Resistance<br />
+                    20% Vitality Damage Resistance<br />
+                    +10% Strength<br />
+                    +10% Intelligence<br />
+                    +10% Dexterity<br />
+                    +250 Health<br />
+                    +250 Energy
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 65
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Howling Ring</p>
+            <img src="../img/ring/24.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Strength of the Pack (Activated on attack)<br />
+                    The howl of the pack emboldens the heart of those who hear it causing them to fight more fiercely.<br />
+                    <br />
+                    30.0 Second(s) Recharge<br />
+                    28 Energy Cost<br />
+                    12.0 Second Duration<br />
+                    10.0 Meter Radius<br />
+                    +18% Physical Damage<br />
+                    +1.0 Energy Regeneration per second<br />
+                    +11% Total Speed<br />
+                    11 Armor
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Howling Ring</p>
+            <img src="../img/ring/24.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Strength of the Pack (Activated on attack)<br />
+                    The howl of the pack emboldens the heart of those who hear it causing them to fight more fiercely.<br />
+                    <br />
+                    30.0 Second(s) Recharge<br />
+                    33 Energy Cost<br />
+                    12.0 Second Duration<br />
+                    10.0 Meter Radius<br />
+                    +24% Physical Damage<br />
+                    +2.0 Energy Regeneration per second<br />
+                    +12% Total Speed<br />
+                    16 Armor
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Howling Ring</p>
+            <img src="../img/ring/24.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Strength of the Pack (Activated on attack)<br />
+                    The howl of the pack emboldens the heart of those who hear it causing them to fight more fiercely.<br />
+                    <br />
+                    30.0 Second(s) Recharge<br />
+                    44 Energy Cost<br />
+                    12.0 Second Duration<br />
+                    10.0 Meter Radius<br />
+                    +36% Physical Damage<br />
+                    +3.0 Energy Regeneration per second<br />
+                    +14% Total Speed<br />
+                    28 Armor
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 56
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Hydradon Veins</p>
+            <img src="../img/ring/23.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    25% Bleeding Resistance<br />
+                    10% Vitality Damage Resistance<br />
+                    -3.0 Health Regeneration per second
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Hydradon Veins</p>
+            <img src="../img/ring/23.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    40% Bleeding Resistance<br />
+                    20% Vitality Damage Resistance<br />
+                    -5.0 Health Regeneration per second
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 42
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Hydradon Veins</p>
+            <img src="../img/ring/23.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    55% Bleeding Resistance<br />
+                    30% Vitality Damage Resistance<br />
+                    -7.0 Health Regeneration per second
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Jewel of Lost Hope</p>
+            <img src="../img/ring/01.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    45% Pierce Resistance<br />
+                    30% Lightning Resistance<br />
+                    60% Energy Leech Resistance<br />
+                    15% Damage Reflected<br />
+                    5 - 10% Energy Drain (25% of lost Energy as Damage)<br />
+                    12% Absorption of Spell Energy<br />
+                    +2 to Reciprocate<br />
+                    <br />
+                    Grants Skill : Mana Regain (Activated on attack)<br />
+                    Restore lost energy with every succesful attack.<br />
+                    <br />
+                    10 Energy Restored<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    5 - 10% Energy Drain (25% of lost Energy as Damage)
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 55
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Magnetic Ring</p>
+            <img src="../img/ring/15.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    28% Elemental Resistance<br />
+                    +12% Pierce Damage<br />
+                    +12% Lightning Damage<br />
+                    18 Piercing Damage<br />
+                    18 Lightning Damage<br />
+                    -15% Recharge<br />
+                    +1 to all skills in Science Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Mythological Enigma</p>
+            <img src="../img/ring/05.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    25% Elemental Resistance<br />
+                    +15% Intelligence<br />
+                    +10% Health<br />
+                    15% less Energy Reserved<br />
+                    -10% Reduction to all Requirements<br />
+                    +1 to Combat Spirit<br />
+                    +1 to Deathshield<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Total Damage<br />
+                    +10% Total Speed<br />
+                    10% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 64
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Naturalist's Loop</p>
+            <img src="../img/ring/30.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    30% Poison Resistance<br />
+                    +110 Defensive Ability<br />
+                    +20% Less Damage from Plants<br />
+                    +20% Less Damage from Beasts<br />
+                    +1 to all skills in Geomancy Mastery<br />
+                    +1 to all skills in Science Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +18% Physical Damage<br />
+                    +18% Lightning Damage<br />
+                    +18% Electrical Burn Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 56
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Nightstalker's Binding</p>
+            <img src="../img/ring/22.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    16 Vitality Damage<br />
+                    4% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Nightstalker's Binding</p>
+            <img src="../img/ring/22.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    24 Vitality Damage<br />
+                    8% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 40
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Nightstalker's Binding</p>
+            <img src="../img/ring/22.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    32 Vitality Damage<br />
+                    12% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Oath of the Arcane</p>
+            <img src="../img/ring/31.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Set : Arcane Barrage
+                <p class="itemText2 itemText2IconAlt">
+                    70% Bleeding Resistance<br />
+                    +10% Total Damage<br />
+                    +250 Health<br />
+                    +15% Attack Speed<br />
+                    20% Weapon Base Damage becomes Elemental<br />
+                    +2 to Electrostatic Veil
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 60
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Ornamental Earring</p>
+            <img src="../img/ring/21.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Bleeding Damage<br />
+                    +5% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 8
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Ornamental Earring</p>
+            <img src="../img/ring/21.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +35% Bleeding Damage<br />
+                    +10% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Ornamental Earring</p>
+            <img src="../img/ring/21.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    +50% Bleeding Damage<br />
+                    +15% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Preserved Reptile Eye</p>
+            <img src="../img/ring/17.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    5% Physical Resistance<br />
+                    80% Reduced Petrify Duration<br />
+                    +30% Instant Poison Damage<br />
+                    +30% Poison Damage<br />
+                    50 Instant Poison Damage<br />
+                    +12% Dexterity<br />
+                    +12% Health<br />
+                    +200 Health<br />
+                    +20% Casting Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 57
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Raging Band</p>
+            <img src="../img/ring/04.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    15% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;96 Bleeding Damage Retaliation over 3.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;2.0 - 5.0 Stun Retaliation<br />
+                    20.0% Chance of 65 Damage<br />
+                    +40% Bleeding Damage<br />
+                    +1 to Mutilating Edge<br />
+                    +1 to Devil's Rush<br />
+                    <br />
+                    Grants Skill : Bloodthirst (Activated on attack)<br />
+                    A raging bloodthirst fills your veins, making you more efficient at leaving lasting wounds.<br />
+                    <br />
+                    60.0 Second(s) Recharge<br />
+                    30 Energy Cost<br />
+                    12.0 Second Duration<br />
+                    +40% Bleeding Damage<br />
+                    8% of Attack damage converted to Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    33.0% Chance of 66 Bleeding Damage over 3.0 Seconds<br />
+                    +10% Attack Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 32
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Ring of Matricide</p>
+            <img src="../img/ring/06.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Set : Innate Murderer
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Pierce Damage<br />
+                    33.0% Chance of 96 Poison Damage over 3.0 Seconds<br />
+                    +35% Poison Damage<br />
+                    5.0% Chance of 25 - 50% Reduction to Enemy's Health<br />
+                    +20% Attack Speed<br />
+                    -5% Energy Cost<br />
+                    +1 to Young Years<br />
+                    +1 to Eternize
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 35
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Ring of Patricide</p>
+            <img src="../img/ring/07.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Set : Innate Murderer
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Physical Damage<br />
+                    33.0% Chance of 96 Bleeding Damage over 3.0 Seconds<br />
+                    +35% Bleeding Damage<br />
+                    5.0% Chance of 25 - 50% Reduction to Enemy's Health<br />
+                    +20% Attack Speed<br />
+                    -5% Energy Cost<br />
+                    +1 to Blood Harvest<br />
+                    +1 to Devil's Rush
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 35
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Ring of Shadows</p>
+            <img src="../img/ring/08.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    20% Vitality Damage Resistance<br />
+                    +8 Intelligence<br />
+                    +8 Dexterity<br />
+                    +10% Attack Speed<br />
+                    +10% Movement Speed<br />
+                    5% Chance to Dodge Attacks<br />
+                    +1 to Vanquish Undead<br />
+                    <br />
+                    Grants Skill : Shadow Cloak (Activated upon taking damage)<br />
+                    Protected inside a veil of shadows, avoid damage for a short period to allow recovery.<br />
+                    <br />
+                    20.0 Second(s) Recharge<br />
+                    50 Energy Cost<br />
+                    3.0 Second Duration<br />
+                    15% Damage Absorption<br />
+                    +20% Defensive Ability<br />
+                    +20% Movement Speed<br />
+                    10% Chance to Dodge Attacks<br />
+                    10% Chance to Avoid Projectiles
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Runestone Band</p>
+            <img src="../img/ring/37.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    25% Lightning Resistance<br />
+                    +10% Lightning Damage<br />
+                    +10% Electrical Burn Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Runestone Band</p>
+            <img src="../img/ring/37.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    50% Lightning Resistance<br />
+                    +18% Lightning Damage<br />
+                    +18% Electrical Burn Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Runestone Band</p>
+            <img src="../img/ring/37.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    75% Lightning Resistance<br />
+                    +26% Lightning Damage<br />
+                    +26% Electrical Burn Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 56
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Seal of the Arcane</p>
+            <img src="../img/ring/32.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Set : Arcane Barrage
+                <p class="itemText2 itemText2IconAlt">
+                    70% Poison Resistance<br />
+                    +50% Lightning Retaliation<br />
+                    +250 Energy<br />
+                    +15% Movement Speed<br />
+                    20% Weapon Base Damage becomes Elemental<br />
+                    +2 to School of Shadows
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 60
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Seal of the Fallen</p>
+            <img src="../img/ring/40.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Necrosis (Activated on attack)<br/>
+                    Weaken the constitution of adjacent enemies, making them vulnerable to bleeding and life-draining attacks.<br/>
+                    <br/>
+                    4.0 Second(s) Recharge<br/>
+                    6 Active Health Cost per Second<br/>
+                    6 Active Energy Cost per Second<br/>
+                    3.0 Meter Radius<br/>
+                    -20% Bleeding Resistance<br/>
+                    -20% Vitality Damage Resistance<br/>
+                    -20% Life Leech Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 14
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Seal of the Fallen</p>
+            <img src="../img/ring/40.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Necrosis (Activated on attack)<br/>
+                    Weaken the constitution of adjacent enemies, making them vulnerable to bleeding and life-draining attacks.<br/>
+                    <br/>
+                    4.0 Second(s) Recharge<br/>
+                    6 Active Health Cost per Second<br/>
+                    6 Active Energy Cost per Second<br/>
+                    3.5 Meter Radius<br/>
+                    -30% Bleeding Resistance<br/>
+                    -30% Vitality Damage Resistance<br/>
+                    -30% Life Leech Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 37
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Seal of the Fallen</p>
+            <img src="../img/ring/40.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Necrosis (Activated on attack)<br/>
+                    Weaken the constitution of adjacent enemies, making them vulnerable to bleeding and life-draining attacks.<br/>
+                    <br/>
+                    4.0 Second(s) Recharge<br/>
+                    10 Active Health Cost per Second<br/>
+                    10 Active Energy Cost per Second<br/>
+                    4.0 Meter Radius<br/>
+                    -40% Bleeding Resistance<br/>
+                    -40% Vitality Damage Resistance<br/>
+                    -40% Life Leech Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 48
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Seal of the Restless King</p>
+            <img src="../img/ring/39.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    +40% Vitality Decay<br/>
+                    +14% Less Damage from Ghosts<br/>
+                    <br/>
+                    Grants Skill : Banishing Spell (Activated on attack)<br/>
+                    This surge of shadow energy effectively defeats the living and the dead alike.<br/>
+                    <br/>
+                    3.2 Second(s) Recharge<br/>
+                    40 Energy Cost<br/>
+                    18 Piercing Damage<br/>
+                    12 Cold Damage<br/>
+                    81 Vitality Damage<br/>
+                    30% of Attack Damage converted to Health<br/>
+                    +60% Damage to Undead
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 35
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Seal of the Restless King</p>
+            <img src="../img/ring/39.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +60% Vitality Decay<br/>
+                    +17% Less Damage from Ghosts<br/>
+                    <br/>
+                    Grants Skill : Banishing Spell (Activated on attack)<br/>
+                    This surge of shadow energy effectively defeats the living and the dead alike.<br/>
+                    <br/>
+                    1.7 Second(s) Recharge<br/>
+                    52 Energy Cost<br/>
+                    30 Piercing Damage<br/>
+                    20 Cold Damage<br/>
+                    132 Vitality Damage<br/>
+                    38% of Attack Damage converted to Health<br/>
+                    +100% Damage to Undead
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Seal of the Restless King</p>
+            <img src="../img/ring/39.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    +80% Vitality Decay<br/>
+                    +20% Less Damage from Ghosts<br/>
+                    <br/>
+                    Grants Skill : Banishing Spell (Activated on attack)<br/>
+                    This surge of shadow energy effectively defeats the living and the dead alike.<br/>
+                    <br/>
+                    0.3 Second(s) Recharge<br/>
+                    64 Energy Cost<br/>
+                    42 Piercing Damage<br/>
+                    28 Cold Damage<br/>
+                    184 Vitality Damage<br/>
+                    46% of Attack Damage converted to Health<br/>
+                    +160% Damage to Undead
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 56
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Signet of Cold</p>
+            <img src="../img/ring/03.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    25% Cold Resistance<br />
+                    20.0% Chance of 30 - 48 Frostburn Damage over 3.0 Seconds<br />
+                    +20% Frostburn Damage<br />
+                    +30 Health<br />
+                    +30 Energy
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 8
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Snakeskin Band</p>
+            <img src="../img/ring/36.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    40% Poison Resistance<br />
+                    20 Instant Poison Damage<br />
+                    +100 Health<br />
+                    +5% Total Speed<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    75 Poison Damage over 3.0 Seconds<br />
+                    +80 Health
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Soul Rage</p>
+            <img src="../img/ring/28.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Life Leech<br />
+                    +15% Life Leech Retaliation<br />
+                    +3 to Bone Cage<br />
+                    +3 to Degeneracy
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Soul Rage</p>
+            <img src="../img/ring/28.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +25% Life Leech<br />
+                    +25% Life Leech Retaliation<br />
+                    +5 to Bone Cage<br />
+                    +5 to Degeneracy
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 42
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Soul Rage</p>
+            <img src="../img/ring/28.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    +35% Life Leech<br />
+                    +35% Life Leech Retaliation<br />
+                    +7 to Bone Cage<br />
+                    +7 to Degeneracy
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Spellsword's Signet</p>
+            <img src="../img/ring/09.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    50% Skill Disruption Protection<br />
+                    8 Damage<br />
+                    8 Elemental Damage<br />
+                    8 Lightning Damage<br />
+                    +12% Attack Speed<br />
+                    -12% Strength Requirement for all Weapons<br />
+                    -12% Dexterity Requirement for all Weapons<br />
+                    +20% Damage to Magical<br />
+                    <br />
+                    Grants Skill : Sorcerer’s Blade
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 45
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Tainted Sigil</p>
+            <img src="../img/ring/20.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    5 Piercing Damage<br />
+                    6 Instant Poison Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 8
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Tainted Sigil</p>
+            <img src="../img/ring/20.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    15 Piercing Damage<br />
+                    19 Instant Poison Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Tainted Sigil</p>
+            <img src="../img/ring/20.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    25 Piercing Damage<br />
+                    39 Instant Poison Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">The Devourer</p>
+            <img src="../img/ring/34.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    25 Damage<br />
+                    25 Bleeding Damage per Second<br />
+                    25 Vitality Decay per Second<br />
+                    25 Life Leech per Second<br />
+                    25 Piercing Damage<br />
+                    25 Vitality Damage<br />
+                    5% of Attack Damage converted to Health
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 55
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Thief's Lucky Charm</p>
+            <img src="../img/ring/19.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    8% Reduction in Poison Duration<br />
+                    +5% Dexterity
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 8
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Thief's Lucky Charm</p>
+            <img src="../img/ring/19.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    12% Reduction in Poison Duration<br />
+                    +10% Dexterity
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Thief's Lucky Charm</p>
+            <img src="../img/ring/19.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    16% Reduction in Poison Duration<br />
+                    +15% Dexterity
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Vengeful Eye</p>
+            <img src="../img/ring/18.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Arcane Mirror
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Vengeful Eye</p>
+            <img src="../img/ring/18.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Arcane Mirror
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 40
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Vengeful Eye</p>
+            <img src="../img/ring/18.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Arcane Mirror
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Volcanic Ring</p>
+            <img src="../img/ring/10.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    50.0% Chance of 80% Reduction in Burn Duration<br />
+                    +20% Fire Damage<br />
+                    4 - 12 Fire Damage<br />
+                    +80 Offensive Ability<br />
+                    +3 to Punishment<br />
+                    <br />
+                    Grants Skill : Volcanic Aura (Activated when equipped)<br />
+                    Surround yourself and your allies with a volcanic ward, permitting to deal extreme burn damage.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    12.0 Meter Radius<br />
+                    20.0% Chance of 175 Burn Damage over 3.0 Seconds<br />
+                    +20% Burn Damage<br />
+                    15.0% Chance of 75 Fire Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Vow of Perseverance</p>
+            <img src="../img/ring/11.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Set : Infinite Alliance
+                <p class="itemText2 itemText2IconAlt">
+                    <i><span style="color: hotpink">- Never give up your dreams, they are our reason to fight...</span><br /></i>
+                    <br />
+                    35% Pierce Resistance<br />
+                    35% Vitality Resistance<br />
+                    -15 Intelligence<br />
+                    +300 Health<br />
+                    +300 Energy<br />
+                    +60 Defensive Ability<br />
+                    +30% Casting Speed<br />
+                    -10% Energy Cost<br />
+                    <br />
+                    Grants Skill : Infinite Perseverance (Activated on low health)<br />
+                    Even in the darkest moments, you find an ally to support you with strength and determination.<br />
+                    <br />
+                    15.0 Second(s) Recharge<br />
+                    5.0 Second Duration<br />
+                    1000 Health Restored<br />
+                    25% Damage Absorption
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 59
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Vow of Will</p>
+            <img src="../img/ring/12.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Set : Infinite Alliance
+                <p class="itemText2 itemText2IconAlt">
+                    <i><span style="color: hotpink">- What we truly desire will become real if we are determined...</span><br /></i>
+                    <br />
+                    35% Elemental Resistance<br />
+                    35% Poison Resistance<br />
+                    -15 Intelligence<br />
+                    +300 Health<br />
+                    +300 Energy<br />
+                    +60 Offensive Ability<br />
+                    +25% Attack Speed<br />
+                    -10% Recharge<br />
+                    <br />
+                    Grants Skill : Infinite Will (Activated on low energy)<br />
+                    Leave nothing to hinder the pursuit of your goal and always prevail despite the difficulties you encounter.<br />
+                    <br />
+                    15.0 Second(s) Recharge<br />
+                    5.0 Second Duration<br />
+                    750 Energy Restored<br />
+                    75% Life Leech Resistance<br />
+                    75% Energy Leech Resistance<br />
+                    75% Stun Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 59
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function_charm.js"></script>
+</body></html>

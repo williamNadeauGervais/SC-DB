@@ -1,0 +1,414 @@
+* {
+    color: aliceblue;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100vw;
+    position: absolute;
+    background-color: #0a0a0a;
+    font-family: 'PT Sans', sans-serif;
+}
+
+header {
+    height: 15%;
+    max-height: 120px;
+    min-height: 100px;
+    width: 100vw;
+    min-width: 100px;
+    font-family: 'Farro', sans-serif;
+    overflow: hidden;
+    display: block;
+    position: sticky;
+    background: #000000;
+    z-index: 100;
+    padding: 2.5vh;
+    font-size: 2.5em;
+    -webkit-box-shadow: 5px 5px 21px 17px #000000;
+    box-shadow: 5px 5px 21px 17px #000000;
+}
+
+#titre {
+    height: 150%;
+    min-height: 30px;
+    width: 120%;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+#titre p {
+    position: relative;
+    bottom: 0.5em;
+}
+
+#titre p .versionStyle {
+    font-size: 40%;
+    opacity: 0.65;
+    position: relative;
+    bottom: 3.75em;
+}
+
+#filter {
+    width: 100%;
+}
+
+#behinder {
+    position: absolute;
+    top: 0;
+    left: 8em;
+    opacity: 0.5;
+}
+
+aside {
+    height: 100%;
+    width: 200px;
+    background-color: #000000;
+    position: relative;
+    z-index: 95;
+}
+
+#liste {
+    position: fixed;
+    top: 10px;
+}
+
+#liste ul {
+    background-color: black;
+    width: 100px;
+    position: relative;
+    top: 10.5em;
+    list-style-type: none;
+    -webkit-box-shadow: 5px 5px 21px 17px #000000;
+    box-shadow: 5px 5px 21px 17px #000000;
+}
+
+#liste li {
+    font-size: 1.1em;
+    padding: 0.1em;
+    width: 85%;
+    -webkit-transition: background-color 0.25s, color 0.25s;
+    /* Safari prior 6.1 */
+    transition: background-color 0.25s, color 0.25s;
+}
+
+#liste li:hover a {
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: background-color 0.25s, color 0.25s;
+    /* Safari prior 6.1 */
+    transition: background-color 0.25s, color 0.25s;
+}
+
+a:hover,
+#liste li:hover {
+    color: black;
+    font-weight: 800;
+}
+
+section {
+    width: 75%;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    position: absolute;
+    left: 250px;
+    top: 23%;
+    border: 1px solid #252525;
+}
+
+section {
+    position: relative;
+    top: 80px;
+}
+
+section > * {
+    position: relative;
+    top: 10px;
+    flex: 0 0 auto;
+    margin: 1em;
+    width: 90%;
+}
+
+table {
+    display: block;
+}
+
+#intro p {
+    width: 99%;
+}
+
+.affixBox {
+    background-color: #252525;
+    width: 350px;
+    height: 190px;
+    padding: 0.4em;
+}
+
+.itemBox {
+    background-color: #252525;
+    width: 350px;
+    height: 300px;
+    padding: 0.4em;
+}
+
+.itemName {
+    font-variant: small-caps;
+    font-size: 120%;
+    width: 50%;
+    display: inline;
+}
+
+.itemNameLong {
+    font-variant: small-caps;
+    font-size: 95%;
+    width: 50%;
+    display: inline;
+}
+
+.itemNameTagNew {
+    font-variant: small-caps;
+    font-size: 80%;
+    font-weight: bold;
+    width: 50%;
+    display: inline;
+    color: black;
+    background-color: #ffcc00;
+    border-radius: 15%;
+    animation: tagNewAnim 1.5s infinite alternate;
+}
+
+@-webkit-keyframes tagNewAnim {
+  0%   { background-color: #ffcc00; }
+  100% { background-color: #ffff00; }
+}
+
+.itemText {
+    margin: 0;
+    padding: 0;
+    width: 82%;
+    font-size: 90%;
+}
+
+.itemText2 {
+    margin: 0;
+    padding: 0;
+    line-height: 125%;
+    width: 100%;
+    height: 60%;
+    font-size: 85%;
+    overflow: auto;
+}
+
+.itemText2Set {
+    margin: 0;
+    padding: 0;
+    line-height: 125%;
+    width: 100%;
+    height: 72%;
+    font-size: 85%;
+    overflow: auto;
+}
+
+.itemTextAffix {
+    margin: 0;
+    padding: 0;
+    line-height: 125%;
+    width: 100%;
+    height: 50%;
+    font-size: 85%;
+    overflow: auto;
+    position: relative;
+    top: 1.5em;
+}
+
+.itemTextAffixLevel {
+    background-color: #151515;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 90%;
+    position: relative;
+    top: 1.75em;
+}
+
+.itemTextCharm {
+    margin: 0;
+    padding: 0;
+    width: 82%;
+    font-size: 90%;
+    height: 10.5%;
+}
+
+.itemText2IconAlt {
+    position: relative;
+    top: 2.5em;
+}
+
+.itemText3 {
+    background-color: #151515;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 90%;
+    position: relative;
+    top: 0.5em;
+}
+
+.itemTextFourRows {
+    position: relative;
+    top: 0.15em;
+}
+
+.itemText3IconAlt {
+    position: relative;
+    top: 2.85em;
+}
+
+.itemText3IconAlt1 {
+    position: relative;
+    top: 1.2em;
+}
+
+.itemText3IconAlt2 {
+    position: relative;
+    top: 3.5em;
+}
+
+.itemText3IconAlt3 {
+    position: relative;
+    top: 0.25em;
+}
+
+.itemText3IconAlt4 {
+    position: relative;
+    top: 2.3em;
+}
+
+.itemText2IconAltT {
+    height: 50%;
+    position: relative;
+    top: 2.85em;
+}
+
+.itemText3IconAltT {
+    position: relative;
+    top: 3.4em;
+}
+
+.itemIcon {
+    float: right;
+    max-height: 98px;
+}
+
+.itemIgnore {
+    margin: 0;
+    padding: 0;
+}
+
+.rarityMI {
+    border-top: 10px solid #51851d;
+}
+
+.rarityEpic {
+    border-top: 10px solid #2ba0ff;
+}
+
+.rarityLeg {
+    border-top: 10px solid #8400bd;
+}
+
+.rarityMU {
+    border-top: 10px solid #ff1f26;
+}
+
+.rarityL {
+    border-top: 10px solid #78fdff;
+}
+
+.rarityG {
+    border-top: 10px solid #78fdff;
+}
+
+.rarityD {
+    border-top: 10px solid #78fdff;
+}
+
+.rarityCharmN {
+    border-top: 10px solid #51851d;
+}
+
+.rarityCharmE {
+    border-top: 10px solid #2ba0ff;
+}
+
+.rarityCharmL {
+    border-top: 10px solid #8400bd;
+}
+
+.rarityCharmMU {
+    border-top: 10px solid #ff1f26;
+}
+
+.rarityCharmQuest {
+    border-top: 10px solid #dc40ff;
+}
+
+.rarityYellowAffix {
+    border-top: 10px solid #f7e00c;
+}
+
+.rarityGreenAffix {
+    border-top: 10px solid #6af70c;
+}
+
+/*=====================*/
+
+.keyName {
+    font-variant: small-caps;
+    font-size: 120%;
+    width: 50%;
+    display: inline;
+    padding: 0.3em;
+    position: relative;
+    top: 10px;
+}
+
+.keyIcon {
+    float: right;
+    max-height: 98px;
+    position: relative;
+    right: 6px;
+    top: 5px;
+}
+
+.keyBox {
+    background-color: #252525;
+    width: 547px;
+    height: 400px;
+}
+
+.keyDesc {
+    height: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+    top: 50px;
+    left: 10px;
+}
+
+.keyDesc ul li {
+    padding: 0;
+    margin: 0
+}
+
+.nobulletlist {
+    list-style-type: none;
+}

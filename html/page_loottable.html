@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style_lootable.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <p>This page displays the location, drop odds and miscellaneous informations about all the new items from the Shadow Champions mod all in one place. You can use the filters below to find a certain type of items, or you can also use the search function of your browser (CTRL+F) to find a specific item by its name.</p>
+         <div id="filter">
+            <form>
+                By Rarity :<br/><br/>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+                <br/>
+                <br/>
+                By Item Type :<br/><br/>
+                <input type="checkbox" id="filter5" name="filter5" value="Helm" checked>&nbsp;<label for="filter5">Helmets</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter6" name="filter6" value="Torso" checked>&nbsp;<label for="filter6">Torsos</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter7" name="filter7" value="Arm" checked>&nbsp;<label for="filter7">Armguards</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter8" name="filter8" value="Leg" checked>&nbsp;<label for="filter8">Leg Armor</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter9" name="filter9" value="Ring" checked>&nbsp;<label for="filter9">Rings</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter10" name="filter10" value="Amulet" checked>&nbsp;<label for="filter10">Amulets</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br/>
+                <br/>
+                <input type="checkbox" id="filter11" name="filter11" value="Sword" checked>&nbsp;<label for="filter11">Swords</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter12" name="filter12" value="Axe" checked>&nbsp;<label for="filter12">Axes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter13" name="filter13" value="Club" checked>&nbsp;<label for="filter13">Clubs</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter14" name="filter14" value="Spear" checked>&nbsp;<label for="filter14">Spears</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter15" name="filter15" value="Bow" checked>&nbsp;<label for="filter15">Bows</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter16" name="filter16" value="Staff" checked>&nbsp;<label for="filter16">Staves</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter17" name="filter17" value="Throw" checked>&nbsp;<label for="filter17">Throwing</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter18" name="filter18" value="Shield" checked>&nbsp;<label for="filter18">Shields</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter19" name="filter19" value="Shield" checked>&nbsp;<label for="filter19">Offhands</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br/>
+                <br/>
+                <input type="checkbox" id="filter20" name="filter20" value="Charm" checked>&nbsp;<label for="filter20">Charms</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter21" name="filter21" value="Charm" checked>&nbsp;<label for="filter21">Relics</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter22" name="filter22" value="Artifact" checked>&nbsp;<label for="filter22">Artifacts</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </form>
+        </div>
+        <h4></h4>
+        <table>
+            <tr>
+                <th>Icon</th><th>Name</th><th>Location</th><th>Additional Informations</th>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/06.png" alt="" class="lootableIcon"></td><td>Abbhorence</td><td><li>Drops in Legendary Act 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeThrown">
+                <td><img src="../img/throw/13.png" alt="" class="lootableIcon"></td><td>Acid Shards</td><td><li>Drops in Normal Act 5</li></td><td><b>Meltdown</b><br/>With enough precision, a continuous stream of acid-covered projectiles can break down even the most durable of armors.<br/><br/>10 Charge Levels<br/>50 Instant Poison Damage<br/>200 Reduced Armor for 2.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/29.png" alt="" class="lootableIcon"></td><td>Aeacus' Judgement</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/02.png" alt="" class="lootableIcon"></td><td>Affliction</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/30.png" alt="" class="lootableIcon"></td><td>Ageless Maw</td><td><li>Very low chance to drop off Dragon Liche - Lord of the Undead</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Frigid Winds of the Graveless</b><br/>The cold of the underworld pierces through the air, as if carried by the wings of Death itself.<br/><br/>60.0 Second(s) Recharge<br/>200 Energy Cost<br/>220 Piercing Damage<br/>220 Cold Damage<br/>80% Chance to Fumble attacks for 4.0 Seconds<br/>80% Chance of Impaired Aim for 4.0 Seconds<br/>4.0 second(s) of Skill Disruption</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeThrown">
+                <td><img src="../img/throw/01.png" alt="" class="lootableIcon"></td><td>Aimon-syd</td><td><li>Very low chance to drop off any Machae Sentinel</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Embodiment of Corruption</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/28.png" alt="" class="lootableIcon"></td><td>Al-al'a</td><td><li>Very low chance to drop off any Machae</li><li>Increased odds versus Hero Machaes</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Embodiment of Corruption</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeOffhand">
+                <td><img src="../img/shield/27.png" alt="" class="lootableIcon"></td><td>Amaranthine Flame</td><td><li>Drops in Legendary Act 3, 4 and 5</li></td><td><b>Flaming Terror</b><br>Mysterious violet flames surrounding you and your allies intensify the power of fire and vitality attacks. The enemies touched by the flame shall run for their lives, and those most vulnerable to it will be reluctant to get near.<br><br>4.0 Second(s) Recharge<br>4 Active Energy Cost per Second<br>15.0 Meter Radius<br>+20% Burn Damage<br>40 Vitality Decay over 2.0 Seconds<br>+20% Vitality Decay<br>30 Fire Damage<br>5.0% Chance of 2.0 - 4.0 second(s) of Fear<br>-30% Energy Regeneration<br>40 Vitality Decay Retaliation over 2.0 Seconds<br>+15% Less Damage from Undead</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/12.png" alt="" class="lootableIcon"></td><td>Amazonian Anklets</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/29.png" alt="" class="lootableIcon"></td><td>Am-heh's Touch</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeThrown">
+                <td><img src="../img/throw/12.png" alt="" class="lootableIcon"></td><td>Anathema</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAmulet">
+                <td><img src="../img/amulet/29.png" alt="" class="lootableIcon"></td><td>Anax's Medal</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/02.png" alt="" class="lootableIcon"></td><td>Ancient Wrappings</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/1_n.png" alt="" class="lootableIcon"><img src="../img/charm/1_e.png" alt="" class="lootableIcon"><img src="../img/charm/1_l.png" alt="" class="lootableIcon"></td><td>Anteok Antlers</td><td><li>7.38% Chance to drop off any Anteok Archon or Protector</li><li>11.07% Chance to drop off any Anteok Forest Lord or Primal Anteok</li><li>Increased odds versus Hero Anteoks</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeLeg">
+                <td><img src="../img/leg/23.png" alt="" class="lootableIcon"></td><td>Ant Queen's Royal Wraps</td><td><li>Very low chance to drop off any mage Formicid</li><li>Increased odds versus Hero Formicids</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Ant Form</b><br/>Shrink your body to swiftly avoid incoming attacks. However, taking such form makes your attacks much less threatening.<br/><br/>240.0 Second(s) Recharge<br/>15 Active Energy Cost per Second<br/>30.0 Second Duration<br/>-50% Total Damage<br/>-50% Offensive Ability<br/>+75% Total Speed<br/>75% Chance to Dodge Attacks<br/>75% Chance to Avoid Projectiles</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeShield">
+                <td><img src="../img/shield/15.png" alt="" class="lootableIcon"></td><td>Apprentice Shield</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/17.png" alt="" class="lootableIcon"></td><td>Aquatic Prism</td><td><li>Very low chance to drop off any Nixie</li><li>Increased odds versus Hero Nixies</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/14.png" alt="" class="lootableIcon"></td><td>Arcane Fury</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td>Part of the set : Arcane Barrage</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/03.png" alt="" class="lootableIcon"></td><td>Arcanist's Secret</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><b>Ternion Attack</b><br/>This powerful wizard's trick causes your staff to shoot three projectiles by channeling magical energy into it. Initially each hit is not as powerful as a normal attack but the effectiveness increases every level.<br/><br/>37 Energy Cost<br/>Launches 3 Projectile(s)<br/>-10% Total Damage</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/14.png" alt="" class="lootableIcon"></td><td>Arctic Desolator</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td><b>Arctic Beam</b><br/>Concentrate the staff’s power to form an unstoppable beam of explosive arctic magic.<br/><br/>1 Energy Cost<br/>3.0 Meter Radius<br/>100% Chance to pass through Enemies<br/>2 Charge Levels<br/>160 Frostburn Damage per Second<br/>15% Slower Movement for 1.0 Seconds<br/>100% Increase in Projectile Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/13.png" alt="" class="lootableIcon"></td><td>Armbands of the Furnace</td><td><li>Very low chance to drop off any Gigantes</li><li>Slightly increased odds versus Vindicators</li><li>Increased odds versus Hero Gigantes, Dactyls and the Warden of Souls</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : The Hell Furnace</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/28.png" alt="" class="lootableIcon"></td><td>Armguards of Myriad Dimensions</td><td><li>Drops in Legendary Act 4</li></td><td>Part of the set : Journey of Myriad Dimensions</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/21.png" alt="" class="lootableIcon"></td><td>Ashoka Sunshield</td><td><li>Drops in Legendary Act 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/11.png" alt="" class="lootableIcon"></td><td>Avenger's Spleen</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and Atlantis</li></td><td><b>Gathering Flames</b><br/>The flames of victory grow ever stronger as each accurate shot increases your agility and fire damage.<br/><span style="color: orange">Each stack produced decays slowly.</span><br/><br/>2 Energy Cost<br/>10 Charge Levels<br/>+100% Fire Damage<br/>+100% Burn Damage<br/>+30% Attack Speed<br/>+60% Casting Speed<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/08.png" alt="" class="lootableIcon"></td><td>Axe of Visions</td><td><li>Drops in Normal Act 2</li></td><td><b>Mind-Reading</b><br>By foreseeing your opponent’s next attack, you’re able to deliver an unavoidable blow.<br><br>3 Charge Levels<br>100% reduced Defensive Ability for 2.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeThrown">
+                <td><img src="../img/throw/09.png" alt="" class="lootableIcon"></td><td>Backstabber</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSpear">
+                <td><img src="../img/spear/8.png" alt="" class="lootableIcon"></td><td>Baetylus Spear</td><td><li>Drops in Normal Act 3</li></td><td><b>War Wind</b><br>Executes a devastating spinning attack that can damage up to four enemies. Initially each hit is not as powerful as a normal attack but the effectiveness increases every level.<br><br>8.0 Second(s) Recharge<br>68 Energy Cost<br>360 Arc of Attack<br>4 Target Maximum<br>-21% Physical Damage<br>+300% Movement Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeStaff">
+                <td><img src="../img/staff/7.png" alt="" class="lootableIcon"></td><td>Bandit's Clutch</td><td><li>2% Chance to drop off any Hades Priest Bandit</li><li>16.5% Chance to drop off any Hero Hades Priest Bandit</li></td><td><b>Stone Form</b><br>An impervious layer of rock envelops you for a short duration boosting regeneration but prohibiting movement.<br><br>24.0 Second(s) Recharge<br>84/108/124 Energy Cost<br>6.0 Second Duration<br>100% Damage Absorption<br>+45.0/85.0/116.0 Healh Regeneration per second</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/27.png" alt="" class="lootableIcon"></td><td>Band of Illusions</td><td><li>3% Chance to drop off any Shadowstalker</li><li>Increased odds versus Egyptian Shadowstalkers</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/24.png" alt="" class="lootableIcon"></td><td>Bane Gauntlets</td><td><li>Drops in Normal Act 1 and 2</li></td><td><b>Reversal</b><br>Change the configuration of your gauntlets to alter the bonuses received by them.<br><span style="color: aquamarine">Cannot be dispelled.</span><br><br>+700 Energy<br>
+                -30% Armor Protection</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/01.png" alt="" class="lootableIcon"></td><td>Barbarian's Pit Trophy</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><b>Toughen Up</b><br>Under the trance of battle, each attack reinforces your endurance.<br><br>2 Energy Cost<br>
+                15 Charge Levels<br>
+                +30.0 Health Regeneration per second<br>
+                +150% Health Regeneration<br>
+                +150 Defensive Ability<br>
+                +15% Attack Speed<br>
+                +15% Armor Protection<br>
+                15% Physical Resistance</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/18.png" alt="" class="lootableIcon"></td><td>Barrier of Myriad Dimensions</td><td><li>Drops in Legendary Act 4</li></td><td>Part of the set : Journey of Myriad Dimensions</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeBow">
+                <td><img src="../img/bow/01.png" alt="" class="lootableIcon"></td><td>Battlemonger's Bow</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/2_n.png" alt="" class="lootableIcon"><img src="../img/charm/2_e.png" alt="" class="lootableIcon"><img src="../img/charm/2_l.png" alt="" class="lootableIcon"></td><td>Bear Claws</td><td><li>9% Chance to drop off any Bear</li><li>Increased odds versus Hero Bears</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/05.png" alt="" class="lootableIcon"></td><td>Bearer of Decay</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/4_n.png" alt="" class="lootableIcon"><img src="../img/charm/4_e.png" alt="" class="lootableIcon"><img src="../img/charm/4_l.png" alt="" class="lootableIcon"></td><td>Behemoth Jawbone</td><td><li>7% Chance to drop off any Odontotyrranus Brute</li><li>14% Chance to drop off any Odontotyrranus Behemoth</li><li>Increased odds versus Hero Odontotyrranus</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/01.png" alt="" class="lootableIcon"></td><td>Bereaving Touch</td><td><li>Drops in Epic Act 3 and 4</li><li>Drops in Legendary Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/04.png" alt="" class="lootableIcon"></td><td>Bijou of Forbidden Arcane</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/15.png" alt="" class="lootableIcon"></td><td>Blackening of Valor</td><td><li>Drops in Legendary Act 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/21.png" alt="" class="lootableIcon"></td><td>Blaze Blade</td><td><li>Drops in Epic Act 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/25.png" alt="" class="lootableIcon"></td><td>Blaze Ring</td><td><li>0.746% Chance to drop off any Fire/Magma Sprite</li><li><b>Obsidian Rink:</b><ul><li>4% Chance to drop off any Fire/Magma Sprite</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/08.png" alt="" class="lootableIcon"></td><td>Bloodbath Raiment</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/35.png" alt="" class="lootableIcon"></td><td>Bloodcrazed's Craving</td><td><li>Drops in Epic Act 4 and 5</li><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/27.png" alt="" class="lootableIcon"></td><td>Bloodstained Ruby</td><td><li>4% Chance to drop off any Melinoe Blood Witch</li><li>Increased odds versus Heroes Melinoe Blood Witch</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/12.png" alt="" class="lootableIcon"></td><td>Bolina's Fate</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/38.png" alt="" class="lootableIcon"></td><td>Bonechill Sapphire</td><td><li>2% Chance to drop off any Frozen Epiales Slygoth</li><li>5% Chance to drop off any Frozen Epiales Kalygoth</li>
+                <li>Exclusively found in the Rogue Dungeon : River Cocytus</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td><b>Iceshatter Bomb</b><br>Conjure a glassy snowdome, tightly containing the essence of the great winter, and hurl it into a group of enemies. Both the magical blast and the crystal shrapnels are powerful enough to shatter bones, cripple movement, and freeze bodies.<br><br>12.0 Second(s) Recharge<br>80/105 Energy Cost<br>1 Projectile(s)<br>4.0 Meter Radius<br>8 - 12/10 - 14 Fragments<br>115/170 Damage<br>400/600 Frostburn Damage over 5.0 Seconds<br>90/135 Cold Damage<br>33.0/44.0% Chance of 2.0 second(s) of Freeze<br>30/35% Slowed for 5.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/16.png" alt="" class="lootableIcon"></td><td>Bonedust Ring</td><td><li>Drops in Epic Act 1 and 2</li></td><td>Grants a single bonus point to a random Skeleton skill from Necromancy.<br/><br/>
+                When forged, this ring loses some of its stats.
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeOffhand">
+                <td><img src="../img/shield/30.png" alt="" class="lootableIcon"></td><td>Book of the Dead</td><td><li>Very low chance to drop off any Abyssal Liche</li><li>Increased odds versus Kallixenia ~ Liche Queen</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Obsidian Rink:</b><ul><li>Better odds than usual</li></ul></li></td><td><b>Abysmal Choir</b><br>Open the tome to release the agonizing screams of the myriad tortured souls trapped inside. The afflicted enemies will run in crippling terror, while their life forces are sapped away.<br><br>16.0 Second(s) Recharge<br>900 Vitality Decay over 6.0 Seconds<br>300 Life Leech over 6.0 Seconds<br>300 Energy Leech over 6.0 Seconds<br>450 Vitality Damage<br>1.0 - 6.0 second(s) of Fear<br>33% Slowed for 6.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/23.png" alt="" class="lootableIcon"></td><td>Bracers of Orion</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/22.png" alt="" class="lootableIcon"></td><td>Brizo's Guidance</td><td><li>Drops in Normal Act 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/19.png" alt="" class="lootableIcon"></td><td>Brôma Theôn</td><td><li>Drops in Normal Atlantis</li><li>Formula sold by dealers from Normal Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Essence of the Children of Okeanos</li>
+                <li>Membrane Wings</li>
+                <li>Scroll of Unbroken Fortitude</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/09.png" alt="" class="lootableIcon"></td><td>Brooch of Spectral Webs</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeClub">
+                <td><img src="../img/club/05.png" alt="" class="lootableIcon"></td><td>Bug</td><td><li>Very low chance to drop off any Jailor Troglodyte</li>
+                <li>Increased odds versus Hero Troglodyte</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/36.png" alt="" class="lootableIcon"></td><td>Burning Chestguard</td><td><li>Drops in Normal Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/07.png" alt="" class="lootableIcon"></td><td>Burning Feather</td><td><li>Drops in Epic Act 3, 4, 5 and Atlantis</li>
+                <li>Drops in Legendary Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/10.png" alt="" class="lootableIcon"></td><td>Burning Ice</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and 5</li></td><td><b>Aspect of Elemental Forces</b><br/>Each hit you take has a chance of invoking a burst of elemental energy from the staff.<br/><br/>4.0 Second(s) Recharge<br/>
+                20% Chance of Activating<br/>
+                6.0 Meter Radius<br/>
+                94 Fire Damage<br/>
+                94 Cold Damage<br/>
+                50.0% Chance of 1.0 second(s) of Stun<br/>
+                120 Energy Reserved</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/24.png" alt="" class="lootableIcon"></td><td>Burning Witches' Plea</td><td><li>Very low chance to drop off any Witch Keres</li>
+                <li>Increased odds versus Hero Keres</li><li>Only in <b>Legendary</b> difficulty</li><li><b>River Cocytus:</b><ul><li>Better odds than usual</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/02.png" alt="" class="lootableIcon"></td><td>Cackling Witch</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/23.png" alt="" class="lootableIcon"></td><td>Cage of the Furnace</td><td><li>Very low chance to drop off any Gigantes</li><li>Slightly increased odds versus Vindicators</li><li>Increased odds versus Hero Gigantes, Dactyls and the Warden of Souls</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : The Hell Furnace</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/09.png" alt="" class="lootableIcon"></td><td>Cape of Cold Winters</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/32.png" alt="" class="lootableIcon"></td><td>Captain Nemo's Tricorne</td><td><li>Drops in Legendary Act 1</li><li>Giveaway from Captn3mo's stream</li></td><td><b>Vernie the Parrot</b><br/>Ahoy, matey! Let's kill those landlubbers and take the booty! Arrr!<br/><br/>90.0 Second(s) Recharge<br/>150 Energy Cost<br/>Vernie the Parrot Attributes:<br/>1200 Health<br/>450 Energy<br/><br/>Vernie the Parrot Abilities:<br/>Basic Attack<br/>50 Damage<br/>50 Piercing Damage<br/><br/>Beak in the Eye<br/>50 Damage<br/>+25% Pierce Damage<br/>50 Piercing Damage<br/>15% reduced Offensive Ability for 3.0 Seconds<br/>10% Chance to Fumble attacks for 3.0 Seconds<br/>10% Chance of Impaired Aim for 3.0 Seconds<br/><br/>You are a Pirate!<br/>40.0 Second(s) Recharge<br/>100 Energy Cost<br/>20.0 Second Duration<br/>15.0 Meter Radius<br/>+15% Pierce Damage<br/>+15% Bleeding Damage<br/>+10% Total Damage<br/>+20% Strength<br/><br/>Dodge Attacks<br/>33% Chance to Dodge Attacks<br/>33% Chance to Avoid Projectiles</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeArm">
+                <td><img src="../img/arm/21.png" alt="" class="lootableIcon"></td><td>Centurion's Crest</td><td><li>1% Chance to drop off any Reptilian Centurion/Hulking Centurion</li><li>1.75% Chance to drop off any Reptilian Hulking Centurion</li><li><b>Temple of Ra:</b><ul><li>4.54% Chance to drop off any Oasis Reptilian Centurion/Hulking Centurion</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeSpear">
+                <td><img src="../img/spear/13.png" alt="" class="lootableIcon"></td><td>Centurion's Lance</td><td><li>0.892% Chance to drop off any Reptilian Centurion</li><li>2% Chance to drop off any Reptilian Hulking Centurion</li><li>Increased odds versus Hero Reptilians</li><li><b>Temple of Ra:</b><ul><li>2.91% Chance to drop off any Oasis Reptilian Centurion</li><li>5.66% Chance to drop off any Oasis Reptilian Hulking Centurion</li><li>Increased odds versus Hero Oasis Reptilians</li></ul></li></td><td><b>Storm Enchantment</b><br/>Imbue the bodies of yourself and nearby allies with flowing electrical energy.<br/><br/>4.0 Second(s) Recharge<br/>2 Active Energy Cost per Second<br/>16.0 Meter Radius<br/>+16/24/30% Lightning Damage<br/>+16/24/30% Electrical Burn Damage<br/>+25% Stun Duration<br/>15/30/45 Lightning Damage<br/>50 Energy Reserved<br/>25.0% Chance of 1 - 25/25 - 50/50 - 75 Lightning Retaliation</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeTorso">
+                <td><img src="../img/torso/39.png" alt="" class="lootableIcon"></td><td>Centurion's Mantle</td><td><li>1.7% Chance to drop off any Reptilian Centurion/Hulking Centurion</li><li><b>Temple of Ra:</b><ul><li>8.25% Chance to drop off any Oasis Reptilian Centurion/Hulking Centurion</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/11_n.png" alt="" class="lootableIcon"><img src="../img/charm/11_e.png" alt="" class="lootableIcon"><img src="../img/charm/11_l.png" alt="" class="lootableIcon"></td><td>Centaur Hooves</td><td><li>Approx. 1,5% chance to drop off any Centaur</li><li>Twice as much chance to drop off any Centaur Elder</li><li>Increased odds versus Hero Centaurs</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>Approx. 6,6% chance to drop off any Primal Centaur</li><li>Approx. 60% chance to drop off any Hero Primal Centaur</li></ul></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/36.png" alt="" class="lootableIcon"></td><td>Ceramic Ankh</td><td><li>Guaranteed drop from Dur-duram</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/20.png" alt="" class="lootableIcon"></td><td>Chaotic Reflector</td><td><li>Drops in Epic Act 4, 5 and Atlantis</li><li>Drops in Legendary Act 1</li></td><td><b>Telekinetic Pulse</b><br>By deeply concentrating your mind, you’re able to hurt enemies regardless of the distance between you.<br><br>5.0 Second(s) Recharge<br>64 Energy Cost<br>1.0 Second Duration<br>
+                5.0 Meter Radius<br>
+                190 Damage<br>
+                98 Vitality Damage</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeShield">
+                <td><img src="../img/shield/17.png" alt="" class="lootableIcon"></td><td>Chaotic Smasher</td><td><li>Drops in Normal Act 2 and 3</li></td><td><b>Batter</b><br>A shield attack that hits for increased damage and slows enemies' attacks for a duration.<br><br>4.0 Second(s) Recharge<br>15 Energy Cost<br>12 Damage<br>+6% Physical Damage<br>23% Slower Attack for 8.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeOffhand">
+                <td><img src="../img/shield/21.png" alt="" class="lootableIcon"></td><td>Chapter Four</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeOffhand">
+                <td><img src="../img/shield/26.png" alt="" class="lootableIcon"></td><td>Cheirokmeta</td><td><li>Drops in Epic Act 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/26.png" alt="" class="lootableIcon"></td><td>Chill Ring</td><td><li>0.746% Chance to drop off any Ice/Rime Sprite</li><li><b>Obsidian Rink:</b><ul><li>4% Chance to drop off any Ice/Rime Sprite</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/37.png" alt="" class="lootableIcon"></td><td>Chillwind Vest</td><td><li>Drops in Legendary Act 1, 2 and 3</li></td><td><b>Arctic Power</b><br/>This aura encircles you with bone-chilling cold.<br/><br/>2.0 Second(s) Recharge<br/>+25% Cold Damage<br/>+40% Frostburn Damage<br/>30 - 35 Cold Damage<br/>75 Energy Reserved<br/>15.0% Chance of 150 Cold Retaliation</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/11.png" alt="" class="lootableIcon"></td><td>Claws of Laelaps</td><td><li>Drops in Epic Act 1</li></td><td>Part of the set : The Hunting Paradox</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/11.png" alt="" class="lootableIcon"></td><td>Cloak of the Underworld</td><td><li>Drops in Epic Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/42.png" alt="" class="lootableIcon"></td><td>Coat of Myriad Dimensions</td><td><li>Drops in Legendary Act 4</li></td><td>Part of the set : Journey of Myriad Dimensions<br/><br/><b>Timetraveller's Technique</b><br>This is the signature ability of the timetravellers, charigng energy in your additional energy in your weapon for incredible prowess.<br><br>1 Energy Cost<br>15 Charge Levels<br>15% of Attack damage converted to Health<br>+60% Inteliigence<br>+30% Attack Speed<br>+90% Casting Speed<br>+15% Armor Protection</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeStaff">
+                <td><img src="../img/staff/25.png" alt="" class="lootableIcon"></td><td>Cocytean Embrace</td><td><li>Approx. 7.4% chance to drop off any Empusa Geomancer</li>
+                <li>Exclusively found in the Rogue Dungeon : River Cocytus</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td><b>Triplicate</b><br>Your staff attacks get divided into three projectiles, increasing your area of attack.<br><span style="color: orange">Requires a staff.</span><br><br>41/49 Energy Cost<br>45/57% Chance to pass through Enemies<br>Launches 3 Projectile(s)<br>-14/-5% Total Damage</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/03.png" alt="" class="lootableIcon"></td><td>Coil of Torture</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/06.png" alt="" class="lootableIcon"></td><td>Coil of the Leech</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/13.png" alt="" class="lootableIcon"></td><td>Commando's Lucky Charm</td><td><li>Drops in Normal Act 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/08.png" alt="" class="lootableIcon"></td><td>Coral Warp-Bow</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/09.png" alt="" class="lootableIcon"></td><td>Corpse Desecrator</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeTorso">
+                <td><img src="../img/torso/50.png" alt="" class="lootableIcon"></td><td>Corrupted Armor</td><td><li>Approx. 2% chance to drop off any Mummy Acolyte or Adept</li>
+                <li>Increased odds versus Mummy Priests</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeArm">
+                <td><img src="../img/arm/34.png" alt="" class="lootableIcon"></td><td>Corrupted Bracers</td><td><li>Approx. 2% chance to drop off any Mummy Acolyte or Adept</li>
+                <li>Increased odds versus Mummy Priests</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeLeg">
+                <td><img src="../img/leg/24.png" alt="" class="lootableIcon"></td><td>Corrupted Greaves</td><td><li>Approx. 2% chance to drop off any Mummy Acolyte or Adept</li>
+                <li>Increased odds versus Mummy Priests</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeHelm">
+                <td><img src="../img/helm/37.png" alt="" class="lootableIcon"></td><td>Corrupted Headdress</td><td><li>Approx. 2% chance to drop off any Mummy Acolyte or Adept</li>
+                <li>Increased odds versus Mummy Priests</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeHelm">
+                <td><img src="../img/helm/25.png" alt="" class="lootableIcon"></td><td>Cover of the Timewarped</td><td><li>Drops in Epic Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/41.png" alt="" class="lootableIcon"></td><td>Crest of Warfare</td><td><li>2% Chance to drop off any Yerren</li><li>6% Chance to drop off any Warchief Yerren</li><li>Increased odds versus Hero Yerrens</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeSword">
+                <td><img src="../img/sword/22.png" alt="" class="lootableIcon"></td><td>Crimsonbolt Steelblade</td><td><li>Very low chance to drop off any Norse Mercenary</li><li>Slightly increased odds versus Norse Ulfhednars</li><li>Increased odds versus Hero Mercenaries</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeArm">
+                <td><img src="../img/arm/38.png" alt="" class="lootableIcon"></td><td>Croaker's Arms</td><td><li>Approx. 1% to drop off any non-mage Pale Anouran</li>
+                <li>Exclusively found in the Rogue Dungeon : River Cocytus</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeLeg">
+                <td><img src="../img/leg/28.png" alt="" class="lootableIcon"></td><td>Croaker's Legs</td><td><li>Approx. 1% to drop off any non-mage Pale Anouran</li>
+                <li>Exclusively found in the Rogue Dungeon : River Cocytus</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeTorso">
+                <td><img src="../img/torso/54.png" alt="" class="lootableIcon"></td><td>Croaker's Suit</td><td><li>Approx. 1% to drop off any non-mage Pale Anouran</li>
+                <li>Exclusively found in the Rogue Dungeon : River Cocytus</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/02.png" alt="" class="lootableIcon"></td><td>Crown of the Unhallowed</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeHelm">
+                <td><img src="../img/helm/40.png" alt="" class="lootableIcon"></td><td>Crystal Crane</td><td><li>12% Chance to drop off any Coldbreather Wyrm</li>
+                <li>Exclusively found in the Rogue Dungeon : Obsidian Rink</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/12.png" alt="" class="lootableIcon"></td><td>Crystal of Hope</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and Atlantis</li><li>Formula sold by dealers from Legendary Act 1, 2 and 3</li></td><td>Required Reagents :<br/>
+                <li>Legendary Pristine Plumage</li>
+                <li>Incarnation of Hermes' Sandal</li>
+                <li>Incarnation of the Aegis of Athena</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/33.png" alt="" class="lootableIcon"></td><td>Crystal Spire</td><td><li>5% Chance to drop off any Rimturs</li><li>15% Chance to drop off Thrym - King of Jotunheim</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/37.png" alt="" class="lootableIcon"></td><td>Cursed Binding of Murkmire</td><td><li>Very low chance to drop off any Cocytean Witch Doctor</li><li>Increased odds versus Lish'tu, Sorcerer of Murkmire</li><li>Exclusively found in the Rogue Dungeon : River Cocytus</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Murkmire Nova</b><br/>Imitate the vile magic of the bog-dwelling inhabitants of Murkmire, damaging nearby enemies with steady blasts of smothering poison and decay, all while regenerating your health with theirs.<br/><br/>95 Energy Cost<br/>4.0 Meter Radius<br/>15% Chance for one of the following:<br/>&nbsp;200 Poison Damage per Second<br/>&nbsp;200 Vitality Decay per Second<br/>&nbsp;33% Slowed for 1.0 Seconds<br/>150 Instant Poison Damage<br/>125 Vitality Damage<br/>5% of Attack damage converted to Health</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeBow">
+                <td><img src="../img/bow/04.png" alt="" class="lootableIcon"></td><td>Cursedwood Bow</td><td><li>Drops in Epic Act 1, 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/03.png" alt="" class="lootableIcon"></td><td>Curved Stormcutter</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/9_n.png" alt="" class="lootableIcon"><img src="../img/charm/9_e.png" alt="" class="lootableIcon"><img src="../img/charm/9_l.png" alt="" class="lootableIcon"></td><td>Cyclop's Eye</td><td><li>7% Chance to drop off any Cyclop</li><li>18% Chance to drop off Polyphemus</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/40.png" alt="" class="lootableIcon"></td><td>Cyzician Armor</td><td><li>Drops in Normal Act 2 and 3</li></td><td>Part of the set : Uniform of Cyzicus</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeHelm">
+                <td><img src="../img/helm/24.png" alt="" class="lootableIcon"></td><td>Cyzician Helmet</td><td><li>Drops in Normal Act 1 and 2</li></td><td>Part of the set : Uniform of Cyzicus</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/24.png" alt="" class="lootableIcon"></td><td>Dagger of Boundless Potential</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/04.png" alt="" class="lootableIcon"></td><td>Dáinsleif</td><td><li>Drops in Legendary Act 5</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeThrown">
+                <td><img src="../img/throw/14.png" alt="" class="lootableIcon"></td><td>Darkfang</td><td><li>Guaranteed drop from Meryetamun the Sand-Veiled</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/16.png" alt="" class="lootableIcon"></td><td>Dark Knight's Revenge</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li><li>Formula sold by dealers from Epic Act 1, 2, 3, 4 and Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Epic Fury's Heartblood</li>
+                <li>Embodiment of the Blade of Thanatos</li>
+                <li>Greater Scroll of Vengeance</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/13.png" alt="" class="lootableIcon"></td><td>Dark Priest's Wraps</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/07.png" alt="" class="lootableIcon"></td><td>Darkwyrm Harness</td><td><li>Very low chance to drop off any Deathlance Dragonian</li>
+                <li>Increased odds versus Hero Dragonians</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Obsidian Rink:</b><ul><li>Better odds than usual</ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeLeg">
+                <td><img src="../img/leg/9.png" alt="" class="lootableIcon"></td><td>Dauntless Step</td><td><li>Very low chance to drop off any Eldjotun (except Infernals)</li><li>Increased odds versus Hero Eldjotuns</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Sovereign of Void</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/27.png" alt="" class="lootableIcon"></td><td>Deadeye's Leather Gauntlets</td><td><li>Drops in Legendary Act 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeTorso">
+                <td><img src="../img/torso/52.png" alt="" class="lootableIcon"></td><td>Death Priest's Cuirass</td><td><li>Approx. 0,92% to drop off any Gilded Skeleton</li><li>Increased odds versus Gilded Warlocks</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeArm">
+                <td><img src="../img/arm/35.png" alt="" class="lootableIcon"></td><td>Death Priest's Grip</td><td><li>Approx. 0,72% to drop off any Gilded Skeleton</li><li>Increased odds versus Gilded Warriors</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td><b>Deathchill Aura</b><br>A deathly chill radiates from the character slowing the attack and movement of enemies as it diminishes their life.<br><br>4.0 Second(s) Recharge<br>1 Active Energy<br>1.0 Second Duration<br>3.4/3.9 Meter Radius<br>3 - 7/3 - 10% Reduction to Enemy's Health<br>-21/27% Total Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeLeg">
+                <td><img src="../img/leg/25.png" alt="" class="lootableIcon"></td><td>Death Priest's Step</td><td><li>Approx. 0,96% to drop off any Gilded Skeleton</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeHelm">
+                <td><img src="../img/helm/38.png" alt="" class="lootableIcon"></td><td>Death Priest's Visage</td><td><li>Approx. 0,85% to drop off any Gilded Skeleton</li>
+                <li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td><b>Trance of Empathy</b><br>Force enemies to share the damage they inflict upon you by forming a telephatic link to their minds that conveys only pain and siphons life in retribution.<br><span style="color: orange">Exclusive skill - Only one exclusive skill can be active at any given time.</span><br><br>1 Active Energy Cost per Second<br>12.0 Meter Radius<br>3 - 10% of Attack damage converted to Health<br>21/28% Damage Reflected</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/32.png" alt="" class="lootableIcon"></td><td>Defenders of the Aai</td><td><li>Drops in Epic Act 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/19.png" alt="" class="lootableIcon"></td><td>Demon-Forged Shortblade</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSpear">
+                <td><img src="../img/spear/9.png" alt="" class="lootableIcon"></td><td>Destroyer of Myriad Dimensions</td><td><li>Drops in Legendary Act 4</li></td><td>Part of the set : Journey of Myriad Dimensions</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSpear">
+                <td><img src="../img/spear/6.png" alt="" class="lootableIcon"></td><td>Diamondspike Lance</td><td><li>Drops in Normal Act 1</li></td><td><b>Gouge</b><br>A combat technique that uses the spear or bow to inflict deep wounds that will result in prolonged bleeding.<br><br>8% Chance to be Used<br>108 Bleeding Damage over 3.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/1.png" alt="" class="lootableIcon"></td><td>Dice of Fate</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li><li>Formula sold by dealers from Epic Act 1, 2, 3, 4, 5 and Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Dark Knight's Revenge</li>
+                <li>Nexus of Insanity</li>
+                <li>Embodiment of the Monkey King's Trickery</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/25.png" alt="" class="lootableIcon"></td><td>Distorted Reflection</td><td><li>Drops in Legendary Act 2, 3 and Atlantis</li></td><td><b>Trance of Empathy</b><br>Force enemies to share the damage they inflict upon you by forming a telephatic link to their minds that conveys only pain and siphons life in retribution.<br><span style="color: orange">Exclusive skill - Only one exclusive skill can be active at any given time.</span><br><br>1 Active Energy Cost per Second<br>12.0 Meter Radius<br>3 - 10% of Attack damage converted to Health<br>24% Damage Reflected</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/06.png" alt="" class="lootableIcon"></td><td>Divinesteel Edge</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeOffhand">
+                <td><img src="../img/shield/23.png" alt="" class="lootableIcon"></td><td>Doom Herald's Horn</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><b>Doom Herald's Call</b><br>Sound the Herald's horn to warn and stregthen your followers in the face of the danger lying ahead.<br><br>240.0 Second(s) Recharge<br>20.0 Second Duration<br>16.0 Meter Radius<br>20% Damage Absorption<br>100 Elemental Damage<br>5% Reduction to Enemy's Health<br>100 Vitality Damage<br>10% of Attack damage converted to Health</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/22.png" alt="" class="lootableIcon"></td><td>Doumu's Headdress</td><td><li>Drops in Legendary Act 3</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeHelm">
+                <td><img src="../img/helm/31.png" alt="" class="lootableIcon"></td><td>Draconic Flameskull</td><td><li>4% chance to drop off any Sepulchral Wyrm</li><li><b>Obsidian Rink:</b><ul><li>12% Chance to drop off any Flametongue Wyrm</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/43.png" alt="" class="lootableIcon"></td><td>Dreadlord's Cage</td><td><li>Very low chance to drop off any Greek Wraith</li>
+                <li>Increased odds versus Hero Wraiths</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>Better odds than usual</ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/16.png" alt="" class="lootableIcon"></td><td>Dreadwalkers</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeThrown">
+                <td><img src="../img/throw/03.png" alt="" class="lootableIcon"></td><td>Drowned Sailor</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeStaff">
+                <td><img src="../img/staff/21.png" alt="" class="lootableIcon"></td><td>Druidic Heirloom</td><td><li>2.45% Chance to drop off any Celtic Druid</li><li>Slightly increased odds versus drunk Druids</li><li>Increased odds versus Hero Druids</li></td><td><b>Herbal Remedy</b><br>Living off the land, you learn to identify and utilize medicinal plants to create healing salves. When applied it will fortify against poison and healing is accelerated for a duration.<br><br>40/50/65 Energy Cost<br>240/360/540.0 Second Duration<br>+3.6/4.8/6.6 Health Regeneration per second<br>38/54/80% Poison Resistance</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/26.png" alt="" class="lootableIcon"></td><td>Dying Candle</td><td><li>3.5% Chance to drop off any Corrupted Priest of Herakles</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/16.png" alt="" class="lootableIcon"></td><td>Earth Arrow</td><td><li>Drops in Legendary Act 5 and Atlantis</li></td><td><b>Seismic Fury</b><br/>The impact of your arrows shakes and crumbles the earth beneath your target.<br/><br/>1 Energy Cost<br/>5 - 6 Fragments<br/>6 Charge Levels<br/>38.0% Chance of 1.3 - 1.7 second(s) of Stun<br/>20% Slowed for 3.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/04.png" alt="" class="lootableIcon"></td><td>Echo Axe</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/05.png" alt="" class="lootableIcon"></td><td>Elder Lalyia's Skullcap</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/17.png" alt="" class="lootableIcon"></td><td>Electrosilk Leggings</td><td><li>Drops in Epic Act 2 and 3</li></td><td><b>Electrostatic Veil</b><br>When the situation calls for it, create an electrical veil around you, granting new energy to fight despite the hopelessness.<br><span style="color: orange">Remains active while health is low.</span><br><span style="color: aquamarine">Cannot be dispelled.</span><br><br>10.0 Second(s) Recharge<br>Activates when Health drops below 40%<br>8.0 Second Duration<br>369 Energy Restored<br>Protects Against:<br>&nbsp;Lightning<br>+17% Total Damage<br>+11.0 Energy Regeneration per second<br>+17% Total Speed<br>50 - 73 Lightning Retaliation<br>46% Lightning Resistance<br>46% Energy Leech Resistance</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/10.png" alt="" class="lootableIcon"></td><td>Eliminator's Suit</td><td><li>Drops in Normal Act 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeThrown">
+                <td><img src="../img/throw/06.png" alt="" class="lootableIcon"></td><td>Embrace of the Final Rest</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeSword">
+                <td><img src="../img/sword/16.png" alt="" class="lootableIcon"></td><td>Endless Struggle</td><td><li>Very low chance to drop off any sword-wielding Eldjotun</li><li>Increased odds versus Hero Eldjotuns</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Sovereign of Void<br><br><b>Death Ward<br></b>Places a magical ward on the player that protects them from death by granting additional life when their life gets dangerously low.<br><br>300.0 Second(s) Recharge<br>Activates when Health drops below 15%<br>3.0 Second Duration<br>450 Health Restored<br>46% Damage Absorption</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/22.png" alt="" class="lootableIcon"></td><td>Ensanguined Devourers</td><td><li>Drops in Epic Act 5</li><li>Drops in Legendary Act 1</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/10.png" alt="" class="lootableIcon"></td><td>Eruption</td><td><li>Drops in Legendary Act 2, 3, 4 and Atlantis</li><li>Formula sold by dealers from Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Summoner's Totem</li>
+                <li>Tongue of Flame</li>
+                <li>Divine Scroll of Sun's Blessing</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/09.png" alt="" class="lootableIcon"></td><td>Etherborn Reverie</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/29.png" alt="" class="lootableIcon"></td><td>Everwinter</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/17_n.png" alt="" class="lootableIcon"><img src="../img/charm/17_e.png" alt="" class="lootableIcon"><img src="../img/charm/17_l.png" alt="" class="lootableIcon"></td><td>Evil Spirit</td><td><li>Approx. 1,27% to drop off any Nightstalker</li><li>Approx. 2,55% to drop off any Champion Nightstalker</li><li>Increased odds versus Quest or Hero Nightstalkers</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/28.png" alt="" class="lootableIcon"></td><td>Eye of Erlang Shen</td><td><li>Drops in Legendary Act 3, 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeShield">
+                <td><img src="../img/shield/29.png" alt="" class="lootableIcon"></td><td>Fallen Hero's Aegis</td><td><li>Common drop from Failed Hero containers</li><li><b>Does not</b> drop from any monster</li>
+                <li>Exclusively found in the Rogue Dungeon : Dark Shaman's Secret Hideout</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td><b>Shield Charge</b><br/>A running attack that slams into the enemy with your shield causing bonus damage and stunning them.<br/><br/>12.0 Second(s) Recharge<br/>57/75 Energy Cost<br/>121 - 166/210 - 301 Damage<br/>1.0 second(s) of Stun<br/>+300% Movement Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/37.png" alt="" class="lootableIcon"></td><td>Fallen Hero's Insignia</td><td><li>Common drop from Failed Hero containers</li><li><b>Does not</b> drop from any monster</li>
+                <li>Exclusively found in the Rogue Dungeon : Dark Shaman's Secret Hideout</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/12.png" alt="" class="lootableIcon"></td><td>Fangshi's Robes</td><td><li>Drops in Legendary Act 3</li></td><td><b>Summon Undead Ninja</b><br/>Summon a knife-throwing skeletal ninja for a small duration.<br/><br/>60.0 Second(s) Recharge<br/>90 Energy Cost<br/>Extra Life Time 60 Seconds<br/>Raised Dead - Shinobi Shozoku Attributes:<br/>Life Time 60.0 Seconds<br/>1053 Health<br/>250 Energy<br/><br/>Raised Dead - Shinobi Shozoku Abilities:<br/>Dodge Attacks<br/>
+                15% Chance to Dodge Attacks<br/>
+                15% Chance to Avoid Projectiles</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/14.png" alt="" class="lootableIcon"></td><td>Farstrider Boots</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/14.png" alt="" class="lootableIcon"></td><td>Fastlearner's Signet</td><td><li>Drops in Epic Act 1, 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeOffhand">
+                <td><img src="../img/shield/02.png" alt="" class="lootableIcon"></td><td>Fatewriter's Inscription</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/15.png" alt="" class="lootableIcon"></td><td>Feather Talisman</td><td><li>1.5% Chance to drop off any Harpy or Isthmus Harpy</li><li>Increased odds versus Hero Harpies</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/01.png" alt="" class="lootableIcon"></td><td>Ferity</td><td><li>Drops in Normal Act 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/22.png" alt="" class="lootableIcon"></td><td>Fiend's Ethos</td><td><li>Drops in Legendary Act 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/31.png" alt="" class="lootableIcon"></td><td>Filed Teeth Necklace</td><td><li>0.75% Chance to drop off any Raptor Hatchling</li><li>1.25% Chance to drop off any Adult Raptor</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/12.png" alt="" class="lootableIcon"></td><td>Final Wish</td><td><li>Very low chance to drop off any Djinn</li><li>Increased odds versus Hero Djinns</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/14_n.png" alt="" class="lootableIcon"><img src="../img/charm/14_e.png" alt="" class="lootableIcon"><img src="../img/charm/14_l.png" alt="" class="lootableIcon"></td><td>Fired Clay</td><td><li>1.9% Chance to drop off any Terra Cotta Warrior</li><li>3.4% Chance to drop off any Terra Cotta General</li><li>Increased odds versus Hero Terra Cotta Warriors</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/13_n.png" alt="" class="lootableIcon"><img src="../img/charm/13_e.png" alt="" class="lootableIcon"><img src="../img/charm/13_l.png" alt="" class="lootableIcon"></td><td>Fish Scales</td><td><li>1.75% Chance to drop off any Oriental Ichthian</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>Approx. 6.97% to drop off any Darktide Ichthian</li><li>Approx. 12.94% to drop off any Darktide Ocean King or Shaman Ichthian</li></ul></li><li><b>River Cocytus:</b><ul><li>12% Chance to drop off any Cocytus' Fish</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeBow">
+                <td><img src="../img/bow/17.png" alt="" class="lootableIcon"></td><td>Flayer of Souls</td><td><li>0.793% Chance to drop off any Keres Huntress</li><li>Increased odds versus Quest Keres and Hero Keres</li><li><b>River Cocytus:</b><ul><li>3.5% Chance to drop off any Keres Huntress</ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeHelm">
+                <td><img src="../img/helm/39.png" alt="" class="lootableIcon"></td><td>Fleshmaw</td><td><li>12% Chance to drop off any Bloodspitter Wyrm</li>
+                <li>Exclusively found in the Rogue Dungeon : Obsidian Rink</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/5_n.png" alt="" class="lootableIcon"><img src="../img/charm/5_e.png" alt="" class="lootableIcon"><img src="../img/charm/5_l.png" alt="" class="lootableIcon"></td><td>Floral Nectar</td><td><li>9% Chance to drop off any Bee/Wasp/Hornet Swarm</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/24.png" alt="" class="lootableIcon"></td><td>Foam of Tethys</td><td><li>Drops in Epic Atlantis</li><li>Formula sold by dealers from Epic Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Halo of Eos</li>
+                <li>Zeal of the Fanatic</li>
+                <li>Greater Scroll of a Thousand Blades</li></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/20.png" alt="" class="lootableIcon"></td><td>Fool's Secret</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/12.png" alt="" class="lootableIcon"></td><td>Force of the Svinfylkingars</td><td><li>Drops in Epic Act 5</li></td><td><b>Empower</b><br>Boost the damage of all nearby allies for a short duration.<br><br>35.0 Second(s) Recharge<br>50 Energy Cost<br>10.0 Second Duration<br>12.0 Meter Radius<br>+15% Physical Damage<br>+15% Total Damage</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/1.png" alt="" class="lootableIcon"></td><td>Forgotten Boots</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/10_n.png" alt="" class="lootableIcon"><img src="../img/charm/10_e.png" alt="" class="lootableIcon"><img src="../img/charm/10_l.png" alt="" class="lootableIcon"></td><td>Formicid Eggs</td><td><li>Approx. 1,25% chance to drop off any Formicid</li><li>Increased odds versus Formicid Captains, Priestesses and Heroes</li><li>Increased odds versus Atlantis' Formicids</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/42.png" alt="" class="lootableIcon"></td><td>Fortress' Keep</td><td><li>Very low chance to drop off The Fortress</li><li>Exclusively found in the Rogue Dungeon : Obsidian Rink</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/18_e.png" alt="" class="lootableIcon"><img src="../img/charm/18_l.png" alt="" class="lootableIcon"></td><td>Fossilized Snakeskin</td><td><li>???</li><li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/5.png" alt="" class="lootableIcon"></td><td>Gale Force</td><td><li>Drops in Normal Act 3, 4 5 and Atlantis</li>
+                <li>Formula sold by dealers from Normal Act 3</li></td><td>Required Reagents :<br/>
+                <li>Shapes in the Light</li>
+                <li>Hour of the Revenant</li>
+                <li>Winterflame</li></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/25.png" alt="" class="lootableIcon"></td><td>Gear of Mu Guiying</td><td><li>Drops in Epic Act 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/46.png" alt="" class="lootableIcon"></td><td>Ghosthunter</td><td><li>Drops in Epic Act 2, 3, 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/48.png" alt="" class="lootableIcon"></td><td>Gilded Hemithoorakion</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/07.png" alt="" class="lootableIcon"></td><td>Gloomweaver's Armguards</td><td><li>Very low chance to drop off any Hero Greek Arachnos</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Gloomweaver's Suit</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/14.png" alt="" class="lootableIcon"></td><td>Gloomweaver's Bodyguard</td><td><li>Very low chance to drop off any Hero Greek Arachnos</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Gloomweaver's Suit</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeSword">
+                <td><img src="../img/sword/07.png" alt="" class="lootableIcon"></td><td>Gloomweaver's Legtip</td><td><li>Very low chance to drop off any Hero Greek Arachnos</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Gloomweaver's Suit</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/03.png" alt="" class="lootableIcon"></td><td>Gloomweaver's Mask</td><td><li>Very low chance to drop off any Hero Greek Arachnos</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Gloomweaver's Suit</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/08.png" alt="" class="lootableIcon"></td><td>Gloves of the Mortician</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeStaff">
+                <td><img src="../img/staff/04.png" alt="" class="lootableIcon"></td><td>God Freezer</td><td><li>Very low chance to drop off any Fjord Mage</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/14.png" alt="" class="lootableIcon"></td><td>Goldblade</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/11.png" alt="" class="lootableIcon"></td><td>Golden Guardian of Abydos</td><td><li>Drops in Epic Act 2</li></td><td><b>Solarstrike</b><br>Empower your next attack with the power of the sun.<br><br>6.0 Second(s) Recharge<br>30 Energy Cost<br>50 Damage<br>500 Burn Damage over 10.0 Seconds<br>50 Fire Damage<br>1.5 second(s) of Stun</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeThrown">
+                <td><img src="../img/throw/08.png" alt="" class="lootableIcon"></td><td>Golden Javelin</td><td><li>Drops in Normal Act 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeHelm">
+                <td><img src="../img/helm/19.png" alt="" class="lootableIcon"></td><td>Golden Masterpiece</td><td><li>2% chance to drop off any Greek Automatoi Champion</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeShield">
+                <td><img src="../img/shield/33.png" alt="" class="lootableIcon"></td><td>Golden Triumph</td><td><li>Very low chance to drop off any Einherjar</li><li>Slightly increased odds versus Champion Einherjars</li><li>Increased odds versus Hero Einherjars</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/26.png" alt="" class="lootableIcon"></td><td>Goldthread Gloves</td><td><li>Drops in Normal Act 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/38.png" alt="" class="lootableIcon"></td><td>Grace of the Creators</td><td><li>Drops in Legendary Act 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSpear">
+                <td><img src="../img/spear/7.png" alt="" class="lootableIcon"></td><td>Gravity Crusher</td><td><li>Drops in Legendary Act 2, 3 and 4</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeHelm">
+                <td><img src="../img/helm/04.png" alt="" class="lootableIcon"></td><td>Grey Hunter's Cap</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/15.png" alt="" class="lootableIcon"></td><td>Groundbreaker's Step</td><td><li>Drops in Epic Act 1, 2, 3, 4, 5 and Atlantis</li><li>Drops in Legendary Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/11.png" alt="" class="lootableIcon"></td><td>Guiding Light</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and 5</li></td><td><b>Titanic Bolt</b><br/>This intense lightning bolt disintegrates everything it touches.<br/><br/>40.0 Second(s) Recharge<br/>425 Energy Cost<br/>1 Projectile(s)<br/>2.5 Meter Radius<br/>500 Piercing Damage<br/>1500 Lightning Damage<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/23.png" alt="" class="lootableIcon"></td><td>Hailstorm Rod</td><td><li>Drops in Epic Act 4 and 5</li><li>Drops in Legendary Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/21.png" alt="" class="lootableIcon"></td><td>Halo of Eos</td><td><li>Drops in Epic Atlantis</li><li>Formula sold by dealers from Epic Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Melqart’s Oil</li>
+                <li>Vorpal Blade</li>
+                <li>Dark Knight’s Revenge</li></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeClub">
+                <td><img src="../img/club/09.png" alt="" class="lootableIcon"></td><td>Hammer of the Venomancer</td><td><li>Drops in Epic Act 3, 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/9.png" alt="" class="lootableIcon"></td><td>Hand of Týr</td><td><li>Drops in Legendary Act 5</li><li>Formula sold by dealers from Legendary Act 5</li></td><td>Required Reagents :<br/>
+                <li>Eruption</li>
+                <li>Nose of the Sphinx</li>
+                <li>Glorybringer</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/01.png" alt="" class="lootableIcon"></td><td>Heartless Within</td><td><li>Very low chance to drop off any Eldjotun</li><li>Increased odds versus Hero Eldjotuns</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Sovereign of Void<br><br><b>Summonic Demonic Archer<br></b>Invoke a demonic bowman to fight under your command.<br><br>120.0 Second(s) Recharge<br>250 Energy Cost<br>Demonic Archer Attributes:<br>1000 Health<br>647 Energy<br><br>Demonic Archer Abilities:<br>Envenom Weapon<br>1 Active Energy Cost per Second<br>197 Poison Damage over 3.0 Seconds<br>50 Energy Reserved<br><br>Poison Gas Bomb<br>91 Energy Cost<br>1 Projectile(s)<br>6.0 Meter Radius<br>517 Poison Damage over 4.0 Seconds<br>33% Slowed for 6.0 Seconds<br><br>Shrapnel<br>14 Energy Cost<br>1.5 Meter Radius<br>9 - 11 Fragments<br>193 Bleeding Damage over 4.0 Seconds<br>119 Piercing Damage<br/><br/>Dodge Attacks<br/>25% Chance to Dodge Attacks<br/>25% Chance to Avoid Projectiles</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/39.png" alt="" class="lootableIcon"></td><td>Heart of Eternal Unrest</td><td><li>Very low chance to drop off Ra-Hotep the Monstrous</li><li>Exclusively found in the Rogue Dungeon : Temple of Ra</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Monstrify</b><br/>“My peace is gone…”<br/><br/>30.0 Second(s) Recharge<br/>30 Active Energy Cost per Second<br/>30.0 Second Duration<br/>8% Physical Resistance<br/>25% Pierce Resistance<br/>+25% Total Damage<br/>5.0% Chance of 1.0 - 3.0 second(s) of Fear<br/>+25% Strength<br/>-15% Dexterity<br/>-15% Total Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/30.png" alt="" class="lootableIcon"></td><td>Heartstinger</td><td><li>1.7% Chance to drop off any Scorpos</li><li>0.8% Chance to drop off any Scorpos Manslayer</li><li>12.5% Chance to drop off Nehebkau - Scorpos King</li><li>30% Chance to drop off any Hero Scorpos</li></td><td><b>Lethal Strike</b><br>A single deadly hit that multiplies the damage of a normal weapon attack.<br><br>12.0 Second(s) Recharge<br>56/62/68 Energy Cost<br>+130/170/210% Bleeding Damage with +50% Improved Duration<br>+70/90/110% Total Damage<br>+130/170/210% Poison Damage with +50% Improved Duration<br>1.8/2.2/2.6 second(s) of Stun</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/04.png" alt="" class="lootableIcon"></td><td>Heavy Metal Wristlets</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAxe">
+                <td><img src="../img/axe/10.png" alt="" class="lootableIcon"></td><td>Hecatomb</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><b>Slaughterhouse</b><br>A fiendish force instills an insurmountable desire in you - to feast on the blood of your victims.<br><br>9% Chance to be Used<br>7 Target Maximum<br>270 Arc of Attack<br>240 Bleeding Damage over 3.0 Seconds<br>15% of Attack damage converted to Health<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeShield">
+                <td><img src="../img/shield/14.png" alt="" class="lootableIcon"></td><td>Heir's Treasure</td><td><li>Drops in Normal Act 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/19.png" alt="" class="lootableIcon"></td><td>Hellspawn's Face</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><b>Shatter</b><br/>This shield technique can hit multiple targets in front of you, dealing high damage and incapacitating their skills.<br/><span style="color: orange">Requires a shield.</span><br/><br/>6.0 Second(s) Recharge<br/>62 Energy Cost<br/>360 Arc of Attack<br/>3 Target Maximum<br/>33 Damage<br/>+16% Total Damage<br/>3.0 second(s) of Skill Disruption</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeHelm">
+                <td><img src="../img/helm/33.png" alt="" class="lootableIcon"></td><td>Helm of Pandion II</td><td><li>Drops in Epic Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/10.png" alt="" class="lootableIcon"></td><td>Helm of the Furnace</td><td><li>Very low chance to drop off any Gigantes</li><li>Slightly increased odds versus Vindicators</li><li>Increased odds versus Hero Gigantes, Dactyls and the Warden of Souls</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : The Hell Furnace</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/45.png" alt="" class="lootableIcon"></td><td>Hera's Thundercloud Shawl</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeStaff">
+                <td><img src="../img/staff/22.png" alt="" class="lootableIcon"></td><td>Hestia's Fire</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeShield">
+                <td><img src="../img/shield/03.png" alt="" class="lootableIcon"></td><td>Highwayman's Guard</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/23.png" alt="" class="lootableIcon"></td><td>Hood of Guile</td><td><li>Drops in Legendary Act 5</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSpear">
+                <td><img src="../img/spear/1.png" alt="" class="lootableIcon"></td><td>Horizon's End</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><b>Ice Blockade</b><br>Form a wide, slow-moving wall of frost energy, damaging anything that passes through it.<br><br>8.0 Second(s) Recharge<br>96 Energy Cost<br>123 Frostburn Damage over 3.0 Seconds<br>63 Cold Damage<br>39% Slower Movement for 3.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/4.png" alt="" class="lootableIcon"></td><td>Hour of the Revenant</td><td><li>Drops in Normal Act 2, 3 and 4</li><li>Formula sold by dealers from Normal Act 3</li></td><td>Required Reagents :<br/>
+                <li>Essence of the Djed of Osiris</li>
+                <li>Pharaonic Wrappings</li>
+                <li>Rigid Carapace</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/24.png" alt="" class="lootableIcon"></td><td>Howling Ring</td><td><li>4% Chance to drop off any Ulvjotun</li><li>75% Chance to drop off any Hero Ulvjotun</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/09.png" alt="" class="lootableIcon"></td><td>Hue of Lustration</td><td><li>Drops in Legendary Act 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/3_n.png" alt="" class="lootableIcon"><img src="../img/charm/3_e.png" alt="" class="lootableIcon"><img src="../img/charm/3_l.png" alt="" class="lootableIcon"></td><td>Human Blood</td><td><li>Approx. 1.4% chance to drop off any Bandit</li><li>Approx. 1.1% chance to drop off any Nerthus' Cultist</li><li>Approx. 1.8% chance to drop off any Northern Mercenary</li><li>Increased odds versus all Human heroes</li><li>66% chance to drop off Sciron the Bandit Lord (both forms)</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/02.png" alt="" class="lootableIcon"></td><td>Hungering Scythe</td><td><li>Drops in Epic Act 3, 4  and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/15.png" alt="" class="lootableIcon"></td><td>Hunter-Seeker</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><b>Eye of the Storm</b><br>A wisp ability that increases elemental damage of all nearby allies for a duration and provides protection from lightning and cold damage.<br><br>90.0 Second(s) Recharge<br>20.0 Second Duration<br>14.0 Meter Radius<br>+50% Elemental Damages<br>30% Elemental Resistance</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/06.png" alt="" class="lootableIcon"></td><td>Huntmaster's Talisman</td><td><li>Drops in Epic Act 1, 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/23.png" alt="" class="lootableIcon"></td><td>Hydradon Veins</td><td><li>1% Chance to drop off any Hydradon</li><li>15% Chance to drop off any Hero Hydradon</li><li><b>River Cocytus:</b><ul><li>5% Chance to drop off any Hydradon</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSpear">
+                <td><img src="../img/spear/11.png" alt="" class="lootableIcon"></td><td>Hyperboreas' Spear</td><td><li>Drops in Normal Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeHelm">
+                <td><img src="../img/helm/34.png" alt="" class="lootableIcon"></td><td>Ifrit's Shell</td><td><li>Drops in Epic Act 2, 3 and 4</li></td><td><b>Heat Shield</b><br>Casts a protective heat shield on the target that absorbs damage, especially from fire.<br><br>50.0 Second(s) Recharge<br>63 Energy Cost<br>150.0 Second Duration<br>45% Damage Absorption<br>Protects Against:<br>&nbsp;Fire<br>126 Burn Retaliation over 3.0 Seconds<br>10% Physical Resistance</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeThrown">
+                <td><img src="../img/throw/11.png" alt="" class="lootableIcon"></td><td>Ill Fate</td><td><li>Drops in Epic Act 5</li><li>Drops in Legendary Act 1, 2 and 3</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeOffhand">
+                <td><img src="../img/shield/31.png" alt="" class="lootableIcon"></td><td>Immortal Flame</td><td><li>0.746% Chance to drop off any Fire/Magma Sprite</li><li><b>Obsidian Rink:</b><ul><li>4% Chance to drop off any Fire/Magma Sprite</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeOffhand">
+                <td><img src="../img/shield/32.png" alt="" class="lootableIcon"></td><td>Immortal Ice</td><td><li>0.746% Chance to drop off any Ice/Rime Sprite</li><li><b>Obsidian Rink:</b><ul><li>4% Chance to drop off any Ice/Rime Sprite</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/09.png" alt="" class="lootableIcon"></td><td>Immutable Countenance of Death</td><td><li>Very low chance to drop off any Jackalman Shaman</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Summon Liche King</b><br>In ages past, powerful sorcerers learned how to cheat Hades and persist as undead liches long after death had robbed their bodies of life. A dangerous practice of Theurgists is to bind the souls of these ancient liches to their will, thus acquiring their powers.<br><br>60.0 Second(s) Recharge<br>402 Energy Cost<br>
+                Liche King - Enslaved Soul Attributes:<br>751 Health<br>
+                630 Energy<br>
+                <br>
+                Liche King - Enslaved Soul Abilities:<br>
+                Spectral Bolt<br>
+                107 Elemental Damage<br>15% Reduction to Enemy's Health<br>89 Vitality Damage<br>15% of Attack damage converted to Health<br><br>Soul Blight<br>53 Energy Cost<br>6.0 Meter Radius<br>33% Reduction to Enemy's Health<br>33% of Attack damage converted to Health<br>75% Reduced Resistances for 8.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSpear">
+                <td><img src="../img/spear/2.png" alt="" class="lootableIcon"></td><td>Incapacitator</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/15.png" alt="" class="lootableIcon"></td><td>Insanity</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/16.png" alt="" class="lootableIcon"></td><td>Inventor's Raiment</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/47.png" alt="" class="lootableIcon"></td><td>Jacket of Love</td><td><li>Drops in Normal Act 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/34.png" alt="" class="lootableIcon"></td><td>Jason's Armor</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/01.png" alt="" class="lootableIcon"></td><td>Jewel of Lost Hope</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/32.png" alt="" class="lootableIcon"></td><td>Jewel of Toxicity</td><td><li>0.8% Chance to drop off any Epiales Slygoth</li><li>1.3% Chance to drop off any Epiales Kalygoth</li><li>25% Chance to drop off any Hero Epiales</li></td><td><b>Super Toxic Gas Bombs</b><br>Hurl multiple poison bombs at your enemies, causing serious damage over time to all enemies in a wide area.<br><br>16.0 Second(s) Recharge<br>120/150/180 Energy Cost<br>2/3/4 Projectile(s)<br>4.0 Meter Radius<br>9 - 11 Fragments<br>113/166/219 Bleeding Damage over 4.0 Seconds<br>174/262/471 Poison Damage over 4.0 Seconds<br>51/94/145 Piercing Damage<br>5/10/25% Chance of Impaired Aim for 4.0 Seconds<br>10.0/20.0/50.0% Chance of 2.0 second(s) of Confusion<br>33% Slowed for 6.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAxe">
+                <td><img src="../img/axe/09.png" alt="" class="lootableIcon"></td><td>Key of Knowledge</td><td><li>Drops in Legendary Act 1, 2 and 3</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/17.png" alt="" class="lootableIcon"></td><td>Knight's Oath</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/33.png" alt="" class="lootableIcon"></td><td>Kvasir's Touch</td><td><li>Drops in Normal Act 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/15_n.png" alt="" class="lootableIcon"><img src="../img/charm/15_e.png" alt="" class="lootableIcon"><img src="../img/charm/15_l.png" alt="" class="lootableIcon"></td><td>Lamia Claw</td><td><li>Approx. 1,5% to drop off any Lamia</li><li>Approx. 3% to drop off any Dark Ranger or Clan Mistress Lamia</li><li>Approx. 50% to drop off any Hero Lamia</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/05.png" alt="" class="lootableIcon"></td><td>Lawbreaker</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/31.png" alt="" class="lootableIcon"></td><td>Legacy of the Rune Artisan</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td><b>Energy Armor</b><br/>Weave vast amounts of Energy into a layer of magical armor for yourself and nearby allies that protects against physical attacks.<br/><br/>25.0 Second(s) Recharge<br/>2307 Energy Cost<br/>5.0 Meter Radius<br/>4613 Damage Absorption<br/>Protects Against :<br/>&nbsp;Physical<br/>&nbsp;Pierce<br/>&nbsp;Bleeding<br/>50% Stun Duration<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/18.png" alt="" class="lootableIcon"></td><td>Legguards of Myriad Dimensions</td><td><li>Drops in Legendary Act 4</li></td><td>Part of the set : Journey of Myriad Dimensions</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/3.png" alt="" class="lootableIcon"></td><td>Legguards of the Archiver</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeLeg">
+                <td><img src="../img/leg/5.png" alt="" class="lootableIcon"></td><td>Legguards of the Furnace</td><td><li>Very low chance to drop off any Gigantes</li><li>Slightly increased odds versus Vindicators</li><li>Increased odds versus Hero Gigantes, Dactyls and the Warden of Souls</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : The Hell Furnace</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/2.png" alt="" class="lootableIcon"></td><td>Legs of the Teumessian Fox</td><td><li>Drops in Epic Act 1</li></td><td>Part of the set : The Hunting Paradox</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/18.png" alt="" class="lootableIcon"></td><td>Liberator's Topcoat</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeThrown">
+                <td><img src="../img/throw/10.png" alt="" class="lootableIcon"></td><td>Librarian's Silencer</td><td><li>Drops in Legendary Act 2, 3, 4 and 5</li></td><td><b>Knowledge is Power</b><br/>Focusing on the inner workings of your spells allows you to cast them almost effortlessly.<br/><br/>15.0 Second(s) Recharge<br/>200 Energy Cost<br/>1.5 Second Duration<br/>+1000% Energy Regeneration<br/>-80% Energy Cost<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/40.png" alt="" class="lootableIcon"></td><td>Lifedrinker's Insignia</td><td><li>1% Chance to drop off any Eurynomus</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>5% chance to drop off any Bonepicker Eurynomus</li><li>12% chance to drop off any Corpse Monger Eurynomus</li></ul></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/18.png" alt="" class="lootableIcon"></td><td>Lifeshatter</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSpear">
+                <td><img src="../img/spear/10.png" alt="" class="lootableIcon"></td><td>Line of Epic Heroes</td><td><li>Exclusive giveaway from MrFae's stream</li></td><td><b>Faethontas' Call</b><br/>"Good day to all of you, ladies and gentlemen! This is Mr.Fae, and here we have it! This is my top secret build : Mr.Fae Build!"<br/><br/>300.0 Second(s) Recharge<br/>500 Energy Cost<br/>Mr.Fae Attributes:<br/>1600 Health<br/>1500 Energy<br/><br/>Mr.Fae Abilities:<br/>Mr.Fae's Membership Aura<br/>12.0 Meter Radius<br/>+10% Total Damage<br/>+100% Health Regeneration<br/>-10% Energy Cost<br/><br/>Bolt of Zeus<br/>6.0 Second(s) Recharge<br/>80 Energy Cost<br/>4.0 Meter Radius<br/>300 Electrical Burn Damage over 3.0 Seconds<br/>300 Lightning Damage<br/>1.0 second(s) of Stun<br/><br/>Giant's Might<br/>30.0 Second(s) Recharge<br/>15.0 Second Duration<br/>20% Damage Absorption<br/>+50% Physical Damage<br/>+500% Health Regeneration<br/>-15% Total Speed<br/>50% Physical Resistance<br/><br/>Great Alexander's Charge<br/>4.0 Second(s) Recharge<br/>150 Damage<br/>5.0 second(s) of Skill Disruption<br/>2.5 second(s) of Stun<br/>+300% Movement Speed<br/><br/>DOTer's Lingering Pain<br/>6.0 Second(s) Recharge<br/>5.0 Meter Radius<br/>100 Bleeding Damage over 5.0 Seconds<br/>100 Burn Damage over 5.0 Seconds<br/>100 Frostburn Damage over 5.0 Seconds<br/>100 Electrical Burn Damage over 5.0 Seconds<br/>100 Poison Damage over 5.0 Seconds<br/>100 Vitality Decay over 5.0 Seconds<br/>100 Life Leech over 5.0 Seconds<br/>100 Energy Leech over 5.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/20.png" alt="" class="lootableIcon"></td><td>Lorekeeper's Clothes</td><td><li>Drops in Epic Act 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeStaff">
+                <td><img src="../img/staff/03.png" alt="" class="lootableIcon"></td><td>Lug, the Goomaker</td><td><li>Very low chance to drop off any Tomb Rot, Creeping Slime, Repugnant Decay or Abominable Mold</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Temple of Ra:</b><ul><li>Better odds than usual</ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/21.png" alt="" class="lootableIcon"></td><td>Lurker's Suit</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/12_n.png" alt="" class="lootableIcon"><img src="../img/charm/12_e.png" alt="" class="lootableIcon"><img src="../img/charm/12_l.png" alt="" class="lootableIcon"></td><td>Maenad Tail</td><td><li>Approx. 2,8% chance to drop off any Maenad</li><li>Increased odds versus any Maenad Alchemist or Sorceress</li><li>Increased odds versus any Hero Maenad (Lysia has less chances than other heroes)</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/22.png" alt="" class="lootableIcon"></td><td>Magehunter's Quiver</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/15.png" alt="" class="lootableIcon"></td><td>Magnetic Ring</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/01.png" alt="" class="lootableIcon"></td><td>Mark of the Polemistes</td><td><li>Drops in Epic Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/16.png" alt="" class="lootableIcon"></td><td>Martyr of the Soul</td><td><li>Drops in Legendary Act 3 and 4</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/07.png" alt="" class="lootableIcon"></td><td>Mask of Madness</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/8_n.png" alt="" class="lootableIcon"><img src="../img/charm/8_e.png" alt="" class="lootableIcon"><img src="../img/charm/8_l.png" alt="" class="lootableIcon"></td><td>Mechanized Heart</td><td><li>2% Chance to drop off any Gigantes Armorite or Vanguard</li><li>5% Chance to drop off any Gigantes Vindicator</li><li>20% Chance to drop off the Warden of Souls</li><li>30% Chance to drop off any Gigantes Hero or Dactyl</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/24.png" alt="" class="lootableIcon"></td><td>Medallion of Aqua</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/23.png" alt="" class="lootableIcon"></td><td>Medallion of Archery</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/25.png" alt="" class="lootableIcon"></td><td>Medallion of Barbarism</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/22.png" alt="" class="lootableIcon"></td><td>Medallion of Chaos</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/21.png" alt="" class="lootableIcon"></td><td>Medallion of Geomancy</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/20.png" alt="" class="lootableIcon"></td><td>Medallion of Lifegivng</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/19.png" alt="" class="lootableIcon"></td><td>Medallion of Necromancy</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/18.png" alt="" class="lootableIcon"></td><td>Medallion of Science</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/17.png" alt="" class="lootableIcon"></td><td>Medallion of Time</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeAmulet">
+                <td><img src="../img/amulet/16.png" alt="" class="lootableIcon"></td><td>Medallion of Witchcraft</td><td><li>???</li></td><td>???</td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/20.png" alt="" class="lootableIcon"></td><td>Melqart's Oil</td><td><li>Drops in Epic Atlantis</li><li>Formula sold by dealers from Epic Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Embodiment of Atlas’ Endurance</li>
+                <li>Embodiment of the Star of the Evening</li>
+                <li>Epic Coral Fragment</li></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/8.png" alt="" class="lootableIcon"></td><td>Memento of Hope</td><td><li>Drops in Legendary Act 2, 3, 4 and Atlantis</li><li>Formula sold by dealers from Legendary Act 2, 3, 4 and 5</li></td><td>Required Reagents :<br/>
+                <li>Root of Chaos</li>
+                <li>Crystal of Hope</li>
+                <li>Legendary Behemoth Jawbone</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/10.png" alt="" class="lootableIcon"></td><td>Menestheus' Rage</td><td><li>Drops in Legendary Act 1, 2, 3 and 4</li></td><td><i>* Shadow version available.</i>
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/08.png" alt="" class="lootableIcon"></td><td>Mercenary's Bloodlust</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeShield">
+                <td><img src="../img/shield/11.png" alt="" class="lootableIcon"></td><td>Merciless Judgement</td><td><li>Very low chance to drop off any spear-wielding Eldjotun</li><li>Increased odds versus Hero Eldjotuns</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Sovereign of Void</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/08.png" alt="" class="lootableIcon"></td><td>Meteorite</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><b>Seismic Strength</b><br/>Charge the power of the Earth in your weapons, incapacitating multiple foes in a single attack. Later levels increase the number of targets hit at once. <span style="color: orange">Apply this skill to your left mouse button.<br/>Requires a melee weapon.</span><br/><br/>1 Energy Cost<br/>360 Arc of Attack<br/>5 Target Maximum<br/>6 Charge Levels<br/>33.0% Chance of 1.1 - 1.5 second(s) of Stun<br/>
+                16% Slowed for 3.0 Seconds
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/35.png" alt="" class="lootableIcon"></td><td>Midnight Flight</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><b>Midnight Flight</b><br/>Target an unsuspecting opponent and, with a bird’s grace and speed, deliver an elemental weapon attack.<span style="color: orange"><br/>Requires a melee weapon.</span><br/><br/>12.0 Second(s) Recharge<br/>109 Energy Cost<br/>+20% Pierce<br/>+16% Total Damage<br/>85 Piercing Damage<br/>+300% Movement Speed<br/>100% Weapon Base Damage becomes Elemental<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/04.png" alt="" class="lootableIcon"></td><td>Mirror Veil</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/4.png" alt="" class="lootableIcon"></td><td>Moonrise Greaves</td><td><li>Drops in Epic Act 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeShield">
+                <td><img src="../img/shield/05.png" alt="" class="lootableIcon"></td><td>Moonshaped Pelta</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/12.png" alt="" class="lootableIcon"></td><td>Mournful Rose</td><td><li>Drops in Legendary Act 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeSpear">
+                <td><img src="../img/spear/12.png" alt="" class="lootableIcon"></td><td>Mulgor’s Inextinguishable Fury</td><td><li>Very low chance to drop off Mulgor Flamespear (Centaur Hero)</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>Better odds than usual</ul></li></td><td><i></i></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm ">
+                <td><img src="../img/helm/06.png" alt="" class="lootableIcon"></td><td>Mythical Lich Crown</td><td><li>Very low chance to drop off any Abyssal Liche</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Obsidian Rink:</b><ul><li>Better odds than usual</ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/05.png" alt="" class="lootableIcon"></td><td>Mythological Enigma</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/30.png" alt="" class="lootableIcon"></td><td>Naturalist's Loop</td><td><li>Drops in Legendary Act 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/01.png" alt="" class="lootableIcon"></td><td>Nature's Revenge</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i>
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/18.png" alt="" class="lootableIcon"></td><td>Naturespeaker's Bracelets</td><td><li>Drops in Normal Act 1 and 2</li></td>
+                <td>Part of the set : Naturespeaker's Outfit</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeStaff">
+                <td><img src="../img/staff/01.png" alt="" class="lootableIcon"></td><td>Naturespeaker's Staff</td><td><li>Drops in Normal Act 1 and 2</li></td>
+                <td>Part of the set : Naturespeaker's Outfit</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/26.png" alt="" class="lootableIcon"></td><td>Naturespeaker's Torso</td><td><li>Drops in Normal Act 1 and 2</li></td>
+                <td>Part of the set : Naturespeaker's Outfit</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/6.png" alt="" class="lootableIcon"></td><td>Naturespeaker's Wraps</td><td><li>Drops in Normal Act 1 and 2</li></td>
+                <td>Part of the set : Naturespeaker's Outfit</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeHelm">
+                <td><img src="../img/helm/11.png" alt="" class="lootableIcon"></td><td>Naturespeaker's Wreath</td><td><li>Drops in Normal Act 1 and 2</li></td><td>Part of the : Naturespeaker's Outfit</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeThrown">
+                <td><img src="../img/throw/02.png" alt="" class="lootableIcon"></td><td>Necrochakram</td><td><li>Drops in Normal Act 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/43.png" alt="" class="lootableIcon"></td><td>Night's Ageless Visage</td><td><li>Very low chance to drop off any Empusa</li><li>Increased odds versus Hero Empusas</li><li>Only in <b>Legendary</b> difficulty</li><li><b>River Cocytus:</b><ul><li>Better odds than usual</ul></li></td><td>Part of the set : Night Eternal</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/53.png" alt="" class="lootableIcon"></td><td>Night's Cold Embrace</td><td><li>Very low chance to drop off any Empusa</li><li>Increased odds versus Hero Empusas</li><li>Only in <b>Legendary</b> difficulty</li><li><b>River Cocytus:</b><ul><li>Better odds than usual</ul></li></td><td>Part of the set : Night Eternal</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/36.png" alt="" class="lootableIcon"></td><td>Night's Perforating Grip</td><td><li>Very low chance to drop off any Empusa</li><li>Increased odds versus Hero Empusas</li><li>Only in <b>Legendary</b> difficulty</li><li><b>River Cocytus:</b><ul><li>Better odds than usual</ul></li></td><td>Part of the set : Night Eternal<br><br><b>Sands of Sleep</b><br>Puts enemies to sleep, rendering them immobile for a duration or until awakened by an attack.<br><br>4.0 Second(s) Recharge<br>Affects up to 5 targets<br>60 Energy Cost<br>5.3 - 9.6 second(s) of Sleep</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeStaff">
+                <td><img src="../img/staff/24.png" alt="" class="lootableIcon"></td><td>Night's Ravaging Kiss</td><td><li>Very low chance to drop off any Empusa</li><li>Increased odds versus Hero Empusas</li><li>Only in <b>Legendary</b> difficulty</li><li><b>River Cocytus:</b><ul><li>Better odds than usual</ul></li></td><td>Part of the set : Night Eternal<br><br><b>Haunting Dreams</b><br>Replace the thoughts of your enemies with dreadful nightmares, tearing their sanity apart.<br><br>20.0 Second(s) Recharge<br>140 Energy Cost<br>8.0 Meter Radius<br>240 Electrical Burn Damage over 3.0 Seconds<br>240 Vitality Decay over 3.0 Seconds<br>33% Reduced Resistances for 3.0 Seconds<br>3.0 - 7.0 second(s) of Sleep</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeLeg">
+                <td><img src="../img/leg/27.png" alt="" class="lootableIcon"></td><td>Night's Silent Step</td><td><li>Very low chance to drop off any Empusa</li><li>Increased odds versus Hero Empusas</li><li>Only in <b>Legendary</b> difficulty</li><li><b>River Cocytus:</b><ul><li>Better odds than usual</ul></li></td><td>Part of the set : Night Eternal</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/22.png" alt="" class="lootableIcon"></td><td>Nightstalker's Binding</td><td><li>0.3% Chance to drop off any Nightstalker</li><li>Increased odds versus any Hero/Quest-related Nightstalker</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/07.png" alt="" class="lootableIcon"></td><td>Noble Spirit</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/17.png" alt="" class="lootableIcon"></td><td>Nose of the Sphinx</td><td><li>Drops in Epic Act 2, 3 and 4</li><li>Formula sold by dealers from Epic Act 2, 3, 4, 5 and Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Jade Idol</li>
+                <li>Sunstone</li>
+                <li>Epic Pharaonic Wrappings</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/31.png" alt="" class="lootableIcon"></td><td>Oath of the Arcane</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td>Part of the set : Arcane Barrage</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/41.png" alt="" class="lootableIcon"></td><td>Ogre-Warrior's Armor</td><td><li>Very low chance to drop off any Satyr Brute</li>
+                <li>Increased odds versus Hero Satyr Brutes</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>Better odds than usual</ul></li></td><td><b>Quick Recovery</b><br>A strong shield arm allows you to block multiple attackers with amazing speed when necessary but it can only be kept up for a short time.<br><br>60.0 Second(s) Recharge<br>50 Energy Cost<br>45.0 Second Duration<br>-81% Shield Recovery Time<br>+10% Armor Absorption<br>+25% Shield Block Chance</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/19.png" alt="" class="lootableIcon"></td><td>Olympian Greaves</td><td><li>Drops in Epic Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAmulet">
+                <td><img src="../img/amulet/35.png" alt="" class="lootableIcon"></td><td>Oeneus' Necklace</td><td><li>Drops in Normal Act 4</li></td><td><b>Battle Rage</b><br>Each enemy hit has a chance of sending you into a battle rage that adds bonus damage to attacks and increases Offensive Ability for a short duration.<br><br>12.0 Second(s) Recharge<br>8% Chance of Activating<br>10.0 Second(s) Duration<br>33 Damage<br>+33% Offensive Ability</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/21.png" alt="" class="lootableIcon"></td><td>Ornamental Earring</td><td><li>0.5% Chance to drop off any Maenad</li><li>0.9% Chance to drop off any Sorceress or Alchemist Maenad</li>
+                <li>4.2% Chance to drop off any Hero Maenad</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeOffhand">
+                <td><img src="../img/shield/06.png" alt="" class="lootableIcon"></td><td>Overgrowth Barrier</td><td><li>Very low chance to drop off any Hesperide</li><li>Increased odds versus Hero Hesperides</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeThrown">
+                <td><img src="../img/throw/15.png" alt="" class="lootableIcon"></td><td>Pabilsag Stings</td><td><li>Drops in Normal Act 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeThrown">
+                <td><img src="../img/throw/07.png" alt="" class="lootableIcon"></td><td>Pale Immolation of Muspelheim</td><td><li>Drops in Legendary Act 5</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/01.png" alt="" class="lootableIcon"></td><td>Passionless Touch</td><td><li>Very low chance to drop off any Eldjotun (except Infernals)</li><li>Increased odds versus Hero Eldjotuns</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Sovereign of Void<br><br><b>Summon Demonic Lancer<br></b>Invoke a demonic spearman to fight under your command.<br><br>120.0 Second(s) Recharge<br>250 Energy Cost<br>Demonic Lancer Attributes:<br>1200 Health<br>674 Energy<br><br>Demonic Lancer Abilities:<br>Devil's Rush<br>8.0 Second(s)<br>68 Energy Cost<br>+120% Physical Damage<br>+60% Pierce Damage<br>80 Piercing Damage<br>198 Vitality Damage<br>+500% Movement Speed<br><br>Befoul Weapons<br>3 Active Energy Cost per Second<br>+87% Vitality Damage<br>56 Vitality Damage<br>50 Energy Reserved<br><br>Calculated Strike<br>100% Chance to pass through Enemies<br>3 Charge Levels<br>+221% Physical Damage<br>159 Piercing Damage<br/><br/>Dodge Attacks<br/>25% Chance to Dodge Attacks<br/>25% Chance to Avoid Projectiles</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/7.png" alt="" class="lootableIcon"></td><td>Path of Ta-Bitjet</td><td><li>Drops in Epic Act 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/17.png" alt="" class="lootableIcon"></td><td>Pestilence</td><td><li>Drops in Legendary Act 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/14.png" alt="" class="lootableIcon"></td><td>Petrified Cuffs</td><td><li>Very low chance to drop off any Gorgon Venomancer or Pyromancer</li><li>Increased odds versus Hero Gorgon</li>
+                <li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/08.png" alt="" class="lootableIcon"></td><td>Phantomlight</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/7_n.png" alt="" class="lootableIcon"><img src="../img/charm/7_e.png" alt="" class="lootableIcon"><img src="../img/charm/7_l.png" alt="" class="lootableIcon"></td><td>Pharaonic Wrappings</td><td><li>Approx. 1,6% Chance to drop off any Mummy</li><li>Increased odds versus Champion Mummies</li><li>Increased odds versus any Hero Mummy</li><li><b>Temple of Ra:</b><ul><li>Approx. 2.9% to drop off any Embalmed Pharaoh</li><li>Approx. 5.81% to drop off any Embalmed Pharaoh Brigand or Priest</li><li>Approx. 8.71% to drop off any Embalmed Pharaoh Guardian</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/14.png" alt="" class="lootableIcon"></td><td>Pocket Rune</td><td><li>4.5% Chance to drop off any Jarnvidja</li><li>25% - 31% Chance to drop off Gunnlöd, Daughter of Suttung (depending on her level)</li><li>75% Chance to drop off any Hero Jarnvidja</li></td><td><b>Rune Weapon</b><br>In the rush of glorious combat, every strike you land pushes your mind further into an ecstatic state, increasing the force of all magical abilities.<br><span style="color: orange">Assign this skill to your left mouse button.</span><br><br>2/3/3 Energy Cost<br>10/12/15 Charge Levels<br>+20/24/30% Total Damage<br>20/24/30 Energy Leech per Second<br>+30/36/45% Intelligence<br>50/60/75% Weapon Base Damage becomes Elemental</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/10.png" alt="" class="lootableIcon"></td><td>Power of the Hekatonkheires</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAxe">
+                <td><img src="../img/axe/07.png" alt="" class="lootableIcon"></td><td>Preeminent Od</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><b>Flow Control</b><br/>Bind the evanescent od of nature itself to your will.<br/><br/>1 Energy Cost<br/>8 Charge Levels<br/>+16% Total Damage<br/>
+                +56% Burn Damage<br/>+56% Frostburn Damage<br/>24% Chance to Fumble attacks for 3.0 Seconds<br/>+24% Attack Speed<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/17.png" alt="" class="lootableIcon"></td><td>Preserved Reptile Eye</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeBow">
+                <td><img src="../img/bow/03.png" alt="" class="lootableIcon"></td><td>Prey Snatcher</td><td><li>Drops in Normal Act 2</li></td><td><b>Ensnare</b><br>Casts a weighted net around the feet of an enemy holding them in place but not preventing them from attacking if you are within their range.<br><br>3.0 Second(s) Recharge<br>19 Energy Cost<br>5.1 Energy Cost<br>0.7 Meter Radius<br>-300% Defensive Ability<br>-25% Movement Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeLeg">
+                <td><img src="../img/leg/26.png" alt="" class="lootableIcon"></td><td>Protectors of the Godly Emissary</td><td><li>Very low chance to drop off any Mummy Acolyte/Adept mage</li><li>Slightly increased odds versus Mummy Priests</li><li>Increased odds versus Hero Mummy Mages</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Temple of Ra:</b><ul><li>Better odds than usual</ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeClub">
+                <td><img src="../img/club/13.png" alt="" class="lootableIcon"></td><td>Ptah's Creation</td><td><li>Drops in Normal Act 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/05.png" alt="" class="lootableIcon"></td><td>Pulsating Bracelets</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeClub">
+                <td><img src="../img/club/15.png" alt="" class="lootableIcon"></td><td>Purificator</td><td><li>Drops in Normal Act 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/27.png" alt="" class="lootableIcon"></td><td>Pyrausta's Thorax</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeBow">
+                <td><img src="../img/bow/20.png" alt="" class="lootableIcon"></td><td>Pyromancer's Bow</td><td><li>14,26% Chance to drop off any Satyr Pillager</li>
+                <li>Exclusively found in the Rogue Dungeon : Dark Shaman's Secret Hideout</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/02.png" alt="" class="lootableIcon"></td><td>Quietus</td><td><li>Drops in Epic Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/04.png" alt="" class="lootableIcon"></td><td>Raging Band</td><td><li>Drops in Epic Act 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeTorso">
+                <td><img src="../img/torso/51.png" alt="" class="lootableIcon"></td><td>Rainmaker's Harness</td><td><li>4% Chance to drop off any Ichthian</li><li>Slightly increased odds versus Ichthian Murk Lords and Shamans</li><li>Increased odds versus Ichthian Ocean Kings</li>
+                <li>Exclusively found in the Rogue Dungeon : Dark Shaman's Secret Hideout</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeOffhand">
+                <td><img src="../img/shield/28.png" alt="" class="lootableIcon"></td><td>Rainmaker's Mirror</td><td><li>8.2% Chance to drop off any Ichthian Murk Lord</li>
+                <li>Exclusively found in the Rogue Dungeon : Dark Shaman's Secret Hideout</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/28.png" alt="" class="lootableIcon"></td><td>Ratlord's Battlepack</td><td><li>Very low chance to drop off any Vermin King Ratman</li>
+                <li>Increased odds versus Orient Hero Ratman</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeShield">
+                <td><img src="../img/shield/08.png" alt="" class="lootableIcon"></td><td>Redeemer of Lost Honor</td><td><li>Drops in Normal Act 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeOffhand">
+                <td><img src="../img/shield/20.png" alt="" class="lootableIcon"></td><td>Remains of Chrysippus' Work</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/06.png" alt="" class="lootableIcon"></td><td>Ring of Matricide</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td>Part of the set : Innate Murderer</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/07.png" alt="" class="lootableIcon"></td><td>Ring of Patricide</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td>Part of the set : Innate Murderer</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/08.png" alt="" class="lootableIcon"></td><td>Ring of Shadows</td><td><li>Drops in Normal Act 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSpear">
+                <td><img src="../img/spear/3.png" alt="" class="lootableIcon"></td><td>Ritual Lance</td><td><li>Drops in Epic Act 1, 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/29.png" alt="" class="lootableIcon"></td><td>Robes of Experimentation</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/15.png" alt="" class="lootableIcon"></td><td>Robes of the Hydromagus</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><b>Winter Aura</b><br>This aura slows down all enemies nearby and occasionally freezes them instantly<br><br>5.0 Second(s) Recharge<br>4 Active Energy Cost per Second<br>3.0 Meter Radius<br>46 Cold Damage<br>10.0% Chance of 1.5 second(s) of Freeze<br>10% Slowed for 1.0 Seconds</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeStaff">
+                <td><img src="../img/staff/19.png" alt="" class="lootableIcon"></td><td>Rockbender's Staff</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeShield">
+                <td><img src="../img/shield/09.png" alt="" class="lootableIcon"></td><td>Rock Formation</td><td><li>Drops in Epic Act 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/14.png" alt="" class="lootableIcon"></td><td>Root of Chaos</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and Atlantis</li><li>Formula sold by dealers from Legendary Act 2 and 3</li></td><td>Required Reagents :<br/>
+                <li>Legendary Centaur Hooves</li>
+                <li>Legendary Demon's Blood</li>
+                <li>Divine Scroll of the Maddened God</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/14.png" alt="" class="lootableIcon"></td><td>Rot Totem</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td>
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/12.png" alt="" class="lootableIcon"></td><td>Rubiline Circlet</td><td><li>Drops in Legendary Act 1, 2, 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAmulet">
+                <td><img src="../img/amulet/08.png" alt="" class="lootableIcon"></td><td>Ruby Necklace</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/37.png" alt="" class="lootableIcon"></td><td>Runestone Band</td><td><li>1% Chance to drop off any Storm Revenant near Zealand Coast</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/20.png" alt="" class="lootableIcon"></td><td>Sacral Wind</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/13.png" alt="" class="lootableIcon"></td><td>Sandqueen's Helmet</td><td><li>Very low chance to drop off any Desert Hag, Desert Crone or Sandqueen Mashika</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Ring of Flame</b><br>Encircles you in a searing ring of flames burning all enemies that come within its radius.<br><br>4.0 Second(s) Recharge<br>20 Active Energy Cost per Second<br>3.8 Meter Radius<br>102 Fire Damage</td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/18.png" alt="" class="lootableIcon"></td><td>Sands of Kronos</td><td><li>Drops in Epic Act 3, 4, 5 and Atlantis</li><li>Formula sold by dealers from Epic Act 3, 4, 5 and Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Sphere of Eternity</li>
+                <li>Dice of Fate</li>
+                <li>Epic Fish Scales</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeBow">
+                <td><img src="../img/bow/19.png" alt="" class="lootableIcon"></td><td>Sandstorm Sniper</td><td><li>Very low chance to drop off any Mounted Dune Raider Archer</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/15.png" alt="" class="lootableIcon"></td><td>Sapphire Armlets</td><td><li>Drops in Epic Act 1, 2, 3, 4, 5 and Atlantis</li><li>Drops in Legendary Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/16_n.png" alt="" class="lootableIcon"><img src="../img/charm/16_e.png" alt="" class="lootableIcon"><img src="../img/charm/16_l.png" alt="" class="lootableIcon"></td><td>Satyr Horns</td><td><li>Approx. 0.77% to drop off any Satyr</li><li>Approx. 1.55% to drop off any Mage Satyr</li><li>Approx. 2.58% to drop off any Champion Satyr</li><li>Approx. 20% to drop off any Hero Satyr</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>Approx. 4.37% to drop off any Primal Satyr</li><li>Approx. 5.42% to drop off any Primal Mage Satyr</li><li>Approx. 6.47% to drop off any Primal Champion Satyr</li><li>Approx. 36.21% to drop off any Hero Primal Satyr</li></ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/22.png" alt="" class="lootableIcon"></td><td>Scale of Tiamat</td><td><li>Drops in Normal Atlantis</li><li>Formula sold by dealers from Normal Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Strength of the Bull</li>
+                <li>Brôma Theôn</li>
+                <li>Basilisk Eye</li><br/><br/><b>Symbol of Primordial Chaos</b><br/>This chaos-imbued seal bursts every few moments with the power which reaches into the depths of destruction and creation itself.<br/><br/>36.0 Second(s) Recharge<br/>150 Energy Cost<br/>9.0 Second Duration<br/>
+                5.0 Meter Radius<br/>
+                172 Damage<br/>
+                Chance for one of the following:<br/>
+                &nbsp;&nbsp;100 Bleeding Damage over 2.0 Seconds<br/>
+                &nbsp;&nbsp;100 Electrical Burn Damage over 2.0 Seconds<br/>
+                33 - 96 Lightning Damage
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/34.png" alt="" class="lootableIcon"></td><td>Scarab of Dawn</td><td><li>0.8% Chance to drop off any Magma Beetle</li><li><b>Temple of Ra:</b><ul>
+                <li>7.5% Chance to drop off any Magma Beetle</li>
+                </ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/13.png" alt="" class="lootableIcon"></td><td>Scarab Pendant</td><td><li>0.75% Chance to drop off any Beetle</li><li>1% Chance to drop off any Gruesome Bone Scarab</li><li><b>Temple of Ra:</b><ul>
+                <li>3.75% Chance to drop off any Beetle</li>
+                <li>5.2% Chance to drop off any Magma Beetle</li>
+                <li>7% Chance to drop off any Gruesome Bone Scarab</li>
+                </ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/8.png" alt="" class="lootableIcon"></td><td>Scarlet Shinguards</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/08.png" alt="" class="lootableIcon"></td><td>Sceptre of Lamashtu</td><td><li>Drops in Legendary Act 4 and 5</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/32.png" alt="" class="lootableIcon"></td><td>Seal of the Arcane</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td>Part of the set : Arcane Barrage</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/40.png" alt="" class="lootableIcon"></td><td>Seal of the Fallen</td><td><li>Rare drop from any Sepulcher container</li><li><b>Does not</b> drop from any monster</li><li><b>Temple of Ra:</b><ul>
+                <li>Appears seven times as often</li>
+                </ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/39.png" alt="" class="lootableIcon"></td><td>Seal of the Restless King</td><td><li>0.5% Chance to drop off any Draugr</li><li>Slightly increased odds versus Draugr Princes and Draugr Kings</li><li>Increased odds versus Hero Draugrs and The Restless King</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/30.png" alt="" class="lootableIcon"></td><td>Secret Agent's Garb</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/16.png" alt="" class="lootableIcon"></td><td>Shackles of Liberation</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/31.png" alt="" class="lootableIcon"></td><td>Shadowsneaker's Harness</td><td><li>Very low chance to drop off any Dune Raider Assassin</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Phantom Strike</b><br>Vanish from the waking world and reappear before a target enemy to deliver a monstrous attack.<br><br>6.0 Second(s) Recharge<br>63 Energy Cost<br>+239% Total Damage</td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/6.png" alt="" class="lootableIcon"></td><td>Shapes in the Light</td><td><li>Drops in Normal Act 2, 3 and 4</li><li>Formula sold by dealers from Normal Act 3</li></td><td>Required Reagents :<br/>
+                <li>Spectral Matter</li>
+                <li>Essence of Set's Betrayal</li>
+                <li>Scroll of Elemental Shielding</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/33.png" alt="" class="lootableIcon"></td><td>Shapeshifting Mudball</td><td><li>1.5% chance to drop off any Mud Man</li><li>50% chance to drop off any Hero Mud Man</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/17.png" alt="" class="lootableIcon"></td><td>Shieldbreaker</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/02.png" alt="" class="lootableIcon"></td><td>Shimmering Diamond Trinket</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><b>Minion Blessing</b><br/>Bless your pets with brief, but godlike strength.<br/><br/>45.0 Second(s) Recharge<br/>140 Energy Cost<br/>3.0 Second Duration<br/><br/><span style="color: orange">Bonus to All Pets:</span><br>20% of Attack damage converted to Health<br>60% Physical Resistance<br>60% Elemental Resistance<br>+75% Total Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/09.png" alt="" class="lootableIcon"></td><td>Shining Gold Armjewels</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/49.png" alt="" class="lootableIcon"></td><td>Shirt of Nessus</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/26.png" alt="" class="lootableIcon"></td><td>Shroud of Myriad Dimensions</td><td><li>Drops in Legendary Act 4</li></td><td>Part of the set : Journey of Myriad Dimensions</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/03.png" alt="" class="lootableIcon"></td><td>Signet of Cold</td><td><li>Drops in Normal Act 1 and 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/02.png" alt="" class="lootableIcon"></td><td>Silver Limbcutter</td><td><li>Drops in Epic Act 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/25.png" alt="" class="lootableIcon"></td><td>Silverthread Gloves</td><td><li>Drops in Normal Act 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeStaff">
+                <td><img src="../img/staff/20.png" alt="" class="lootableIcon"></td><td>Sinister Effigy</td><td><li>Very low chance to drop off any Satyr Magi</li>
+                <li>Increased odds versus Hero Satyr Magis</li><li>Only in <b>Legendary</b> difficulty</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>Better odds than usual</ul></li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeArm">
+                <td><img src="../img/arm/30.png" alt="" class="lootableIcon"></td><td>Si'xoi-lap</td><td><li>Very low chance to drop off any Machae</li><li>Increased odds versus Hero Machaes</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Embodiment of Corruption<br><br><b>Acidic Assault</b><br>Throw yourself into a battle trance, ever increasing your damage and resilience to burn and poison.<br><br>1 Energy Cost<br>8 Charge Levels<br>+40% Burn Damage<br>+40% Instant Poison Damage<br>+36% Attack Speed<br>100% Increase in Projectile Speed<br>80% Fire Resistance<br>
+                80% Poison Resistance</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeLeg">
+                <td><img src="../img/leg/21.png" alt="" class="lootableIcon"></td><td>Si'xoi-orp</td><td><li>Very low chance to drop off any Machae</li><li>Increased odds versus Hero Machaes</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Embodiment of Corruption</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/16.png" alt="" class="lootableIcon"></td><td>Skeletal Agonizer</td><td><li>Drops in Legendary Act 1, 2, 3 and 4</li></td><td><b>Bone Stakes</b><br/>Throw a flurry of sharpened bones which impale and pierce through armor and flesh.<br/><br/>12.0 Second(s) Recharge<br/>75 Energy Cost<br/>5 Projectile(s)<br/>50% Chance to pass through Enemies<br/>160 Piercing Damage<br/>15% Reduction to Enemy's Health<br/>90 Vitality Damage<br/>15.0% Chance of 2.0 - 5.0 second(s) of Fear<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeSword">
+                <td><img src="../img/sword/27.png" alt="" class="lootableIcon"></td><td>Slayer of the Thirteenth Dynasty</td><td><li>Very low chance to drop off any Terra Cotta Warrior</li><li>Slightly increased odds versus Terra Cotta Generals</li><li>Increased odds versus Terra Cotta Heroes</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Runeword: Explode</b><br/>Weapons inscribed with this powerful rune may cause a successful hit to blast outward, striking multiple enemies.<br/><br/>27% Chance to be Used<br/>120 Arc of Attack<br/>2.5 Meter Radius<br/>60 Damage<br/>60 Fire Damage<br/>0.5 second(s) of Stun</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/36.png" alt="" class="lootableIcon"></td><td>Snakeskin Band</td><td><li>Drops in Normal Act 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/44.png" alt="" class="lootableIcon"></td><td>So-dam'oh</td><td><li>Very low chance to drop off any Machae</li><li>Increased odds versus Hero Machaes</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Embodiment of Corruption</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeSword">
+                <td><img src="../img/sword/23.png" alt="" class="lootableIcon"></td><td>Solarblade</td><td><li>0.43% Chance to drop off any Mummy Warriors</li><li>Slightly increased odds versus Guardian Mummies</li><li>Increased odds versus Hero Mummies</li><li><b>Temple of Ra:</b><ul><li>2.04% Chance to drop off any Embalmed Pharaoh Soldier</li><li>6% Chance to drop off any Embalmed Pharaoh Guardian</li></ul></li></td><td><b>Devouring Flame</b><br>A barrage of glaring orbs engulfs the battlefield in vampiric flames.
+                45/75/110 Energy Cost<br>
+                3.0 Meter Radius<br>
+                3 - 4/4 - 5/5 - 6 Fragments<br>
+                33% Chance of:<br>
+                &nbsp;&nbsp;90/210/390 Burn Damage over 3.0 Seconds<br>
+                &nbsp;&nbsp;45/90/135 Life Leech over 3.0 Seconds<br>
+                40/60/80 Fire Damage<br/>
+                40/60/80 Vitality Damage<br/></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/14.png" alt="" class="lootableIcon"></td><td>Sopdu's Voice</td><td><li>Drops in Legendary Act 2</li></td><td><b>Lightning Mastery</b><br/>Mastery over elemental forces allows you to share your thundering powers with companions and friendly units.<br/><br/>25.0 Second(s) Recharge<br/>100 Energy Cost<br/>240.0 Second Duration<br/>+20% Lightning Damage<br/>
+                70 Lightning Damage<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeBow">
+                <td><img src="../img/bow/18.png" alt="" class="lootableIcon"></td><td>Sorrow's Song</td><td><li>Drops in Normal Act 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/13.png" alt="" class="lootableIcon"></td><td>Soul Lantern</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and Atlantis</li><li>Formula sold by dealers from Legendary Act 1, 2 and 3</li></td><td>Required Reagents :<br/>
+                <li>Legendary Albino Spider Web</li>
+                <li>Legendary Vicious Essence</li>
+                <li>Incarnation of Li-Nezha's Guile</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/28.png" alt="" class="lootableIcon"></td><td>Soul Rage</td><td><li>2.5% Chance to drop off any Charred Fiend</li><li>5% Chance to drop off any Bone Scourge</li><li>70% Chance to drop off any Hero Bone Scourge</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/12.png" alt="" class="lootableIcon"></td><td>Spartacus Legend</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/38.png" alt="" class="lootableIcon"></td><td>Spectre</td><td><li>Drops in Legendary Act 4</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/11.png" alt="" class="lootableIcon"></td><td>Speedy Penknife</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeArm">
+                <td><img src="../img/arm/20.png" alt="" class="lootableIcon"></td><td>Spellrage Coil</td><td><li>Drops in Legendary Act 2, 3, 4 and 5</li></td><td><b>Spell Breaker</b><br>A pulse of negatively charged energy dispels hostile enchantements on allies or, when cast on enemies, breaks their beneficial enchantements and negates a portion of their energy. This attack inflicts bonus damage when used against Magical creatures.<br><br>6.0 Second(s) Recharge<br>
+                42 Energy Cost<br>
+                6.0 Meter Radius<br>
+                60 Damage<br>
+                66% Energy Drain<br>
+                +50% Damage to Magical<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/09.png" alt="" class="lootableIcon"></td><td>Spellsword's Signet</td><td><li>Drops in Epic Act 2, 3, 4, 5 and Atlantis</li><li>Drops in Legendary Act 1</li></td><td><b>Sorcerer’s Blade</b><br>Spellswords who posses both weapon proficiency and arcane knowledge combine the two of them to form a completely new arsenal of attacks.<br><span style="color: orange">Requires a melee weapon.</span><br>
+                <br>
+                6.0 Second(s) Recharge<br>
+                163 Electrical Burn Damage over 3.0 Seconds<br>
+                64 Elemental Damage<br>
+                32 - 192 Lightning Damage<br>
+                30% Reduction to Enemy's Health
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/13.png" alt="" class="lootableIcon"></td><td>Spellwind Blade</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td><b>Energy Shield</b><br>Creates a shield of energy that will nullify incoming damage from elemental attacks.<br><br>60.0 Second(s) Recharge<br>84 Energy Cost<br>200.0 Second Duration<br>40% Damage Absorption<br>Protects Against :<br>&nbsp;&nbsp;Lightning<br>&nbsp;&nbsp;Cold</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/12.png" alt="" class="lootableIcon"></td><td>Spinesplitter</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeAmulet">
+                <td><img src="../img/amulet/12.png" alt="" class="lootableIcon"></td><td>Spirit Catcher</td><td><li>1.12% Chance to drop off any Fire Magi or Shaman Satyr</li>
+                <li>2.39% Chance to drop off any Spirit Caller Satyr</li><li>10.3% Chance to drop off any Mage Hero Satyr</li><li><b>Dark Shaman's Secret Hideout:</b><ul><li>12% Chance to drop off any Primal Fire Magi or Shaman Satyr</li><li>24% Chance to drop off any Primal Spirit Caller Satyr</li></ul></li></td><td><b>Summon Spirit Boars</b><br>Summon a pair of spirit boars that fight on your side.<br><br>120.0 Second(s) Recharge<br>80/115/153 Energy Cost<br>2 Summon Limit<br>Spirit Animal Attributes:<br>&nbsp;355/3312/9864 Health<br>&nbsp;110/430/1005 Energy<br><br>Spirit Animal Abilities:<br>14 - 20/24 - 31/36 - 43  Damage</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/07.png" alt="" class="lootableIcon"></td><td>Spirit Conduit</td><td><li>Drops in Epic Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/26.png" alt="" class="lootableIcon"></td><td>Spoilmaker</td><td><li>Drops in Legendary Act 5</li></td><td>Provides loot orbs from Legendary Act 5</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/13.png" alt="" class="lootableIcon"></td><td>Staff of Bouzyges</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeStaff">
+                <td><img src="../img/staff/18.png" alt="" class="lootableIcon"></td><td>Staff of the Jiangshi</td><td><li>Drops in Normal Act 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/10.png" alt="" class="lootableIcon"></td><td>Stardust Knot</td><td><li>Drops in Legendary Act 3, 4, 5  and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeThrown">
+                <td><img src="../img/throw/16.png" alt="" class="lootableIcon"></td><td>Stealer of Ka</td><td><li>Drops in Normal Act 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeLeg">
+                <td><img src="../img/leg/10.png" alt="" class="lootableIcon"></td><td>Steps of the General</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/02.png" alt="" class="lootableIcon"></td><td>Stormtrooper</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/17.png" alt="" class="lootableIcon"></td><td>Straps of Witchcraft</td><td><li>Drops in Normal Act 1</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/3.png" alt="" class="lootableIcon"></td><td>Strength of the Bull</td><td><li>Drops in Normal Act 1, 2</li><li>Formula sold by dealers from Normal Act 1 and 2</li></td><td>Required Reagents :<br/>
+                <li>Essence of Herakles' Might</li>
+                <li>Centaur Hooves</li>
+                <li>Boar Hide</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeClub">
+                <td><img src="../img/club/07.png" alt="" class="lootableIcon"></td><td>Sundering Destroyer</td><td><li>Very low chance to drop off any Elder Cyclops</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>The Ultimate Shattering Impact</b><br>Deliver the mightiest of blows, with forcer that neither humans nor gods have seen before.<br><span style="color: orange">Requires a club.</span><br><br>180.0 Second(s) Recharge<br>1000 Energy Cost<br>360 Arc of Attack<br>3 Target Maximum<br>+400% Total Damage<br>10.0 second(s) of Stun</td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/20.png" alt="" class="lootableIcon"></td><td>Tainted Sigil</td><td><li>0.25% Chance to drop off any Carrion Crow</li><li>0.875% Chance to drop off any Plague Bird</li><li>25% Chance to drop off any Hero Carrion Crow</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/34.png" alt="" class="lootableIcon"></td><td>The Devourer</td><td><li>Drops in Legendary Act 2, 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSword">
+                <td><img src="../img/sword/10.png" alt="" class="lootableIcon"></td><td>The Eternal Menace</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/13.png" alt="" class="lootableIcon"></td><td>The Flagbearer</td><td><li>Drops in Legendary Act 1, 2, 3 and 4</li></td><td><b>Battle Standard</b><br/>Throw down a might standard to embolden the hearts of nearby allies.<br/><br/>60.0 Second(s) Recharge<br/>
+                50 Energy Cost<br/>
+                Extra Life Time 28 Seconds<br/>
+                Battle Standard Attributes:<br/>
+                Life Time 28.0 Seconds<br/>
+                330 Health<br/>
+                <br/>
+                Battle Standard Abilities:<br/>
+                Battle Standard<br/>
+                50.0 Second Duration<br/>
+                12.0 Meter Radius<br/>
+                25% Damage Absorption<br/>
+                +1 to all skills<br/>
+                87 Damage<br/>
+                +56 Offensive Ability<br/>
+                -50% Energy Cost<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/36.png" alt="" class="lootableIcon"></td><td>The Flameforged</td><td><li>Very low chance to drop off Talos - Master Automatoi</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Fiery Embrace</b><br/>Release bursts of all-devouring flames which expose vulnerability to volcanic elements, all whilst heavily burning and crippling enemies around you.<br/><br/>2 Active Energy Cost per Second<br/>4.0 Meter Radius<br/>200 Energy Reserved<br/>-25% Physical Resistance<br/>-25% Fire Resistance<br/>-15% Offensive Ability</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/05.png" alt="" class="lootableIcon"></td><td>The Gazing Eye</td><td><li>Drops in Legendary Act 4, 5  and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemRelic tableTypeRelic">
+                <td><img src="../img/relic/relic1n.png" alt="" class="lootableIcon"><img src="../img/relic/relic1e.png" alt="" class="lootableIcon"><img src="../img/relic/relic1l.png" alt="" class="lootableIcon"></td><td>The Great Deity of the Northern Peak</td><td><li>Drops in Act 3 only</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeSword">
+                <td><img src="../img/sword/25a.png" alt="" class="lootableIcon"><img src="../img/sword/25b.png" alt="" class="lootableIcon"><img src="../img/sword/25c.png" alt="" class="lootableIcon"><img src="../img/sword/25d.png" alt="" class="lootableIcon"></td><td>The Long-Forgotten</td><td><li>0.822% Chance to drop off any Oriental Zombie</li><li>Slightly increased odds versus Oriental Captain Zombies</li><li>Increased odds versus Oriental Zombie Heroes</li><li><b>Obsidian Rink:</b><ul><li>2.38% off any Oriental Zombie</li><li>5.12% off any Oriental Captain Zombie</li></ul></li></td><td>Appears in 4 different versions, which determines the damage type that will appear on your weapon. All versions have the same chance to drop. The following damage types can be found :<br><br>Burn, Frostburn, Electrical Burn, Vitality Decay</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/19.png" alt="" class="lootableIcon"></td><td>The Lord of Death's Garb</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><b>Deathchill Aura</b><br>A deathly chill radiates from the character slowing the attack and movement of enemies as it diminishes their life.<br><br>4.0 Second(s) Recharge<br>1 Active Energy<br>1.0 Second Duration<br>4.5 Meter Radius<br>3 - 15% Reduction to Enemy's Health<br>-33% Total Speed</td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/23.png" alt="" class="lootableIcon"></td><td>The Pride of Atlantis</td><td><li>Drops in Legendary Atlantis</li><li>Formula sold by dealers from Legendary Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Twilight Tempest</li>
+                <li>Elemental Rage</li>
+                <li>Incarnation of Poseidon’s Trident</li>
+                <br/><br/><b>Tridental Totem</b><br/>This weapon-like totem is charged with powerful current which strikes and disables multiple enemies with a single discharge.<br/><br/>8.0 Second(s) Recharge<br/>120 Energy Cost<br/>Extra Life Time 30 Seconds<br/>
+                3 Summon Limit<br/>
+                Lightning Rod Attributes:<br/>
+                Life Time 30.0 Seconds<br/>
+                &nbsp;750 Health<br/>
+                &nbsp;750 Energy<br/>
+                <br/>
+                Lightning Rod Abilities:<br/>
+                Lightning Beam<br/>
+                3.0 Second(s) Recharge<br/>
+                Affects up to 5 targets<br/>
+                200 - 400 Lightning Damage<br/>
+                5 - 10 Reduced Resistances for 3.0 Seconds<br/>
+                25.0% Chance of 1.0 - 2.0 second(s) of Stun<br/>
+                <br/>
+                Electrical Aura<br/>
+                100 Electrical Burn Retaliation over 2.0 Seconds<br/>
+                20% Reduced Defensive Ability Retaliation for 2.0 Seconds
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeHelm">
+                <td><img src="../img/helm/41.png" alt="" class="lootableIcon"></td><td>The Regurgitator</td><td><li>12% Chance to drop off any Biledrinker Wyrm</li>
+                <li>Exclusively found in the Rogue Dungeon : Obsidian Rink</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/06.png" alt="" class="lootableIcon"></td><td>The Silent One</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/10.png" alt="" class="lootableIcon"></td><td>The Skyfallen</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeArm">
+                <td><img src="../img/arm/19.png" alt="" class="lootableIcon"></td><td>The Stolen Artifacts</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/06.png" alt="" class="lootableIcon"></td><td>The Sword in the Stone</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeOffhand">
+                <td><img src="../img/shield/24.png" alt="" class="lootableIcon"></td><td>Theophrastus' Knowledge</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/19.png" alt="" class="lootableIcon"></td><td>Thief's Lucky Charm</td><td><li>0.4% Chance to drop off any Greek Ratman</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/32.png" alt="" class="lootableIcon"></td><td>Thornmail</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSpear">
+                <td><img src="../img/spear/4.png" alt="" class="lootableIcon"></td><td>Thunderstruck Drill</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeTorso">
+                <td><img src="../img/torso/03.png" alt="" class="lootableIcon"></td><td>Tiger King Honor Guard</td><td><li>Very low chance to drop off any Warlord/Pack Leader Tigerman</li><li>Increased odds versus Hero Tigermans</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAxe">
+                <td><img src="../img/axe/03.png" alt="" class="lootableIcon"></td><td>Tormentor</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/04.png" alt="" class="lootableIcon"></td><td>Torso of Ceyx</td><td><li>Drops in Normal Act 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeThrown">
+                <td><img src="../img/throw/05.png" alt="" class="lootableIcon"></td><td>Tourmaline Axe</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeShield">
+                <td><img src="../img/shield/10.png" alt="" class="lootableIcon"></td><td>Toxeus the Murdered</td><td><li>Very low chance to drop off Toxeus the Murderer</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Only drops off the Toxeus from Rhodes' Secret passage<br><br><b>Distort Reality</b><br>Sends out a powerful ripple of distortion around the player that tears the fabric of reality, causing severe damage to enemies caught within it.<br><br>12.0 Second(s) Recharge<br>160 Energy Cost<br>8.0 Meter Radius<br>315 Damage<br>228 Vitality Damage<br>1.5 second(s) of Stun</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeThrown">
+                <td><img src="../img/throw/04.png" alt="" class="lootableIcon"></td><td>Tranquiliser</td><td><li>Drops in Epic  4, 5 and Atlantis</li><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/06.png" alt="" class="lootableIcon"></td><td>Trauma</td><td><li>Drops in Epic Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeSpear">
+                <td><img src="../img/spear/5.png" alt="" class="lootableIcon"></td><td>Trident of the Five Oceans</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/11.png" alt="" class="lootableIcon"></td><td>Twilight Tempest</td><td><li>Drops in Legendary Act 2, 3, 4  and Atlantis</li><li>Formula sold by dealers from Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td>Required Reagents :<br/><li>Ethereal Veil</li><li>Silver Heart</li><li>Incarnation of Ogmios' Eloquence</li></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeBow">
+                <td><img src="../img/bow/02.png" alt="" class="lootableIcon"></td><td>Underworld Stinger</td><td><li>Drops in Epic Act 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/19_e.png" alt="" class="lootableIcon"><img src="../img/charm/19_l.png" alt="" class="lootableIcon"></td><td>Unmelting Ice</td><td><li>2% Chance to drop off any Frozen Epiales Slygoth</li><li>5% Chance to drop off any Frozen Epiales Kalygoth</li><li>Exclusively found in the Rogue Dungeon : River Cocytus</li><li>Only in <b>Epic</b> or <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/05.png" alt="" class="lootableIcon"></td><td>Vampire Coat</td><td><li>Drops in Epic Act 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMI tableTypeRing">
+                <td><img src="../img/ring/18.png" alt="" class="lootableIcon"></td><td>Vengeful Eye</td><td><li>2% Chance to drop off any Dragonian Wyrmmage</li><li>3% Chance to drop off any Dragonian Warlock</li><li><b>Obsidian Rink:</b><ul><li>6.5% Chance to drop off any Dragonian Warlock</li></ul></td><td><b>Arcane Mirror</b><br>The thousandfold reflection of this sphere of mirrors damages those who strike it using the power of their own attacks.<br><br>120.0 Second(s) Recharge<br>50/100/150 Energy Cost<br>12.0 Second Duration<br>100/160/220% Damage Reflected</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeTorso">
+                <td><img src="../img/torso/06.png" alt="" class="lootableIcon"></td><td>Vest of the First Apostle</td><td><li>Drops in Legendary Act 1, 2, 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeTorso">
+                <td><img src="../img/torso/33.png" alt="" class="lootableIcon"></td><td>Vest of the Manacrazed</td><td><li>Drops in Epic Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemCharm tableTypeCharm">
+                <td><img src="../img/charm/6_n.png" alt="" class="lootableIcon"><img src="../img/charm/6_e.png" alt="" class="lootableIcon"><img src="../img/charm/6_l.png" alt="" class="lootableIcon"></td><td>Vicious Essence</td><td><li>Approx. 1,4% chance to drop off any Machae</li><li>Twice as much chance versus any Machae Warden or Master Archer</li><li>Increased odds versus any Machae Heroes (excluding Laeghon's Clones)</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/13.png" alt="" class="lootableIcon"></td><td>Victor of the Arena</td><td><li>Drops in Epic Act 2, 3, 4 and 5</li></td><td><b>Bravado</b><br/>Your continuous success in battle makes you equally strong as foolhardy.<br/><br/>1 Active Energy Cost per Second<br/>+30% Strength<br/>50 Energy Reserved<br/>-10% Physical Resistance</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/27.png" alt="" class="lootableIcon"></td><td>Visage of Woe</td><td><li>Very low chance to drop off any Embalmed Priest</li><li>Increased odds versus Hero Embalmed Priests</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAxe">
+                <td><img src="../img/axe/05.png" alt="" class="lootableIcon"></td><td>Vitality Reaver</td><td>
+                <li>Drops in Epic Act 5</li><li>Drops in Legendary Act 1, 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAmulet">
+                <td><img src="../img/amulet/41.png" alt="" class="lootableIcon"></td><td>Vixen's Heart</td><td><li>Drops in Epic Act 3</li></td><td>Part of the set : Vixen's Legacy</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeSword">
+                <td><img src="../img/sword/28.png" alt="" class="lootableIcon"></td><td>Vixen's Fang</td><td><li>Drops in Epic Act 3</li></td><td>Part of the set : Vixen's Legacy</td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/15.png" alt="" class="lootableIcon"></td><td>Voiceless Scream</td><td><li>Very low chance to drop off any Eldjotun (except Infernals)</li><li>Increased odds versus Hero Eldjotuns</li><li>Only in <b>Legendary</b> difficulty</li></td><td>Part of the set : Sovereign of Void</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeRing">
+                <td><img src="../img/ring/10.png" alt="" class="lootableIcon"></td><td>Volcanic Ring</td><td><li>Drops in Epic Act 1, 2, 3, 4 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/11.png" alt="" class="lootableIcon"></td><td>Voltaic Conductor</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i>
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/15.png" alt="" class="lootableIcon"></td><td>Vorpal Blade</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li><li>Formula sold by dealers from Epic Act 1, 2, 3, 4 and Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Embodiment of Set's Betrayal</li>
+                <li>Epic Maenad Tail</li>
+                <li>Epic Lupine Claw</li></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/11.png" alt="" class="lootableIcon"></td><td>Vow of Perseverance</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td>Part of the set : Eternal Alliance</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeRing">
+                <td><img src="../img/ring/12.png" alt="" class="lootableIcon"></td><td>Vow of Will</td><td><li>Drops in Legendary Act 4, 5 and Atlantis</li></td><td>Part of the set : Eternal Alliance</td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeShield">
+                <td><img src="../img/shield/13.png" alt="" class="lootableIcon"></td><td>Wall of Evil</td><td><li>Drops in Legendary Act 5</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeStaff">
+                <td><img src="../img/staff/05.png" alt="" class="lootableIcon"></td><td>Wand of Dead Sailors</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and 5</li></td><td><b>Ghostly Shores</b><br>Call forth waves of water, which carry souls of drowned sailors, to drown your enemies in their misery.<br><br>20.0 Second(s) Recharge<br>200 Energy Cost<br>270 Cold Damage<br>270 Vitality Damage<br>35% Slowed for 3.0 Seconds<br/><br/><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/11.png" alt="" class="lootableIcon"></td><td>Warding Torc</td><td><li>Drops in Epic Act 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/35.png" alt="" class="lootableIcon"></td><td>Warlord's Ultimatum</td><td><li>Drops in Legendary Act 1, 2, 3, 4 and 5</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeBow">
+                <td><img src="../img/bow/13.png" alt="" class="lootableIcon"></td><td>Waywatcher's Caveat</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeHelm">
+                <td><img src="../img/helm/18.png" alt="" class="lootableIcon"></td><td>Webweaver's Visor</td><td><li>Very low chance to drop off any Tropical Arachnos Deathspinner or Hero</li><li>Only in <b>Legendary</b> difficulty</li></td><td><b>Snaring Web Attack</b><br>Throw a ball of sticky web at your opponents, to temporarily immobilize them.<br><br>15.0 Second(s) Recharge<br>90 Energy Cost<br>3.0 Second Duration<br>
+                363 Poison Damage over 3.0 Seconds<br>
+                100 Instant Poison Damage<br>
+                20% Reduced Resistances for 3.0 Seconds<br>
+                3.0 second(s) of Immobilization</td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeAxe">
+                <td><img src="../img/axe/14.png" alt="" class="lootableIcon"></td><td>Wepwawet's Adze</td><td><li>Drops in Epic Act 2</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeLeg">
+                <td><img src="../img/leg/11.png" alt="" class="lootableIcon"></td><td>Winged Wanderers</td><td><li>Drops in Legendary Act 2, 3, 4, 5 and Atlantis</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/7.png" alt="" class="lootableIcon"></td><td>Winterflame</td><td><li>Drops in Normal Act 1 and 2</li><li>Formula sold by dealers from Normal Act 1 and 2</li></td><td>Required Reagents :<br/>
+                <li>Essence of Prometheus' Flame</li>
+                <li>Essence of Hecate's Crescent</li>
+                <li>Scroll of Ice Nova</li></td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/25.png" alt="" class="lootableIcon"></td><td>Wodan's Price</td><td><li>Drops in Legendary Act 5</li><li>Formula sold by dealers from Legendary Act 5</li></td><td>Required Reagents :<br/>
+                <li>Gambanteinn</li>
+                <li>Gjallarhorn</li>
+                <li>Incarnation of Wodan’s Knowledge</li></td>
+            </tr>
+            <tr class="itemEntry tableItemMU tableTypeClub">
+                <td><img src="../img/club/03.png" alt="" class="lootableIcon"></td><td>Wood-Hammer</td><td><li>Very low chance to drop off any Anteok or Fungoid Pileus</li><li>Only in <b>Legendary</b> difficulty</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeAmulet">
+                <td><img src="../img/amulet/01.png" alt="" class="lootableIcon"></td><td>Worldsaver</td><td>
+                <li>Drops in Epic Act 5</li><li>Drops in Legendary Act 1, 2, 3, 4, 5  and Atlantis</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemEpic tableTypeClub">
+                <td><img src="../img/club/04.png" alt="" class="lootableIcon"></td><td>Wrath of the Serpent</td><td><li>Drops in Epic Act 2 and 3</li></td><td></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeHelm">
+                <td><img src="../img/helm/16.png" alt="" class="lootableIcon"></td><td>Wreath of the Misbegotten</td><td><li>Drops in Legendary Act 3 and 4</li></td><td><i>* Shadow version available.</i></td>
+            </tr>
+            <tr class="itemEntry tableItemLeg tableTypeClub">
+                <td><img src="../img/club/12.png" alt="" class="lootableIcon"></td><td>Xiangshuishen's Supremacy</td><td><li>Drops in Legendary Act 3, 4, 5 and Atlantis</li></td><td>
+                </td>
+            </tr>
+            <tr class="itemEntry tableItemArt tableTypeArt">
+                <td><img src="../img/artifact/2.png" alt="" class="lootableIcon"></td><td>Zeal of the Fanatic</td><td><li>Drops in Epic Act 1, 2, 3 and 4</li><li>Formula sold by dealers from Epic Act 1, 2, 3, 4, 5 and Atlantis</li></td><td>Required Reagents :<br/>
+                <li>Summoner's Totem</li>
+                <li>Vorpal Blade</li>
+                <li>Epic Anteok Antlers</li><br/><br/><b>Shell of Light</b><br/>In time of need, shield yourself with a force field that minimizes the damage received.<br/><br/>20.0 Second(s) Recharge<br/>75 Active Energy Cost per Second<br/>2.0 Second Duration<br/>
+                300% Damage Absorption<br/>
+                300% Sleep Resistance<br/>
+                300% Stun Resistance<br/>
+                300% Reduced Freeze Duration<br/>
+                300% Reduced Petrify Duration<br/>
+                300% Slow Resistance
+                </td>
+            </tr>
+        </table>
+        
+        <!--
+
+        -->
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function_lootable.js"></script>
+</body></html>

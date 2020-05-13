@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Arcane Barrage</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 3 Set Bonuses :</span><br />
+                    +50% Vitality Damage<br />
+                    20% Elemental Resistance<br />
+                    +40 Intelligence<br />
+                    <br />
+                    <span style="color: orange">3 / 3 Set Bonuses :</span><br />
+                    +50% Vitality Damage<br />
+                    40% Elemental Resistance<br />
+                    +80 Intelligence<br />
+                    -20% Recharge
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Embodiment of Corruption</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 5 Set Bonuses :</span><br />
+                    +20% Pierce Damage<br />
+                    +20% Fire Damage<br />
+                    +20% Burn Damage<br />
+                    +20% Instant Poison Damage<br />
+                    +20% Poison Damage<br />
+                    6% of Attack damage converted to Health<br />
+                    6% Physical Resistance<br />
+                    20% Pierce Resistance<br />
+                    20% Elemental Resistance<br />
+                    +5% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">3 / 5 Set Bonuses :</span><br />
+                    +30% Pierce Damage<br />
+                    +30% Fire Damage<br />
+                    +30% Burn Damage<br />
+                    +30% Instant Poison Damage<br />
+                    +30% Poison Damage<br />
+                    9% of Attack damage converted to Health<br />
+                    9% Physical Resistance<br />
+                    30% Pierce Resistance<br />
+                    30% Elemental Resistance<br />
+                    +10% Dexterity<br />
+                    +10% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">4 / 5 Set Bonuses :</span><br />
+                    +40% Pierce Damage<br />
+                    +40% Fire Damage<br />
+                    +40% Burn Damage<br />
+                    +40% Instant Poison Damage<br />
+                    +40% Poison Damage<br />
+                    12% of Attack damage converted to Health<br />
+                    12% Physical Resistance<br />
+                    40% Pierce Resistance<br />
+                    40% Elemental Resistance<br />
+                    +15% Dexterity<br />
+                    +20% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">5 / 5 Set Bonuses :</span><br />
+                    +50% Pierce Damage<br />
+                    +50% Fire Damage<br />
+                    +50% Burn Damage<br />
+                    +50% Instant Poison Damage<br />
+                    +50% Poison Damage<br />
+                    15% of Attack damage converted to Health<br />
+                    15% Physical Resistance<br />
+                    50% Pierce Resistance<br />
+                    50% Elemental Resistance<br />
+                    +20% Dexterity<br />
+                    +30% Attack Speed<br/>
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Eternal Alliance</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 2 Set Bonuses :</span><br />
+                    +50 Strength<br />
+                    -15 Intelligence<br />
+                    +20% Health<br />
+                    +20% Energy<br />
+                    +10% Total Speed
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Gloomweaver's Set</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 4 Set Bonuses :</span><br />
+                    +5% Total Damage<br />
+                    +20% Instant Poison Damage<br />
+                    +20% Poison Damage<br />
+                    15% Pierce Resistance<br />
+                    15% Elemental Resistance<br />
+                    16 Piercing Retaliation<br />
+                    16 Instant Poison Retaliation<br />
+                    +10% Total Speed<br />
+                    <br />
+                    <span style="color: orange">3 / 4 Set Bonuses :</span><br />
+                    +10% Total Damage<br />
+                    +40% Instant Poison Damage<br />
+                    +40% Poison Damage<br />
+                    30% Pierce Resistance<br />
+                    30% Elemental Resistance<br />
+                    32 Piercing Retaliation<br />
+                    32 Instant Poison Retaliation<br />
+                    +15% Total Speed<br />
+                    <br />
+                    <span style="color: orange">4 / 4 Set Bonuses :</span><br />
+                    +25% Total Damage<br />
+                    +100% Instant Poison Damage<br />
+                    +100% Poison Damage<br />
+                    45% Pierce Resistance<br />
+                    45% Elemental Resistance<br />
+                    48 Piercing Retaliation<br />
+                    48 Instant Poison Retaliation<br />
+                    +20% Total Speed
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Innate Murderer</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 2 Set Bonuses :</span><br />
+                    +35% Total Damage
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Journey of Myriad Dimensions</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 6 Set Bonuses :</span><br />
+                    5% Pierce Resistance<br />
+                    5% Bleeding Resistance<br />
+                    5% Elemental Resistance<br />
+                    5% Poison Resistance<br />
+                    5% Vitality Damage Resistance<br />
+                    +25 Intelligence<br />
+                    +50% Health Regeneration<br />
+                    <br />
+                    <span style="color: orange">3 / 6 Set Bonuses :</span><br />
+                    10% Pierce Resistance<br />
+                    10% Bleeding Resistance<br />
+                    10% Elemental Resistance<br />
+                    10% Poison Resistance<br />
+                    10% Vitality Damage Resistance<br />
+                    +50 Intelligence<br />
+                    +100% Health Regeneration<br />
+                    <br />
+                    <span style="color: orange">4 / 6 Set Bonuses :</span><br />
+                    15% Pierce Resistance<br />
+                    15% Bleeding Resistance<br />
+                    15% Elemental Resistance<br />
+                    15% Poison Resistance<br />
+                    15% Vitality Damage Resistance<br />
+                    +50% Electrical Burn Retaliation<br />
+                    +100 Intelligence<br />
+                    +150% Health Regeneration<br />
+                    20% Weapon Base Damage becomes Elemental<br />
+                    -15% Recharge<br />
+                    -15% Energy Cost<br />
+                    <br />
+                    <span style="color: orange">5 / 6 Set Bonuses :</span><br />
+                    10% Physical Resistance<br />
+                    20% Pierce Resistance<br />
+                    20% Bleeding Resistance<br />
+                    20% Elemental Resistance<br />
+                    20% Poison Resistance<br />
+                    20% Vitality Damage Resistance<br />
+                    +50% Electrical Burn Retaliation with +50% Improved Duration<br />
+                    +150 Intelligence<br />
+                    +200% Health Regeneration<br />
+                    30% Weapon Base Damage becomes Elemental<br />
+                    -20% Recharge<br />
+                    -20% Energy Cost<br />
+                    <br />
+                    <span style="color: orange">6 / 6 Set Bonuses :</span><br />
+                    20% Physical Resistance<br />
+                    25% Pierce Resistance<br />
+                    25% Bleeding Resistance<br />
+                    25% Elemental Resistance<br />
+                    25% Poison Resistance<br />
+                    25% Vitality Damage Resistance<br />
+                    +100% Electrical Burn Retaliation with +100% Improved Duration<br />
+                    +200 Intelligence<br />
+                    +300% Health Regeneration<br />
+                    40% Weapon Base Damage becomes Elemental<br />
+                    -25% Recharge<br />
+                    -25% Energy Cost
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Naturespeaker's Outfit</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 5 Set Bonuses :</span><br />
+                    +15% Poison Damage with +20% Improved Duration<br />
+                    5 Armor<br />
+                    +5% Health<br />
+                    +5% Energy<br />
+                    <br />
+                    <span style="color: orange">3 / 5 Set Bonuses :</span><br />
+                    +30% Poison Damage with +40% Improved Duration<br />
+                    10 Armor<br />
+                    +10% Health<br />
+                    +10% Energy<br />
+                    3% Chance to Dodge Attacks<br />
+                    3% Chance to Avoid Projectiles<br />
+                    <br />
+                    <span style="color: orange">4 / 5 Set Bonuses :</span><br />
+                    +45% Poison Damage with +60% Improved Duration<br />
+                    15 Armor<br />
+                    +15% Health<br />
+                    +15% Energy<br />
+                    6% Chance to Dodge Attacks<br />
+                    6% Chance to Avoid Projectiles<br />
+                    <br />
+                    <span style="color: orange">5 / 5 Set Bonuses :</span><br />
+                    +60% Poison Damage with +80% Improved Duration<br />
+                    20 Armor<br />
+                    +20% Health<br />
+                    +20% Energy<br />
+                    +50 Defensive Ability<br />
+                    10% Chance to Dodge Attacks<br />
+                    10% Chance to Avoid Projectiles
+                </p>
+        </div>
+        <div class="itemBox rarityMU" id="newSet1">
+            <p class="itemName">Night Eternal</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 5 Set Bonuses :</span><br />
+                    30% Pierce Resistance<br />
+                    30% Poison Resistance<br />
+                    40% Sleep Resistance<br />
+                    30% Reduced Freeze Duration<br />
+                    +2.0 Energy Regeneration per second<br />
+                    +10% Attack Speed<br />
+                    -5% Energy Cost<br />
+                    <br />
+                    <span style="color: orange">3 / 5 Set Bonuses :</span><br />
+                    50% Pierce Resistance<br />
+                    50% Poison Resistance<br />
+                    60% Sleep Resistance<br />
+                    40% Reduced Freeze Duration<br />
+                    40% Reduced Petrify Duration<br />
+                    +4.0 Energy Regeneration per second<br />
+                    +15% Attack Speed<br />
+                    5% Chance to Dodge Attacks<br />
+                    5% Chance to Avoid Projectiles<br />
+                    -10% Energy Cost<br />
+                    <br />
+                    <span style="color: orange">4 / 5 Set Bonuses :</span><br />
+                    70% Pierce Resistance<br />
+                    70% Poison Resistance<br />
+                    80% Sleep Resistance<br />
+                    50% Reduced Freeze Duration<br />
+                    50% Reduced Petrify Duration<br />
+                    +15% Intelligence<br />
+                    +6.0 Energy Regeneration per second<br />
+                    +20% Attack Speed<br />
+                    10% Chance to Dodge Attacks<br />
+                    10% Chance to Avoid Projectiles<br />
+                    -15% Energy Cost<br />
+                    <br />
+                    <span style="color: orange">5 / 5 Set Bonuses :</span><br />
+                    90% Pierce Resistance<br />
+                    90% Poison Resistance<br />
+                    100% Sleep Resistance<br />
+                    60% Reduced Freeze Duration<br />
+                    60% Reduced Petrify Duration<br />
+                    +25% Intelligence<br />
+                    +10.0 Energy Regeneration per second<br />
+                    +30% Attack Speed<br />
+                    15% Chance to Dodge Attacks<br />
+                    15% Chance to Avoid Projectiles<br />
+                    -25% Energy Cost<br />
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Sovereign of Void</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 6 Set Bonuses :</span><br />
+                    +5% Physical Damage<br />
+                    +5% Pierce Damage<br />
+                    +10% Vitality Damage<br />
+                    +10% Vitality Decay with +25% Improved Duration<br />
+                    25% Bleeding Resistance<br />
+                    25% Poison Resistance<br />
+                    +4% Health<br />
+                    <br />
+                    <span style="color: orange">3 / 6 Set Bonuses :</span><br />
+                    +15% Physical Damage<br />
+                    +15% Pierce Damage<br />
+                    +20% Vitality Damage<br />
+                    +20% Vitality Decay with +25% Improved Duration<br />
+                    50% Bleeding Resistance<br />
+                    50% Poison Resistance<br />
+                    +8% Health<br />
+                    <br />
+                    <span style="color: orange">4 / 6 Set Bonuses :</span><br />
+                    +20% Physical Damage<br />
+                    +20% Pierce Damage<br />
+                    +30% Vitality Damage<br />
+                    +30% Vitality Decay with +50% Improved Duration<br />
+                    75% Bleeding Resistance<br />
+                    75% Poison Resistance<br />
+                    50% Sleep Resistance<br />
+                    50% Slow Resistance<br />
+                    +12% Health<br />
+                    <br />
+                    <span style="color: orange">5 / 6 Set Bonuses :</span><br />
+                    +30% Physical Damage<br />
+                    +30% Pierce Damage<br />
+                    +50% Vitality Damage<br />
+                    +50% Vitality Decay with +75% Improved Duration<br />
+                    +15% Armor Protection<br />
+                    100% Bleeding Resistance<br />
+                    100% Poison Resistance<br />
+                    100% Sleep Resistance<br />
+                    100% Slow Resistance<br />
+                    +16% Health<br />
+                    <br />
+                    <span style="color: orange">6 / 6 Set Bonuses :</span><br />
+                    +40% Physical Damage<br />
+                    +40% Pierce Damage<br />
+                    +80% Vitality Damage<br />
+                    +80% Vitality Decay with +100% Improved Duration<br />
+                    +25% Armor Protection<br />
+                    100% Bleeding Resistance<br />
+                    100% Poison Resistance<br />
+                    100% Sleep Resistance<br />
+                    100% Slow Resistance<br />
+                    +20% Health
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">The Hell Furnace</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 4 Set Bonuses :</span><br />
+                    10% Damage Reflected<br />
+                    20 - 45 Fire Retaliation<br />
+                    120 - 180 Burn Retaliation over 3.0 Seconds<br />
+                    +400 Health<br />
+                    +10% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">3 / 4 Set Bonuses :</span><br />
+                    25% Damage Reflected<br />
+                    30 - 60 Fire Retaliation<br />
+                    180 - 270 Burn Retaliation over 3.0 Seconds<br />
+                    +800 Health<br />
+                    +25% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">4 / 4 Set Bonuses :</span><br />
+                    40 Armor<br />
+                    40% Damage Reflected<br />
+                    40 - 75 Fire Retaliation<br />
+                    240 - 360 Burn Retaliation over 3.0 Seconds<br />
+                    +1200 Health<br />
+                    +40% Attack Speed<br />
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">The Hunting Paradox</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 2 Set Bonuses :</span><br />
+                    +20% Movement Speed<br />
+                    14% Chance to Dodge Attacks<br />
+                    14% Chance to Avoid Projectiles
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Uniform of Cyzicus</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 2 Set Bonuses :</span><br />
+                    +10% Armor Protection<br />
+                    +150 Health<br />
+                    +30% Health Regeneration<br />
+                    +150 Energy<br />
+                    +30% Energy Regeneration<br />
+                    +10% Total Speed
+                </p>
+        </div>
+        <div class="itemBox rarityEpic" id="newSet2">
+            <p class="itemName">Vixen's Legacy</p>
+            <p class="itemText">
+                <br />
+                <p class="itemText2Set itemText2IconAlt">
+                    <span style="color: orange">2 / 2 Set Bonuses :</span><br />
+                    25 Piercing Damage<br />
+                    25 Fire Damage<br />
+                    25% Pierce Resistance<br />
+                    25% Fire Resistance<br />
+                    +25 Dexterity<br />
+                    +10% Total Speed
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function_sets.js"></script>
+</body></html>

@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html">
+                <p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p>
+                <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            </a>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+         <div class="itemBox rarityCharmE">
+            <p class="itemName">Anax's Medal</p>
+            <img src="../img/amulet/29.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    20% Pierce Resistance<br />
+                    +10% Shield Block Chance<br />
+                    10 Damage<br />
+                    +1.5 Health Regeneration per second<br />
+                    +1 to Slash Flurry
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 12
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Arcanist's Secret</p>
+            <img src="../img/amulet/03.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    +18% Armor Protection<br />
+                    40% Pierce Resistance<br />
+                    40% Poison Resistance<br />
+                    40% Vitality Resistance<br />
+                    15% Reduced Resistances for 3.0 Seconds<br />
+                    +1.0 Energy Regeneration per second<br />
+                    +14% Casting Speed<br />
+                    +20% Less Damage from Undead<br />
+                    +20% Less Damage from Demons<br />
+                    <br />
+                    Grants Skill : Ternion Attack<br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 57
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Bijou of Forbidden Arcane</p>
+            <img src="../img/amulet/04.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    30% Elemental Resistance<br />
+                    +40% Elemental Damages<br />
+                    26 - 31 Elemental Damage<br />
+                    +55 Intelligence<br />
+                    +75 Defensive Ability<br />
+                    +40% Casting Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 41
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Bloodstained Ruby</p>
+            <img src="../img/amulet/27.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    30% Bleeding Resistance<br />
+                    30 Bleeding Damage over 3.0 Seconds<br />
+                    <br />
+                    Grants Skill : Blood Circle (Activated upon taking damage)<br />
+                    Create a vortex of blood that shreds the living caught inside.<br />
+                    <br />
+                    4.0 Second(s) Recharge<br />
+                    Extra Life Time 12 Seconds<br />
+                    3 Summon Limit<br />
+                    Blood Circle Attributes :<br />
+                    Life Time 12.0 Seconds<br />
+                    200 Health<br />
+                    200 Energy<br />
+                    <br />
+                    Blood Circle Abilities :<br />
+                    Blood Circle<br />
+                    6.0 Meter Radius<br />
+                    30 Bleeding Damage per Second<br />
+                    30 Vitality Decay per Second<br />
+                    8 Reduced Resistances for 3.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Bloodstained Ruby</p>
+            <img src="../img/amulet/27.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    60% Bleeding Resistance<br />
+                    75 Bleeding Damage over 3.0 Seconds<br />
+                    <br />
+                    Grants Skill : Blood Circle (Activated upon taking damage)<br />
+                    Create a vortex of blood that shreds the living caught inside.<br />
+                    <br />
+                    4.0 Second(s) Recharge<br />
+                    Extra Life Time 12 Seconds<br />
+                    3 Summon Limit<br />
+                    Blood Circle Attributes :<br />
+                    Life Time 12.0 Seconds<br />
+                    1950 Health<br />
+                    400 Energy<br />
+                    <br />
+                    Blood Circle Abilities :<br />
+                    Blood Circle<br />
+                    6.0 Meter Radius<br />
+                    60 Bleeding Damage per Second<br />
+                    60 Vitality Decay per Second<br />
+                    12 Reduced Resistances for 3.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 42
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Bloodstained Ruby</p>
+            <img src="../img/amulet/27.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    100% Bleeding Resistance<br />
+                    120 Bleeding Damage over 3.0 Seconds<br />
+                    <br />
+                    Grants Skill : Blood Circle (Activated upon taking damage)<br />
+                    Create a vortex of blood that shreds the living caught inside.<br />
+                    <br />
+                    4.0 Second(s) Recharge<br />
+                    Extra Life Time 12 Seconds<br />
+                    3 Summon Limit<br />
+                    Blood Circle Attributes :<br />
+                    Life Time 12.0 Seconds<br />
+                    5720 Health<br />
+                    600 Energy<br />
+                    <br />
+                    Blood Circle Abilities :<br />
+                    Blood Circle<br />
+                    6.0 Meter Radius<br />
+                    100 Bleeding Damage per Second<br />
+                    100 Vitality Decay per Second<br />
+                    16 Reduced Resistances for 3.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN"  id="newItem1">
+            <p class="itemName">Bonechill Sapphire</p>
+            <img src="../img/amulet/38.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    200 Frostburn Damage over 3.0 Seconds<br/>
+                    <br/>
+                    Grants Skill : Iceshatter Bomb
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 48
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Bonechill Sapphire</p>
+            <img src="../img/amulet/38.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    320 Frostburn Damage over 3.0 Seconds<br/>
+                    <br/>
+                    Grants Skill : Iceshatter Bomb
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 58
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Brooch of Spectral Webs</p>
+            <img src="../img/amulet/09.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    20% Bleeding Resistance<br />
+                    100% Poison Resistance<br />
+                    +50% Poison Damage<br />
+                    +40% Vitality Damage<br />
+                    20 Instant Poison Damage<br />
+                    +23 Intelligence<br />
+                    +23 Dexterity<br />
+                    +35% Less Damage from Insectoids<br />
+                    <br />
+                    Grants Skill : Summon Spectral Spiders (Activated on attack)<br />
+                    Invoke three spectral spiders that will defend you until they dissapear.<br />
+                    <br />
+                    60.0 Second(s) Recharge<br />
+                    25 Energy Cost<br />
+                    Extra Life Time 45 Seconds<br />
+                    3 Summon Limit<br />
+                    Spectral Spider Attributes:<br />
+                    Life Time 45.0 Seconds<br />
+                    7618 Health<br />
+                    750 Energy<br />
+                    <br />
+                    Spectral Spider Abilities:<br />
+                    Sinister Spider Web<br />
+                    50 Energy Cost<br />
+                    5.0 Second Duration<br />
+                    2.5 Meter Radius<br />
+                    81 Poison Damage over 3.0 Seconds<br />
+                    20 Instant Poison Damage<br />
+                    -33% Defensive Ability
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 54
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN"  id="newItem6">
+            <p class="itemName">Ceramic Ankh</p>
+            <img src="../img/amulet/36.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +30% Stun Retaliation<br />
+                    25.0% Chance of 150 Physical Retaliation<br />
+                    5.0% Chance of 1.0 - 1.5 Stun Retaliation<br />
+                    +450 Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +30% Stun Duration<br />
+                    45 Physical Retaliation
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 43
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Ceramic Ankh</p>
+            <img src="../img/amulet/36.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +40% Stun Retaliation<br />
+                    25.0% Chance of 225 Physical Retaliation<br />
+                    10.0% Chance of 1.0 - 1.5 Stun Retaliation<br />
+                    +700 Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +40% Stun Duration<br />
+                    70 Physical Retaliation
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 54
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Dying Candle</p>
+            <img src="../img/amulet/26.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    25.0% Chance of +75% Burn Damage <br />
+                    +10% Damage to Demons
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Dying Candle</p>
+            <img src="../img/amulet/26.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    25.0% Chance of +150% Burn Damage <br />
+                    +20% Damage to Demons
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 42
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Dying Candle</p>
+            <img src="../img/amulet/26.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    25.0% Chance of +225% Burn Damage <br />
+                    +30% Damage to Demons
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Eye of Erlang Shen</p>
+            <img src="../img/amulet/28.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    15% Physical Resistance<br />
+                    +15.0 Energy Regeneration per second<br />
+                    20% less Energy Reserved<br />
+                    +100 Offensive Ability<br />
+                    +8% Offensive Ability<br />
+                    +100 Defensive Ability<br />
+                    +8% Defensive Ability<br />
+                    +2 to Eye of the Mind<br />
+                    +2 to all skills in Time Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 58
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN"  id="newItem15">
+            <p class="itemName">Fallen Hero's Insignia</p>
+            <img src="../img/amulet/37.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Physical Damage<br />
+                    -15% Reduction to all Requirements<br />
+                    +15% Less Damage from Demons<br />
+                    +15% Less Damage from Titans
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 40
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Fallen Hero's Insignia</p>
+            <img src="../img/amulet/37.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Physical Damage<br />
+                    -20% Reduction to all Requirements<br />
+                    +20% Less Damage from Demons<br />
+                    +20% Less Damage from Titans
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Feather Talisman</p>
+            <img src="../img/amulet/15.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    30% Poison Resistance<br />
+                    15% Less Damage from Beasts
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 8
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Feather Talisman</p>
+            <img src="../img/amulet/15.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    60% Poison Resistance<br />
+                    15% Less Damage from Beasts
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Feather Talisman</p>
+            <img src="../img/amulet/15.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    100% Poison Resistance<br />
+                    15% Less Damage from Beasts
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Filed Teeth Necklace</p>
+            <img src="../img/amulet/31.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal<br />
+                16 Armor
+                <p class="itemText2 itemText2IconAlt">
+                    +12% Physical Damage<br />
+                    8 Piercing Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 20
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Filed Teeth Necklace</p>
+            <img src="../img/amulet/31.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic<br />
+                24 Armor
+                <p class="itemText2 itemText2IconAlt">
+                    +18% Physical Damage<br />
+                    16 Piercing Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 40
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Filed Teeth Necklace</p>
+            <img src="../img/amulet/31.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary<br />
+                32 Armor
+                <p class="itemText2 itemText2IconAlt">
+                    +24% Physical Damage<br />
+                    24 Piercing Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU" id="newItem26">
+            <p class="itemName">Heart of Eternal Unrest</p>
+            <img src="../img/amulet/39.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                25 Armor
+                <p class="itemText2 itemText2IconAlt">
+                    100% Bleeding Resistance<br />
+                    100% Fire Resistance<br />
+                    100% Poison Resistance<br />
+                    500 Vitality Decay Retaliation over 10.0 Seconds<br />
+                    10% Reduction to Enemy's Health<br />
+                    +15% Health<br />
+                    <br />
+                    Grants Skill : Monstrify
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 69
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Heartstinger</p>
+            <img src="../img/amulet/30.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    20% Pierce Resistance<br />
+                    20% Poison Resistance<br />
+                    +3% Total Speed<br />
+                    <br />
+                    Grants Skill : Lethal Strike
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 14
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Heartstinger</p>
+            <img src="../img/amulet/30.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    35% Pierce Resistance<br />
+                    35% Poison Resistance<br />
+                    +6% Total Speed<br />
+                    <br />
+                    Grants Skill : Lethal Strike
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 37
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Heartstinger</p>
+            <img src="../img/amulet/30.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    50% Pierce Resistance<br />
+                    50% Poison Resistance<br />
+                    +9% Total Speed<br />
+                    <br />
+                    Grants Skill : Lethal Strike
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 48
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Huntmaster's Talisman</p>
+            <img src="../img/amulet/06.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    45% Pierce Resistance<br />
+                    35% Bleeding Resistance<br />
+                    11 Piercing Retaliation<br />
+                    10.0% Chance of +75% Pierce Damage<br />
+                    +10% Defensive Ability<br />
+                    +7% Total Speed<br />
+                    +15% Attack Speed<br />
+                    +1 to all skills in Archery Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 44
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Jewel of Toxicity</p>
+            <img src="../img/amulet/32.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    100 Poison Damage over 3.0 Seconds<br />
+                    <br />
+                    Grants Skill : Super Toxic Gas Bombs
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Jewel of Toxicity</p>
+            <img src="../img/amulet/32.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    200 Poison Damage over 3.0 Seconds<br />
+                    <br />
+                    Grants Skill : Super Toxic Gas Bombs
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 42
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Jewel of Toxicity</p>
+            <img src="../img/amulet/32.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    320 Poison Damage over 3.0 Seconds<br />
+                    <br />
+                    Grants Skill : Super Toxic Gas Bombs
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN" id="newItem37">
+            <p class="itemName">Lifedrinker's Insiginia</p>
+            <img src="../img/amulet/40.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    20% Life Leech Resistance<br />
+                    9% of Attack damage converted to Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    9% of Attack damage converted to Health<br />
+                    20% Life Leech Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 8
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Lifedrinker's Insiginia</p>
+            <img src="../img/amulet/40.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    40% Life Leech Resistance<br />
+                    12% of Attack damage converted to Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    12% of Attack damage converted to Health<br />
+                    40% Life Leech Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Lifedrinker's Insiginia</p>
+            <img src="../img/amulet/40.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    60% Life Leech Resistance<br />
+                    15% of Attack damage converted to Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    15% of Attack damage converted to Health<br />
+                    60% Life Leech Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Aqua</p>
+            <img src="../img/amulet/24.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    100% Cold Resistance<br />
+                    +30% Cold Damage<br />
+                    +30% Frostburn Damage<br />
+                    +20 Strength<br />
+                    +20 Intelligence<br />
+                    +40 Dexterity<br />
+                    +540 Health<br />
+                    +100 Energy<br />
+                    +4 to all skills in Aqua Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Archery</p>
+            <img src="../img/amulet/23.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    80% Pierce Resistance<br />
+                    +20% Pierce Damage<br />
+                    +40% Bleeding Damage<br />
+                    +20 Strength<br />
+                    +60 Dexterity<br />
+                    +600 Health<br />
+                    +80 Energy<br />
+                    +4 to all skills in Archery Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Barbarism</p>
+            <img src="../img/amulet/25.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    100% Bleeding Resistance<br />
+                    +20% Physical Damage<br />
+                    +40% Bleeding Damage<br />
+                    +60 Strength<br />
+                    +20 Dexterity<br />
+                    +750 Health<br />
+                    +4 to all skills in Barbarism Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Chaos</p>
+            <img src="../img/amulet/22.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    50% Bleeding Resistance<br />
+                    50% Vitality Damage Resistance<br />
+                    +30% Bleeding Damage<br />
+                    +30% Vitality Damage<br />
+                    +40 Strength<br />
+                    +40 Intelligence<br />
+                    +40 Dexterity<br />
+                    +325 Health<br />
+                    +4 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Geomancy</p>
+            <img src="../img/amulet/21.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    13% Physical Resistance<br />
+                    +30% Physical Damage<br />
+                    +20% Stun Duration<br />
+                    +50 Strength<br />
+                    +30 Intelligence<br />
+                    +500 Health<br />
+                    +200 Energy<br />
+                    +4 to all skills in Geomancy Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Lifegivng</p>
+            <img src="../img/amulet/20.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    100% Fire Resistance<br />
+                    +30% Fire Damage<br />
+                    +30% Burn Damage<br />
+                    +40 Intelligence<br />
+                    +20 Dexterity<br />
+                    +900 Health<br />
+                    +240 Energy<br />
+                    +4 to all skills in Lifegiving Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Necromancy</p>
+            <img src="../img/amulet/19.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    100% Vitality Damage Resistance<br />
+                    +30% Vitality Damage<br />
+                    +30% Vitality Decay<br />
+                    +40 Intelligence<br />
+                    +40 Dexterity<br />
+                    +500 Health<br />
+                    +200 Energy<br />
+                    +4 to all skills in Necromancy Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Science</p>
+            <img src="../img/amulet/18.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    100% Poison Resistance<br />
+                    +30% Instant Poison Damage<br />
+                    +30% Poison Damage<br />
+                    +26 Intelligence<br />
+                    +26 Strength<br />
+                    +26 Dexterity<br />
+                    +400 Health<br />
+                    +300 Energy<br />
+                    +4 to all skills in Science Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Time</p>
+            <img src="../img/amulet/17.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    33% Elemental Resistance<br />
+                    +20% Elemental Damages<br />
+                    +20 Strength<br />
+                    +40 Intelligence<br />
+                    +20 Dexterity<br />
+                    +400 Health<br />
+                    +300 Energy<br />
+                    +4 to all skills in Time Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmMU">
+            <p class="itemName">Medallion of Witchcraft</p>
+            <img src="../img/amulet/16.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    20% Elemental Resistance<br />
+                    20% Poison Resistance<br />
+                    20% Vitality Resistance<br />
+                    +15% Total Damage<br />
+                    +60 Intelligence<br />
+                    +20 Dexterity<br />
+                    +480 Health<br />
+                    +200 Energy<br />
+                    +4 to all skills in Witchcraft Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 70
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Oeneus' Necklace</p>
+            <img src="../img/amulet/35.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                20 Armor
+                <p class="itemText2 itemText2IconAlt">
+                    +30% Physical Resistance<br />
+                    30% Bleeding Resistance<br />
+                    30% Vitality Damage Resistance<br />
+                    +200 Health<br />
+                    <br />
+                    Grants Skill : Battle Rage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 30
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Pocket Rune</p>
+            <img src="../img/amulet/14.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    10 Elemental Damage<br />
+                    8% Elemental Resistance<br />
+                    20 Elemental Retaliation<br />
+                    <br />
+                    Grants Skill : Rune Weapon
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Pocket Rune</p>
+            <img src="../img/amulet/14.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    20 Elemental Damage<br />
+                    16% Elemental Resistance<br />
+                    40 Elemental Retaliation<br />
+                    <br />
+                    Grants Skill : Rune Weapon
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Pocket Rune</p>
+            <img src="../img/amulet/14.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    30 Elemental Damage<br />
+                    24% Elemental Resistance<br />
+                    70 Elemental Retaliation<br />
+                    <br />
+                    Grants Skill : Rune Weapon
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 56
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Ruby Necklace</p>
+            <img src="../img/amulet/08.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    +8% Armor Protection<br />
+                    10% Bleeding Resistance<br />
+                    15 Bleeding Damage per Second<br />
+                    +75 Health<br />
+                    -10% Strength Requirement for all Weapons
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 10
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Scarab of Dawn</p>
+            <img src="../img/amulet/34.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    30% Fire Resistance<br />
+                    20% Damage to Insectoids<br />
+                    20% Less Damage from Insectoids<br />
+                    <br />
+                    Grants Skill : Ring of Flame (Activated when equipped)<br />
+                    The aura encircles you with fiendish flames, melting weapons and armor of nearby enemies.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    4.0 Second(s) Recharge<br />
+                    3 Active Energy Cost per Second<br />
+                    3.0 Meter Radius<br />
+                    10 Fire Damage<br />
+                    10% reduced Defensive Ability for 3.0 Seconds<br />
+                    60 Reduced Armor for 3.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 14
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Scarab of Dawn</p>
+            <img src="../img/amulet/34.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    60% Fire Resistance<br />
+                    25% Damage to Insectoids<br />
+                    25% Less Damage from Insectoids<br />
+                    <br />
+                    Grants Skill : Ring of Flame (Activated when equipped)<br />
+                    The aura encircles you with fiendish flames, melting weapons and armor of nearby enemies.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    4.0 Second(s) Recharge<br />
+                    5 Active Energy Cost per Second<br />
+                    3.0 Meter Radius<br />
+                    20 Fire Damage<br />
+                    12% reduced Defensive Ability for 3.0 Seconds<br />
+                    100 Reduced Armor for 3.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 37
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Scarab of Dawn</p>
+            <img src="../img/amulet/34.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    100% Fire Resistance<br />
+                    30% Damage to Insectoids<br />
+                    30% Less Damage from Insectoids<br />
+                    <br />
+                    Grants Skill : Ring of Flame (Activated when equipped)<br />
+                    The aura encircles you with fiendish flames, melting weapons and armor of nearby enemies.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    4.0 Second(s) Recharge<br />
+                    7 Active Energy Cost per Second<br />
+                    3.0 Meter Radius<br />
+                    40 Fire Damage<br />
+                    15% reduced Defensive Ability for 3.0 Seconds<br />
+                    160 Reduced Armor for 3.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 48
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Scarab Pendant</p>
+            <img src="../img/amulet/13.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    +8% Armor Protection<br />
+                    2% Physical Resistance<br />
+                    20% Pierce Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 14
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Scarab Pendant</p>
+            <img src="../img/amulet/13.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    +14% Armor Protection<br />
+                    4% Physical Resistance<br />
+                    30% Pierce Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 37
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Scarab Pendant</p>
+            <img src="../img/amulet/13.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Armor Protection<br />
+                    6% Physical Resistance<br />
+                    40% Pierce Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 48
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Shapeshifting Mudball</p>
+            <img src="../img/amulet/33.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                   3% Physical Resistance<br />
+                   +3% Shield Block Chance<br/>
+                    -10% Shield Recovery Time
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 28
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Shapeshifting Mudball</p>
+            <img src="../img/amulet/33.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    6% Physical Resistance<br />
+                   +6% Shield Block Chance<br/>
+                    -18% Shield Recovery Time
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 42
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Shapeshifting Mudball</p>
+            <img src="../img/amulet/33.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    9% Physical Resistance<br />
+                   +9% Shield Block Chance<br/>
+                   -26% Shield Recovery Time
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 52
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Shimmering Diamond Trinket</p>
+            <img src="../img/amulet/02.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                25 Armor
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Armor Protection<br />
+                    40% Bleeding Resistance<br />
+                    40% Poison Resistance<br />
+                    40% Life Leech Resistance<br />
+                    40% Energy Leech Resistance<br />
+                    +500 Health<br />
+                    <br />
+                    Grants Skill : Minion Blessing<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    40 Armor<br />
+                    +250 Health
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 59
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Spirit Catcher</p>
+            <img src="../img/amulet/12.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Normal
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Summon Spirit Boars<br /><br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    5.0% Chance of 1.0 Stun Retaliation<br />
+                    6% Chance to Avoid Projectiles
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 8
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Spirit Catcher</p>
+            <img src="../img/amulet/12.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Epic
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Summon Spirit Boars<br /><br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    5.0% Chance of 2.0 Stun Retaliation<br />
+                    8% Chance to Avoid Projectiles
+                    
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Spirit Catcher</p>
+            <img src="../img/amulet/12.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Difficulty : Legendary
+                <p class="itemText2 itemText2IconAlt">
+                    Grants Skill : Summon Spirit Boars<br /><br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    5.0% Chance of 3.0 Stun Retaliation<br />
+                    10% Chance to Avoid Projectiles
+                    
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Spirit Conduit</p>
+            <img src="../img/amulet/07.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    32 Vitality Decay Retaliation per Second<br />
+                    +50% Vitality Decay<br />
+                    +270 Health<br />
+                    +250 Energy<br />
+                    +50% Damage to Ghosts<br />
+                    +2 to Doom Sealing<br />
+                    <br />
+                    Grants Skill : Spirit Wave (Activated on attack)<br />
+                    Call upon a swarm of spirits to eliminate all living things in the way.<br />
+                    <br />
+                    6.0 Second(s) Recharge<br />
+                    50 Energy Cost<br />
+                    294 Vitality Decay over 3.0 Seconds<br />
+                    106 Vitality Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 41
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Stardust Knot</p>
+            <img src="../img/amulet/10.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    35% Pierce Resistance<br />
+                    35% Elemental Resistance<br />
+                    75% Reduced Freeze Duration<br />
+                    +250 Energy<br />
+                    +50% Energy Regeneration<br />
+                    +50 Defensive Ability<br />
+                    -10% Recharge<br />
+                    -10% Energy Cost<br />
+                    +25% Less Damage from Magical<br />
+                    <br />
+                    Grants Skill : Fairy Aura (Activated when equipped)<br />
+                    Magical dust emanating from your pendant puts everyone's minds at ease, aiding their spellcasting.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    5 Active Energy Cost per Second<br />
+                    10.0 Meter Radius<br />
+                    20.0% Chance of -30% Recharge<br />
+                    40.0% Chance of -30% Energy Cost
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 56
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">The Gazing Eye</p>
+            <img src="../img/amulet/05.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    8% Health Reduction Retaliation<br />
+                    +40% Fire Damage<br />
+                    +40% Burn Damage<br />
+                    +40% Lightning Damage<br />
+                    +40% Vitality Decay<br />
+                    -3.0 Health Regeneration per second<br />
+                    -3.0 Energy Regeneration per second<br />
+                    +1 to Energy Rush<br />
+                    +1 to Pandemonium<br />
+                    <br />
+                    Grants Skill : Gazing Eye's Pain-Barrier (Activated upon taking ranged damage)<br />
+                    The Gazing Eye creates a ward, which absorbs large amounts of damage. The question remains... where does it draw its power from?<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    360.0 Second(s) Recharge<br />
+                    7000 Damage Absorption<br />
+                    Protects Against :<br />
+                    &nbsp;Physical<br />
+                    &nbsp;Pierce<br />
+                    &nbsp;Lightning<br />
+                    &nbsp;Fire<br />
+                    &nbsp;Cold<br />
+                    &nbsp;Poison<br />
+                    &nbsp;Vitality<br />
+                    &nbsp;Bleeding<br />
+                    -30.0 Health Regeneration per second<br />
+                    -10.0 Energy Regeneration per second<br />
+                    16 Fire Retaliation<br />
+                    85 Vitality Decay Retaliation over 5.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 67
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE" id="newItem39">
+            <p class="itemName">Vixen's Heart</p>
+            <img src="../img/amulet/41.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Set : Vixen's Legacy
+                <p class="itemText2 itemText2IconAlt">
+                    +30% Bleeding Damage<br />
+                    +30% Fire Damage<br />
+                    +30% Burn Damage<br />
+                    +25 Dexterity<br />
+                    +250 Health<br />
+                    +100 Offensive Ability<br />
+                    +15% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 39
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Warding Torc</p>
+            <img src="../img/amulet/11.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    +10% Armor Protection<br />
+                    50% Bleeding Resistance<br />
+                    50% Poison Resistance<br />
+                    +110 Defensive Ability<br />
+                    +20% Attack Speed<br />
+                    +70% Casting Speed<br />
+                    +15% Less Damage from Undead<br />
+                    +15% Less Damage from Ghosts<br />
+                    +1 to all Skills
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 50
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Worldsaver</p>
+            <img src="../img/amulet/01.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                <p class="itemText2 itemText2IconAlt">
+                    12% Physical Resistance<br />
+                    20% Elemental Resistance<br />
+                    +12% Shield Block Chance<br />
+                    +25% Physical Damage<br />
+                    +50% Fire Damage<br />
+                    +50% Burn Damage<br />
+                    +350 Health<br />
+                    +2 to Perenniality<br />
+                    +2 to Purity
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 55
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function_amulet.js"></script>
+</body></html>

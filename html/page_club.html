@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Bug</p>
+            <img src="../img/club/05.png" alt="" class="itemIcon">
+            <p class="itemText">
+                237 - 302 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    60 Elemental Damage<br />
+                    +24% Strength<br />
+                    +24% Intelligence<br />
+                    +24% Dexterity<br />
+                    +24% Health<br />
+                    +24% Energy
+                </p>
+                <p class="itemText3">
+                    LVL 62, STR 626, DEX 168
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Hammer of the Venomancer</p>
+            <img src="../img/club/09.png" alt="" class="itemIcon">
+            <p class="itemText">
+                162 - 198 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    218 Poison Damage over 3.0 Seconds<br />
+                    +25% Instant Poison Damage<br />
+                    +25% Poison Damage<br />
+                    10.0% Chance of 50% Reduction to Enemy's Health<br />
+                    10.0% Chance to Fumble attacks for 3.0 Seconds<br />
+                    10% Reduction in Poison Duration<br />
+                    +30 Intelligence<br />
+                    <br />
+                    Grants Skill : Poison Blast (Activated on attack)<br />
+                    Every few attacks will release a large burst of poison.<br />
+                    <br />
+                    10.0 Second(s) Recharge<br />
+                    30 Energy Cost<br />
+                    5.0 Meter Radius<br />
+                    130 Poison Damage over 3.0 Seconds<br />
+                    60 Instant Poison Damage<br />
+                    35 Reduced Physical Damage for 5.0 Seconds
+                </p>
+                <p class="itemText3">
+                    LVL 48, STR 422, DEX 133
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Menestheus' Rage</p>
+            <img src="../img/club/10.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 - 267 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +20% Physical Damage<br />
+                    +20% Vitality Damage<br />
+                    45 Vitality Damage<br />
+                    +10% Shield Block Chance<br />
+                    -75 Offensive Ability<br />
+                    +350 Defensive Ability<br />
+                    +20% Attack Speed<br />
+                    +1 to all skills in Lifegiving Mastery<br />
+                    +1 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 50, STR 482, DEX 144
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Meteorite</p>
+            <img src="../img/club/08.png" alt="" class="itemIcon">
+            <p class="itemText">
+                252 - 287 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +15% Physical Damage<br />
+                    210 Burn Damage over 3.0 Seconds<br />
+                    +25% Fire Damage<br />
+                    +25% Burn Damage<br />
+                    150 Burn Retaliation over 3.0 Seconds<br />
+                    +25% Burn Retaliation<br />
+                    10.0% Chance of 1.5 Stun Retaliation<br />
+                    +10% Energy<br />
+                    +180 Defensive Ability<br />
+                    +2 to Celestial Quintessence<br />
+                    <br />
+                    Grants Skill : Seismic Strength
+                </p>
+                <p class="itemText3">
+                    LVL 60, STR 590, DEX 83
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Nature's Revenge</p>
+            <img src="../img/club/01.png" alt="" class="itemIcon">
+            <p class="itemText">
+                151 - 178 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    50 Elemental Damage<br />
+                    44 Instant Poison Damage<br />
+                    44 Vitality Damage<br />
+                    20% Reduction in Poison Duration<br />
+                    20% Reduction in Bleeding Duration<br />
+                    +12.0 Health Regeneration per second<br />
+                    +50% Health Regeneration<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +25% Elemental Damages<br />
+                    +25% Lightning Damage<br />
+                    +25% Poison Damage<br />
+                    +4.0 Health Regeneration per second
+                </p>
+                <p class="itemText3">
+                    LVL 49, STR 426, DEX 132
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Ptah's Creation</p>
+            <img src="../img/club/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                53 - 58 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +15% Lightning Damage<br />
+                    20.0% Chance of 35 Lightning Damage<br />
+                    18% Pierce Resistance<br />
+                    18% Stun Resistance<br />
+                    +5% Strength<br />
+                    +5% Intelligence<br />
+                    +2 to Ingenuity
+                </p>
+                <p class="itemText3">
+                    LVL 20, STR 226, DEX 72
+                </p>
+        </div>
+        <div class="itemBox rarityEpic" id="newItem40">
+            <p class="itemName">Purificator</p>
+            <img src="../img/club/15.png" alt="" class="itemIcon">
+            <p class="itemText">
+                34 Fire Damage <br />
+                34 Lightning Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    25.0% Chance of +50% Fire Damage<br />
+                    25.0% Chance of +50% Lightning Damage<br />
+                    50% Life Leech Resistance<br />
+                    +150 Health<br />
+                    +5.0 Health Regeneration per second<br />
+                    +2 to Strength Bestowal<br />
+                    <br />
+                    Grants Skill : Cleanse (Activated upon casting a buff)<br />
+                    The purificator makes it an insperable element of your divine quest to soothe the body and mind of whoever stands with you.<br />
+                    <br />
+                    8.0 Second(s) Recharge<br />
+                    10 Active Energy Cost per Second<br />
+                    4.0 Second Duration<br />
+                    10.0 Meter Radius<br />
+                    +200% Health Regeneration<br />
+                    +20% Movement Speed
+                </p>
+                <p class="itemText3">
+                    LVL 20, STR 210, DEX 70
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Quietus</p>
+            <img src="../img/club/02.png" alt="" class="itemIcon">
+            <p class="itemText">
+                210 - 238 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +20% Physical Damage<br />
+                    25 Vitality Damage<br />
+                    60% Vitality Damage Resistance<br />
+                    +20% Damage to Undead<br />
+                    +20% Damage to Humans<br />
+                    +1 to Corruption<br />
+                    <br />
+                    Grants Skill : Dark Maelstrom (Activated on attack)<br />
+                    A chaotic burst of lightning particles encircles you, damaging the fabric of reality.
+                    <br />
+                    <br />
+                    25.0 Second(s) Recharge<br />
+                    12.0 Meter Radius<br />
+                    375 Life Leech over 3.0 Seconds<br />
+                    30% Reduction to Enemy's Health<br />
+                    75 Vitality Damage
+                </p>
+                <p class="itemText3">
+                    LVL 40, STR 482, DEX 144
+                </p>
+        </div>
+        <div class="itemBox rarityLeg"  id="newItem9">
+            <p class="itemName">Rot Totem</p>
+            <img src="../img/club/14.png" alt="" class="itemIcon">
+            <p class="itemText">
+                247 - 280 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +20% Physical Damage<br />
+                    210 Frostburn Damage over 3.0 Seconds<br />
+                    200 Poison Damage over 3.0 Seconds<br />
+                    50 Cold Damage<br />
+                    35 Instant Poison Damage<br />
+                    +10% Intelligence<br />
+                    +10% Dexterity<br />
+                    <br />
+                    Grants Skill : Pox Impulse (Activated on attack)<br />
+                    This virulent curse attaches itself to enemies, enfeebling their spellcasting and resistances to poison and frost.<br />
+                    <br />
+                    10.0 Second(s) Recharge<br />
+                    5.0 Second Duration<br />
+                    6.0 Meter Radius<br />
+                    -150.0 Health Regeneration per second<br />
+                    -40% Casting Speed<br />
+                    -30% Cold Resistance<br />
+                    -30% Poison Resistance
+                </p>
+                <p class="itemText3">
+                    LVL 62, STR 518, DEX 150
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Sundering Destroyer</p>
+            <img src="../img/club/07.png" alt="" class="itemIcon">
+            <p class="itemText">
+                280 - 325 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +50% Physical Damage<br />
+                    10.0% Chance of 2.0 - 6.0 second(s) of Stun<br />
+                    60% Pierce Resistance<br />
+                    90% Stun Resistance<br />
+                    90% Reduced Entrapment Duration<br />
+                    +500 Health<br />
+                    -15% Attack Speed<br />
+                    +3 to Worldbuilder's Aura<br />
+                    +3 to Sundering<br />
+                    +2 to all skills in Geomancy Mastery<br />
+                    <br />
+                    Grants Skill : The Ultimate Shattering Impact
+                </p>
+                <p class="itemText3">
+                    LVL 70, STR 765, DEX 50
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">The Sword in the Stone</p>
+            <img src="../img/club/06.png" alt="" class="itemIcon">
+            <p class="itemText">
+                298 - 256 Damage <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    +25% Physical Damage<br />
+                    +40% Stun Duration<br />
+                    8% Reduction to Enemy's Health<br />
+                    64 Reduced Physical Damage for 3.0 Seconds<br />
+                    15.0% Chance of 1.0 - 5.0 second(s) of Stun<br />
+                    10% Physical Resistance<br />
+                    +20% Strength<br />
+                    -13% Dexterity<br />
+                    +300 Health<br />
+                    +3 to Boulder Toss<br />
+                    +3 to Stone Hurler
+                </p>
+                <p class="itemText3">
+                    LVL 53, STR 639, DEX 126
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Voltaic Conductor</p>
+            <img src="../img/club/11.png" alt="" class="itemIcon">
+            <p class="itemText">
+                180 - 230 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +40% Lightning Damage<br />
+                    +20% Electrical Burn Damage with +50% Improved Duration<br />
+                    100 - 150 Lightning Damage<br />
+                    5.0% Chance of 2.0 second(s) of Stun<br />
+                    +10.0 Energy Regeneration per second<br />
+                    +50 Offensive Ability<br />
+                    -24% Energy Cost<br />
+                    +30% Damage to Magical<br />
+                    +3 to Interdimensional Breach<br />
+                    +3 to School of Lightning<br />
+                    +1 to all skills in Science Mastery<br />
+                    <br />
+                    Grants Skill : Shock Pulse (Activated on attack)<br />
+                    Spark your mace like a matching stick to unleash the force of lightning within.<br /><br />30.0 Second(s) Recharge<br />
+                    5.0 Second Duration<br />
+                    200 Electrical Burn Damage over 3.0 Seconds<br />
+                    +260% Lightning Damage<br />
+                    -30% Attack Speed
+                </p>
+                <p class="itemText3">
+                    LVL 58, STR 530, DEX 152
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Wood-Hammer</p>
+            <img src="../img/club/03.png" alt="" class="itemIcon">
+            <p class="itemText">
+                298 - 386 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +15% Physical Damage<br />
+                    420 - 570 Poison Damage over 3.0 Seconds<br />
+                    50 Instant Poison Damage<br />
+                    +220 Defensive Ability<br />
+                    +50% Damage to Plants<br />
+                    +35% Less Damage from Plants<br />
+                    +6 to Rubblemaker<br />
+                    +6 to Staggering Force<br />
+                    <br />
+                    Grants Skill : Wood Hammer (Activated on attack)<br />
+                    Slams the ground with the power of nature, releasing a violent pulse and a storm of leaves upon your enemies.<br />
+                    <br />
+                    15.0 Second(s) Recharge<br />
+                    6.5 Meter Radius<br />
+                    300 Damage<br />
+                    600 Poison Damage over 3.0 Seconds<br />
+                    150 Instant Poison Damage<br />
+                    1.0 second(s) of Stun
+                </p>
+                <p class="itemText3">
+                    LVL 63, STR 668, DEX 175
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Wrath of the Serpent</p>
+            <img src="../img/club/04.png" alt="" class="itemIcon">
+            <p class="itemText">
+                124 - 149 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +25% Instant Poison Damage<br />
+                    40 Instant Poison Damage<br />
+                    20% Poison Resistance<br />
+                    +18 Strength<br />
+                    +20 Intelligence<br />
+                    +1.0 Health Regeneration per second<br />
+                    +1.0 Energy Regeneration per second<br />
+                    +15% Attack Speed<br />
+                    +2 to Poison Weapons<br />
+                    +1 to all skills in Science Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 37, STR 386, DEX 127
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Xiangshuishen's Supremacy</p>
+            <img src="../img/club/12.png" alt="" class="itemIcon">
+            <p class="itemText">
+                230 - 252 Damage <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +30% Physical Damage<br />
+                    +30% Cold Damage<br />
+                    +30% Frostburn Damage<br />
+                    +400 Health<br />
+                    +250 Defensive Ability<br />
+                    +20% Less Damage from Magical<br />
+                    +20% Less Damage from Plants<br />
+                    +2 to Shore Uprising<br />
+                    +2 to all skills in Aqua Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 57, STR 581, DEX 1, INT 122
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

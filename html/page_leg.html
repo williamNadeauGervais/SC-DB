@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Amazonian Anklets</p>
+            <img src="../img/leg/12.png" alt="" class="itemIcon">
+            <p class="itemText">
+                540 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    5% Physical Resistance<br />
+                    44% Pierce Resistance<br />
+                    50% Bleeding Resistance<br />
+                    100% Skill Disruption Protection<br />
+                    +350 Health<br />
+                    +20.0 Health Regeneration per second<br />
+                    +100 Defensive Ability<br />
+                    +10% Defensive Ability<br />
+                    +10% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 50, DEX 194, INT 484
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Ant Queen's Royal Wraps</p>
+            <img src="../img/leg/23.png" alt="" class="itemIcon">
+            <p class="itemText">
+                440 Armor
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    100% Pierce Resistance<br />
+                    100% Poison Resistance<br />
+                    25.0% Chance of 450 Bleeding Damage Retaliation over 3.0 Seconds<br />
+                    +75% Bleeding Retaliation<br />
+                    +75% Bleeding Damage<br />
+                    +500 Health<br />
+                    +250 Energy<br />
+                    +100% Energy Regeneration<br />
+                    +35% Movement Speed<br />
+                    <br />
+                    Grants Skill : Ant Form<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    +150% Health Regeneration<br />
+                    +150% Energy Regeneration<br />
+                    +15% Total Speed<br />
+                    10% Chance to Dodge Attacks<br />
+                    10% Chance to Avoid Projectiles
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 70, DEX 204, INT 590
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Brizo's Guidance</p>
+            <img src="../img/leg/22.png" alt="" class="itemIcon">
+            <p class="itemText">
+                208 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    30% Pierce Resistance<br />
+                    30% Vitality Damage Resistance<br />
+                    +15% Physical Damage<br />
+                    +10% Movement Speed<br />
+                    +10% Less Damage from Magical<br />
+                    +1 to all skills in Science Mastery<br />
+                    +1 to all skills in Aqua Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to Magical Pet :</span><br />
+                    +10% Total Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 29, DEX 108, INT 224
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem4">
+            <p class="itemName">Corrupted Greaves</p>
+            <img src="../img/leg/24.png" alt="" class="itemIcon">
+            <p class="itemText">
+                149 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    24% Bleeding Resistance<br />
+                    24% Life Leech Resistance<br />
+                    6% of Attack damage converted to Health<br />
+                    +15% Movement Speed<br />
+                    +1 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 43, DEX 142, INT 312
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Corrupted Greaves</p>
+            <img src="../img/leg/24.png" alt="" class="itemIcon">
+            <p class="itemText">
+                294 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    36% Bleeding Resistance<br />
+                    36% Life Leech Resistance<br />
+                    8% of Attack damage converted to Health<br />
+                    +20% Movement Speed<br />
+                    +2 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 54, DEX 180, INT 424
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem32">
+            <p class="itemName">Croaker's Legs</p>
+            <img src="../img/leg/28.png" alt="" class="itemIcon">
+            <p class="itemText">
+                292 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +30% Instant Poison Damage<br />
+                    +30% Poison Damage<br />
+                    +10% Movement Speed<br />
+                    <br />
+                    Grants Skill : Murkmire Burst (Activated on attack)<br />
+                    Each attack has a chance of sending concentrated bursts of blackened poison at an enemy.<br />
+                    <br />
+                    3.0 Second(s) Recharge<br />
+                    3 Projectile(s)<br />
+                    1.0 Meter Radius<br />
+                    80 Poison Damage over 2.0 Seconds<br />
+                    80 Vitality Decay over 2.0 Seconds<br />
+                    10% Chance of:<br />
+                    &nbsp;33% Reduced Damage for 2.0 Seconds<br />
+                    &nbsp;33% Slowed for 2.0 Seconds<br />
+                    40 Instant Poison Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 48, STR 150, DEX 300
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Croaker's Legs</p>
+            <img src="../img/leg/28.png" alt="" class="itemIcon">
+            <p class="itemText">
+                584 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +45% Instant Poison Damage<br />
+                    +45% Poison Damage<br />
+                    +16% Movement Speed<br />
+                    <br />
+                    Grants Skill : Murkmire Burst (Activated on attack)<br />
+                    Each attack has a chance of sending concentrated bursts of blackened poison at an enemy.<br />
+                    <br />
+                    3.0 Second(s) Recharge<br />
+                    3 Projectile(s)<br />
+                    1.0 Meter Radius<br />
+                    150 Poison Damage over 2.0 Seconds<br />
+                    150 Vitality Decay over 2.0 Seconds<br />
+                    10% Chance of:<br />
+                    &nbsp;44% Reduced Damage for 2.0 Seconds<br />
+                    &nbsp;44% Slowed for 2.0 Seconds<br />
+                    75 Instant Poison Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 58, STR 200, DEX 400
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Dark Priest's Wraps</p>
+            <img src="../img/leg/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                352 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    35% Bleeding Resistance<br />
+                    50% Vitality Damage Resistance<br />
+                    80% Sleep Resistance<br />
+                    55% Skill Disruption Protection<br />
+                    +40% Vitality Damage<br />
+                    +40% Vitality Decay<br />
+                    +10% Intelligence<br />
+                    +10% Health<br />
+                    +35% Energy Regeneration<br />
+                    +10% Defensive Ability<br />
+                    +20% Movement Speed<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    60 Vitality Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 53, DEX 182, INT 490
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Dauntless Step</p>
+            <img src="../img/leg/9.png" alt="" class="itemIcon">
+            <p class="itemText">
+                767 Armor <br />
+                Set : Sovereign of Void
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    25% Pierce Resistance<br />
+                    25% Elemental Resistance<br />
+                    25% Vitality Damage Resistance<br />
+                    60% Stun Resistance<br />
+                    60% Reduced Petrify Duration<br />
+                    -3.0 Health Regeneration per second<br />
+                    +1.0 Energy Regeneration per second<br />
+                    +110 Defensive Ability<br />
+                    +35% Movement Speed<br />
+                    <br />
+                    Grants Skill : March of Death (Activated when equipped)<br />
+                    Allies under your command shall be exceptional in their hardiness, as they deliver unmatched blows in your name.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    12.0 Meter Radius<br />
+                    +20% Physical Damage<br />
+                    +20% Pierce Damage<br />
+                    +8% Total Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 75, STR 688
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem12">
+            <p class="itemName">Death Priest's Step</p>
+            <img src="../img/leg/25.png" alt="" class="itemIcon">
+            <p class="itemText">
+                265 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Vitality Damage Resistance<br />
+                    +15% Movement Speed<br />
+                    +1 to all skills in Necromancy Mastery<br />
+                    +1 to all skills in Lifegiving Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 44, STR 411
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Death Priest's Step</p>
+            <img src="../img/leg/25.png" alt="" class="itemIcon">
+            <p class="itemText">
+                579 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    100% Vitality Damage Resistance<br />
+                    +20% Movement Speed<br />
+                    +2 to all skills in Necromancy Mastery<br />
+                    +2 to all skills in Lifegiving Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 55, STR 558
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Dreadwalkers</p>
+            <img src="../img/leg/16.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    65% Bleeding Resistance<br />
+                    65% Vitality Damage Resistance<br />
+                    30% Reduction in Life Leech Duration<br />
+                    +60% Bleeding Damage with +33% Improved Duration<br />
+                    +23% Cold Damage<br />
+                    +30 Intelligence<br />
+                    +250 Energy<br />
+                    +28% Movement Speed<br />
+                    +1 to all skills in Necromancy Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    90 Bleeding Damage over 3.0 Seconds<br />
+                    +20% Bleeding Damage<br />
+                    +20% Cold Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 59, STR 190, DEX 464
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Electrosilk Leggings</p>
+            <img src="../img/leg/17.png" alt="" class="itemIcon">
+            <p class="itemText">
+                208 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    25% Pierce Resistance<br />
+                    25% Lightning Resistance<br />
+                    30% Reduction in Electrical Burn Duration<br />
+                    25% Stun Resistance<br />
+                    38 Lightning Retaliation<br />
+                    +15% Lightning Damage<br />
+                    +15% Electrical Burn Damage<br />
+                    +16% Movement Speed<br />
+                    +2 to Electrical Field<br />
+                    <br />
+                    Grants Skill : Electrostatic Veil
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 36, STR 137, DEX 319
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Farstrider Boots</p>
+            <img src="../img/leg/14.png" alt="" class="itemIcon">
+            <p class="itemText">
+                42 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    10% Pierce Resistance<br />
+                    10% Elemental Resistance<br />
+                    10% Poison Resistance<br />
+                    +10% Total Speed<br />
+                    +10% Movement Speed<br />
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 7, STR 49, DEX 72
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Forgotten Boots</p>
+            <img src="../img/leg/1.png" alt="" class="itemIcon">
+            <p class="itemText">
+                147 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    30% Elemental Resistance<br />
+                    50% Cold Resistance<br />
+                    10.0% Chance of +130% Bleeding Damage<br />
+                    10.0% Chance of +130% Burn Damage<br />
+                    10.0% Chance of +130% Frostburn Damage<br />
+                    10.0% Chance of +130% Electrical Burn Damage<br />
+                    10.0% Chance of +130% Poison Damage<br />
+                    10.0% Chance of +130% Vitality Decay<br />
+                    +220 Health<br />
+                    +70% Energy Regeneration<br />
+                    +40 Defensive Ability<br />
+                    +24% Movement Speed<br />
+                    +2 to Forbidden Codex
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 38, DEX 116, INT 252
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Groundbreaker's Step</p>
+            <img src="../img/leg/15.png" alt="" class="itemIcon">
+            <p class="itemText">
+                270 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    10% Physical Resistance<br />
+                    60% Stun Resistance<br />
+                    +10% Physical Damage<br />
+                    4% Reduction to Enemy's Health<br />
+                    +38 Strength<br />
+                    +220 Health<br />
+                    +15% Movement Speed<br />
+                    +1 to all skills in Geomancy Mastery<br />
+                    +1 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 37, STR 462
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Legguards of Myriad Dimensions</p>
+            <img src="../img/leg/18.png" alt="" class="itemIcon">
+            <p class="itemText">
+                470 Armor <br />
+                Set : Journey of Myriad Dimensions
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    40% Pierce Resistance<br />
+                    60% Poison Resistance<br />
+                    40% Slow Resistance<br />
+                    +10% Intelligence<br />
+                    +85 Defensive Ability<br />
+                    +40% Movement Speed<br />
+                    20% Absorption on Spell Energy<br />
+                    5% Chance to Avoid Projectiles<br />
+                    +2 to Temporal Energy<br />
+                    +2 to Forgotten Knowledge
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 61, STR 210, DEX 497
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Legguards of the Archiver</p>
+            <img src="../img/leg/3.png" alt="" class="itemIcon">
+            <p class="itemText">
+                260 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    60% Stun Resistance<br />
+                    60% Reduced Entrapment Duration<br />
+                    33% Reduced Offensive Ability Retaliation for 3.0 Seconds<br />
+                    +20% Fire Damage<br />
+                    +35% Burn Damage<br />
+                    +20% Lightning Damage<br />
+                    +35% Electrical Burn Damage<br />
+                    +170 Health<br />
+                    +8% Health<br />
+                    +50% Health Regeneration<br />
+                    +30% Energy Regeneration<br />
+                    +25% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 45, DEX 156, INT 396
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Legguards of the Furnace</p>
+            <img src="../img/leg/5.png" alt="" class="itemIcon">
+            <p class="itemText">
+                725 Armor <br />
+                Set : The Hell Furnace
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    60% Elemental Resistance<br />
+                    40% Vitality Damage Resistance<br />
+                    33% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;+60% Fire Damage<br />
+                    &nbsp;&nbsp;&nbsp;+60% Burn Damage<br />
+                    +250 Energy<br />
+                    +100 Defensive Ability<br />
+                    +15% Movement Speed<br />
+                    <br />
+                    Grants Skill : Furnace Blast (Activated upon taking damage)<br />
+                    Blast nearby opponents with an explosive burst of scorching flames.<br />
+                    <br />
+                    10.0 Second(s) Recharge<br />
+                    15 Energy Cost<br />
+                    6.0 Meter Radius<br />
+                    50 Damage<br />
+                    360 Burn Damage over 3.0 Seconds<br />
+                    300 Fire Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 62, STR 694
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Legs of the Teumessian Fox</p>
+            <img src="../img/leg/2.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 Armor <br />
+                Set : The Hunting Paradox
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    30% Pierce Resistance<br />
+                    25% Bleeding Resistance<br />
+                    25% Poison Resistance<br />
+                    +35 Defensive Ability<br />
+                    +25% Movement Speed<br />
+                    +25% Less Damage from Beasts<br />
+                    +25% Less Damage from Beastmen<br />
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 34, STR 134, DEX 309
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Moonrise Greaves</p>
+            <img src="../img/leg/4.png" alt="" class="itemIcon">
+            <p class="itemText">
+                424 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +30% Frostburn Damage<br />
+                    +20 Dexterity<br />
+                    -150 Health<br />
+                    +28% Movement Speed<br />
+                    +15% Increased Experience<br />
+                    +2 to Aquamancer's Bounty<br />
+                    +1 to all skills in Time Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 38, DEX 157, INT 351
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Naturespeaker's Wraps</p>
+            <img src="../img/leg/6.png" alt="" class="itemIcon">
+            <p class="itemText">
+                36 Armor <br />
+                Set : Naturespeaker's Outfit
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    10% Bleeding Resistance<br />
+                    10% Cold Resistance<br />
+                    25.0% Chance of 51 Poison Retaliation over 3.0 Seconds<br />
+                    +30 Energy<br />
+                    +20% Energy Regeneration<br />
+                    +18% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 14, DEX 80, INT 140
+                </p>
+        </div>
+        <div class="itemBox rarityMU"  id="newItem24">
+            <p class="itemName">Night's Silent Step</p>
+            <img src="../img/leg/27.png" alt="" class="itemIcon">
+            <p class="itemText">
+                445 Armor<br />
+                Set : Night Eternal
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    100% Cold Resistance<br />
+                    +75% Frostburn Damage with +50% Improved Duration<br />
+                    +30 Intelligence<br />
+                    +30 Dexterity<br />
+                    +30% Movement Speed<br />
+                    10% Chance to Avoid Projectiles<br />
+                    +130 Damage to Undead<br />
+                    +130 Damage to Ghosts<br />
+                    +15% Less Damage from Undead<br />
+                    +15% Less Damage from Ghosts<br />
+                    +1 to all Skills<br />
+                    <br />
+                    Grants Skill : Time Freeze (Activated on attack)<br />
+                    Send a wave of temporal energy that immobilizes enemies in time and space, leaving them open to attacks.<br />
+                    <br />
+                    10.0 Second(s) Recharge<br />
+                    94 Energy Cost<br />
+                    3.7 - 4.6 second(s) of Petrify
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 70, DEX 206, INT 547
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Olympian Greaves</p>
+            <img src="../img/leg/19.png" alt="" class="itemIcon">
+            <p class="itemText">
+                450 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Bleeding Resistance<br />
+                    50% Fire Resistance<br />
+                    50% Poison Resistance<br />
+                    30% Chance of :<br />
+                    &nbsp;&nbsp;&nbsp;40 Fire Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;80 Burn Retaliation over 2.0 Seconds<br />
+                    +20% Fire Damage<br />
+                    +20% Burn Damage<br />
+                    +10% Movement Speed<br />
+                    +25% Less Damage from Deities<br />
+                    +1 to Punishment<br />
+                    +1 to all skills in Lifegiving Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 45, STR 447
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Path of Ta-Bitjet</p>
+            <img src="../img/leg/7.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    20% Cold Resistance<br />
+                    50% Poison Resistance<br />
+                    100 Poison Retaliation over 3.0 Seconds<br />
+                    +40% Poison Damage<br />
+                    +40% Energy Regeneration<br />
+                    +22% Movement Speed<br />
+                    -8% Energy Cost<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    +25% Instant Poison Damage<br />
+                    20 Instant Poison Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 36, STR 126, DEX 284
+                </p>
+        </div>
+        <div class="itemBox rarityMU"  id="newItem19">
+            <p class="itemName">Protectors of the Godly Emissary</p>
+            <img src="../img/leg/26.png" alt="" class="itemIcon">
+            <p class="itemText">
+                265 Armor
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    35% Pierce Resistance<br />
+                    35% Poison Resistance<br />
+                    50% Stun Resistance<br />
+                    +70% Lightning Retaliation<br />
+                    +70% Lightning Damage<br />
+                    +10.0 Energy Regeneration per second<br />
+                    +75% Energy Regeneration<br />
+                    +25% Attack Speed<br />
+                    +25% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 68, DEX 212, INT 580
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Sacral Wind</p>
+            <img src="../img/leg/20.png" alt="" class="itemIcon">
+            <p class="itemText">
+                145 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    60% Stun Resistance<br />
+                    60% Slow Resistance<br />
+                    +20% Pierce Damage<br />
+                    +20% Lightning Damage<br />
+                    +150 Energy<br />
+                    +50% Energy Regeneration<br />
+                    +60% Movement Speed<br />
+                    <br />
+                    Grants Skill : Break (Activated upon taking damage)<br />
+                    The exquisiteness of the enchanted greaves renders them vulnerable to any attack, losing their potency for the short time it takes for them to repair themselves.<br />
+                    <br />
+                    1.5 Second Duration<br />
+                    -60% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 35, DEX 126, INT 286
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Scarlet Shinguards</p>
+            <img src="../img/leg/8.png" alt="" class="itemIcon">
+            <p class="itemText">
+                300 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    75% Bleeding Resistance<br />
+                    75% Life Leech Resistance<br />
+                    20.0% Chance of 136 Life Leech Retaliation over 3.0 Seconds<br />
+                    +12% Health<br />
+                    +80% Health Regeneration<br />
+                    +15% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 37, STR 467
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Si'xoi-orp</p>
+            <img src="../img/leg/21.png" alt="" class="itemIcon">
+            <p class="itemText">
+                594 Armor <br />
+                Set : Embodiment of Corruption
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    40% Pierce Resistance<br />
+                    25% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    +60% Burn Damage<br />
+                    +30% Instant Poison Damage<br />
+                    +70 Offensive Ability<br />
+                    +70 Defensive Ability<br />
+                    +20% Attack Speed<br />
+                    +25% Movement Speed<br />
+                    +1 to all Skills
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 70, STR 260, DEX 510
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Steps of the General</p>
+            <img src="../img/leg/10.png" alt="" class="itemIcon">
+            <p class="itemText">
+                50 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    10% Pierce Resistance<br />
+                    10% Vitality Damage Resistance<br />
+                    +13% Attack Speed<br />
+                    +10% Movement Speed<br />
+                    <br />
+                    Grants Skill : Undying Fury (Activated upon taking damage)<br />
+                    Reduce all damage taken for a short period of time, continuing on a battle even against all odds.<br />
+                    <br />
+                    40.0 Second(s) Recharge<br />
+                    66 Energy Cost<br />
+                    10.0 Second Duration<br />
+                    13% Damage Absorption<br />
+                    31 Armor<br />
+                    +10% Armor Absorption
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 9, STR 125
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Winged Wanderers</p>
+            <img src="../img/leg/11.png" alt="" class="itemIcon">
+            <p class="itemText">
+                483 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    30% Pierce Resistance<br />
+                    50% Bleeding Resistance<br />
+                    +20% Pierce Damage<br />
+                    +40% Poison Damage<br />
+                    +10% Offensive Ability<br />
+                    +10% Defensive Ability<br />
+                    +30% Casting Speed<br />
+                    +27% Movement Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 52, STR 177, DEX 454
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

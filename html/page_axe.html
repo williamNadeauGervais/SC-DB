@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Axe of Visions</p>
+            <img src="../img/axe/08.png" alt="" class="itemIcon">
+            <p class="itemText">
+                50 - 58 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    26 Burn Damage over 3.0 Seconds<br />
+                    26 Poison Damage over 3.0 Seconds<br />
+                    +30 Offensive Ability<br />
+                    +2 to Eye of the Mind<br />
+                    <br />
+                    Grants Skill : Mind-Reading
+                </p>
+                <p class="itemText3">
+                    LVL 20, STR 204, DEX 94
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Echo Axe</p>
+            <img src="../img/axe/04.png" alt="" class="itemIcon">
+            <p class="itemText">
+                31 - 38 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    25.0% Chance of 69 Electrical Burn Damage over 3.0 Seconds<br />
+                    3 - 7 Bonus Damage<br />
+                    +20 Intelligence<br />
+                    +10.0 Health Regeneration per Second<br />
+                    +15% Attack Speed<br />
+                    +1 to Mend Wounds<br />
+                    +1 to Eye of the Mind
+                </p>
+                <p class="itemText3">
+                    LVL 12, STR 124, DEX 72
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Ferity</p>
+            <img src="../img/axe/01.png" alt="" class="itemIcon">
+            <p class="itemText">
+                59 - 67 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    72 Bleeding Damage over 3.0 Seconds<br />
+                    +30% Bleeding Damage<br />
+                    +30% Life Leech<br />
+                    30% Slower Attack for 3.0 Seconds<br />
+                    8% Pierce Resistance<br />
+                    12% Fire Resistance<br />
+                    +10% Movement Speed<br />
+                    <br />
+                    Grants Skill:<br />
+                    Moxie (Activated upon taking melee damage)<br />
+                    Blinded by rage in the heat of the battle, hit with increased power at the cost of lowered accuracy.<br />
+                    <br />
+                    30.0 Second(s) Recharge<br />
+                    10.0 Second Duration<br />
+                    12 Damage<br />
+                    +20% Physical Damage<br />
+                    -75 Offensive Ability<br />
+                    +20% Attack Speed
+                </p>
+                <p class="itemText3">
+                    LVL 25, STR 230, DEX 107
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Force of the Svinfylkingars </p>
+            <img src="../img/axe/12.png" alt="" class="itemIcon">
+            <p class="itemText">
+                164 - 185 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +20% Physical Damage<br />
+                    120 Reduced Armor for 3.0 Seconds<br />
+                    +10% Armor Protection<br />
+                    +200 Health<br />
+                    +10.0 Health Regeneration per second<br />
+                    <br />
+                    Grants Skill : Empower
+                </p>
+                <p class="itemText3">
+                    LVL 44, STR 336, DEX 219
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Golden Guardian of Abydos</p>
+            <img src="../img/axe/11.png" alt="" class="itemIcon">
+            <p class="itemText">
+                102 - 115 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +20% Physical Damage<br />
+                    +10% Elemental Damages<br />
+                    +10% Stun Duration<br />
+                    +10% Health<br />
+                    +10% Total Speed<br />
+                    +1 to Staggering Force<br />
+                    +1 to Primordial Force<br />
+                    <br />
+                    Grants Skill : Solarstrike
+                </p>
+                <p class="itemText3">
+                    LVL 34, STR 402, DEX 149
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Hecatomb</p>
+            <img src="../img/axe/10.png" alt="" class="itemIcon">
+            <p class="itemText">
+                191 - 200 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    25.0% Chance of 540 Bleeding Damage over 3.0 Seconds<br />
+                    10% Reduction to Enemy's Health<br />
+                    120 Vitality Damage<br />
+                    -15% Bleeding Resistance<br />
+                    90% Vitality Damage Resistance<br />
+                    +40 Strength<br />
+                    +2 to Demon's Gift<br />
+                    +2 to Obscure Crescent<br />
+                    <br />
+                    Grants Skill : Slaughterhouse (Dual-wield Technique)
+                </p>
+                <p class="itemText3">
+                    LVL 51, STR 457, DEX 164
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Key of Knowledge</p>
+            <img src="../img/axe/09.png" alt="" class="itemIcon">
+            <p class="itemText">
+                180 - 192 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    25% Chance of :<br />
+                    &nbsp;&nbsp;&nbsp;600 Electrical Burn Damage over 4.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;15% Slowed for 4.0 Seconds<br />
+                    +20% Armor Protection<br />
+                    +400 Energy<br />
+                    +40% Casting Speed<br />
+                    10.0% Chance of -80% Recharge<br />
+                    +2 to all skills in Science Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +20% Total Speed
+                </p>
+                <p class="itemText3">
+                    LVL 50, STR 455, DEX 170
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Preeminent Od</p>
+            <img src="../img/axe/07.png" alt="" class="itemIcon">
+            <p class="itemText">
+                142 - 162 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    321 Burn Damage over 3.0 Seconds<br />
+                    +42% Fire Damage<br />
+                    321 Frostburn Damage over 3.0 Seconds<br />
+                    +42% Cold Damage<br />
+                    25% Elemental Resistance<br />
+                    +10% Intelligence<br />
+                    +10% Dexterity<br />
+                    +2 to Conjured Steel<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    Grants Skill : Flow Control
+                </p>
+                <p class="itemText3">
+                    LVL 58, STR 510, DEX 176
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Silver Limbcutter</p>
+            <img src="../img/axe/02.png" alt="" class="itemIcon">
+            <p class="itemText">
+                122 - 136 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    10.0% Chance of 195 - 234 Bleeding Damage over 3.0 Seconds<br />
+                    10.0% Chance of 15 Reduced Resistances for 3.0 Seconds<br />
+                    40% Bleeding Resistance<br />
+                    60% Stun Resistance<br />
+                    60% Skill Disruption Protection<br />
+                    +1.0 Health Regeneration per second<br />
+                    +22% Attack Speed per second<br />
+                    +15% Damage to Humans<br />
+                    +15% Damage to Giants<br />
+                    +1 to Mutilating Edge<br />
+                    +1 to Blade Blaze
+                </p>
+                <p class="itemText3">
+                    LVL 37, STR 358, DEX 137
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Tormentor</p>
+            <img src="../img/axe/03.png" alt="" class="itemIcon">
+            <p class="itemText">
+                241 - 262 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    165 - 210 Vitality Decay over 3.0 Seconds<br />
+                    10% Reduction to Enemy's Health<br />
+                    8% of Attack damage converted to Health<br />
+                    30% Vitality Damage Resistance<br />
+                    +3.0 Health Regeneration per second<br />
+                    +40% Casting Speed<br />
+                    +300 Damage to Humans<br />
+                    +2 to Everlasting Hatred<br />
+                    +2 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 60, STR 570, DEX 255
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Trauma</p>
+            <img src="../img/axe/06.png" alt="" class="itemIcon">
+            <p class="itemText">
+                172 - 192 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +10% Total Damage<br />
+                    48 - 108 Lightning Damage<br />
+                    5.0% Chance of 2.0 second(s) of Stun<br />
+                    +200 Health<br />
+                    +200 Energy<br />
+                    -10% Recharge<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +25% Lightning Damage<br />
+                    +25% Electrical Burn Damage
+                </p>
+                <p class="itemText3">
+                    LVL 49, STR 451, DEX 162
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Victor of the Arena</p>
+            <img src="../img/axe/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                127 - 138 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    10.0% Chance of 35% Reduction to Enemy's Health<br />
+                    +25 Strength<br />
+                    +200 Health<br />
+                    +200 Energy<br />
+                    +15% Attack Speed<br />
+                    <br />
+                    Grants Skill : Bravado
+                </p>
+                <p class="itemText3">
+                    LVL 38, STR 347, DEX 134
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Vitality Reaver</p>
+            <img src="../img/axe/05.png" alt="" class="itemIcon">
+            <p class="itemText">
+                197 - 208 Damage <br />
+                30% Pierce Ratio <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +20% Pierce Damage<br />
+                    15.0% Chance of 588 Bleeding Damage over 3.0 Seconds<br />
+                    +25% Bleeding Damage with +25% Improved Duration<br />
+                    12 Piercing Damage<br />
+                    8% of Attack damage converted to Health<br />
+                    25% Reduction in Bleeding Duration<br />
+                    25% Reduction in Life Leech Duration<br />
+                    +50 Dexterity<br />
+                    +50 Offensive Ability<br />
+                    +20% Attack Speed<br />
+                    +2 to Hemorrhage<br />
+                    +2 to Blood Harvest
+                </p>
+                <p class="itemText3">
+                    LVL 49, STR 451, DEX 162
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Wepwawet's Adze</p>
+            <img src="../img/axe/14.png" alt="" class="itemIcon">
+            <p class="itemText">
+                109 - 116 Damage <br />
+                Speed: Average <br />
+                <br />
+                <p class="itemText2">
+                    +18 Strength<br />
+                    +18 Dexterity<br />
+                    +50 Offensive Ability<br />
+                    +15% Total Speed<br />
+                    <br />
+                    Grants Skill : Battlecraze (Activated on attack)<br />
+                    The axe proves to fit in your grip so well, it allows you to storm enemies with a volley of unstoppable hits.<br />
+                    <br />
+                    10.0 Second(s) Recharge<br />
+                    2.5 Second Duration<br />
+                    +30% Attack Speed
+                </p>
+                <p class="itemText3">
+                    LVL 32, STR 319, DEX 126
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

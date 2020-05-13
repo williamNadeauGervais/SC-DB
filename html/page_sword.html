@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Bearer of Decay</p>
+            <img src="../img/sword/05.png" alt="" class="itemIcon">
+            <p class="itemText">
+                108 - 114 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    20.0% Chance of 276 Poison Damage over 3.0 Seconds<br />
+                    20 Instant Poison Damage<br />
+                    30% Poison Resistance<br />
+                    10% Vitality Damage Resistance<br />
+                    +12 Strength<br />
+                    -2.0 Health Regeneration per second<br />
+                    +60 Offensive Ability<br />
+                    +1 to Antidote
+                </p>
+                <p class="itemText3">
+                    LVL 32, STR 220, DEX 186
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Bereaving Touch</p>
+            <img src="../img/sword/01.png" alt="" class="itemIcon">
+            <p class="itemText">
+                136 - 146 Damage <br />
+                30% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    +36% Pierce Damage<br />
+                    +66% Instant Poison Damage<br />
+                    77 Instant Poison Damage<br />
+                    50% Energy Leech Resistance<br />
+                    +25% Attack Speed<br />
+                    +25% Casting Speed<br />
+                    -18% Shield Recovery Time<br />
+                    +2 to Poison Weapons<br />
+                    +2 to Black Widow<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +20% Pierce Damage<br />
+                    +20% Poison Damage<br />
+                    50 Instant Poison Damage
+                </p>
+                <p class="itemText3">
+                    LVL 48, STR 311, DEX 253
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Blaze Blade</p>
+            <img src="../img/sword/21.png" alt="" class="itemIcon">
+            <p class="itemText">
+                80 - 87 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +15% Fire Damage<br />
+                    +15% Burn Damage<br />
+                    40 Fire Damage<br />
+                    30% Fire Resistance<br />
+                    +30% Attack Speed<br />
+                    +1 to Blade Blaze<br />
+                    +1 to Fiery Strikes
+                </p>
+                <p class="itemText3">
+                    LVL 38, STR 275, DEX 226
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Cackling Witch</p>
+            <img src="../img/sword/02.png" alt="" class="itemIcon">
+            <p class="itemText">
+                135 - 142 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    159 - 210 Poison Damage over 3.0 Seconds<br />
+                    +34% Instant Poison Damage<br />
+                    +34% Poison Damage with +20% Improved Duration<br />
+                    +34% Vitality Damage<br />
+                    +34% Vitality Decay with +20% Improved Duration<br />
+                    100 Vitality Damage<br />
+                    15 Reduced Resistances for 3.0 Seconds<br />
+                    15% Reduction in Poison Duration<br />
+                    15% Reduction in Vitality Decay Duration<br />
+                    15% Reduction in Life Leech Duration<br />
+                    +42 Defensive Ability<br />
+                    +16% Attack Speed<br />
+                    -8% Energy Cost<br />
+                    +2 to School Poison<br />
+                    +2 to Rot Zone<br />
+                    <br />
+                    Grants Skill : Rot Zone (Activated upon taking damage)<br />
+                    Plague the air of an area, to spread disease and death to those that inhale it.<br />
+                    <br />
+                    8.0 Second(s) Recharge<br />
+                    60 Energy Cost<br />
+                    8.0 Second Duration<br />
+                    5.0 Meter Radius<br />
+                    15% Chance of:<br>
+                    &nbsp;&nbsp;135 Poison Damage over 3.0 Seconds<br />
+                    &nbsp;&nbsp;16% Reduction to Enemy's Health<br />
+                    74 Instat Poison Damage<br />
+                    74 Vitality Damage
+                </p>
+                <p class="itemText3">
+                    LVL 51, STR 316, DEX 292
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Crimsonbolt Steelblade</p>
+            <img src="../img/sword/22.png" alt="" class="itemIcon">
+            <p class="itemText">
+                172 - 186 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    210 Bleeding Damage over 3.0 Seconds<br />
+                    +80% Bleeding Damage<br />
+                    210 Electrical Burn Damage over 3.0 Seconds<br />
+                    +60% Lightning Damage<br />
+                    +60% Electrical Burn Damage<br />
+                    +4.0 Energy Regeneration per second<br />
+                    -15% Energy Cost<br />
+                    <br />
+                    Grants Skill : Crimson Call (Activated on attack)<br />
+                    Small ornamental parts of the hilt fly off the dagger and manifest in the shape of two eerie ravens, returning to their original form and place once they can no longer sustain their lifelike form.<br />
+                    <br />
+                    15.0 Second(s) Recharge<br />
+                    Extra Life Time 30 Seconds<br />
+                    2 Summon Limit<br />
+                    Crimson Raven Attributes:<br />
+                    600 Health<br />
+                    400 Energy<br />
+                    <br />
+                    Crimson Raven Abilities:<br />
+                    Basic Attack<br />
+                    150 Bleeding Damage over 3.0 Seconds<br />
+                    80 Piercing Damage<br />
+                    <br />
+                    Bolt Rage<br />
+                    14.0 Second(s) Recharge<br />
+                    80 Energy Cost<br />
+                    1.5 Meter Radius<br />
+                    363 Electrical Burn Damage over 3.0 Seconds<br />
+                    203 - 413 Lightning Damage<br />
+                    1.0 second(s) of Stun<br />
+                    <br />
+                    Bloodstorm (on Death)<br />
+                    6.0 Meter Radius<br />
+                    300 Bleeding Damage over 3.0 Seconds<br />
+                    250 Lightning Damage<br />
+                    <br />
+                    Dodge Attacks<br />
+                    44% Chance to Dodge Attacks<br />
+                    44% Chance to Avoid Projectiles
+                </p>
+                <p class="itemText3">
+                    LVL 70, STR 415, DEX 331
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Curved Stormcutter</p>
+            <img src="../img/sword/03.png" alt="" class="itemIcon">
+            <p class="itemText">
+                95 - 100 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +15% Elemental Damages<br />
+                    +40% Cold Damage<br />
+                    8 - 30 Elemental Damage<br />
+                    10 - 30 Cold Damage<br />
+                    +10% Energy<br />
+                    +5% Total Speed<br />
+                    +10% Attack Speed<br />
+                    33% Weapon Base Damage becomes Elemental
+                </p>
+                <p class="itemText3">
+                    LVL 37, STR 279, DEX 228
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Dagger of Boundless Potential</p>
+            <img src="../img/sword/24.png" alt="" class="itemIcon">
+            <p class="itemText">
+                12 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +35% Physical Damage<br />
+                    +35% Pierce Damage<br />
+                    10.0% Chance for +150% Elemental Damages<br />
+                    +35% Vitality Damage<br />
+                    80% Skill Disruption Protection<br />
+                    +55 Intelligence<br />
+                    +350 Health<br />
+                    10.0% Chance of -80% Recharge<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +15% Elementqal Damages<br />
+                    40 Elemental Retaliation<br />
+                    20% Slowed Attack Retaliation for 3.0 Seconds
+                </p>
+                <p class="itemText3">
+                    LVL 50, STR 1, DEX 310, INT 387
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Divinesteel Edge</p>
+            <img src="../img/sword/06.png" alt="" class="itemIcon">
+            <p class="itemText">
+                102 - 110 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +15% Physical Damage<br />
+                    20.0% Chance of 117 Burn Damage over 3.0 Seconds<br />
+                    25 Fire Damage<br />
+                    5.0% Chance of 3.0 - 6.0 second(s) of Stun<br />
+                    +2 to Staggering Force<br />
+                    +2 to Celestial Armory<br />
+                    <br />
+                    Grants Skill : Refresh (Activated on attack)<br />
+                    Each attack has a chance to speed up the recharge of your abilities by a split second.<br />
+                    <br />
+                    -0.4 Second(s) to all Recharge Times
+                </p>
+                <p class="itemText3">
+                    LVL 38, STR 295, DEX 241
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Dáinsleif</p>
+            <img src="../img/sword/04.png" alt="" class="itemIcon">
+            <p class="itemText">
+                215 - 221 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    25% Slowed for 3.0 Seconds<br />
+                    60% Bleeding Resistance<br />
+                    +40 Strength<br />
+                    +40 Dexterity<br />
+                    +30% Offensive Ability<br />
+                    +20% Attack Speed<br />
+                    +3 to Eternize<br />
+                    +4 to Landslide
+                </p>
+                <p class="itemText3">
+                    LVL 60, STR 387, DEX 310
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Demon-Forged Shortblade</p>
+            <img src="../img/sword/19.png" alt="" class="itemIcon">
+            <p class="itemText">
+                153 - 167 Damage <br />
+                20% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    160 - 360 Bleeding Damage over 3.0 Seconds<br />
+                    20% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;+100% Burn Damage with +30% Improved Duration<br />
+                    &nbsp;&nbsp;&nbsp;+100% Vitality Damage<br />
+                    &nbsp;&nbsp;&nbsp;+100% Vitality Decay with +30% Improved Duration<br />
+                    34 Piercing Damage<br />
+                    28% Chance to Fumble attacks for 3.0 Seconds<br />
+                    80% Vitality Damage Resistance<br />
+                    +30% Casting Speed<br />
+                    +9% Movement Speed<br />
+                    +4 to Dreadful Impact
+                </p>
+                <p class="itemText3">
+                    LVL 48, STR 372, DEX 300
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Endless Struggle</p>
+            <img src="../img/sword/16.png" alt="" class="itemIcon">
+            <p class="itemText">
+                213 - 233 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Fast <br />
+                Set : Sovereign of Void<br />
+                <br />
+                <p class="itemText2">
+                    300 Vitality Decay over 4.0 Seconds<br />
+                    60 - 80 Vitality Damage<br />
+                    18 Reduced Resistances for 4.0 Seconds<br />
+                    238 Vitality Decay Retaliation over 5.0 Seconds<br />
+                    -3.0 Health Regeneration per second<br />
+                    +1.0 Energy Regeneration per second<br />
+                    +20% Attack Speed<br />
+                    +100% Damage to Humans<br />
+                    <br />
+                    Grants Skill : Death Ward<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Total Damage<br />
+                    20% Pierce Resistance<br />
+                    +5% Total Speed
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 75, STR 435, DEX 354
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Fool's Secret</p>
+            <img src="../img/sword/20.png" alt="" class="itemIcon">
+            <p class="itemText">
+                17 - 26 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    8 Vitality Damage<br />
+                    +15% Increased Experience<br />
+                    -25% Health Regeneration<br />
+                    -25% Energy Regeneration
+                </p>
+                <p class="itemText3">
+                    LVL 8, STR 100, DEX 90
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Gloomweaver's Legtip</p>
+            <img src="../img/sword/07.png" alt="" class="itemIcon">
+            <p class="itemText">
+                182 - 200 Damage <br />
+                35% Pierce Ratio <br />
+                Speed: Fast <br />
+                Set : Gloomweaver's Set<br />
+                <br />
+                <p class="itemText2">
+                    +25% Pierce Damage<br />
+                    10.0% Chance of +190% Instant Poison Damage<br />
+                    130 Instant Poison Damage<br />
+                    +10% Dexterity<br />
+                    +80 Offensive Ability<br />
+                    +25% Damage to Humans<br />
+                    +25% Damage to Beastmen<br />
+                    +1 to Poison Weapons<br />
+                    +1 to Corrode<br />
+                    +1 to all skills in Science Mastery
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 58, STR 395, DEX 316
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Goldblade</p>
+            <img src="../img/sword/14.png" alt="" class="itemIcon">
+            <p class="itemText">
+                24 - 29 Damage <br />
+                10% Pierce Ratio <br />f
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    15 Bleeding Damage per Second<br />
+                    +20% Bleeding Damage<br />
+                    +20% Poison Damage<br />
+                    5% Reduction to Enemy's Health<br />
+                    40% Slow Resistance<br />
+                    +13 Dexterity
+                </p>
+                <p class="itemText3">
+                    LVL 11, STR 105, DEX 94
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Hue of Lustration</p>
+            <img src="../img/sword/09.png" alt="" class="itemIcon">
+            <p class="itemText">
+                227 - 232 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +30% Total Damage<br />
+                    +20 Strength<br />
+                    +20 Intelligence<br />
+                    +20 Dexterity<br />
+                    +200 Health<br />
+                    +200 Energy<br />
+                    +75 Offensive Ability<br />
+                    +75 Defensive Ability<br />
+                    +10% Total Speed<br />
+                    <br />
+                    Grants Skill : Rainbow Ray (Activated on attack)<br />
+                    A bouncing, multicolored ray of light jumps between nearby enemies, striking them with different damage types.<br />
+                    <br />
+                    3.0 Second(s) Recharge<br />
+                    Affects up to 3 targets<br />
+                    50 Energy Cost<br />
+                    30 Damage<br />
+                    30 Piercing Damage<br />
+                    30 Fire Damage<br />
+                    30 Cold Damage<br />
+                    30 Lightning Damage<br />
+                    30 Instant Poison Damage<br />
+                    30 Vitality Damage<br />
+                    3.0 seconds of Skill Disruption
+                </p>
+                <p class="itemText3">
+                    LVL 65, STR 430, DEX 350
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Insanity</p>
+            <img src="../img/sword/15.png" alt="" class="itemIcon">
+            <p class="itemText">
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +35% Total Damage<br />
+                    Chance for one of the following :<br />
+                    &nbsp;&nbsp;&nbsp;400 Fire Damage<br />
+                    &nbsp;&nbsp;&nbsp;400 Cold Damage<br />
+                    &nbsp;&nbsp;&nbsp;400 Lightning Damage<br />
+                    &nbsp;&nbsp;&nbsp;400 Instant Poison Damage<br />
+                    &nbsp;&nbsp;&nbsp;400 Vitality Damage<br />
+                    100% Energy Drain (150% of lost Energy as Damage)<br />
+                    4000 Energy Reserved<br />
+                    +350 Offensive Ability<br />
+                    +20% Total Speed<br />
+                    20% Chance to Dodge Attacks<br />
+                    -50% Recharge<br />
+                    <br />
+                    Grants Skill : Insanity (Activated on attack)<br />
+                    Wielding the blade of madness renders the user recklessly self-destructive.<br />
+                    <br />
+                    3.0 Second Duration<br />
+                    -40.0 Health Regeneration per second
+                </p>
+                <p class="itemText3">
+                    LVL 75, STR 300, DEX 450, INT 300
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Lifeshatter</p>
+            <img src="../img/sword/18.png" alt="" class="itemIcon">
+            <p class="itemText">
+                200 - 209 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +20% Physical Damage<br />
+                    +20% Lightning Damage<br />
+                    +20% Vitality Damage<br />
+                    20 Piercing Damage<br />
+                    8% Reduction to Enemy's Health<br />
+                    8% of Attack damage converted to Health<br />
+                    +35 Strength<br />
+                    +35 Intelligence<br />
+                    +30% Damage to Demons<br />
+                    <br />
+                    Grants Skill : End of the Line (Activated on attack)<br />
+                    Extend the reach of your attacks with a powerful, fast-travelling blast of energy.<br />
+                    <br />
+                    0.5 Second(s) Recharge<br />
+                    2 Energy Cost<br />
+                    90 Damage<br />
+                    30 Lightning Damage<br />
+                    10% Reduction to Enemy's Health<br />
+                    30 Vitality Damage<br />
+                    150 Reduced Armor for 3.0 Seconds
+                </p>
+                <p class="itemText3">
+                    LVL 62, STR 421, DEX 343
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Phantomlight</p>
+            <img src="../img/sword/08.png" alt="" class="itemIcon">
+            <p class="itemText">
+                231 - 237 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    172 Electrical Burn Damage per Second<br />
+                    +25% Lightning Damage<br />
+                    +50% Electrical Burn<br />
+                    43 - 93 Lightning Damage<br />
+                    58 Vitality Damage<br />
+                    +42 Strength<br />
+                    +42 Intelligence<br />
+                    +42 Dexterity<br />
+                    +300 Energy<br />
+                    +70% Energy Regeneration<br />
+                    +150 Offensive Ability<br />
+                    -10% Recharge<br />
+                    +100 Damage to Ghosts<br />
+                    +3 to Conjured Steel
+                </p>
+                <p class="itemText3">
+                    LVL 66, STR 425, DEX 346
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Shieldbreaker</p>
+            <img src="../img/sword/17.png" alt="" class="itemIcon">
+            <p class="itemText">
+                64 - 71 Damage <br />
+                20% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    +40% Pierce Damage<br />
+                    250 Reduced Armor for 3.0 Seconds<br />
+                    20% Pierce Resistance<br />
+                    +20% Offensive Ability<br />
+                    4% Chance to Dodge Attacks
+                </p>
+                <p class="itemText3">
+                    LVL 32, STR 255, DEX 211
+                </p>
+        </div>
+        <div class="itemBox rarityMU" id="newItem35">
+            <p class="itemName">Slayer of the Thirteenth Dynasty</p>
+            <img src="../img/sword/27.png" alt="" class="itemIcon">
+            <p class="itemText">
+                172 - 186 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    180 - 360 Bleeding Damage over 3.0 Seconds<br />
+                    +20% Total Damage<br />
+                    80 - 200 Fire Damage<br />
+                    10.0% Chance of 40% Reduction to Enemy's Health<br />
+                    180 Reduced Armor for 3.0 Seconds<br />
+                    10.0% Chance of 1.0 - 1.5 second(s) of Confusion<br />
+                    15% Slowed for 2.0 Seconds<br />
+                    50% Pierce Resistance<br />
+                    80% Fire Resistance<br />
+                    <br />
+                    Grants Skill : Runeword: Explode
+                </p>
+                <p class="itemText3">
+                    LVL 67, STR 440, DEX 326
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Solarblade</p>
+            <img src="../img/sword/23.png" alt="" class="itemIcon">
+            <p class="itemText">
+                22 - 30 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                Difficulty : Normal<br />
+                <br />
+                <p class="itemText2">
+                    +15% Fire Damage<br />
+                    +15 Fire Damage<br />
+                    <br />
+                    Grants Skill : Devouring Flame
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 14, STR 145, DEX 1, INT 126
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Solarblade</p>
+            <img src="../img/sword/23.png" alt="" class="itemIcon">
+            <p class="itemText">
+                82 - 90 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                Difficulty : Epic<br />
+                <br />
+                <p class="itemText2">
+                    +30% Fire Damage<br />
+                    +30 Fire Damage<br />
+                    <br />
+                    Grants Skill : Devouring Flame
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 37, STR 260, DEX 1, INT 218
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Solarblade</p>
+            <img src="../img/sword/23.png" alt="" class="itemIcon">
+            <p class="itemText">
+                168 - 178 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                Difficulty : Legendary<br />
+                <br />
+                <p class="itemText2">
+                    +45% Fire Damage<br />
+                    +45 Fire Damage<br />
+                    <br />
+                    Grants Skill : Devouring Flame
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 48, STR 315, DEX 1, INT 262
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Speedy Penknife</p>
+            <img src="../img/sword/11.png" alt="" class="itemIcon">
+            <p class="itemText">
+                78 - 82 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    30% Stun Resistance<br />
+                    85% Slow Resistance<br />
+                    +40% Attack Speed<br />
+                    +50% Casting Speed<br />
+                    -33% Energy Cost
+                </p>
+                <p class="itemText3">
+                    LVL 38, STR 260, DEX 218
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Spellwind Blade</p>
+            <img src="../img/sword/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                115 - 120 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +10% Pierce Damage<br />
+                    +15% Cold Damage<br />
+                    +15% Lightning Damage<br />
+                    10 - 50 Lightning Damage<br />
+                    15% Energy Drain (50% of lost Energy as Damage)<br />
+                    +15% Attack Speed<br />
+                    -10% Recharge<br />
+                    +1 to Lunge<br />
+                    <br />
+                    Grants Skill : Energy Shield
+                </p>
+                <p class="itemText3">
+                    LVL 30, STR 227, DEX 190
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Spinesplitter</p>
+            <img src="../img/sword/12.png" alt="" class="itemIcon">
+            <p class="itemText">
+                123 - 134 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    +25% Pierce Damage<br />
+                    +10% Total Damage<br />
+                    34 Piercing Damage<br />
+                    95% Slow Resistance<br />
+                    +15 Dexterity<br />
+                    +60 Offensive Ability<br />
+                    +10% Attack Speed<br />
+                    +2 to Impaling Bones<br />
+                    +1 to Reaper's Avatar
+                </p>
+                <p class="itemText3">
+                    LVL 38, STR 303, DEX 247
+                </p>
+        </div>
+        <div class="itemBox rarityLeg" id="newItem8">
+            <p class="itemName">Spoilmaker</p>
+            <img src="../img/sword/26.png" alt="" class="itemIcon">
+            <p class="itemText">
+                100 Damage <br />
+                10% Pierce Ratio <br />
+                Speed: Very Fast <br />
+                <br />
+                <p class="itemText2">
+                    +3.0 Health Regeneration per second<br />
+                    +3.0 Energy Regeneration per second<br />
+                    +30% Increased Experience<br />
+                    <br />
+                    Grants Skill : Find Item (Activated on attack)<br />
+                    Attacking has a small chance of making free loot appear.<br />
+                    <br />
+                    180.0 Second(s) Recharge<br />
+                    Extra Life Time 0 Seconds<br />
+                    Spoilmaker Attributes:<br />
+                    Life Time 0.1 Seconds<br />
+                    &nbsp;100 Health<br />
+                    &nbsp;100 Energy<br />
+                    <br />
+                    Spoilmaker Abilities:
+                </p>
+                <p class="itemText3">
+                    LVL 70, STR 403, DEX 322
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">The Eternal Menace</p>
+            <img src="../img/sword/10.png" alt="" class="itemIcon">
+            <p class="itemText">
+                220 - 226 Damage <br />
+                15% Pierce Ratio<br />
+                Speed: Fast <br />
+                <br />
+                <p class="itemText2">
+                    +15% Physical Damage<br />
+                    300 Vitality Decay over 3.0 Seconds<br />
+                    20.0% Chance of +220% Vitality Decay<br />
+                    -15% Vitality Damage Resistance<br />
+                    +60 Intelligence<br />
+                    +15% Dexterity<br />
+                    -150 Health<br />
+                    +5.0 Energy Regeneration per second<br />
+                    +60% Energy Regeneration<br />
+                    20% less Energy Reserved<br />
+                    +12% Total Speed<br />
+                    +2 to Demon's Gift<br />
+                    +2 to Deathshield<br />
+                    +1 to all skills in Chaos Mastery<br />
+                    +1 to all skills in Necromancy Mastery
+                </p>
+                <p class="itemText3">
+                    LVL 59, STR 407, DEX 325
+                </p>
+        </div>
+        <div class="itemBox rarityMI" id="newItem1">
+            <p class="itemName">The Long-Forgotten</p>
+            <img src="../img/sword/25d.png" alt="" class="itemIcon">
+            <img src="../img/sword/25c.png" alt="" class="itemIcon">
+            <img src="../img/sword/25b.png" alt="" class="itemIcon">
+            <img src="../img/sword/25a.png" alt="" class="itemIcon">
+            <p class="itemText">
+                35 - 42 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                Difficulty : Normal<br />
+                <br />
+                <p class="itemText2">
+                    45 <i>(Random Dmg. Type)</i> over 3.0 Seconds<br />
+                    +20% <i>(Random Dmg. Type)</i> with +100% Increased Duration<br />
+                    +1 to all skills in Time Mastery
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 20, STR 165, DEX 142
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">The Long-Forgotten</p>
+            <img src="../img/sword/25d.png" alt="" class="itemIcon">
+            <img src="../img/sword/25c.png" alt="" class="itemIcon">
+            <img src="../img/sword/25b.png" alt="" class="itemIcon">
+            <img src="../img/sword/25a.png" alt="" class="itemIcon">
+            <p class="itemText">
+                88 - 96 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                Difficulty : Epic<br />
+                <br />
+                <p class="itemText2">
+                    90 <i>(Random Dmg. Type)</i> over 3.0 Seconds<br />
+                    +30% <i>(Random Dmg. Type)</i> with +150% Increased Duration<br />
+                    +1 to all skills in Time Mastery
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 40, STR 165, DEX 142
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">The Long-Forgotten</p>
+            <img src="../img/sword/25d.png" alt="" class="itemIcon">
+            <img src="../img/sword/25c.png" alt="" class="itemIcon">
+            <img src="../img/sword/25b.png" alt="" class="itemIcon">
+            <img src="../img/sword/25a.png" alt="" class="itemIcon">
+            <p class="itemText">
+                168 - 178 Damage <br />
+                15% Pierce Ratio <br />
+                Speed: Fast <br />
+                Difficulty : Legendary<br />
+                <br />
+                <p class="itemText2">
+                    180 <i>(Random Dmg. Type)</i> over 3.0 Seconds<br />
+                    +40% <i>(Random Dmg. Type)</i> with +200% Increased Duration<br />
+                    +2 to all skills in Time Mastery
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 50, STR 165, DEX 142
+                </p>
+        </div>
+        <div class="itemBox rarityEpic" id="newItem38">
+            <p class="itemName">Vixen's Fang</p>
+            <img src="../img/sword/28.png" alt="" class="itemIcon">
+            <p class="itemText">
+                102 - 106 Damage <br />
+                40% Pierce Ratio <br />
+                Speed: Fast <br />
+                Set: Vixen's Legacy <br />
+                <br />
+                <p class="itemText2">
+                    90 Bleeding Damage over 3.0 Seconds<br />
+                    +15% Bleeding Damage<br />
+                    +8% Total Damage<br />
+                    +15% Fire Damage<br />
+                    +15% Burn Damage<br />
+                    30 Fire Damage<br />
+                    +25 Dexterity<br />
+                    +8% Total Speed
+                </p>
+                <p class="itemText3 itemTextFourRows">
+                    LVL 39, STR 263, DEX 217
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

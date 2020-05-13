@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1">Normal</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2">Epic</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3">Legendary</label>
+            </form>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Anteok Antlers</p>
+            <img src="../img/charm/1_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A pair of large and solid anteok antlers.<span style="color: orange"> Can enhance head armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    10% Elemental Resistance<br />
+                    20% Stun Resistance
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Stun Duration<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Cold Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Vitality Damage Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Pierce Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+6% Intelligence<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+6% Defensive Ability<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20% of Base Wep. damage becomes Elemental<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills<span style="float :right">3%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Bear Claws</p>
+            <img src="../img/charm/2_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A set of sharp claws from a now dead bear.<span style="color: orange"> Can enhance all melee weapons and throwing weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    3 - 5% Reduction to Enemy's Health<br />
+                    60.0 Reduced Armor for 3.0 Seconds<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;10 Damage<br />
+                    &nbsp;&nbsp;&nbsp;+8% Physical Damage<span style="float :right">11,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10 Piercing<br />
+                    &nbsp;&nbsp;&nbsp;+8% Pierce Damage<span style="float :right">11,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Attack Speed<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30 Bleeding Damage over 3.0 Seconds<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Bleeding Damage<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+25 Offensive Ability<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance for 10 Red. Res. for 3.0 Seconds<span style="float :right">7,24%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 30
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Behemoth Jawbone</p>
+            <img src="../img/charm/4_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A piece of the large jaw of a behemoth.<span style="color: orange"> Can enhance axes only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    5 Physical Damage<br />
+                    +5% Physical Damage<br />
+                    5 Piercing Damage<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Attack Speed<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Bleeding Damage<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;36 Life Leech over 3.0 Seconds<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;24 Energy Leech over 3.0 Seconds<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Stun Duration<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+5% Strength<br />&nbsp;&nbsp;&nbsp;+2.0 Health Regeneration per second<span style="float :right">10,88%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 Damage<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 Piercing Damage<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+12% Total Damage<span style="float :right">7,48%%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Centaur Hooves</p>
+            <img src="../img/charm/11_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A durable hoof of a centaur.<span style="color: orange"> Can enhance leg armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    20% Chance of +50% Increased Pierce Ratio<br />
+                    20% Stun Resistance
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;20% Stun Resistance<br />
+                    &nbsp;&nbsp;&nbsp;20% Slow Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;40% Life Leech Resistance Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Vitality Damage Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+18 Dexterity<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30 Bleeding Damage over 3.0 Seconds<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+6% Total Speed<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Barbarism Mastery<br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Archery Mastery<span style="float :right">3,34%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 3
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Cyclops' Eye</p>
+            <img src="../img/charm/9_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A giant cyclops eye, unrelentingly staring at you.<span style="color: orange"> Can enhance head armor and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +60 Offensive Ability<br />
+                    8% Chance to Avoid Projectiles<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+6% Offensive Ability<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Shield Block Chance<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10% Damage Reflected<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Stun Duration<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10 Vitality Damage<br />&nbsp;&nbsp;&nbsp;10 Vitality Retaliation<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+28 Damage to Demons<br />
+                    &nbsp;&nbsp;&nbsp;+28 Damage to Magical<br />
+                    &nbsp;&nbsp;&nbsp;+18% Less Damage from Demons<br />
+                    &nbsp;&nbsp;&nbsp;+18% Less Damage from Magical<br />
+                    &nbsp;&nbsp;&nbsp;33% Energy Leech Resistance
+                    <span style="float :right">12,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 18
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Evil Spirit</p>
+            <img src="../img/charm/17_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Life essence of a night-crawling creature, still clinging to this world.<span style="color: orange"> Can enhance all armor.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    -10% Defensive Ability<br />
+                    10% Chance to Avoid Projectiles
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Poison Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Pierce Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Vitality Damage Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+5% Movement Speed<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Armor Protection<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Life Leech Resistance<br />
+                    &nbsp;&nbsp;&nbsp;30% Energy Leech Resistance
+                    <span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Vitality Damage<br />
+                    &nbsp;&nbsp;&nbsp;+12% Electrical Burn Damage
+                    <span style="float :right">6,49%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Fired Clay</p>
+            <img src="../img/charm/14_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Fragments of baked clay, from which the terracotta army is made out of.<span style="color: orange"> Can enhance all armor and shields.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    10% Pierce Resistance<br />
+                    25 Physical Retaliation<br />
+                    +12% less Damage from Constructs
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;9% Pierce Resistance<br />&nbsp;&nbsp;&nbsp;4% Physical Resistance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;6% Defensive Ability<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Armor Protection<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-6% Energy Cost<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+6% Strength<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Shield Block Chance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />&nbsp;&nbsp;&nbsp;20.0% Chance of 80 Physical Retaliation 
+                    <span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 18
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Fish Scales</p>
+            <img src="../img/charm/13_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Tough and slimy scales of water-dwelling creatures.<span style="color: orange"> Can enhance all armor.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    20% Fire Resistance<br />
+                    10% Reduction in Burn Duration<br />
+                    +1.0 Energy Regeneration per second
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;20 Armor<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Bleeding Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Poison Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Pierce Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Fire Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Cold Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10 Cold Damage<br />
+                    &nbsp;&nbsp;&nbsp;12 Vitality Damage<br />
+                    &nbsp;&nbsp;&nbsp;42 Bleeding Damage over 3.0 Seconds
+                    <span style="float :right">3,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10 Cold Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;12 Vitality Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;42 Bleeding Retaliation over 3.0 Seconds
+                    <span style="float :right">3,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 18
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Floral Nectar</p>
+            <img src="../img/charm/5_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                This substance has a taste and smell of honey.<span style="color: orange"> Can enhance  rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    12% Reduction in Poison Duration<br />
+                    12% Reduction in Bleeding Duration
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Poison Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Pierce Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Bleeding Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Vitality Damage Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20% Energy Leech Resistance<br />
+                    &nbsp;&nbsp;&nbsp;30% Stun Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+1.0 Health Regeneration per second
+                    <span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+6% Defensive Ability<span style="float :right">7,69%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 30
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Formicid Eggs</p>
+            <img src="../img/charm/10_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A couple of poisonous eggs coated in a sticky web.<span style="color: orange"> Can enhance all ranged weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    35 Instant Poison Damage
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Poison Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Poison Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;24 Poison Damage over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Instant Poison Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;6% Reduction to Enemy's Health<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Attack Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;24 Energy Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;33% Slower Attack Speed for 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Human Blood</p>
+            <img src="../img/charm/3_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A sample of dry human blood.<span style="color: orange"> Can enhance rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    15% Reduced Offensive Ability Retaliation for 3.0 Seconds<br />
+                    +15% Damage to Humans<br />
+                    +15% Damage to Demons<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Pierce Resistance<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30 Poison Retaliation over 3.0 Seconds<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Poison Dmg. with +10% Improved Dur.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Bleeding Dmg. with +10% Improved Dur.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance of 60 Life L. Ret. over 3.0 Secs.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30 Less Damage from Humans<br />
+                    &nbsp;&nbsp;&nbsp;+30 Less Damage from Demons<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+5.0 Health Regeneration per second<br />
+                    &nbsp;&nbsp;&nbsp;+30 Offensive Ability<span style="float :right">7,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Chaos Mastery<span style="float :right">2,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 30
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Lamia Claw</p>
+            <img src="../img/charm/15_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Ornamental filed claw of a lamia.<span style="color: orange"> Can enhance rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +10% Pierce Damage<br />
+                    +30 Offensive Ability
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+25 Offensive Ability<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+25 Defensive Ability<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+5% Movement Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Attack Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Bleeding Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Vitality Damage Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Bleeding Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+40% Damage to Insectoids<br />
+                    &nbsp;&nbsp;&nbsp;+10% Less Damage from Insectoids<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Maenad Tail</p>
+            <img src="../img/charm/12_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A long tail of a maenad.<span style="color: orange"> Can enhance torso armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    30 Life Leech Retaliation over 3.0 Seconds<br />
+                    30 Energy Leech Retaliation over 3.0 Seconds<br />
+                    +6% Movement Speed
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;36 Life Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;24 Energy Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Bleeding Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10% Reduced Off. Ability Ret. for 3.0 Seconds<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Poison Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Bleeding Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+18 Dexterity<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 3
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Mechanized Heart</p>
+            <img src="../img/charm/8_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A scorching core of energy, burning anything it touches.<span style="color: orange"> Can enhance all torso armor and shields.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Burn Damage<br />
+                    +15% Electrical Burn Damage<br />
+                    +4% Health<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Armor Protection<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Vitality Damage<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;6% Physical Resistance<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Cold Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+20% Fire Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+20% Lightning Resistance
+                    <span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+95 Health<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10% Damage Reflected<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+2.0 Health Regeneration per second<br />
+                    &nbsp;&nbsp;&nbsp;+2.0 Energy Regeneration per second
+                    <span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-8% Recharge<span style="float :right">4,54%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Pharaonic Wrappings</p>
+            <img src="../img/charm/7_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A handful of ancient, foul wrappings found in an egyptian crypt.<span style="color: orange"> Can enhance all armor, rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    30 Poison Retaliation over 3.0 Seconds<br />
+                    30 Vitality Decay Retaliation over 3.0 Seconds<br />
+                    +10% Damage to Undead
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance of 60 Life L. Ret. over 3.0 Secs.<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;18 Energy Leech Retaliation over 3.0 Seconds<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10% Reduced Off. Ability Ret. for 3.0 Seconds<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;8% Health Reduction Retaliation<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;6.0% Chance of 1.0 Stun Retaliation<span style="float :right">7,69%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Vitality Damage Resistance<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Health<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 12
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Satyr Horns</p>
+            <img src="../img/charm/16_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Small but sturdy horns of a satyr.<span style="color: orange"> Can enhance head armor, leg armor, shields and staves.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    30% Reduced Entrapment Duration<br />
+                    +6% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    10 Armor<br />
+                    +40 Health
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;40% Life Leech Resistance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Pierce Damage<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+18 Strength<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+18 Dexterity<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+95 Health<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+25% Energy Regeneration<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;8% Elemental Resistance<span style="float :right">7,14%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-6% Energy Cost<span style="float :right">7,14%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 3
+                </p>
+        </div>
+        <div class="itemBox rarityCharmN">
+            <p class="itemName">Vicious Essence</p>
+            <img src="../img/charm/6_n.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Malignant fluid extracted from a demon's body.<span style="color: orange"> Can enhance all weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    33 Burn Damage over 3.0 Seconds<br />
+                    +12% Fire Damage <br />
+                    33 Poison Damage over 3.0 Seconds<br />
+                    +12% Instant Poison Damage<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;36 Life Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;24 Energy Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Attack Speed<br />
+                    &nbsp;&nbsp;&nbsp;20% Increase in Projectile Speed<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Fire Damage<br />
+                    &nbsp;&nbsp;&nbsp;+8% Burn Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Instant Poison Damage<br />
+                    &nbsp;&nbsp;&nbsp;+8% Poison Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 26
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Anteok Antlers</p>
+            <img src="../img/charm/1_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A pair of large and solid anteok antlers.<span style="color: orange"> Can enhance head armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    14% Elemental Resistance<br />
+                    35% Stun Resistance
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+26% Stun Duration<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Cold Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Vitality Damage Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Pierce Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Intelligence<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Defensive Ability<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20% of Base Wep. damage becomes Elemental<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills<span style="float :right">3%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Bear Claws</p>
+            <img src="../img/charm/2_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A set of sharp claws from a now dead bear.<span style="color: orange"> Can enhance all melee weapons and throwing weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    5 - 7% Reduction to Enemy's Health<br />
+                    120.0 Reduced Armor for 3.0 Seconds<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;16 Damage<br />
+                    &nbsp;&nbsp;&nbsp;+11% Physical Damage<span style="float :right">11,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;16 Piercing<br />
+                    &nbsp;&nbsp;&nbsp;+11% Pierce Damage<span style="float :right">11,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Attack Speed<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;60 Bleeding Damage over 3.0 Seconds<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Bleeding Damage<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+45 Offensive Ability<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance for 16 Red. Res. for 3.0 Seconds<span style="float :right">7,24%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 45
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Behemoth Jawbone</p>
+            <img src="../img/charm/4_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A piece of the large jaw of a behemoth.<span style="color: orange"> Can enhance axes only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    10 Physical Damage<br />
+                    +10% Physical Damage<br />
+                    10 Piercing Damage<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Attack Speed<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Bleeding Damage<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;96 Life Leech over 3.0 Seconds<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;42 Energy Leech over 3.0 Seconds<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+26% Stun Duration<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Strength<br />&nbsp;&nbsp;&nbsp;+3.5 Health Regeneration per second<span style="float :right">10,88%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 Damage<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 Piercing Damage<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+16% Total Damage<span style="float :right">7,48%%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Centaur Hooves</p>
+            <img src="../img/charm/11_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A durable hoof of a centaur.<span style="color: orange"> Can enhance leg armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    20% Chance of +100% Increased Pierce Ratio<br />
+                    30% Stun Resistance
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Stun Resistance<br />
+                    &nbsp;&nbsp;&nbsp;30% Slow Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;50% Life Leech Resistance Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Vitality Damage Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+27 Dexterity<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;60 Bleeding Damage over 3.0 Seconds<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Total Speed<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Barbarism Mastery<br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Archery Mastery<span style="float :right">3,34%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 27
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Cyclops' Eye</p>
+            <img src="../img/charm/9_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A giant cyclops eye, unrelentingly staring at you.<span style="color: orange"> Can enhance head armor and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +120 Offensive Ability<br />
+                    10% Chance to Avoid Projectiles<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Offensive Ability<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Shield Block Chance<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20% Damage Reflected<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+26% Stun Duration<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20 Vitality Damage<br />&nbsp;&nbsp;&nbsp;20 Vitality Retaliation<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+60 Damage to Demons<br />
+                    &nbsp;&nbsp;&nbsp;+60 Damage to Magical<br />
+                    &nbsp;&nbsp;&nbsp;+20% Less Damage from Demons<br />
+                    &nbsp;&nbsp;&nbsp;+20% Less Damage from Magical<br />
+                    &nbsp;&nbsp;&nbsp;50% Energy Leech Resistance
+                    <span style="float :right">12,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Evil Spirit</p>
+            <img src="../img/charm/17_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Life essence of a night-crawling creature, still clinging to this world.<span style="color: orange"> Can enhance all armor.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    -15% Defensive Ability<br />
+                    20% Chance to Avoid Projectiles
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Poison Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Pierce Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Vitality Damage Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Movement Speed<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Armor Protection<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Life Leech Resistance<br />
+                    &nbsp;&nbsp;&nbsp;35% Energy Leech Resistance
+                    <span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+18% Vitality Damage<br />
+                    &nbsp;&nbsp;&nbsp;+18% Electrical Burn Damage
+                    <span style="float :right">6,49%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Fired Clay</p>
+            <img src="../img/charm/14_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Fragments of baked clay, from which the terracotta army is made out of.<span style="color: orange"> Can enhance all armor and shields.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    15% Pierce Resistance<br />
+                    50 Physical Retaliation<br />
+                    +14% less Damage from Constructs
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;12% Pierce Resistance<br />&nbsp;&nbsp;&nbsp;5% Physical Resistance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;8% Defensive Ability<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Armor Protection<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-8% Energy Cost<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Strength<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Shield Block Chance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />&nbsp;&nbsp;&nbsp;20.0% Chance of 160 Physical Retaliation 
+                    <span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Fish Scales</p>
+            <img src="../img/charm/13_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Tough and slimy scales of water-dwelling creatures.<span style="color: orange"> Can enhance all armor.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    30% Fire Resistance<br />
+                    15% Reduction in Burn Duration<br />
+                    +2.0 Energy Regeneration per second
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;45 Armor<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Bleeding Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Poison Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Pierce Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Fire Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Cold Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;16 Cold Damage<br />
+                    &nbsp;&nbsp;&nbsp;18 Vitality Damage<br />
+                    &nbsp;&nbsp;&nbsp;75 Bleeding Damage over 3.0 Seconds
+                    <span style="float :right">3,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;16 Cold Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;18 Vitality Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;75 Bleeding Retaliation over 3.0 Seconds
+                    <span style="float :right">3,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 34
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Floral Nectar</p>
+            <img src="../img/charm/5_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                This substance has a taste and smell of honey.<span style="color: orange"> Can enhance  rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    14% Reduction in Poison Duration<br />
+                    14% Reduction in Bleeding Duration
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Poison Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Pierce Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Bleeding Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Vitality Damage Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Energy Leech Resistance<br />
+                    &nbsp;&nbsp;&nbsp;40% Stun Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+2.0 Health Regeneration per second
+                    <span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8% Defensive Ability<span style="float :right">7,69%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 45
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Formicid Eggs</p>
+            <img src="../img/charm/10_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A couple of poisonous eggs coated in a sticky web.<span style="color: orange"> Can enhance all ranged weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    75 Instant Poison Damage
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Poison Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Poison Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;48 Poison Damage over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Instant Poison Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;7% Reduction to Enemy's Health<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+25% Attack Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;42 Energy Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;50% Slower Attack Speed for 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE" id="newChm1">
+            <p class="itemName">Epic Fossilized Snakeskin</p>
+            <img src="../img/charm/18_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Scales of a fossilized snake, preserved in pristine condition.<span style="color: orange"> Can enhance amulets only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Health<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;Grants Skill: Cheat Death (Activated on low health)<br />&nbsp;&nbsp;&nbsp;When death draws near, borrow some time to turn the tide around and avoid a grim fate.<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;180.0 Second(s) Recharge<br />&nbsp;&nbsp;&nbsp;3.0 Second Duration<br />&nbsp;&nbsp;&nbsp;1000 Health Restored<br />&nbsp;&nbsp;&nbsp;75% Damage Absorption<span style="float :right">33%&nbsp;&nbsp;&nbsp;&nbsp;</span><br /><br />
+                    &nbsp;&nbsp;&nbsp;Grants Skill: Escape Death (Activated on low health)<br />&nbsp;&nbsp;&nbsp;When death draws near, excite your senses to allow lightspeed reactions and otherwise impossible agility.<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;180.0 Second(s) Recharge<br />&nbsp;&nbsp;&nbsp;6.0 Second Duration<br />&nbsp;&nbsp;&nbsp;1500 Health Restored<br />&nbsp;&nbsp;&nbsp;+30% Movement Speed<br />&nbsp;&nbsp;&nbsp;20% Chance to Dodge Attacks<br />&nbsp;&nbsp;&nbsp;20% Chance to Avoid Projectiles<span style="float :right">33%&nbsp;&nbsp;&nbsp;&nbsp;</span><br /><br />
+                    &nbsp;&nbsp;&nbsp;Grants Skill: Fight Death (Activated on low health)<br />&nbsp;&nbsp;&nbsp;When death draws near, multiply your physical strength and brutality to wreck the fools that stand before you.<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;180.0 Second(s) Recharge<br />&nbsp;&nbsp;&nbsp;8.0 Second Duration<br />&nbsp;&nbsp;&nbsp;500 Health Restored<br />&nbsp;&nbsp;&nbsp;500 Energy Restored<br />&nbsp;&nbsp;&nbsp;+15% Total Damage<br />&nbsp;&nbsp;&nbsp;+30% Attack Speed<br />&nbsp;&nbsp;&nbsp;+30% Casting Speed<span style="float :right">33%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 43
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Human Blood</p>
+            <img src="../img/charm/3_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A sample of dry human blood.<span style="color: orange"> Can enhance rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    20% Reduced Offensive Ability Retaliation for 3.0 Seconds<br />
+                    +20% Damage to Humans<br />
+                    +20% Damage to Demons<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Pierce Resistance<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;87 Poison Retaliation over 3.0 Seconds<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+25% Poison Dmg. with +20% Improved Dur.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+25% Bleeding Dmg. with +20% Improved Dur.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance of 100 Life L. Ret. over 3.0 Secs.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+60 Less Damage from Humans<br />
+                    &nbsp;&nbsp;&nbsp;+60 Less Damage from Demons<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+8.0 Health Regeneration per second<br />
+                    &nbsp;&nbsp;&nbsp;+60 Offensive Ability<span style="float :right">7,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Chaos Mastery<span style="float :right">2,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 45
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Lamia Claw</p>
+            <img src="../img/charm/15_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Ornamental filed claw of a lamia.<span style="color: orange"> Can enhance rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Pierce Damage<br />
+                    +60 Offensive Ability
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+45 Offensive Ability<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+45 Defensive Ability<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Movement Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Attack Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Bleeding Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Vitality Damage Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Bleeding Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+40% Damage to Insectoids<br />
+                    &nbsp;&nbsp;&nbsp;+10% Less Damage from Insectoids<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Maenad Tail</p>
+            <img src="../img/charm/12_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A long tail of a maenad.<span style="color: orange"> Can enhance torso armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    51 Life Leech Retaliation over 3.0 Seconds<br />
+                    51 Energy Leech Retaliation over 3.0 Seconds<br />
+                    +8% Movement Speed
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;96 Life Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;42 Energy Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Bleeding Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15% Reduced Off. Ability Ret. for 3.0 Seconds<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Poison Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Bleeding Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+27 Dexterity<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 27
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Mechanized Heart</p>
+            <img src="../img/charm/8_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A scorching core of energy, burning anything it touches.<span style="color: orange"> Can enhance all torso armor and shields.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +25% Burn Damage<br />
+                    +25% Electrical Burn Damage<br />
+                    +6% Health<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Armor Protection<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Vitality Damage<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;7% Physical Resistance<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Cold Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+20% Fire Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+20% Lightning Resistance
+                    <span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+315 Health<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20% Damage Reflected<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+3.5 Health Regeneration per second<br />
+                    &nbsp;&nbsp;&nbsp;+3.5 Energy Regeneration per second
+                    <span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-10% Recharge<span style="float :right">4,54%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Pharaonic Wrappings</p>
+            <img src="../img/charm/7_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A handful of ancient, foul wrappings found in an egyptian crypt.<span style="color: orange"> Can enhance all armor, rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    72 Poison Retaliation over 3.0 Seconds<br />
+                    72 Vitality Decay Retaliation over 3.0 Seconds<br />
+                    +15% Damage to Undead
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance of 100 Life L. Ret. over 3.0 Secs.<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;36 Energy Leech Retaliation over 3.0 Seconds<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15% Reduced Off. Ability Ret. for 3.0 Seconds<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;9% Health Reduction Retaliation<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;7.0% Chance of 1.5 Stun Retaliation<span style="float :right">7,69%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;25% Vitality Damage Resistance<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Health<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 30
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Satyr Horns</p>
+            <img src="../img/charm/16_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Small but sturdy horns of a satyr.<span style="color: orange"> Can enhance head armor, leg armor, shields and staves.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    40% Reduced Entrapment Duration<br />
+                    +9% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    25 Armor<br />
+                    +80 Health
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;50% Life Leech Resistance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Pierce Damage<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+27 Strength<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+27 Dexterity<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+315 Health<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+50% Energy Regeneration<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;13% Elemental Resistance<span style="float :right">7,14%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-8% Energy Cost<span style="float :right">7,14%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 27
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE" id="newChm2">
+            <p class="itemName">Epic Unmelting Ice</p>
+            <img src="../img/charm/19_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A sample of mysterious ice which seems capable of eternally preserving anything encased in it.<span style="color: orange"> Can enhance all weapons and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    90 Frostburn Damage over 3.0 Seconds<br />
+                    6.0% Chance of 2.0 second(s) of Freeze<br />
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Frostburn Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Attack Speed<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;96 Life Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;42 Energy Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-8% Recharge<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;5.0% Chance of 1.0 - 2.0 second(s) of Freeze<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 48
+                </p>
+        </div>
+        <div class="itemBox rarityCharmE">
+            <p class="itemName">Epic Vicious Essence</p>
+            <img src="../img/charm/6_e.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Malignant fluid extracted from a demon's body.<span style="color: orange"> Can enhance all weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    66 Burn Damage over 3.0 Seconds<br />
+                    +16% Fire Damage <br />
+                    66 Poison Damage over 3.0 Seconds<br />
+                    +16% Instant Poison Damage
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;96 Life Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;42 Energy Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+24% Attack Speed<br />
+                    &nbsp;&nbsp;&nbsp;30% Increase in Projectile Speed<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Fire Damage<br />
+                    &nbsp;&nbsp;&nbsp;+12% Burn Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Instant Poison Damage<br />
+                    &nbsp;&nbsp;&nbsp;+12% Poison Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Anteok Antlers</p>
+            <img src="../img/charm/1_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A pair of large and solid anteok antlers.<span style="color: orange"> Can enhance head armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    18% Elemental Resistance<br />
+                    50% Stun Resistance
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+33% Stun Duration<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;45% Cold Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Vitality Damage Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Pierce Resistance<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Intelligence<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Defensive Ability<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20% of Base Wep. damage becomes Elemental<span style="float :right">13,856%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills<span style="float :right">3%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Bear Claws</p>
+            <img src="../img/charm/2_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A set of sharp claws from a now dead bear.<span style="color: orange"> Can enhance all melee weapons and throwing weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    7 - 9% Reduction to Enemy's Health<br />
+                    180.0 Reduced Armor for 3.0 Seconds<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;22 Damage<br />
+                    &nbsp;&nbsp;&nbsp;+15% Physical Damage<span style="float :right">11,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;22 Piercing<br />
+                    &nbsp;&nbsp;&nbsp;+15% Pierce Damage<span style="float :right">11,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Attack Speed<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;90 Bleeding Damage over 3.0 Seconds<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Bleeding Damage<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+65 Offensive Ability<span style="float :right">17,39%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance for 22 Red. Res. for 3.0 Seconds<span style="float :right">7,24%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 60
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Behemoth Jawbone</p>
+            <img src="../img/charm/4_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A piece of the large jaw of a behemoth.<span style="color: orange"> Can enhance axes only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    15 Physical Damage<br />
+                    +15% Physical Damage<br />
+                    15 Piercing Damage<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Attack Speed<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Bleeding Damage<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;147 Life Leech over 3.0 Seconds<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;72 Energy Leech over 3.0 Seconds<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+33% Stun Duration<span style="float :right">16,32%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Strength<br />&nbsp;&nbsp;&nbsp;+5.0 Health Regeneration per second<span style="float :right">10,88%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35 Damage<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35 Piercing Damage<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+20% Total Damage<span style="float :right">7,48%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Centaur Hooves</p>
+            <img src="../img/charm/11_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A durable hoof of a centaur.<span style="color: orange"> Can enhance leg armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    20% Chance of +150% Increased Pierce Ratio<br />
+                    40% Stun Resistance
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;40% Stun Resistance<br />
+                    &nbsp;&nbsp;&nbsp;40% Slow Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;60% Life Leech Resistance Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Vitality Damage Resistance<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+33 Dexterity<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;90 Bleeding Damage over 3.0 Seconds<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Total Speed<span style="float :right">16,1%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Barbarism Mastery<br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Archery Mastery<span style="float :right">3,34%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 38
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Cyclops' Eye</p>
+            <img src="../img/charm/9_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A giant cyclops eye, unrelentingly staring at you.<span style="color: orange"> Can enhance head armor and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +180 Offensive Ability<br />
+                    12% Chance to Avoid Projectiles<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Offensive Ability<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Shield Block Chance<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Damage Reflected<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+33% Stun Duration<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30 Vitality Damage<br />&nbsp;&nbsp;&nbsp;30 Vitality Retaliation<span style="float :right">14,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+110 Damage to Demons<br />
+                    &nbsp;&nbsp;&nbsp;+110 Damage to Magical<br />
+                    &nbsp;&nbsp;&nbsp;+24% Less Damage from Demons<br />
+                    &nbsp;&nbsp;&nbsp;+24% Less Damage from Magical<br />
+                    &nbsp;&nbsp;&nbsp;66% Energy Leech Resistance
+                    <span style="float :right">12,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 44
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Evil Spirit</p>
+            <img src="../img/charm/17_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Life essence of a night-crawling creature, still clinging to this world.<span style="color: orange"> Can enhance all armor.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    -20% Defensive Ability<br />
+                    30% Chance to Avoid Projectiles
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Poison Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Pierce Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Vitality Damage Resistance<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Movement Speed<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Armor Protection<span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;40% Life Leech Resistance<br />
+                    &nbsp;&nbsp;&nbsp;40% Energy Leech Resistance
+                    <span style="float :right">15,58%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+24% Vitality Damage<br />
+                    &nbsp;&nbsp;&nbsp;+24% Electrical Burn Damage
+                    <span style="float :right">6,49%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Fired Clay</p>
+            <img src="../img/charm/14_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Fragments of baked clay, from which the terracotta army is made out of.<span style="color: orange"> Can enhance all armor and shields.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    20% Pierce Resistance<br />
+                    75 Physical Retaliation<br />
+                    +16% less Damage from Constructs
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;15% Pierce Resistance<br />&nbsp;&nbsp;&nbsp;6% Physical Resistance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10% Defensive Ability<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Armor Protection<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-10% Energy Cost<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Strength<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Shield Block Chance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />&nbsp;&nbsp;&nbsp;20.0% Chance of 240 Physical Retaliation 
+                    <span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 44
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Fish Scales</p>
+            <img src="../img/charm/13_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Tough and slimy scales of water-dwelling creatures.<span style="color: orange"> Can enhance all armor.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    40% Fire Resistance<br />
+                    20% Reduction in Burn Duration<br />
+                    +3.0 Energy Regeneration per second
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;70 Armor<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Bleeding Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Poison Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Pierce Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;45% Fire Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;45% Cold Resistance<span style="float :right">15,6%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;23 Cold Damage<br />
+                    &nbsp;&nbsp;&nbsp;24 Vitality Damage<br />
+                    &nbsp;&nbsp;&nbsp;114 Bleeding Damage over 3.0 Seconds
+                    <span style="float :right">3,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;23 Cold Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;24 Vitality Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;114 Bleeding Retaliation over 3.0 Seconds
+                    <span style="float :right">3,19%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 44
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Floral Nectar</p>
+            <img src="../img/charm/5_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                This substance has a taste and smell of honey.<span style="color: orange"> Can enhance  rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    16% Reduction in Poison Duration<br />
+                    16% Reduction in Bleeding Duration
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Poison Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Pierce Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Bleeding Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Vitality Damage Resistance<span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;40% Energy Leech Resistance<br />
+                    &nbsp;&nbsp;&nbsp;50% Stun Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+3.0 Health Regeneration per second
+                    <span style="float :right">18,46%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10% Defensive Ability<span style="float :right">7,69%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 60
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Formicid Eggs</p>
+            <img src="../img/charm/10_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A couple of poisonous eggs coated in a sticky web.<span style="color: orange"> Can enhance all ranged weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    100 Instant Poison Damage
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+25% Poison Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Poison Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;72 Poison Damage over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+25% Instant Poison Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;9% Reduction to Enemy's Health<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+35% Attack Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;72 Energy Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;66% Slower Attack Speed for 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Fossilized Snakeskin</p>
+            <img src="../img/charm/18_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Scales of a fossilized snake, preserved in pristine condition.<span style="color: orange"> Can enhance amulets only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Health<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;Grants Skill: Cheat Death (Activated on low health)<br />&nbsp;&nbsp;&nbsp;When death draws near, borrow some time to turn the tide around and avoid a grim fate.<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;120.0 Second(s) Recharge<br />&nbsp;&nbsp;&nbsp;3.0 Second Duration<br />&nbsp;&nbsp;&nbsp;1500 Health Restored<br />&nbsp;&nbsp;&nbsp;75% Damage Absorption<span style="float :right">33%&nbsp;&nbsp;&nbsp;&nbsp;</span><br /><br />
+                    &nbsp;&nbsp;&nbsp;Grants Skill: Escape Death (Activated on low health)<br />&nbsp;&nbsp;&nbsp;When death draws near, excite your senses to allow lightspeed reactions and otherwise impossible agility.<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;120.0 Second(s) Recharge<br />&nbsp;&nbsp;&nbsp;6.0 Second Duration<br />&nbsp;&nbsp;&nbsp;1500 Health Restored<br />&nbsp;&nbsp;&nbsp;+40% Movement Speed<br />&nbsp;&nbsp;&nbsp;25% Chance to Dodge Attacks<br />&nbsp;&nbsp;&nbsp;25% Chance to Avoid Projectiles<span style="float :right">33%&nbsp;&nbsp;&nbsp;&nbsp;</span><br /><br />
+                    &nbsp;&nbsp;&nbsp;Grants Skill: Fight Death (Activated on low health)<br />&nbsp;&nbsp;&nbsp;When death draws near, multiply your physical strength and brutality to wreck the fools that stand before you.<br />&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;120.0 Second(s) Recharge<br />&nbsp;&nbsp;&nbsp;8.0 Second Duration<br />&nbsp;&nbsp;&nbsp;750 Health Restored<br />&nbsp;&nbsp;&nbsp;750 Energy Restored<br />&nbsp;&nbsp;&nbsp;+25% Total Damage<br />&nbsp;&nbsp;&nbsp;+40% Attack Speed<br />&nbsp;&nbsp;&nbsp;+40% Casting Speed<span style="float :right">33%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 54
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Human Blood</p>
+            <img src="../img/charm/3_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A sample of dry human blood.<span style="color: orange"> Can enhance rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    25% Reduced Offensive Ability Retaliation for 3.0 Seconds<br />
+                    +25% Damage to Humans<br />
+                    +25% Damage to Demons<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Pierce Resistance<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;120 Poison Retaliation over 3.0 Seconds<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Poison Dmg. with +30% Improved Dur.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Bleeding Dmg. with +30% Improved Dur.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance of 160 Life L. Ret. over 3.0 Secs.<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+100 Less Damage from Humans<br />
+                    &nbsp;&nbsp;&nbsp;+100 Less Damage from Demons<span style="float :right">15%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+10.0 Health Regeneration per second<br />
+                    &nbsp;&nbsp;&nbsp;+100 Offensive Ability<span style="float :right">7,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+1 to all skills in Chaos Mastery<span style="float :right">2,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 60
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Lamia Claw</p>
+            <img src="../img/charm/15_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Ornamental filed claw of a lamia.<span style="color: orange"> Can enhance rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Pierce Damage<br />
+                    +90 Offensive Ability
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+65 Offensive Ability<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+65 Defensive Ability<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+15% Movement Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+16% Attack Speed<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Bleeding Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Vitality Damage Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Bleeding Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+40% Damage to Insectoids<br />
+                    &nbsp;&nbsp;&nbsp;+10% Less Damage from Insectoids<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Maenad Tail</p>
+            <img src="../img/charm/12_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A long tail of a maenad.<span style="color: orange"> Can enhance torso armor only.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    72 Life Leech Retaliation over 3.0 Seconds<br />
+                    72 Energy Leech Retaliation over 3.0 Seconds<br />
+                    +10% Movement Speed
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;147 Life Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;72 Energy Leech over 3.0 Seconds<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Bleeding Damage<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20% Reduced Off. Ability Ret. for 3.0 Seconds<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Poison Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Bleeding Resistance<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+33 Dexterity<span style="float :right">12,5%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 38
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Mechanized Heart</p>
+            <img src="../img/charm/8_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A scorching core of energy, burning anything it touches.<span style="color: orange"> Can enhance all torso armor and shields.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    +35% Burn Damage<br />
+                    +35% Electrical Burn Damage<br />
+                    +8% Health<br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Armor Protection<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Vitality Damage<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;8% Physical Resistance<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Cold Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+20% Fire Resistance<br />
+                    &nbsp;&nbsp;&nbsp;+20% Lightning Resistance
+                    <span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+450 Health<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;30% Damage Reflected<span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+5.0 Health Regeneration per second<br />
+                    &nbsp;&nbsp;&nbsp;+5.0 Energy Regeneration per second
+                    <span style="float :right">13,63%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-12% Recharge<span style="float :right">4,54%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Pharaonic Wrappings</p>
+            <img src="../img/charm/7_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A handful of ancient, foul wrappings found in an egyptian crypt.<span style="color: orange"> Can enhance all armor, rings and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    120 Poison Retaliation over 3.0 Seconds<br />
+                    120 Vitality Decay Retaliation over 3.0 Seconds<br />
+                    +20% Damage to Undead
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;20.0% Chance of 160 Life L. Ret. over 3.0 Secs.<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;60 Energy Leech Retaliation over 3.0 Seconds<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;Chance for one of the following:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20% Reduced Off. Ability Ret. for 3.0 Seconds<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20% Reduced Def. Ability Ret. for 3.0 Seconds<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;10% Health Reduction Retaliation<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;8.0% Chance of 2.0 Stun Retaliation<span style="float :right">7,69%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;35% Vitality Damage Resistance<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+12% Health<span style="float :right">15,38%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 41
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Satyr Horns</p>
+            <img src="../img/charm/16_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Small but sturdy horns of a satyr.<span style="color: orange"> Can enhance head armor, leg armor, shields and staves.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    60% Reduced Entrapment Duration<br />
+                    +12% Attack Speed<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    40 Armor<br />
+                    +120 Health
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;60% Life Leech Resistance<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+20% Pierce Damage<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+33 Strength<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+33 Dexterity<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+450 Health<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+75% Energy Regeneration<span style="float :right">14,28%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;18% Elemental Resistance<span style="float :right">7,14%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-10% Energy Cost<span style="float :right">7,14%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 36
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Unmelting Ice</p>
+            <img src="../img/charm/19_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                A sample of mysterious ice which seems capable of eternally preserving anything encased in it.<span style="color: orange"> Can enhance all weapons and amulets.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    150 Frostburn Damage over 3.0 Seconds<br />
+                    8.0% Chance of 3.0 second(s) of Freeze<br />
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Frostburn Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Attack Speed<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;147 Life Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;72 Energy Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;-10% Recharge<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;5.0% Chance of 1.0 - 3.0 second(s) of Freeze<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 58
+                </p>
+        </div>
+        <div class="itemBox rarityCharmL">
+            <p class="itemName">Legendary Vicious Essence</p>
+            <img src="../img/charm/6_l.png" alt="" class="itemIcon">
+            <p class="itemTextCharm">
+                Malignant fluid extracted from a demon's body.<span style="color: orange"> Can enhance all weapons.</span>
+                <p class="itemText2 itemText2IconAlt">
+                    111 Burn Damage over 3.0 Seconds<br />
+                    +20% Fire Damage <br />
+                    111 Poison Damage over 3.0 Seconds<br />
+                    +20% Instant Poison Damage
+                    <br />
+                    <br />
+                    <span style="color: orange">Completion Bonuses :</span><br />
+                    &nbsp;&nbsp;&nbsp;147 Life Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;72 Energy Leech over 3.0 Seconds<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+30% Attack Speed<br />
+                    &nbsp;&nbsp;&nbsp;40% Increase in Projectile Speed<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+16% Fire Damage<br />
+                    &nbsp;&nbsp;&nbsp;+16% Burn Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                    &nbsp;&nbsp;&nbsp;+16% Instant Poison Damage<br />
+                    &nbsp;&nbsp;&nbsp;+16% Poison Damage<span style="float :right">16,67%&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+                </p>
+                <p class="itemText3 itemText3IconAlt2">
+                    LVL 46
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function_charm.js"></script>
+</body></html>

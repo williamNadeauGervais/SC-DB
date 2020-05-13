@@ -1,0 +1,2396 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html">
+                <p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p>
+                <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            </a>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Adventurer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +30 Dexterity<br/>
+                    +20% Attack Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Swords<br/>
+            LVL 36
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Alchemist's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    25% Skill Disruption Protection<br/>
+                    +50 Energy<br/>
+                    +2.0 Energy Regeneration per second<br/>
+                    +50% Energy Regeneration
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Antimage's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    40% Skill Disruption Resistance<br/>
+                    9% Elemental Resistance<br/>
+                    40% Energy Leech Resistance<br/>
+                    20% Absorption of Spell Energy<br/>
+                    63 Energy Leech Retaliation over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 37
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix"  id="newAfx1">
+            <p class="itemName">Apostate's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    210 Vitality Decay over 3.0 Seconds<br/>
+                    90 Life Leech over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 60
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Aquamancer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Aqua Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Spears<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Arcane</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    36 - 42 Elemental Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 35
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Archer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Archery Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Bows<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Artificier's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    15% Reduction in Burn Duration<br />
+                    +30% Burn Damage<br />
+                    +30% Casting Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All arm armor, all head armor, shields<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Artificier's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20% Reduction in Burn Duration<br />
+                    +40% Burn Damage<br />
+                    +40% Casting Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All arm armor, all head armor, shields<br/>
+            LVL 50
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Athlete's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    -15% Energy<br />
+                    +10% Movement Speed<br />
+                    10% Chance to Dodge Attacks<br />
+                    10% Chance to Avoid Projectiles
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All leg armor<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Avenger's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    12 - 18 Piercing Damage<br />
+                    35.0% Chance of 30 - 40 Piercing Retaliation
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 18
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Barbarian's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Barbarism Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Axes<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Battlelord's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Barbarism Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Axes<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix" id="newAfx2">
+            <p class="itemName">Blasphemer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    90 Vitality Decay over 3.0 Seconds<br/>
+                    45 Life Leech over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 30
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Blessed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    60% Fire Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor, All jewelry<br/>
+            LVL 39
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Blessed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    60% Cold Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor, All jewelry<br/>
+            LVL 39
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Blessed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    60% Lightning Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor, All jewelry<br/>
+            LVL 39
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Blessed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    34% Fire Resistance<br/>
+                    34% Cold Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor, All jewelry<br/>
+            LVL 39
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Blessed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    34% Fire Resistance<br/>
+                    34% Lightning Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor, All jewelry<br/>
+            LVL 39
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Blessed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    34% Cold Resistance<br/>
+                    34% Lightning Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor, All jewelry<br/>
+            LVL 39
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Blood-drinking</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    6 - 10% of Attack damage converted to Health
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 24
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Bulwark's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +26 Strength<br/>
+                    +90 Defensive Ability
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 36
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Captain's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +3% Shield Block Chance<br/>
+                    +50 Health<br/>
+                    -10% Shield Recovery Time
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Caretaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2.0 Health Regeneration per second<br />
+                    +50% Health Regeneration<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +3.0 Health Regeneration per second<br />
+                    +25% Health Regeneration
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Chaos Master's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Chaos Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Swords<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Chaotic's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Chaos Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Swords<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Corrupted</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    10 - 20 Reduced Resistances for 3.0 Seconds<br/>
+                    -10% Health
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Crushing</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +10% Stun Duration<br/>
+                    5.0% Chance of 1 - 2 seconds of Stun<br/>
+                    5.0% Chance of 50 Reduced Armor for 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Crushing</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +10% Stun Duration<br/>
+                    5.0% Chance of 1 - 2 seconds of Stun<br/>
+                    5.0% Chance of 75 Reduced Armor for 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Deadeye's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20.0% Chance of +200% increased Pierce Ratio<br/>
+                    +24% Attack Speed<br/>
+                    40% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 32
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Debater's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +300 Energy
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor<br/>
+            LVL 47
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Devout</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +12% Less Damage from Undead<br/>
+                    +12% Less Damage from Demons
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor<br/>
+            LVL 10
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Diabolic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    6 Fire Damage<br/>
+                    20 Vitality Decay over 4.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Diabolic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    12 Fire Damage<br/>
+                    52 Vitality Decay over 4.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Staves, Swords<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Diamondsilk</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    30% Pierce Resistance<br/>
+                    30% Lightning Resistance<br/>
+                    1 - 50 Lightning Retaliation<br/>
+                    10% Damage Reflected
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Mage Torsos<br/>
+            LVL 30
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Diamondsilk</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    50% Pierce Resistance<br/>
+                    50% Lightning Resistance<br/>
+                    1 - 100 Lightning Retaliation<br/>
+                    16% Damage Reflected
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Mage Torsos<br/>
+            LVL 48
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Dignified</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15% Stun Duration<br/>
+                    25% Stun Resistance<br/>
+                    +250 Health<br/>
+                    5.0% Chance of 3.0 Stun Retaliation
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All head armor<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Dragoon's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15% Physical Damage<br/>
+                    +15% Pierce Damage<br/>
+                    +10% Offensive Ability<br/>
+                    +25% Damage to Beasts
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Spears<br/>
+            LVL 18
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Emberlord's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    10% Reduction in Burn Duration<br/>
+                    40 Burn Damage over 4.0 seconds<br/>
+                    +10% Fire Retaliation<br/>
+                    <br/>
+                    Grants Skill : Flamekeeper's Guard (Activated when equipped)<br/>
+                    Under the spiritual guidance of the Flamekeepers, the elemental forces of you and your allies strengthen.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    12.0 Meter Radius<br />
+                    10% Fire Resistance<br />
+                    10 Fire Damage<br />
+                    +10% Fire Damage<br />
+                    +10% Burn Damage
+
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Embermaster's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    15% Reduction in Burn Duration<br/>
+                    80 Burn Damage over 4.0 seconds<br/>
+                    +20% Fire Retaliation<br/>
+                    <br/>
+                    Grants Skill : Flamekeeper's Guard (Activated when equipped)<br/>
+                    Under the spiritual guidance of the Flamekeepers, the elemental forces of you and your allies strengthen.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    10.0 Meter Radius<br />
+                    30% Fire Resistance<br />
+                    20 Fire Damage<br />
+                    +15% Fire Damage<br />
+                    +15% Burn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 32
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Ember God's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20% Reduction in Burn Duration<br/>
+                    160 Burn Damage over 4.0 seconds<br/>
+                    +30% Fire Retaliation<br/>
+                    <br/>
+                    Grants Skill : Flamekeeper's Guard (Activated when equipped)<br/>
+                    Under the spiritual guidance of the Flamekeepers, the elemental forces of you and your allies strengthen.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    40.0 Meter Radius<br />
+                    40% Fire Resistance<br />
+                    30 Fire Damage<br />
+                    +25% Fire Damage<br />
+                    +25% Burn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 47
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Enchanted</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    18 - 24 Elemental Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Enchanter's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    50% Skill Disruption Protection<br/>
+                    +150 Energy<br/>
+                    +5.0 Energy Regeneration per second<br/>
+                    +100% Energy Regeneration
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 35
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Feral</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    10 Damage<br/>
+                    10 Piercing Damage<br/>
+                    75 Bleeding Damage over 3.0 Seconds<br/>
+                    <br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    &nbsp;&nbsp;&nbsp;45 Bleeding Damage over 3.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;+15% Physical Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Spears, Swords<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Gargantuan</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    42 - 62 Bonus Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Swords<br/>
+            LVL 48
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Gelid</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    84 Frostburn Damage over 4.0 Seconds<br/>
+                    5.0% Chance of 2 - 4 seconds of Freeze
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Geniuses's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Science Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Clubs<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Geomancer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Geomancy Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Shields<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Ghoulish</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    5 - 8% Reduction to Enemy's Health<br/>
+                    33.0% Chance of 270 - 300 Bleeding Damage over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs, Spears, Swords<br/>
+            LVL 43
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Ghostly</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    23 Vitality Damage<br/>
+                    +30% Vitality Damage<br/>
+                    15.0% Chance of 35% Slowed for 3.0 Seconds<br/>
+                    +50% Damage to Ghosts
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 26
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Glacierborn</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    6% Physical Resistance<br/>
+                    -15% Fire Resistance<br/>
+                    50% Cold Resistance<br/>
+                    60% Reduced Freeze Duration<br />
+                    20 Cold Retaliation<br />
+                    15.0% Chance of:<br/>
+                    &nbsp;&nbsp;&nbsp;20% Slowed Attack Retaliation for 4.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;80 Frostburn Retaliation over 4.0 Seconds<br/>
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Melee Torsos<br/>
+            LVL 26
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Glacierborn</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    9% Physical Resistance<br/>
+                    -20% Fire Resistance<br/>
+                    75% Cold Resistance<br/>
+                    120% Reduced Freeze Duration<br />
+                    35 Cold Retaliation<br />
+                    15.0% Chance of:<br/>
+                    &nbsp;&nbsp;&nbsp;25% Slowed Attack Retaliation for 4.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;120 Frostburn Retaliation over 4.0 Seconds<br/>
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Melee Torsos<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Gruesome</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    4 - 7% Reduction to Enemy's Health<br/>
+                    33.0% Chance of 180 - 210 Bleeding Damage over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs, Spears, Swords<br/>
+            LVL 27
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Hardened</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    8% Bleeding Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 3
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Healthcaster's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +3.0 Health Regeneration per second<br />
+                    +75% Health Regeneration<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +6.0 Health Regeneration per second<br />
+                    +50% Health Regeneration
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 24
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Heartseeking</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +20% Pierce Damage<br/>
+                    5.0% Chance of:<br/>
+                    &nbsp;&nbsp;&nbsp;200 Reduced Armor for 3.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;10% Reduction to Enemy's Health<br/>
+                    20% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Heartseeking</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +25% Pierce Damage<br/>
+                    5.0% Chance of:<br/>
+                    &nbsp;&nbsp;&nbsp;400 Reduced Armor for 3.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;15% Reduction to Enemy's Health<br/>
+                    25% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 30
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Heartseeking</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +30% Pierce Damage<br/>
+                    5.0% Chance of:<br/>
+                    &nbsp;&nbsp;&nbsp;600 Reduced Armor for 3.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;20% Reduction to Enemy's Health<br/>
+                    30% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 50
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Hellish</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20 Fire Damage<br/>
+                    100 Vitality Decay over 4.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 18
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix" id="newAfx3">
+            <p class="itemName">Heretic's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    36 Vitality Decay over 3.0 Seconds<br/>
+                    18 Life Leech over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Hieratic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +30 Strength<br/>
+                    +30 Dexterity<br/>
+                    +30 Intelligence
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 32
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Human Savior's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Lifegiving Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Shields<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Icy</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    27 Frostburn Damage over 3.0 Seconds<br/>
+                    5.0% Chance of 1 - 3 seconds of Freeze
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Impenetrable</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    41% Bleeding Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 34
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Impervious</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    50% Pierce Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Impervious</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    50% Bleeding Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Imploding</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15% Stun Duration<br/>
+                    5.0% Chance of 1 - 3 seconds of Stun<br/>
+                    5.0% Chance of 150 Reduced Armor for 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs<br/>
+            LVL 24
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Imploding</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15% Stun Duration<br/>
+                    5.0% Chance of 1 - 3 seconds of Stun<br/>
+                    5.0% Chance of 200 Reduced Armor for 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs<br/>
+            LVL 30
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Indestructible</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +53 Armor
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 45
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix" id="newAfx4">
+            <p class="itemName">Infidel's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    160 Vitality Decay over 3.0 Seconds<br/>
+                    75 Life Leech over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 45
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Innervating</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    5% Physical Resistance<br/>
+                    +25% Physical Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Legate's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +8% Shield Block Chance<br/>
+                    +230 Health<br/>
+                    -20% Shield Recovery Time
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 42
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Lieutenant's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +5% Shield Block Chance<br/>
+                    +140 Health<br/>
+                    -15% Shield Recovery Time
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 26
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Lifegiver's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Lifegiving Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Lifewarder's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +5.0 Health Regeneration per second<br />
+                    +100% Health Regeneration<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10.0 Health Regeneration per second<br />
+                    +75% Health Regeneration
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 36
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Lightspeed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +8% Total Speed<br/>
+                    -8% Recharge<br/>
+                    25% Increase in Projectile Speed<br/><br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +8% Total Speed<br/>
+                    -8% Recharge<br/>
+                    25% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 18
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Lightspeed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +12% Total Speed<br/>
+                    -12% Recharge<br/>
+                    40% Increase in Projectile Speed<br/><br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +12% Total Speed<br/>
+                    -12% Recharge<br/>
+                    40% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 36
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Lightspeed</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +16% Total Speed<br/>
+                    -16% Recharge<br/>
+                    65% Increase in Projectile Speed<br/><br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +16% Total Speed<br/>
+                    -16% Recharge<br/>
+                    65% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 52
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Lionized</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +20% Stun Duration<br/>
+                    50% Stun Resistance<br/>
+                    +500 Health<br/>
+                    5.0% Chance of 3.0 - 5.0 Stun Retaliation
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All head armor<br/>
+            LVL 35
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Loremaster's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +10% Intelligence<br/>
+                    +1 to all Skills
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 18
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Lupine</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    3 Damage<br/>
+                    3 Piercing Damage<br/>
+                    12 Bleeding Damage over 3.0 Seconds<br/>
+                    <br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    &nbsp;&nbsp;&nbsp;15 Bleeding Damage over 3.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;+5% Physical Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Spears, Swords<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Lupine</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    6 Damage<br/>
+                    6 Piercing Damage<br/>
+                    33 Bleeding Damage over 3.0 Seconds<br/>
+                    <br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    &nbsp;&nbsp;&nbsp;27 Bleeding Damage over 3.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;+10% Physical Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Spears, Swords<br/>
+            LVL 16
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Macabre</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    2 - 5% Reduction to Enemy's Health<br/>
+                    33.0% Chance of 30 - 60 Bleeding Damage over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs, Spears, Swords<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Macabre</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    3 - 6% Reduction to Enemy's Health<br/>
+                    33.0% Chance of 90 - 120 Bleeding Damage over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs, Spears, Swords<br/>
+            LVL 16
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Magebane's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    60% Skill Disruption Resistance<br/>
+                    12% Elemental Resistance<br/>
+                    60% Energy Leech Resistance<br/>
+                    30% Absorption of Spell Energy<br/>
+                    96 Energy Leech Retaliation over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 52
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Manabreaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20% Skill Disruption Resistance<br/>
+                    6% Elemental Resistance<br/>
+                    20% Energy Leech Resistance<br/>
+                    10% Absorption of Spell Energy<br/>
+                    30 Energy Leech Retaliation over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Marksman's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20.0% Chance of +150% increased Pierce Ratio<br/>
+                    +18% Attack Speed<br/>
+                    30% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Marvelous</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +10% Physical Damage<br/>
+                    +10% Pierce Damage<br/>
+                    +10% Elemental Damages<br/>
+                    10.0% Chance of +50% Total Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Necromancer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Necromancy Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Staves<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Null</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    -10% Health<br />
+                    +10% Movement Speed<br />
+                    10% Chance to Dodge Attacks<br />
+                    10% Chance to Avoid Projectiles
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Pandemonium</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20% Chance of:<br/>
+                    &nbsp;&nbsp;&nbsp;200 Vitality Decay Retaliation over 5.0 seconds<br/>
+                    &nbsp;&nbsp;&nbsp;50% Slower Attack Speed Retaliation over 5.0 seconds<br/>
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    40 Vitality Damage<br/>
+                    20% Vitality Damage Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor<br/>
+            LVL 38
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Pandemonium</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20% Chance of:<br/>
+                    &nbsp;&nbsp;&nbsp;450 Vitality Decay Retaliation over 5.0 seconds<br/>
+                    &nbsp;&nbsp;&nbsp;66% Slower Attack Speed Retaliation over 5.0 seconds<br/>
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    80 Vitality Damage<br/>
+                    40% Vitality Damage Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor<br/>
+            LVL 50
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Paramount</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +20% Armor Protection<br/>
+                    +20% Health<br/>
+                    +20% Energy
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets<br/>
+            LVL 60
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Persecutor's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +35% Bleeding Damage<br/>
+                    +35% Vitality Decay
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 38
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Phantom</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    35 Vitality Damage<br/>
+                    +40% Vitality Damage<br/>
+                    15.0% Chance of 45% Slowed for 3.0 Seconds<br/>
+                    +50% Damage to Ghosts
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 42
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Phytagoras'</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +24% Intelligence<br/>
+                    +14% Energy
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 50
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Pilgrim's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +20 Dexterity<br/>
+                    +15% Attack Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Swords<br/>
+            LVL 22
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Plaguecaller's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +10% Poison Damage<br/>
+                    20% Poison Resistance<br/>
+                    8 - 14 Instant Poison Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Rings<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Plaguebringer’s</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15% Poison Damage<br/>
+                    30% Poison Resistance<br/>
+                    16 - 22 Instant Poison Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Rings<br/>
+            LVL 30
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Plaguemaster’s</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +20% Poison Damage<br/>
+                    40% Poison Resistance<br/>
+                    24 - 30 Instant Poison Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Rings<br/>
+            LVL 45
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Potionmixer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    30% Poison Resistance<br/>
+                    +15 Intelligence<br/>
+                    +1.5 Health Regeneration per second<br/>
+                    +1.5 Energy Regeneration per second
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Potionmixer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    45% Poison Resistance<br/>
+                    +21 Intelligence<br/>
+                    +2.0 Health Regeneration per second<br/>
+                    +2.0 Energy Regeneration per second
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 28
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Potionmixer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    60% Poison Resistance<br/>
+                    +27 Intelligence<br/>
+                    +2.5 Health Regeneration per second<br/>
+                    +2.5 Energy Regeneration per second
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 42
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Pressurizing</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +20% Stun Duration<br/>
+                    5.0% Chance of 2 - 3 seconds of Stun<br/>
+                    5.0% Chance of 300 Reduced Armor for 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs<br/>
+            LVL 36
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Pressurizing</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +20% Stun Duration<br/>
+                    5.0% Chance of 2 - 3 seconds of Stun<br/>
+                    5.0% Chance of 400 Reduced Armor for 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs<br/>
+            LVL 42
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Prized</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +9 Strength<br/>
+                    +9 Dexterity<br/>
+                    +9 Intelligence
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Protector's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +10 Strength<br/>
+                    +30 Defensive Ability
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Pulverizing</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +25% Stun Duration<br/>
+                    5.0% Chance of 3 seconds of Stun<br/>
+                    5.0% Chance of 500 Reduced Armor for 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Clubs<br/>
+            LVL 50
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Punisher's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    4 - 10 Piercing Damage<br />
+                    35.0% Chance of 20 - 30 Piercing Retaliation
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Rainbow</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    15 Elemental Damage<br/>
+                    +10% Elemental Damages<br/>
+                    5% Elemental Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Rainbow</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20 Elemental Damage<br/>
+                    +15% Elemental Damages<br/>
+                    10% Elemental Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 32
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Rainbow</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    25 Elemental Damage<br/>
+                    +20% Elemental Damages<br/>
+                    15% Elemental Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 46
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Rancorous</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20 - 26 Piercing Damage<br />
+                    35.0% Chance of 40 - 50 Piercing Retaliation
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 30
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Rigid</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    16% Bleeding Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Rover's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +12 Dexterity<br/>
+                    +10% Attack Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Swords<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Sadist's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +25% Bleeding Damage<br/>
+                    +25% Vitality Decay
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 24
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Satanic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    32 Fire Damage<br/>
+                    160 Vitality Decay over 4.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 28
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Scientist's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Science Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Clubs<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Sea King's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Aqua Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Spears<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Shady</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    10 Vitality Damage<br/>
+                    20% Vitality Damage<br/>
+                    15.0% Chance of 25% Slowed for 3.0 Seconds<br/>
+                    +50% Damage to Ghosts
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Shamanic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +5% Elemental Damages<br/>
+                    +1.0 Energy Regeneration per second<br/>
+                    15% Weapon Base Damage becomes Elemental
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Shamanic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +10% Elemental Damages<br/>
+                    +1.5 Energy Regeneration per second<br/>
+                    30% Weapon Base Damage becomes Elemental
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Shamanic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15% Elemental Damages<br/>
+                    +2.0 Energy Regeneration per second<br/>
+                    50% Weapon Base Damage becomes Elemental
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets<br/>
+            LVL 34
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Sharpshooter's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Archery Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Bows<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Siphonic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    8 - 12% of Attack damage converted to Health
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 39
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Skeleton Baron's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Necromancy Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Staves<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Skylord's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    10% Reduction in Electrical Burn Duration<br/>
+                    40 Electrical Burn Damage over 4.0 seconds<br/>
+                    +10% Lightning Retaliation<br/>
+                    <br/>
+                    Grants Skill : Stormcaller’s Blessing (Activated when equipped)<br/>
+                    Under the spiritual guidance of the Stormcallers, the elemental forces of you and your allies strengthen.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />       
+                    12.0 Meter Radius<br />
+                    10% Lightning Resistance<br />
+                    10 Lightning Damage<br />
+                    +10% Lightning Damage<br />
+                    +10% Electrical Burn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Skymaster's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    15% Reduction in Electrical Burn Duration<br/>
+                    80 Electrical Burn Damage over 4.0 seconds<br/>
+                    +20% Lightning Retaliation<br/>
+                    <br/>
+                    Grants Skill : Stormcaller’s Blessing (Activated when equipped)<br/>
+                    Under the spiritual guidance of the Stormcallers, the elemental forces of you and your allies strengthen.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />       
+                    12.0 Meter Radius<br />
+                    40% Lightning Resistance<br />
+                    30 Lightning Damage<br />
+                    +25% Lightning Damage<br />
+                    +25% Electrical Burn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 32
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Sky God's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    160% Reduction in Electrical Burn Duration<br/>
+                    40 Electrical Burn Damage over 4.0 seconds<br/>
+                    +30% Lightning Retaliation<br/>
+                    <br/>
+                    Grants Skill : Stormcaller’s Blessing (Activated when equipped)<br/>
+                    Under the spiritual guidance of the Stormcallers, the elemental forces of you and your allies strengthen.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />       
+                    12.0 Meter Radius<br />
+                    30% Lightning Resistance<br />
+                    20 Lightning Damage<br />
+                    +20% Lightning Damage<br />
+                    +15% Electrical Burn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 47
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Sparkling</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    6 - 12 Elemental Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Spellweaver's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Witchcraft Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Staves<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Subnautic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +30% Frostburn Damage<br />
+                    45% Slow Resistance<br />
+                    +30% Frostburn Retaliation
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Subnautic</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +45% Frostburn Damage<br />
+                    60% Slow Resistance<br />
+                    +45% Frostburn Retaliation
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All mage armor<br/>
+            LVL 50
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Taxidermist's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +12% Less Damage from Beast<br/>
+                    +12% Less Damage from Beastmen
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All armor<br/>
+            LVL 10
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Tempered</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    26% Bleeding Resistance
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All melee armor<br/>
+            LVL 18
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Thunderous</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    32 Lightning Damage<br/>
+                    159 Electrical Burn Damage over 3.0 Seconds
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Rings<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Thunderstruck</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +25% Lightning Damage<br/>
+                    +25% Electrical Burn Damage<br/>
+                    +8% Total Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All leg armor<br/>
+            LVL 41
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Timemaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    Grants Skill : Synchronism [Level 4]
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Timemaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    Grants Skill : Synchronism [Level 6]
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 30
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Timemaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    Grants Skill : Synchronism [Level 8]
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 40
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Time Master's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Time Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Staves<br/>
+            LVL 25
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Timetraveller's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Time Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Staves<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Torturer's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15% Bleeding Damage<br/>
+                    +15% Vitality Decay
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Treasured</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +18 Strength<br/>
+                    +18 Dexterity<br/>
+                    +18 Intelligence
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Rings<br/>
+            LVL 24
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Unmelting</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    175 Frostburn Damage over 5.0 Seconds<br/>
+                    5.0% Chance of 3 - 5 seconds of Freeze
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 35
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Vampiric</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    4 - 8% of Attack damage converted to Health
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Bows, Clubs, Spears, Staves, Swords<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Vanguard's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +18 Strength<br/>
+                    +60 Defensive Ability
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Shields<br/>
+            LVL 20
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Watchman's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20.0% Chance of +100% increased Pierce Ratio<br/>
+                    +12% Attack Speed<br/>
+                    20% Increase in Projectile Speed
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Bows<br/>
+            LVL 8
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Windspeaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +15 Armor<br/>
+                    +15% Movement Speed<br/>
+                    8% Chance to Avoid Projectiles<br/>
+                    <br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Movement Speed<br/>
+                    +5% Total Speed<br/>
+                    8% Chance to Avoid Projectiles
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All leg armor<br/>
+            LVL 16
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Windspeaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +30 Armor<br/>
+                    +18% Movement Speed<br/>
+                    10% Chance to Avoid Projectiles<br/>
+                    <br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Movement Speed<br/>
+                    +8% Total Speed<br/>
+                    10% Chance to Avoid Projectiles
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All leg armor<br/>
+            LVL 32
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Windspeaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +45 Armor<br/>
+                    +20% Movement Speed<br/>
+                    12% Chance to Avoid Projectiles<br/>
+                    <br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Movement Speed<br/>
+                    +10% Total Speed<br/>
+                    12% Chance to Avoid Projectiles
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : All leg armor<br/>
+            LVL 48
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Winterlord's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    10% Reduction in Frostburn Duration<br/>
+                    40 Frostburn Damage over 4.0 seconds<br/>
+                    +10% Cold Retaliation<br/>
+                    <br/>
+                    Grants Skill : Frostguard’s Embrace (Activated when equipped)<br/>
+                    Under the spiritual guidance of the Frostguards, the elemental forces of you and your allies strengthen.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    12.0 Meter Radius<br />
+                    10% Cold Resistance<br />
+                    10 Cold Damage<br />
+                    +10% Cold Damage<br />
+                    +10% Frostburn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 15
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Wintermaster's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    15% Reduction in Frostburn Duration<br/>
+                    80 Frostburn Damage over 4.0 seconds<br/>
+                    +20% Cold Retaliation<br/>
+                    <br/>
+                    Grants Skill : Frostguard’s Embrace (Activated when equipped)<br/>
+                    Encircles you and your allies with a chilling wind.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    12.0 Meter Radius<br />
+                    10% Cold Resistance<br />
+                    10 Cold Damage<br />
+                    +10% Cold Damage<br />
+                    +10% Frostburn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 32
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Winter God's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    20% Reduction in Frostburn Duration<br/>
+                    160 Frostburn Damage over 4.0 seconds<br/>
+                    +30% Cold Retaliation<br/>
+                    <br/>
+                    Grants Skill : Frostguard’s Embrace (Activated when equipped)<br/>
+                    Encircles you and your allies with a chilling wind.<br/>
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    12.0 Meter Radius<br />
+                    40% Cold Resistance<br />
+                    30 Cold Damage<br />
+                    +25% Cold Damage<br />
+                    +25% Frostburn Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Staves<br/>
+            LVL 47
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Witch's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +1 to all skills in Witchcraft Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Staves<br/>
+            LVL 12
+            </p>
+        </div>
+        <div class="affixBox rarityYellowAffix">
+            <p class="itemName">Wolven</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    16 Damage<br/>
+                    16 Piercing Damage<br/>
+                    141 Bleeding Damage over 3.0 Seconds<br/>
+                    <br/>
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    &nbsp;&nbsp;&nbsp;75 Bleeding Damage over 3.0 Seconds<br/>
+                    &nbsp;&nbsp;&nbsp;+20% Physical Damage
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Axes, Spears, Swords<br/>
+            LVL 38
+            </p>
+        </div>
+        <div class="affixBox rarityGreenAffix">
+            <p class="itemName">Worldmaker's</p>
+            <p class="itemText">
+                <br />
+                <p class="itemTextAffix">
+                    +2 to all skills in Geomancy Mastery
+                </p>
+            <p class="itemTextAffixLevel">
+            Found on : Amulets, Shields<br/>
+            LVL 25
+            </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function_amulet.js"></script>
+</body></html>

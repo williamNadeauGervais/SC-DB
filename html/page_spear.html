@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Baetylus Spear</p>
+            <img src="../img/spear/8.png" alt="" class="itemIcon">
+            <p class="itemText">
+                54 - 80 Damage <br />
+                30% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +10% Physical Damage<br />
+                    15 Life Leech per Second<br />
+                    33.0% Chance of +150% Life Leech<br />
+                    +10% Shield Block Chance<br />
+                    <br />
+                    Grants Skill : War Wind
+                </p>
+                <p class="itemText3">
+                    LVL 26, STR 102, DEX 206
+                </p>
+        </div>
+        <div class="itemBox rarityMI"   id="newItem32">
+            <p class="itemName">Centurion's Spear</p>
+            <img src="../img/spear/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                30 - 45 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Slow <br />
+                Difficulty : Normal
+                <br />
+                <p class="itemText2">
+                    33% Slower Attack for 3.0 Seconds<br />
+                    +1 to all skills in Lifegiving Mastery<br />
+                    <br />
+                    Grants Skill : Storm Enchantment
+                </p>
+                <p class="itemText3">
+                    LVL 17, STR 110, DEX 175
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Centurion's Spear</p>
+            <img src="../img/spear/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                125 - 140 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Slow <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2">
+                    33% Slower Attack for 4.0 Seconds<br />
+                    +1 to all skills in Lifegiving Mastery<br />
+                    <br />
+                    Grants Skill : Storm Enchantment
+                </p>
+                <p class="itemText3">
+                    LVL 40, STR 170, DEX 320
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Centurion's Spear</p>
+            <img src="../img/spear/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                242 - 259 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Slow <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2">
+                    33% Slower Attack for 5.0 Seconds<br />
+                    +2 to all skills in Lifegiving Mastery<br />
+                    <br />
+                    Grants Skill : Storm Enchantment
+                </p>
+                <p class="itemText3">
+                    LVL 51, STR 200, DEX 410
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Destroyer of Myriad Dimensions</p>
+            <img src="../img/spear/9.png" alt="" class="itemIcon">
+            <p class="itemText">
+                260 - 282 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Slow <br />
+                Set : Journey of Myriad Dimensions
+                <br />
+                <p class="itemText2">
+                    +15% Total Damage<br />
+                    180 - 280 Electrical Burn Damage over 4.0 Seconds<br />
+                    18% Energy Drain (200% of lost Energy as Damage)<br />
+                    40% Slower Attack for 1.0 Seconds<br />
+                    180 - 220 Electrical Burn Retaliation over 4.0 Seconds<br />
+                    +10% Intelligence<br />
+                    +100% Casting Speed<br />
+                    +2 to Interdimensional Breach<br />
+                    +2 to Abiding Majesty
+                </p>
+                <p class="itemText3">
+                    LVL 61, STR 210, DEX 497
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Diamondspike Lance</p>
+            <img src="../img/spear/6.png" alt="" class="itemIcon">
+            <p class="itemText">
+                27 - 34 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    3 - 10 Piercing Damage<br />
+                    8.0% Chance of 22% Reduction to Enemy's Health<br />
+                    +6 Dexterity<br />
+                    +30 Offensive Ability<br />
+                    +10% Movement Speed<br />
+                    <br />
+                    Grants Skill : Gouge
+                </p>
+                <p class="itemText3">
+                    LVL 7, STR 64, DEX 92
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Gravity Crusher</p>
+            <img src="../img/spear/7.png" alt="" class="itemIcon">
+            <p class="itemText">
+                245 - 262 Damage <br />
+                20% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +60% Electrical Burn Damage with +50% Improved Duration<br />
+                    78 Energy Leech over 3.0 Seconds<br />
+                    8% Reduction to Enemy's Health<br />
+                    10% Energy Drain (100% of lost Energy as Damage)<br />
+                    20% Chance to Fumble attacks for 3.0 Seconds<br />
+                    30% Energy Leech Resistance<br />
+                    +1.6 Energy Regeneration per second<br />
+                    -10% Recharge<br />
+                    +3 to Gravity Nova<br />
+                    +1 to all skills in Science Mastery<br />
+                    <br />
+                    Grants Skill : Electrical Field (Activated on attack)<br />
+                    Cast a zone of electrifying energy, damaging enemies who find themselves caught in its radius.<br />
+                    <br />
+                    68 Energy Cost<br />
+                    6.0 Second Duration<br />
+                    5.0 Meter Radius<br />
+                    71 Electrical Burn Damage per Second<br />
+                    53 Lightning Damage
+                </p>
+                <p class="itemText3">
+                    LVL 60, STR 196, DEX 455
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Horizon's End</p>
+            <img src="../img/spear/1.png" alt="" class="itemIcon">
+            <p class="itemText">
+                182 - 202 Damage <br />
+                30% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +15% Physical Damage<br />
+                    +25% Cold Damage<br />
+                    +25% Lightning Damage<br />
+                    25% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;50% Slowed for 2.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;2.0 second(s) of Skill Disruption<br />
+                    42 - 62 Cold Damage<br />
+                    41 - 118 Lightning Damage<br />
+                    +150 Energy<br />
+                    +5.0 Energy Regeneration<br />
+                    <br />
+                    Grants Skill : Ice Blockade
+                </p>
+                <p class="itemText3">
+                    LVL 52, STR 165, DEX 398
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Hyperboreas' Spear</p>
+            <img src="../img/spear/11.png" alt="" class="itemIcon">
+            <p class="itemText">
+                60 - 80 Damage <br />
+                20% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +15% Cold Damage<br />
+                    +15% Frostburn Damage<br />
+                    15 Cold Damage<br />
+                    35% Cold Resistance<br />
+                    80% Reduced Freeze Duration<br />
+                    +50 Offensive Ability<br />
+                    +1 to all skills in Aqua Mastery<br />
+                    <br />
+                    Grants Skill : Cold Touch (Activated on attack)<br />
+                    Encase your weapon in ice to discover the full potential of your attacks. The layer of frost melts quickly, however.<br />
+                    <br />
+                    30.0 Second(s) Recharge<br />
+                    45 Energy Cost<br />
+                    10.0 Second Duration<br />
+                    +30% Cold Damage<br />
+                    30 Cold Damage
+                </p>
+                <p class="itemText3">
+                    LVL 33, STR 120, DEX 260
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Incapacitator</p>
+            <img src="../img/spear/2.png" alt="" class="itemIcon">
+            <p class="itemText">
+                252 - 274 Damage <br />
+                30% Pierce Ratio <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    20% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;50 Bonus Damage<br />
+                    &nbsp;&nbsp;&nbsp;20% Reduction to Enemy's Health<br />
+                    &nbsp;&nbsp;&nbsp;50% reduced Offensive Ability for 4.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;50% reduced Defensive Ability for 4.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;300 Reduced Armor for 4.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;60% Chance to Fumble attacks for 3.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;60% Chance of Impaired Aim for 3.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;35% Slowed for 4.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;4.0 second(s) of Skill Disruption<br />
+                    50% Pierce Resistance<br />
+                    +10% Strength<br />
+                    +20% Attack Speed
+                </p>
+                <p class="itemText3">
+                    LVL 51, STR 173, DEX 423
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Line of Epic Heroes</p>
+            <img src="../img/spear/10.png" alt="" class="itemIcon">
+            <p class="itemText">
+                260 - 275 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Average
+                <br />
+                <p class="itemText2">
+                    +15% Total Damage<br />
+                    +240 Health<br />
+                    +12% Health<br />
+                    +240 Energy<br />
+                    +12% Energy<br />
+                    +25% Attack Speed<br />
+                    <br />
+                    Grants Skill : Faethontas' Call<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Total Damage<br />
+                    +120 Health
+                <p class="itemText3">
+                    LVL 60, STR 350, DEX 350, INT 225
+                </p>
+        </div>
+        <div class="itemBox rarityMU"  id="newItem10">
+            <p class="itemName">Mulgor’s Inextinguishable Fury</p>
+            <img src="../img/spear/12.png" alt="" class="itemIcon">
+            <p class="itemText">
+                245 - 262 Damage <br />
+                20% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +80% Fire Damage<br />
+                    +80% Burn Damage<br />
+                    280 Vitality Decay over 3.0 Seconds<br />
+                    140 Fire Damage<br />
+                    180 Reduced Armor for 3.0 Seconds<br />
+                    30% Slower Attack for 3.0 Seconds<br />
+                    100% Fire Resistance<br />
+                    +40 Strength<br />
+                    +40 Intelligence<br />
+                    +400 Health<br />
+                    +100 Offensive Ability<br />
+                    +15% Attack Speed<br />
+                    +1 to all skills in Chaos Mastery<br />
+                    <br />
+                    Grants Skill : Flaming Temblor (Activated on attack)<br />
+                    The ground around you combusts and upheaves as the destructive forces of Mother Earth dance to the rhythm of Mulgor's spear.<br />
+                    <br />
+                    3.0 Meter Radius<br />
+                    250 Damage<br />
+                    150 Fire Damage<br />
+                    180 Reduced Armor for 3.0 Seconds<br />
+                    30.0% Chance of 1.0 second(s) of Stun
+                </p>
+                <p class="itemText3">
+                    LVL 67, STR 200, DEX 475
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Ritual Lance</p>
+            <img src="../img/spear/3.png" alt="" class="itemIcon">
+            <p class="itemText">
+                144 - 164 Damage <br />
+                30% Pierce Ratio <br />
+                Speed: Very Slow <br />
+                <br />
+                <p class="itemText2">
+                    33.0% Chance of +40% Elemental Damages<br />
+                    135 Energy Leech over 3.0 Seconds<br />
+                    50.0% Chance of 50 Elemental Damage<br />
+                    +15% Intelligence<br />
+                    +50% Energy Regeneration<br />
+                    20% less Energy Reserved<br />
+                    35% Weapon Base Damage becomes Elemental
+                </p>
+                <p class="itemText3">
+                    LVL 36, STR 138, DEX 317
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Thunderstruck Drill</p>
+            <img src="../img/spear/4.png" alt="" class="itemIcon">
+            <p class="itemText">
+                269 - 282 Damage <br />
+                25% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +10% Total Damage<br />
+                    195 Electrical Burn Damage over 3.0 Seconds<br />
+                    +40% Lightning Damage<br />
+                    +50% Electrical Burn Damage<br />
+                    20 - 270 Lightning Damage<br />
+                    6% Reduction to Enemy's Health<br />
+                    50 Reduced Physical Damage for 3.0 Seconds<br />
+                    100% Lightning Resistance<br />
+                    +10% Total Speed<br />
+                    +30% Attack Speed<br />
+                    <br />
+                    Grants Skill : Lightning Bolt (Activated on attack)<br />
+                    Calls down a powerful bolt of lightning from the heavens to decimate your target.<br />
+                    <br />
+                    12.0 Second(s) Recharge<br />
+                    200 Energy Cost<br />
+                    2.0 Meter Radius<br />
+                    239 - 486 Lightning Damage<br />
+                    1.0 second(s) of Stun
+                </p>
+                <p class="itemText3">
+                    LVL 59, STR 198, DEX 499
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Trident of the Five Oceans</p>
+            <img src="../img/spear/5.png" alt="" class="itemIcon">
+            <p class="itemText">
+                247 - 262 Damage <br />
+                30% Pierce Ratio <br />
+                Speed: Slow <br />
+                <br />
+                <p class="itemText2">
+                    +20% Elemental Damages<br />
+                    252 - 318 Frostburn Damage over 3.0 Seconds<br />
+                    +20% Frostburn Damage<br />
+                    40 Cold Damage<br />
+                    8.0% Chance of 1.0 - 2.0 second(s) of Freeze<br />
+                    30% Pierce Resistance<br />
+                    35% Elemental Resistance<br />
+                    40% Cold Resistance<br />
+                    +5.0 Energy Regeneration per second<br />
+                    +12% Total Speed<br />
+                    +4 to Tsunami Spin<br />
+                    +4 to Tempest Spear
+                </p>
+                <p class="itemText3">
+                    LVL 61, STR 195, DEX 475
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Aeacus' Judgemnet</p>
+            <img src="../img/helm/29.png" alt="" class="itemIcon">
+            <p class="itemText">
+                438 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Elemental Resistance<br />
+                    20.0% Chance of 150% Vitality Damage Resistance<br />
+                    25% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;35 Physical Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;35 Elemental Retaliation<br />
+                    +10% Physical Damage<br />
+                    +15% Elemental Damages<br />
+                    +500 Energy<br />
+                    +2 to Ferocity<br />
+                    +2 to Physical Ward<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    25% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;35 Physical Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;35 Elemental Retaliation
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 50, STR 301, DEX 301
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Al-al'a</p>
+            <img src="../img/helm/28.png" alt="" class="itemIcon">
+            <p class="itemText">
+                594 Armor <br />
+                Set : Embodiment of Corruption
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    20% Elemental Resistance<br />
+                    50% Vitality Damage Resistance<br />
+                    50% Life Leech Resistance<br />
+                    102 Life Leech over 3.0 Seconds<br />
+                    +20% Stun Duration<br />
+                    35 Instant Poison Damage<br />
+                    5.0% Chance of 4.0 second(s) of Stun<br />
+                    +70 Offensive Ability<br />
+                    +70 Defensive Ability<br />
+                    +12% Movement Speed<br />
+                    +1 to all Skills
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 70, STR 260, DEX 510
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Ageless Maw</p>
+            <img src="../img/helm/30.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    15.0% Chance of 100% Physical Resistance<br />
+                    80% Bleeding Resistance<br />
+                    40% Reduction in Vitality Decay Duration<br />
+                    80% Skill Disruption Protection<br />
+                    +80% Frostburn Damage<br />
+                    +80% Vitality Decay<br />
+                    +15% Intelligence<br />
+                    +8.0 Energy Regeneration per second<br />
+                    -12% Recharge<br />
+                    <br />
+                    Grants Skill : Frigid Winds of the Graveless
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 75, DEX 280, INT 555
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Aquatic Prism</p>
+            <img src="../img/helm/17.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    35% Damage Reflected<br />
+                    150 Cold Retaliation<br />
+                    +55% Cold Damage<br />
+                    54 Energy Leech over 3.0 Seconds<br />
+                    +15% Energy<br />
+                    +3.0 Energy Regeneration<br />
+                    +25% Casting Speed<br />
+                    10% Chance to Dodge Attacks<br />
+                    20% Chance to Avoid Projectiles
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 63, DEX 190, INT 520
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Ashoka Sunshield</p>
+            <img src="../img/helm/21.png" alt="" class="itemIcon">
+            <p class="itemText">
+                290 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    20% Elemental Resistance<br />
+                    70% Fire Resistance<br />
+                    35% Reduction in Burn Duration<br />
+                    10.0% Chance of 540 Burn Retaliation over 3.0 Seconds<br />
+                    +20% Pierce Damage<br />
+                    +35% Fire Damage<br />
+                    +35% Burn Damage<br />
+                    +600 Health<br />
+                    +1 to all skills in Lifegiving Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 50, DEX 441, INT 175
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Barbarian's Pit Trophy</p>
+            <img src="../img/helm/01.png" alt="" class="itemIcon">
+            <p class="itemText">
+                430 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    7% Physical Resistance<br />
+                    20% Pierce Resistance<br />
+                    20% Bleeding Resistance<br />
+                    20% Elemental Resistance<br />
+                    +120 Defensive Ability<br />
+                    +20% Attack Speed<br />
+                    <br />
+                    Grants Skill : Toughen Up
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 60, STR 158, DEX 389
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Captain Nemo's Tricorne</p>
+            <img src="../img/helm/32.png" alt="" class="itemIcon">
+            <p class="itemText">
+                432 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    80% Cold Resistance<br />
+                    80% Lightning Resistance<br />
+                    80% Vitality Damage Resistance<br />
+                    +15% Total Damage<br />
+                    5% Reduction to Enemy's Health<br />
+                    25% reduced Offensive Ability for 3.0 Seconds<br />
+                    +15% Energy<br />
+                    <br />
+                    Grants Skill : Vernie the Parrot
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 50, STR 190, DEX 390
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Chaotic Reflector</p>
+            <img src="../img/helm/20.png" alt="" class="itemIcon">
+            <p class="itemText">
+                275 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    30% Fire Resistance<br />
+                    40% Vitality Damage Resistance<br />
+                    40% Life Leech Resistance<br />
+                    40% Stun Resistance<br />
+                    +8% Shield Block Chance<br />
+                    15.0% Chance of 75% Damage Reflected<br />
+                    +10% Physical Damage<br />
+                    +10% Pierce Damage<br />
+                    +10% Bleeding Damage<br />
+                    +10% Vitality Damage<br />
+                    +2 to Death Pulse<br />
+                    <br />
+                    Grants Skill : Telekinetic Pulse
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 45, DEX 160, INT 405
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem5">
+            <p class="itemName">Corrupted Headdress</p>
+            <img src="../img/helm/37.png" alt="" class="itemIcon">
+            <p class="itemText">
+                149 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    24% Bleeding Resistance<br />
+                    24% Life Leech Resistance<br />
+                    6% of Attack damage converted to Health<br />
+                    +1 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 43, DEX 142, INT 312
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Corrupted Headdress</p>
+            <img src="../img/helm/37.png" alt="" class="itemIcon">
+            <p class="itemText">
+                294 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    36% Bleeding Resistance<br />
+                    36% Life Leech Resistance<br />
+                    8% of Attack damage converted to Health<br />
+                    +2 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 54, DEX 180, INT 424
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Cover of the Timewarped</p>
+            <img src="../img/helm/25.png" alt="" class="itemIcon">
+            <p class="itemText">
+                160 Armor
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    40% Pierce Resistance<br />
+                    40% Vitality Damage Resistance<br />
+                    +8% Dexterity<br />
+                    -5% Health<br />
+                    +50% Health Regeneration<br />
+                    +10.0 Energy Regeneration per second<br />
+                    +50% Energy Regeneration<br />
+                    +2 to Temporal Energy<br />
+                    +2 to Abiding Majesty
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 38, DEX 128, INT 292
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Crown of the Unhallowed</p>
+            <img src="../img/helm/02.png" alt="" class="itemIcon">
+            <p class="itemText">
+                365 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    60% Lightning Resistance<br />
+                    60% Vitality Damage Resistance<br />
+                    10% Health Reduction Retaliation<br />
+                    240 Vitality Decay Retaliation over 4.0 Seconds<br />
+                    +60% Vitality Decay<br />
+                    +33% Bleeding Damage<br />
+                    +33% Poison Damage<br />
+                    +260 Health<br />
+                    +220 Energy<br />
+                    +60% Energy Regeneration<br />
+                    8% Chance to Dodge Attacks<br />
+                    -8% Recharge<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    +1 to all skills in Chaos Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 58, DEX 180, INT 490
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem7">
+            <p class="itemName">Crystal Crane</p>
+            <img src="../img/helm/40.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Cold Resistance<br />
+                    40% Weapon Base Damage becomes Elemental<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    120 Poison Damage over 4.0 Seconds<br />
+                    +25% Frostburn Damage<br />
+                    10% Slowed for 4.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 46, DEX 146, INT 358
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Crystal Crane</p>
+            <img src="../img/helm/40.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    75% Cold Resistance<br />
+                    50% Weapon Base Damage becomes Elemental<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    180 Poison Damage over 4.0 Seconds<br />
+                    +30% Frostburn Damage<br />
+                    15% Slowed for 4.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 56, DEX 191, INT 521
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Cyzician Helmet</p>
+            <img src="../img/helm/24.png" alt="" class="itemIcon">
+            <p class="itemText">
+                64 Armor <br />
+                Set : Uniform of Cyzicus
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +10% Armor Protection<br />
+                    15% Elemental Resistance<br />
+                    +100 Health<br />
+                    +30% Health Regeneration<br />
+                    +10% Attack Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 16, STR 193
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem13">
+            <p class="itemName">Death Priest's Visage</p>
+            <img src="../img/helm/38.png" alt="" class="itemIcon">
+            <p class="itemText">
+                265 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Vitality Damage Resistance<br />
+                    +1 to all skills in Lifegiving Mastery<br />
+                    <br />
+                    Grants Skill : Trance of Empathy
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 44, STR 411
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Death Priest's Visage</p>
+            <img src="../img/helm/38.png" alt="" class="itemIcon">
+            <p class="itemText">
+                579 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    100% Vitality Damage Resistance<br />
+                    +2 to all skills in Lifegiving Mastery<br />
+                    <br />
+                    Grants Skill : Trance of Empathy
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 55, STR 558
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Doumu's Headdress</p>
+            <img src="../img/helm/22.png" alt="" class="itemIcon">
+            <p class="itemText">
+                380 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    35% Pierce Resistance<br />
+                    22% Elemental Resistance<br />
+                    +58 Intelligence<br />
+                    +800 Health<br />
+                    +10.0 Energy Regeneration per second<br />
+                    +3 to Eye of the Mind<br />
+                    +3 to Celestial Quintessence<br />
+                    +1 to all skills in Lifegiving Mastery<br />
+                    <br />
+                    Grants Skill : Heavenly Guidance (Activated when equipped)<br />
+                    Guided by the stars and celestial beings, you never lose your sense of direction, nor doubt your quest's purpose.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    14.0 Meter Radius<br />
+                    +15% Elemental Damages<br />
+                    +100 Offensive Ability<br />
+                    +10% Movement Speed<br />
+                    80% Slow Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 60, DEX 187, INT 510
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Draconic Flameskull</p>
+            <img src="../img/helm/31.png" alt="" class="itemIcon">
+            <p class="itemText">
+                80 Armor <br />
+                Difficulty : Normal
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    25% Fire Resistance<br />
+                    30% Weapon base Damage becomes Elemental<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    60 Burn Damage over 4.0 Seconds<br />
+                    +20% Fire Damage<br />
+                    +20% Burn Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 26, DEX 110, INT 230
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Draconic Flameskull</p>
+            <img src="../img/helm/31.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Fire Resistance<br />
+                    40% Weapon base Damage becomes Elemental<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    120 Burn Damage over 4.0 Seconds<br />
+                    +25% Fire Damage<br />
+                    +25% Burn Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 33, DEX 140, INT 336
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Draconic Flameskull</p>
+            <img src="../img/helm/31.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    75% Fire Resistance<br />
+                    50% Weapon base Damage becomes Elemental<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    180 Burn Damage over 4.0 Seconds<br />
+                    +30% Fire Damage<br />
+                    +30% Burn Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 47, DEX 185, INT 499
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Elder Lalyia's Skullcap</p>
+            <img src="../img/helm/05.png" alt="" class="itemIcon">
+            <p class="itemText">
+                488 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    40% Pierce Resistance<br />
+                    25% Elemental Resistance<br />
+                    25% Poison Resistance<br />
+                    50% Stun Resistance<br />
+                    +25% Pierce Damage<br />
+                    +60 Dexterity<br />
+                    +40% Health Regeneration<br />
+                    +20% Damage to Beasts<br />
+                    +20% Damage to Beastmen<br />
+                    +15% Less Damage from Beasts<br />
+                    +15% Less Damage from Beastmen<br />
+                    +2 to Acute Precision<br />
+                    +2 to Astuteness<br />
+                    +2 to all skills in Archery Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 64, STR 182, DEX 469
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem9">
+            <p class="itemName">Fleshmaw</p>
+            <img src="../img/helm/39.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Bleeding Resistance<br />
+                    10% of Attack damage converted to Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    120 Bleeding Damage over 4.0 Seconds<br />
+                    +25% Bleeding Damage<br />
+                    10% of Attack damage converted to Health
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 46, DEX 146, INT 358
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Fleshmaw</p>
+            <img src="../img/helm/39.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    75% Bleeding Resistance<br />
+                    15% of Attack damage converted to Health<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    180 Bleeding Damage over 4.0 Seconds<br />
+                    +30% Bleeding Damage<br />
+                    15% of Attack damage converted to Health
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 56, DEX 191, INT 521
+                </p>
+        </div>
+        <div class="itemBox rarityMU" id="newItem25">
+            <p class="itemName">Fortress' Keep</p>
+            <img src="../img/helm/42.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    150% Lightning Resistance<br />
+                    75% Stun Resistance<br />
+                    50% Reduced Petrify Duration<br />
+                    75% Skill Disruption Protection<br />
+                    252 Electrical Burn Damage over 4.0 Seconds<br />
+                    +50% Lightning Damage<br />
+                    +50% Stun Duration<br />
+                    50% Increase in Projectile Speed<br />
+                    <br />
+                    Grants Skill : Conjured Light (Activated on attack)<br />
+                    Give a brief few seconds of life to a conjured wisp, sending it to violently explode between enemy ranks.<br />
+                    <br />
+                    6.0 Second(s) Recharge<br />
+                    50 Energy Cost<br />
+                    Extra Life Time 10 Seconds<br />
+                    4 Summon Limit<br />
+                    Unstable Wisp Attributes:<br />
+                    Life Time 10.0 Seconds<br />
+                    &nbsp;2449 Health<br />
+                    &nbsp;1071 Energy<br />
+                    <br />
+                    Unstable Wisp Abilities:<br />
+                    Detonate<br />
+                    4.5 Meter Radius<br />
+                    252 Electrical Burn Damage over 4.0 Seconds<br />
+                    200 Lightning Damage<br />
+                    50% Energy Drain (50% of lost Energy as Damage)<br />
+                    50.0% Chance of 1.0 - 2.0 second(s) of Stun<br />
+                    33.0% Chance of 2.0 - 4.0 second(s) of Confusion<br />
+                    <br />
+                    Dodge Attacks<br />
+                    99% Chance to Dodge Attacks<br />
+                    99% Chance to Avoid Projectiles<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    +33% Stun Duration<br />
+                    3.0% Chance of 1.0 - 2.0 second(s) of Stun
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 75, DEX 280, INT 555
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Gloomweaver's Mask</p>
+            <img src="../img/helm/03.png" alt="" class="itemIcon">
+            <p class="itemText">
+                573 Armor <br />
+                Set : Gloomweaver's Set
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    60% Bleeding Resistance<br />
+                    15% Elemental Resistance<br />
+                    60% Poison Resistance<br />
+                    40% Stun Resistance<br />
+                    40% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;+40% Instant Poison Damage<br />
+                    &nbsp;&nbsp;&nbsp;+40% Poison Damage<br />
+                    +35 Dexterity<br />
+                    +300 Energy<br />
+                    +120 Defensive Ability<br />
+                    -8% Energy Cost<br />
+                    +1 to all skills in Science Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 57, STR 629
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Golden Masterpiece</p>
+            <img src="../img/helm/19.png" alt="" class="itemIcon">
+            <p class="itemText">
+                62 Armor <br />
+                Difficulty : Normal
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    10% Pierce Resistance<br />
+                    10% Vitality Damage Resistance<br />
+                    +1 to all skills in Geomancy Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 15, STR 180
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Golden Masterpiece</p>
+            <img src="../img/helm/19.png" alt="" class="itemIcon">
+            <p class="itemText">
+                238 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    20% Pierce Resistance<br />
+                    20% Vitality Damage Resistance<br />
+                    +1 to all skills in Geomancy Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 27, STR 330
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Golden Masterpiece</p>
+            <img src="../img/helm/19.png" alt="" class="itemIcon">
+            <p class="itemText">
+                532 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    40% Pierce Resistance<br />
+                    40% Vitality Damage Resistance<br />
+                    +2 to all skills in Geomancy Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 39, STR 410
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Grey Hunter's Cap</p>
+            <img src="../img/helm/04.png" alt="" class="itemIcon">
+            <p class="itemText">
+                28 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Pierce Damage<br />
+                    +16 Dexterity<br />
+                    +20 Less Damage from Beastmen<br />
+                    +20 Less Damage from Demons<br />
+                    +1 to all skills in Archery Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 6, STR 61, DEX 84
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Helm of Pandion II</p>
+            <img src="../img/helm/33.png" alt="" class="itemIcon">
+            <p class="itemText">
+                235 Armor
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    15% Physical Resistance<br />
+                    -15% Elemental Resistance<br />
+                    +60% Physical Damage<br />
+                    -20% Total Damage<br />
+                    +40 Strength<br />
+                    -25 Intelligence<br />
+                    +600 Health<br />
+                    -200 Energy
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 34, STR 389
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Helm of the Furnace</p>
+            <img src="../img/helm/10.png" alt="" class="itemIcon">
+            <p class="itemText">
+                725 Armor <br />
+                Set : The Hell Furnace
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    100% Poison Resistance<br />
+                    40% Vitality Damage Resistance<br />
+                    100% Stun Resistance<br />
+                    100% Slow Resistance<br />
+                    33% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;+60% Fire Damage<br />
+                    &nbsp;&nbsp;&nbsp;+60% Burn Damage<br />
+                    +300 Health<br />
+                    +100 Defensive Ability<br />
+                    <br />
+                    Grants Skill : Furnace Blast (Activated upon taking damage)<br />
+                    Blast nearby opponents with an explosive burst of scorching flames.<br />
+                    <br />
+                    10.0 Second(s) Recharge<br />
+                    15 Energy Cost<br />
+                    6.0 Meter Radius<br />
+                    50 Damage<br />
+                    360 Burn Damage over 3.0 Seconds<br />
+                    300 Fire Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 62, STR 694
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Hood of Guile</p>
+            <img src="../img/helm/23.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                25% Pierce Resistance<br />
+                50% Bleeding Resistance<br />
+                50% Vitality Damage Resistance<br />
+                +20% Pierce Damage<br />
+                +30% Bleeding Damage<br />
+                4% of Attack damage converted to Health<br />
+                +250 Health<br />
+                <br />
+                <span style="color: orange">Bonus to All Pets :</span><br />
+                64 Bleeding Damage over 3.0 Seconds<br />
+                +50% Bleeding Damage
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 59, STR 176, DEX 449
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Ifrit's Shell</p>
+            <img src="../img/helm/34.png" alt="" class="itemIcon">
+            <p class="itemText">
+                196 Armor
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    8% Physical Resistance<br />
+                    15% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;+200% Fire Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;35 Fire Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;+200% Burn Retaliation<br />
+                    +10% Physical Damage<br />
+                    +20% Fire Damage<br />
+                    +20% Burn Damage<br />
+                    +10% Less Damage from Undead<br />
+                    +10% Less Damage from Magical<br />
+                    <br />
+                    Grants Skill : Heat Shield
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 38, DEX 140, INT 336
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Immutable Countenance of Death</p>
+            <img src="../img/helm/09.png" alt="" class="itemIcon">
+            <p class="itemText">
+                364 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    14% Physical Resistance<br />
+                    50% Bleeding Resistance<br />
+                    50% Poison Resistance<br />
+                    50% Vitality Damage Resistance<br />
+                    100% Life Leech Resistance<br />
+                    +12% Intelligence<br />
+                    +12% Dexterity<br />
+                    +500 Energy<br />
+                    +30% Energy Regeneration<br />
+                    +200 Defensive Ability<br />
+                    +15% Less Damage from Undead<br />
+                    +15% Less Damage from Humans<br />
+                    <br />
+                    Grants Skill : Summon Liche King
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 66, DEX 180, INT 482
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Mask of Madness</p>
+            <img src="../img/helm/07.png" alt="" class="itemIcon">
+            <p class="itemText">
+                352 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    -10% Physical Resistance<br />
+                    -12% Elemental Resistance<br />
+                    15% of Attack damage converted to Health<br />
+                    -5.0 Health Regeneration per second<br />
+                    +40% Total Speed<br />
+                    -15% Recharge<br />
+                    +10 to Twisted Mind
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 53, DEX 191, INT 521
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Mercenary's Bloodlust</p>
+            <img src="../img/helm/08.png" alt="" class="itemIcon">
+            <p class="itemText">
+                474 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    48% Vitality Damage Resistance<br />
+                    26 Damage<br />
+                    +15% Pierce Damage<br />
+                    +50% Bleeding Damage<br />
+                    6% of Attack damage converted to Health<br />
+                    +40 Dexterity<br />
+                    +12% Movement Speed<br />
+                    +1 to all skills in Barbarism Mastery<br />
+                    +1 to all skills in Chaos Mastery<br />
+                    <br />
+                    Grants Skill : No Mercy (Activated on attack)<br />
+                    Berserker's spirit temporarily possesses your body and mind, allowing you to sow destruction, at the risk of your own sanity - and even life.<br />
+                    <br />
+                    25.0 Second(s) Recharge<br />
+                    5.0 Second Duration<br />
+                    +60% Offensive Ability<br />
+                    -30% Defensive Ability
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 60, STR 580
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Mythical Lich Crown</p>
+            <img src="../img/helm/06.png" alt="" class="itemIcon">
+            <p class="itemText">
+                329 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    35% Elemental Resistance<br />
+                    30.0% Chance of 100% Vitality Damage Resistance<br />
+                    50% Reduction in Energy Leech Duration<br />
+                    70% Stun Resistance<br />
+                    +25% Elemental Damages<br />
+                    +5.0 Energy Regeneration per second<br />
+                    +100% Energy Regeneration<br />
+                    +25% Defensvie Ability<br />
+                    +30% Casting Speed<br />
+                    25% Absorption of Spell Energy
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 67, DEX 191, INT 521
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Naturespeaker's Wreath</p>
+            <img src="../img/helm/11.png" alt="" class="itemIcon">
+            <p class="itemText">
+                36 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    20% Vitality Damage Resistance<br />
+                    20% Energy Leech Resistance<br />
+                    +8 Dexterity<br />
+                    +20% Regeneration<br />
+                    +10% Casting Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 14, DEX 80, INT 140
+                </p>
+        </div>
+        <div class="itemBox rarityMU" id="newItem20">
+            <p class="itemName">Night's Ageless Visage</p>
+            <img src="../img/helm/43.png" alt="" class="itemIcon">
+            <p class="itemText">
+                445 Armor <br />
+                Set : Night Eternal
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +20% Armor Protection<br />
+                    100% Lightning Resistance<br />
+                    50% Stun Resistance<br />
+                    50% Reduced Entrapment Duration<br />
+                    +75% Electrical Burn Damage with +50% Improved Duration<br />
+                    +30 Intelligence<br />
+                    +30 Dexterity<br />
+                    +20% Energy<br />
+                    +1 to all Skills
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 70, DEX 206, INT 547
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Rubiline Circlet</p>
+            <img src="../img/helm/12.png" alt="" class="itemIcon">
+            <p class="itemText">
+                258 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                +20% Armor Protection<br />
+                100% Fire Resistance<br />
+                100% Life Leech Resistance<br />
+                20.0% Chance of 225 Life Leech Retaliation over 3.0 Seconds<br />
+                +10% Health<br />
+                +3.0 Health Regeneration per second<br />
+                +80% Health Regeneration<br />
+                +40% Energy Regeneration<br />
+                +2 to Gift of Life<br />
+                +2 to Pure Heart<br />
+                <br />
+                <span style="color: orange">Bonus to All Pets :</span><br />
+                +10.0 Health Regeneration per second<br />
+                +75% Health Regeneration
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 47, DEX 168, INT 438
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Sandqueen's Helmet</p>
+            <img src="../img/helm/13.png" alt="" class="itemIcon">
+            <p class="itemText">
+                430 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +50% Pierce Damage<br />
+                    +50% Fire Damage<br />
+                    +50% Burn Damage<br />
+                    +25 Dexterity<br />
+                    +25% Health Regeneration<br />
+                    +20% Attack Speed<br />
+                    8% Chance to Dodge Attacks<br />
+                    10% Chance to Avoid Projectiles<br />
+                    -15% Recharge<br />
+                    <br />
+                    Grants Skill : Ring of Flame
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 60, STR 189, DEX 494
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Shroud of Myriad Dimensions</p>
+            <img src="../img/helm/26.png" alt="" class="itemIcon">
+            <p class="itemText">
+                470 Armor <br />
+                Set : Journey of Myriad Dimensions
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    40% Bleeding Resistance<br />
+                    30% Elemental Resistance<br />
+                    +10% Intelligence<br />
+                    +100% Energy Regeneration<br />
+                    12% less Energy Reserved<br />
+                    +85 Defensive Ability<br />
+                    5% Chance to Avoid Projectiles<br />
+                    +2 to Slowing Rift<br />
+                    +2 to Rise of the Ancestors<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    +20% Elemental Damages<br />
+                    +20% Casting Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 61, STR 210, DEX 497
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Sopdu's Voice</p>
+            <img src="../img/helm/14.png" alt="" class="itemIcon">
+            <p class="itemText">
+                475 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    40% Pierce Resistance<br />
+                    80% Lightning Resistance<br />
+                    60% Stun Resistance<br />
+                    40% Skill Disruption Protection<br />
+                    20.0% Chance of +300% Lightning Retaliation<br />
+                    50 Lightning Retaliation<br />
+                    +300 Energy<br />
+                    +50% Energy Regeneration<br />
+                    +3 to Electrical Field<br />
+                    <br />
+                    Grants Skill : Lightning Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 50, STR 506
+                </p>
+        </div>
+        <div class="itemBox rarityMU"  id="newItem11">
+            <p class="itemName">The Flameforged</p>
+            <img src="../img/helm/36.png" alt="" class="itemIcon">
+            <p class="itemText">
+                700 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +15% Armor Protection<br />
+                    60% Bleeding Resistance<br />
+                    80% Fire Resistance<br />
+                    60% Vitality Damage Resistance<br />
+                    60% Stun Resistance<br />
+                    60% Reduced Petrify Duration<br />
+                    180 Burn Retaliation over 3.0 Seconds<br />
+                    +60% Burn Retaliation with +33% Improved Duration<br />
+                    +25% Physical Damage<br />
+                    +25% Fire Damage<br />
+                    +60% Burn Damage with +33% Improved Duration<br />
+                    <br />
+                    Grants Skill : Fiery Embrace
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 75, STR 700
+                </p>
+        </div>
+        <div class="itemBox rarityMI"  id="newItem8">
+            <p class="itemName">The Regurgitator</p>
+            <img src="../img/helm/41.png" alt="" class="itemIcon">
+            <p class="itemText">
+                240 Armor <br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    50% Poison Resistance<br />
+                    8% Health Reduction Retaliation<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    160 Poison Damage over 4.0 Seconds<br />
+                    +25% Poison Damage<br />
+                    160 Poison Retaliation over 4.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 46, DEX 146, INT 358
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">The Regurgitator</p>
+            <img src="../img/helm/41.png" alt="" class="itemIcon">
+            <p class="itemText">
+                480 Armor <br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    75% Poison Resistance<br />
+                    12% Health Reduction Retaliation<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    200 Poison Damage over 4.0 Seconds<br />
+                    +30% Poison Damage<br />
+                    200 Poison Retaliation over 4.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 56, DEX 191, INT 521
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Visage of Woe</p>
+            <img src="../img/helm/27.png" alt="" class="itemIcon">
+            <p class="itemText">
+                460 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    35% Elemental Resistance<br />
+                    50% Vitality Damage Resistance<br />
+                    +20% Physical Damage<br />
+                    +20% Pierce Damage<br />
+                    +35% Cold Damage<br />
+                    +35% Vitality Damage<br />
+                    +35% Life Leech<br />
+                    +400 Energy<br />
+                    +1 to all skills in Necromancy<br />
+                    +1 to all Skills<br />
+                    <br />
+                    Grants Skill : Echo of Death (Activated upon taking damage)<br />
+                    This hungering pulse of the Underworld consumes the very essence of life of those around you.<br />
+                    <br />
+                    1.0 Second(s) Recharge<br />
+                    25 Energy Cost<br />
+                    10.0 Meter Radius<br />
+                    50 Damage<br />
+                    50 Vitality Damage<br />
+                    200% of Attack damage converted to Health<br />
+                    33% Slowed for 1.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 64, STR 345, INT 345
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Voiceless Scream</p>
+            <img src="../img/helm/15.png" alt="" class="itemIcon">
+            <p class="itemText">
+                763 Armor <br />
+                Set : Sovereign of Void
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    25% Pierce Resistance<br />
+                    25% Elemental Resistance<br />
+                    25% Vitality Damage Resistance<br />
+                    20.0% Chance of 30% Reduction to Enemy's Health<br />
+                    9% of Attack damage converted to Health<br />
+                    -3.0 Health Regeneration per second<br />
+                    +1.0 Energy Regeneration per second<br />
+                    +1 to all Skills<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets :</span><br />
+                    160 Vitality Decay over 4.0 Seconds<br />
+                    160 Life Leech over 4.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 75, STR 688
+                </p>
+        </div>
+        <div class="itemBox rarityLeg" id="newItem6">
+            <p class="itemName">Warlord's Ultimatum</p>
+            <img src="../img/helm/35.png" alt="" class="itemIcon">
+            <p class="itemText">
+                540 Armor
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +40% Physical Resistance<br />
+                    45 Physical Retaliation<br />
+                    30% Reduced Offensive Ability Retaliation for 3.0 Seconds<br />
+                    15% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    50% Slowed Movement Retaliation for 3.0 Seconds<br />
+                    +500 Health<br />
+                    +10% Strength<br />
+                    +6 to Warlord's Challenge<br />
+                    +6 to Battleground's Menace<br />
+                    <br />
+                    Grants Skill : Iron Lungs (Activated on low health)<br />
+                    When a fight seems to have been lost, let your enemies know that you are not yet ready to give up.<br />
+                    <br />
+                    20.0 Second(s) Recharge<br />
+                    15.0 Meter Radius<br />
+                    15% Reduction to Enemy's Health<br />
+                    150 Reduced Armor for 10.0 Seconds<br />
+                    40% Reduced Damage for 5.0 Seconds<br />
+                    50.0% Chance of 1.0 second(s) of Stun<br />
+                    1.0 - 3.0 second(s) of Confusion<br />
+                    75% Slowed for 4.0 Seconds
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 55, STR 628
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Webweaver's Visor</p>
+            <img src="../img/helm/18.png" alt="" class="itemIcon">
+            <p class="itemText">
+                620 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +10% Armor Protection<br />
+                    60% Pierce Resistance<br />
+                    20% Elemental Resistance<br />
+                    50% Fire Resistance<br />
+                    50% Poison Resistance<br />
+                    +150% Pierce Damage Retaliation<br />
+                    +150% Instant Poison Retaliation<br />
+                    45 Piercing Retaliation<br />
+                    45 Instant Poison Retaliation<br />
+                    10.0% Chance of +175% Pierce Damage<br />
+                    +124 Defensive Ability<br />
+                    6% Chance to Dodge Attacks<br />
+                    <br />
+                    Grants Skill : Snaring Web Attack
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 61, STR 629
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Wreath of the Misbegotten</p>
+            <img src="../img/helm/16.png" alt="" class="itemIcon">
+            <p class="itemText">
+                291 Armor <br />
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    12% Physical Resistance<br />
+                    110% Bleeding Resistance<br />
+                    20 - 35% Reduced Offensive Ability Retaliation for 3.0 Seconds<br />
+                    +40%% Vitality Damage<br />
+                    20% Chance of:<br />
+                    &nbsp;&nbsp;&nbsp;90 Poison Damage over 3.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;+150% Poison Damage<br />
+                    &nbsp;&nbsp;&nbsp;20% Slowed for 5.0 Seconds<br />
+                    +18% Energy<br />
+                    +240 Defensive Ability<br />
+                    +1 to all skills in Witchcraft Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 61, DEX 182, INT 512
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

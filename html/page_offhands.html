@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <a href="../index.html"><p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p></a>
+            <p><span class="versionStyle" >Mod version : v1.3</span></p>
+            <img src="../img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section>
+        <div id="filter">
+            <p>Filters:</p>
+            <form>
+                <input type="checkbox" id="filter1" name="filter1" value="MI" checked>&nbsp;<label for="filter1"><span style="color : #51851d">Monster Infrequents</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter2" name="filter2" value="Epic" checked>&nbsp;<label for="filter2"><span style="color : #2ba0ff">Epics</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter3" name="filter3" value="Legendary" checked>&nbsp;<label for="filter3"><span style="color : #8400bd">Legendaries</span></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="filter4" name="filter4" value="MU" checked>&nbsp;<label for="filter4"><span style="color : #ff1f26">Monster Uniques</span></label>
+            </form>
+        </div>
+        <div class="itemBox rarityLeg" id="newItem7">
+            <p class="itemName">Amaranthine Flame</p>
+            <img src="../img/shield/27.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +10% Armor Protection<br />
+                    +10% Armor Absorption<br />
+                    +60% Burn Damage<br />
+                    +60% Vitality Decay<br />
+                    +500 Health<br />
+                    +2 to all skills in Chaos Mastery<br />
+                    +2 to all skills in Time Mastery<br />
+                    <br />
+                    Grants Skill : Flaming Terror
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 60, STR 1, INT 618
+                </p>
+        </div>
+        <div class="itemBox rarityMU" id="newItem30">
+            <p class="itemName">Book of the Dead</p>
+            <img src="../img/shield/30.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    10.0% Chance of -50% Armor Protection<br />
+                    25.0% Chance of 200% Elemental Resistance<br />
+                    -20% Vitality Damage Resistance<br />
+                    +85% Vitality Damage<br />
+                    +85% Vitality Decay<br />
+                    +40% Casting Speed<br />
+                    -18% Recharge<br />
+                    +40% Damage to Undead<br />
+                    +2 to all skills in Necromancy Mastery<br />
+                    <br />
+                    Grants Skill : Abysmal Choir
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 70, STR 1, INT 618
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Chapter Four</p>
+            <img src="../img/shield/21.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    -50% Health<br />
+                    +3 to all Skills
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 10, STR 1, INT 128
+                </p>
+        </div>
+        <div class="itemBox rarityEpic" id="newItem2">
+            <p class="itemName">Cheirokmeta</p>
+            <img src="../img/shield/26.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +12% Armor Protection<br />
+                    25% Reduction in Life Leech Duration<br />
+                    +40% Instant Poison Damage<br />
+                    +40% Poison Damage<br />
+                    +50% Health Regeneration<br />
+                    +12% Energy<br />
+                    -6% Recharge<br />
+                    +3 to School of Poison<br />
+                    +3 to Antidote
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 35, STR 1, INT 363
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Doom Herald's Horn</p>
+            <img src="../img/shield/23.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    80% Vitality Damage Resistance<br />
+                    +20% Life Leech<br />
+                    +20% Intelligence<br />
+                    +20% Energy<br />
+                    +20% Casting Speed<br />
+                    +2 to all skills in Necromancy Mastery<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    Grants Skill : Doom Herald's Call<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +100 Health<br />
+                    +15% Total Speed
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 60, STR 1, INT 572
+                </p>
+        </div>
+        <div class="itemBox rarityLeg">
+            <p class="itemName">Fatewriter's Inscription</p>
+            <img src="../img/shield/02.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    88% Vitality Damage Resistance<br />
+                    +60% Lightning Damage<br />
+                    +60% Vitality Damage<br />
+                    +3.0 Energy Regeneration per second<br />
+                    +80% Energy Regeneration<br />
+                    +11% Total Speed<br />
+                    +30% Casting Speed<br />
+                    -15% Recharge<br />
+                    +1 to all skills in Necromancy Mastery<br />
+                    +2 to all skills in Time Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Total Speed<br />
+                    -10% Energy Cost
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 60, STR 290, INT 290
+                </p>
+        </div>
+        <div class="itemBox rarityMI" id="newItem33">
+            <p class="itemName">Immortal Flame</p>
+            <img src="../img/shield/31.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Normal
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    90 Burn Retaliation over 3.0 Seconds<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Fire Damage<br />
+                    +20% Burn Damage<br />
+                    20% Fire Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 20, STR 1, INT 280
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Immortal Flame</p>
+            <img src="../img/shield/31.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    135 Burn Retaliation over 3.0 Seconds<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +15% Fire Damage<br />
+                    +30% Burn Damage<br />
+                    40% Fire Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 40, STR 1, INT 443
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Immortal Flame</p>
+            <img src="../img/shield/31.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    180 Burn Retaliation over 3.0 Seconds<br />
+                    +2 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +20% Fire Damage<br />
+                    +40% Burn Damage<br />
+                    60% Fire Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 50, STR 1, INT 555
+                </p>
+        </div>
+        <div class="itemBox rarityMI" id="newItem34">
+            <p class="itemName">Immortal Ice</p>
+            <img src="../img/shield/32.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Normal
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    90 Frostburn Retaliation over 3.0 Seconds<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +10% Cold Damage<br />
+                    +20% Frostburn Damage<br />
+                    20% Cold Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 20, STR 1, INT 280
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Immortal Ice</p>
+            <img src="../img/shield/32.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    135 Frostburn Retaliation over 3.0 Seconds<br />
+                    +1 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +15% Cold Damage<br />
+                    +30% Frostburn Damage<br />
+                    40% Cold Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 40, STR 1, INT 443
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Immortal Ice</p>
+            <img src="../img/shield/32.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    180 Frostburn Retaliation over 3.0 Seconds<br />
+                    +2 to all skills in Witchcraft Mastery<br />
+                    <br />
+                    <span style="color: orange">Bonus to All Pets:</span><br />
+                    +20% Cold Damage<br />
+                    +40% Frostburn Damage<br />
+                    60% Cold Resistance
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 50, STR 1, INT 555
+                </p>
+        </div>
+        <div class="itemBox rarityMU">
+            <p class="itemName">Overgrowth Barrier</p>
+            <img src="../img/shield/06.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2">
+                    80% Bleeding Resistance<br />
+                    80% Poison Resistance<br />
+                    80% Reduced Petrify Duration<br />
+                    80% Slow Resistance<br />
+                    Chance for one of the following:<br />
+                    &nbsp;&nbsp;&nbsp;100 Elemental Retaliation<br />
+                    &nbsp;&nbsp;&nbsp;90 - 210 Poison Retaliation over 3.0 Seconds<br />
+                    &nbsp;&nbsp;&nbsp;66% Slowed Attack Retaliation for 3.0 Seconds<br />
+                    +250 Health<br />
+                    +250 Energy<br />
+                    +10.0 Energy Regeneration per second<br />
+                    +150% Energy Regeneration<br />
+                    10% Chance to Dodge Attacks<br />
+                    <br />
+                    Grants Skill : Leaf Barrier (Activated upon taking damage)<br />
+                    Protect yourself with a barrier of mysterious flora.<br />
+                    <span style="color: aquamarine">Cannot be dispelled.</span><br />
+                    <br />
+                    20.0 Second(s) Recharge<br />
+                    50 Energy Cost<br />
+                    10.0 Second Duration<br />
+                    +20% Elemental Damages<br />
+                    +60% Instant Poison Damage<br />
+                    +60% Poison Damage<br />
+                    +5.0 Health Regeneration per second<br />
+                    +150% Health Regeneration<br />
+                    208 - 268 Instant Poison Retaliation<br />
+                    50% Reduction in Poison Duration<br />
+                    +50% Less Damage from Plants
+                </p>
+                <p class="itemText3">
+                    LVL 65, STR 1, INT 655
+                </p>
+        </div>
+        <div class="itemBox rarityMI" id="newItem18">
+            <p class="itemName">Rainmaker's Mirror</p>
+            <img src="../img/shield/28.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Epic
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    20% Damage Reflected<br />
+                    +1 to all skills in Aqua Mastery<br />
+                    <br />
+                    Grants Skill : Rain (Activated on attack)<br />
+                    Cast large torrents of water on a specific zone, assaulting any hostile units with a cold and drenching rain.<br />
+                    <br />
+                    1.0 Second(s) Recharge<br />
+                    45 Energy Cost<br />
+                    3.0 Meter Radius<br />
+                    30 Damage<br />
+                    40 Cold Damage<br />
+                    8.0% Chance of 1.5 second(s) of Stun
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 40, STR 1, DEX 230, INT 230
+                </p>
+        </div>
+        <div class="itemBox rarityMI">
+            <p class="itemName">Rainmaker's Mirror</p>
+            <img src="../img/shield/28.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage<br />
+                Difficulty : Legendary
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    35% Damage Reflected<br />
+                    +2 to all skills in Aqua Mastery<br />
+                    <br />
+                    Grants Skill : Rain (Activated on attack)<br />
+                    Cast large torrents of water on a specific zone, assaulting any hostile units with a cold and drenching rain.<br />
+                    <br />
+                    1.0 Second(s) Recharge<br />
+                    55 Energy Cost<br />
+                    3.0 Meter Radius<br />
+                    45 Damage<br />
+                    60 Cold Damage<br />
+                    10.0% Chance of 1.5 second(s) of Stun
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 40, STR 1, DEX 300, INT 300
+                </p>
+        </div>
+        <div class="itemBox rarityEpic">
+            <p class="itemName">Remains of Chrysippus' Work</p>
+            <img src="../img/shield/20.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    +200 Health<br />
+                    +200 Energy<br />
+                    -10% Reduction to all Requirements<br />
+                    -10% Energy Cost<br />
+                    +1 to all skills in Science Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 16, STR 1, INT 140
+                </p>
+        </div>
+        <div class="itemBox rarityEpic" id="newItem3">
+            <p class="itemName">Theophrastus' Knowledge</p>
+            <img src="../img/shield/24.png" alt="" class="itemIcon">
+            <p class="itemText">
+                0% Chance to block 0 damage
+                <br />
+                <p class="itemText2 itemText2IconAlt">
+                    18% Pierce Resistance<br />
+                    18% Poison Resistance<br />
+                    18% Vitality Damage Resistance<br />
+                    18% Energy Leech Resistance<br />
+                    18% Stun Resistance<br />
+                    +40% Casting Speed<br />
+                    +15% Less Damage from Beasts<br />
+                    +15% Less Damage from Plants<br />
+                    +15% Less Damage from Insectoids<br />
+                    +3 to Nature Familiarity<br />
+                    +1 to all skills in Science Mastery
+                </p>
+                <p class="itemText3 itemText3IconAlt">
+                    LVL 36, STR 1, INT 368
+                </p>
+        </div>
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="../js/function.js"></script>
+</body></html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SCDatabase</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Farro|PT+Sans&display=swap" rel="stylesheet">
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        /*f1f1f1 */
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5a5a;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="titre">
+            <p><span id="colorStyle" style="font-size:150%">SC</span><span style="text-shadow: 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #FFF, 0px 0px 3px #FFF;">Database</span></p>
+            <p><span class="versionStyle">Mod version : v1.3</span></p>
+            <img src="img/ico1.png" alt="" id="behinder">
+        </div>
+    </header>
+    <!--/////////////////////////////////////////////////-->
+    <section id="intro">
+        <p>
+            Welcome to SC-Database!<br />
+            <br />
+            This small local website holds a wealth of information about all the items that you can find during your journey in Shadow Champions. To get started, simply use the menus on the side to see all the items of that category. You can also filter items by rarity.<br />
+            <br />
+            For more precise information regarding drop rates and locations, refer to the Loot Tables section at the bottom of the menu.<br />
+            <br />
+            We hope you have fun playing our mod!<br />
+            - W. N. G. & Torstein159<br />
+            <br />
+        </p>
+        <p><b style="font-size: 18pt">Change Log:</b><br /></p>
+        <p><b>v1.31:</b>Hotfix update.<br /></p>
+        <ul>
+            <li>Fixed multiple mistakes</li>
+        </ul>
+        <p><b>v1.3:</b>12th May update<br /></p>
+        <ul>
+            <li>Fixed more incoherent data/mistakes</li>
+            <li>Added informations about Rogue Dungeons in Keys section</li>
+            <li>Created a section Offhands to split them apart from Shields</li>
+            <li>New affixes:</li>
+            <ul>
+                <li><a href="./html/page_axp.html#newAfx1"><span style="color : #00ff00">Apostate's</span></a>, <a href="./html/page_axp.html#newAfx2"><span style="color : #00ff00">Blasphemer's</span></a>, <a href="./html/page_axp.html#newAfx3"><span style="color : #00ff00">Heretic's</span></a>, <a href="./html/page_axp.html#newAfx4"><span style="color : #00ff00">Infidel's</span></a>, <a href="./html/page_axs.html#newAfx5"><span style="color : #00ff00">of Rebuke</span></a></li>
+            </ul>
+            <li>New charms:</li>
+            <ul>
+                <li><a href="./html/page_charm.html#newChm1"><span style="color : #996633">Fossilized Snakeskin</span></a>, <a href="./html/page_charm.html#newChm2"><span style="color : #996633">Unmelting Ice</span></a></li>
+            </ul>
+            <li>New Epics:</li>
+            <ul>
+                <li><a href="./html/page_throwing.html#newItem37"><span style="color : #2ba0ff">Pabilsag Stings</span></a>, <a href="./html/page_club.html#newItem40"><span style="color : #2ba0ff">Purificator</span></a>, <a href="./html/page_throwing.html#newItem38"><span style="color : #2ba0ff">Stealer of Ka</span></a>, <a href="./html/page_sword.html#newItem38"><span style="color : #2ba0ff">Vixen's Fang</span></a>, <a href="./html/page_amulet.html#newItem39"><span style="color : #2ba0ff">Vixen's Heart</span></a></li>
+            </ul>
+            <li>New MIs:</li>
+            <ul>
+                <li><a href="./html/page_amulet.html#newItem1"><span style="color : #51851d">Bonechill Sapphire</span></a>, <a href="./html/page_spear.html#newItem32"><span style="color : #51851d">Centurion's Lance</span></a>, <a href="./html/page_amulet.html#newItem6"><span style="color : #51851d">Ceramic Ankh</span></a>, <a href="./html/page_torso.html#newItem2"><span style="color : #51851d">Corrupted Armor</span></a>, <a href="./html/page_arms.html#newItem3"><span style="color : #51851d">Corrupted Bracers</span></a>, <a href="./html/page_leg.html#newItem4"><span style="color : #51851d">Corrupted Greaves</span></a>, <a href="./html/page_helm.html#newItem5"><span style="color : #51851d">Corrupted Headdress</span></a>, <a href="./html/page_staff.html#newItem28"><span style="color : #51851d">Cocytean Embrace</span></a>, <a href="./html/page_ring.html#newItem36"><span style="color : #51851d">Crest of Warfare</span></a>, <a href="./html/page_arms.html#newItem31"><span style="color : #51851d">Croaker's Arms</span></a>, <a href="./html/page_leg.html#newItem32"><span style="color : #51851d">Croaker's Legs</span></a>, <a href="./html/page_torso.html#newItem33"><span style="color : #51851d">Croaker's Suit</span></a>, <a href="./html/page_helm.html#newItem7"><span style="color : #51851d">Crystal Crane</span></a>, <a href="./html/page_throwing.html#newItem19"><span style="color : #51851d">Darkfang</span></a>, <a href="./html/page_torso.html#newItem10"><span style="color : #51851d">Death Priest's Cuirass</span></a>, <a href="./html/page_arms.html#newItem11"><span style="color : #51851d">Death Priest's Grip</span></a>, <a href="./html/page_leg.html#newItem12"><span style="color : #51851d">Death Priest's Step</span></a>, <a href="./html/page_helm.html#newItem13"><span style="color : #51851d">Death Priest's Visage</span></a>, <a href="./html/page_shield.html#newItem14"><span style="color : #51851d">Fallen Hero's Aegis</span></a>, <a href="./html/page_amulet.html#newItem15"><span style="color : #51851d">Fallen Hero's Insignia</span></a>, <a href="./html/page_helm.html#newItem9"><span style="color : #51851d">Fleshmaw</span></a>, <a href="./html/page_offhands.html#newItem33"><span style="color : #51851d">Immortal Flame</span></a>, <a href="./html/page_offhands.html#newItem34"><span style="color : #51851d">Immortal Ice</span></a>, <a href="./html/page_amulet.html#newItem37"><span style="color : #51851d">Lifedrinker's Insignia</span></a>, <a href="./html/page_bow.html#newItem16"><span style="color : #51851d">Pyromancer's Bow</span></a>, <a href="./html/page_torso.html#newItem17"><span style="color : #51851d">Rainmaker's Harness</span></a>, <a href="./html/page_offhands.html#newItem18"><span style="color : #51851d">Rainmaker's Mirror</span></a>, <a href="./html/page_helm.html#newItem8"><span style="color : #51851d">The Regurgitator</span></a></li>
+            </ul>
+            <li>New MUs:</li>
+            <ul>
+                <li><a href="./html/page_offhands.html#newItem30"><span style="color : #ff1f26">Book of the Dead</span></a>, <a href="./html/page_arms.html#newItem27"><span style="color : #ff1f26">Cursed Binding of Murkmire</span></a>, <a href="./html/page_helm.html#newItem25"><span style="color : #ff1f26">Fortress' Keep</span></a>, <a href="./html/page_shield.html#newItem42"><span style="color : #ff1f26">Golden Triumph</span></a>, <a href="./html/page_amulet.html#newItem26"><span style="color : #ff1f26">Heart of Eternal Unrest</span></a>, <a href="./html/page_helm.html#newItem20"><span style="color : #ff1f26">Night's Ageless Visage</span></a>, <a href="./html/page_torso.html#newItem22"><span style="color : #ff1f26">Night's Cold Embrace</span></a>, <a href="./html/page_arms.html#newItem21"><span style="color : #ff1f26">Night's Perforating Grip</span></a>, <a href="./html/page_staff.html#newItem23"><span style="color : #ff1f26">Night's Ravaging Kiss</span></a>, <a href="./html/page_leg.html#newItem24"><span style="color : #ff1f26">Night's Silent Step</span></a>, <a href="./html/page_leg.html#newItem19"><span style="color : #ff1f26">Protectors of the Godly Emissary</span></a>, <a href="./html/page_sword.html#newItem35"><span style="color : #ff1f26">Slayer of the Thirteenth Dynasty</span></a></li>
+            </ul>
+            <li>New sets:</li>
+            <ul>
+                <li><a href="./html/page_set.html#newSet1"><span style="color : #ff1f26">Night Eternal</span></a>, <a href="./html/page_set.html#newSet2"><span style="color : #2ba0ff">Vixen's Legacy</span></a></li>
+            </ul>
+        </ul>
+        <p><b>v1.22:</b>Hotfix update.<br /></p>
+        <ul>
+            <li>Added the missing details about the Ant Queen's Royal Wraps' skill (Ant Form) in the Loot Tables section</li>
+            <li>Fixed a minor bug regarding the navigation menu</li>
+        </ul>
+        <p><b>v1.21:</b>March 22th's small update.<br /></p>
+        <ul>
+            <li>Corrected more inaccurate data</li>
+            <li>From now on, all new items listed below will have a link to direct you to their database entry</li>
+            <li>New affixes:</li>
+            <ul>
+                <li><a href="./html/page_axs.html#newAfx2"><span style="color : #ffee00">of Ascendancy</span></a>, <a href="./html/page_axs.html#newAfx3"><span style="color : #ffee00">of Authority</span></a>, <a href="./html/page_axs.html#newAfx4"><span style="color : #ffee00">of Command</span></a>, <a href="./html/page_axs.html#newAfx1"><span style="color : #00ff00">of Endless Night</span></a></li>
+            </ul>
+            <li>New MIs:</li>
+            <ul>
+                <li><a href="./html/page_sword.html#newItem1"><span style="color : #51851d">The Long-Forgotten</span></a></li>
+            </ul>
+            <li>New Epics:</li>
+            <ul>
+                <li><a href="./html/page_shield.html#newItem2"><span style="color : #2ba0ff">Cheirokmeta</span></a>, <a href="./html/page_shield.html#newItem3"><span style="color : #2ba0ff">Theophrastus' Knowledge</span></a></li>
+            </ul>
+            <li>New Legendaries:</li>
+            <ul>
+                <li><a href="./html/page_shield.html#newItem7"><span style="color : #8400bd">Amaranthine Flame</span></a>, <a href="./html/page_shield.html#newItem4"><span style="color : #8400bd">Distorted Reflection</span></a>, <a href="./html/page_staff.html#newItem5"><span style="color : #8400bd">Hailstorm Rod</span></a>, <a href="./html/page_club.html#newItem9"><span style="color : #8400bd">Rot Totem</span></a>, <a href="./html/page_sword.html#newItem8"><span style="color : #8400bd">Spoilmaker</span></a>, <a href="./html/page_helm.html#newItem6"><span style="color : #8400bd">Warlord's Ultimatum</span></a></li>
+            </ul>
+            <li>New MUs:</li>
+            <ul>
+                <li><a href="./html/page_spear.html#newItem10"><span style="color : #ff1f26">Mulgor’s Inextinguishable Fury</span></a>, <a href="./html/page_helm.html#newItem11"><span style="color : #ff1f26">The Flameforged</span></a></li>
+            </ul>
+        </ul>
+        <p><b>v1.2:</b>March 15th Update.<br /></p>
+        <ul>
+            <li>Corrected some inaccurate data related to items and affixes</li>
+            <li>New/modified affixes:</li>
+            <ul>
+                <li><span style="color : #00ff00">Artificer's, Athlete's, Null, of the Seas, of the Sound Body, of the Sound Mind, Pandemonium, Subnautic, Timemaker's</span></li>
+            </ul>
+            <li>New MIs:</li>
+            <ul>
+                <li><span style="color : #51851d">Scarab of Dawn, Seal of the Fallen, Seal of the Restless King</span></li>
+            </ul>
+            <li>New Epics:</li>
+            <ul>
+                <li><span style="color : #2ba0ff">Brizo's Guidance, Chapter Four, Gilded Hemithoorakion, Helm of Pandion II, Hestia's Fire, Hyperboreas' Spear, Ifrit's Shell, Kvasir's Touch, Oeneus' Necklace, Ptah's Creation, Shirt of Nessus, Sorrow's Song, Wepwawet's Adze</span></li>
+            </ul>
+            <li>New Legendaries:</li>
+            <ul>
+                <li><span style="color : #8400bd">Dagger of Boundless Potential, Doom Herald's Horn, Fiend's Ethos, Grace of the Creators</span></li>
+            </ul>
+            <li>New MUs:</li>
+            <ul>
+                <li><span style="color : #ff1f26">Ant Queen's Royal Wraps, Sandstorm Sniper</span></li>
+            </ul>
+            <li>New artifacts:</li>
+            <ul>
+                <li><span style="color : #00ffff">Brôma Theôn, Foam of Tethys, Halo of Eos, Melqart's Oil, Scale of Tiamat, The Pride of Atlantis, Wodan's Price</span></li>
+            </ul>
+        </ul>
+        <p><b>v1.12:</b>February 2th Update.<br /></p>
+        <ul>
+            <li>Improved the navigation menu; now sticks to the side whenever you scroll</li>
+            <li>Added Prefixes and Suffixes sections, containing informations about all new affixes from Shadow Champions</li>
+            <li>Added Relics section to display the new Shadow Champions relics</li>
+            <li>Fixed some incoherent information</li>
+            <li>Filters are easier to toggle on/off by clicking on the text rather than the checkbox</li>
+            <li>Added the following items:</li>
+            <ul>
+                <li><span style="color : #8400bd">Captain's Nemo Tricorne</span></li>
+                <li><span style="color : #996633">Essence of the Great Deity of the Northern Peak</span></li>
+                <li><span style="color : #51851d">Solarblade</span></li>
+            </ul>
+        </ul>
+        <p><b>v1.01:</b> 31st December's Hot-fix.<br /></p>
+        <ul>
+            <li>Added Line of Epic Heroes.</li>
+        </ul>
+        <p><b>v1.0:</b> First Release.<br /></p>
+
+    </section>
+    <!--/////////////////////////////////////////////////-->
+    <aside>
+        <div id="liste">
+            <ul>
+                <li>
+                    <a href="./html/page_helm.html">Helmets</a>
+                </li>
+                <li>
+                    <a href="./html/page_arms.html">Arms</a>
+                </li>
+                <li>
+                    <a href="./html/page_torso.html">Torsos</a>
+                </li>
+                <li>
+                    <a href="./html/page_leg.html">Legs</a>
+                </li>
+                <li>
+                    <a href="./html/page_axe.html">Axes</a>
+                </li>
+                <li>
+                    <a href="./html/page_spear.html">Spears</a>
+                </li>
+                <li>
+                    <a href="./html/page_bow.html">Bows</a>
+                </li>
+                <li>
+                    <a href="./html/page_staff.html">Staves</a>
+                </li>
+                <li>
+                    <a href="./html/page_club.html">Clubs</a>
+                </li>
+                <li>
+                    <a href="./html/page_sword.html">Swords</a>
+                </li>
+                <li>
+                    <a href="./html/page_shield.html">Shields</a>
+                </li>
+                <li>
+                    <a href="./html/page_offhands.html">Offhands</a>
+                </li>
+                <li>
+                    <a href="./html/page_throwing.html">Throwables</a>
+                </li>
+                <li>
+                    <a href="./html/page_ring.html">Rings</a>
+                </li>
+                <li>
+                    <a href="./html/page_amulet.html">Amulets</a>
+                </li>
+                <li>
+                    <a href="./html/page_charm.html">Charms</a>
+                </li>
+                <li>
+                    <a href="./html/page_relic.html">Relics</a>
+                </li>
+                <li>
+                    <a href="./html/page_artifact.html">Artifacts</a>
+                </li>
+                <li>
+                    <a href="./html/page_axp.html">Prefixes</a>
+                </li>
+                <li>
+                    <a href="./html/page_axs.html">Suffixes</a>
+                </li>
+                <li>
+                    <a href="./html/page_set.html">Sets</a>
+                </li>
+                <li>
+                    <a href="./html/page_key.html">Keys</a>
+                </li>
+                <li>
+                    <a href="./html/page_loottable.html">Loot Tables</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <script src="js/function_index.js"></script>
+</body>
+
+</html>
