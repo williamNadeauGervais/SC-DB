@@ -80,6 +80,7 @@ aside {
     background-color: black;
     width: 100px;
     position: relative;
+    margin: 0;
     top: 10.5em;
     list-style-type: none;
     -webkit-box-shadow: 5px 5px 21px 17px #000000;
@@ -87,8 +88,8 @@ aside {
 }
 
 #liste li {
-    font-size: 1.1em;
-    padding: 0.1em;
+    font-size: 0.85em;
+    padding: 0.15em;
     width: 85%;
     -webkit-transition: background-color 0.25s, color 0.25s;
     /* Safari prior 6.1 */
@@ -114,19 +115,15 @@ a:hover,
 }
 
 section {
-    width: 75%;
+    width: 75vw;
     display: flex;
     flex-flow: row wrap;
     flex: 1 1 auto;
-    position: absolute;
-    left: 250px;
-    top: 23%;
-    border: 1px solid #252525;
-}
-
-section {
     position: relative;
+    left: 250px;
     top: 80px;
+    border: 1px solid #252525;
+    padding-right: 25px;
 }
 
 section > * {
