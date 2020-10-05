@@ -170,6 +170,13 @@ table {
     display: inline;
 }
 
+.itemNameVeryLong {
+    font-variant: small-caps;
+    font-size: 90%;
+    width: 50%;
+    display: inline;
+}
+
 .itemNameTagNew {
     font-variant: small-caps;
     font-size: 80%;
@@ -408,4 +415,56 @@ table {
 
 .nobulletlist {
     list-style-type: none;
+}
+
+#warning-update {
+    border: 4px solid #883100;
+    background-color: darkorange;
+    border-radius: 15px;
+    padding: 9px;
+}
+
+#warning-update p, #warning-update p strong {
+    color: black!important;
+}
+
+#warning-update h4 {
+    color: black!important;
+    padding-left: 7px;
+}
+
+/*=====================*/
+
+.itemBox.originTQ, .affixBox.originTQ {
+    background-image: url(../img/bg_tq.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.itemBox.originIT, .affixBox.originIT {
+    background-image: url(../img/bg_it.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.itemBox.originRAG, .affixBox.originRAG {
+    background-image: url(../img/bg_rag.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.itemBox.originATL, .affixBox.originATL {
+    background-image: url(../img/bg_atl.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.itemBox.originSC, .affixBox.originSC {
+    background-image: url(../img/bg_sc.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.hide {
+    display: none!important;
 }

@@ -199,7 +199,7 @@ table tr:nth-child(1) {
     width: 99%;
 }
 
-.itemBox {
+.itemBox originSC {
     background-color: #252525;
     width: 350px;
     height: 300px;
