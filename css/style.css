@@ -73,7 +73,7 @@ aside {
 
 #liste {
     position: fixed;
-    top: 10px;
+    top: 15px;
 }
 
 #liste ul {
@@ -271,6 +271,16 @@ table {
     top: 0.15em;
 }
 
+.itemTextFiveRows {
+    position: relative;
+    top: -0.9em;
+}
+
+.itemTextSixRows {
+    position: relative;
+    top: -2em;
+}
+
 .itemText3IconAlt {
     position: relative;
     top: 2.85em;
@@ -305,6 +315,24 @@ table {
 .itemText3IconAltT {
     position: relative;
     top: 3.4em;
+}
+
+.itemText2IconAltT5 {
+    top: 1.8em!important;
+}
+
+.itemText3IconAltT5 {
+    top: 2.3em!important;
+}
+
+.itemText2IconAltSmol {
+    position: relative;
+    top: 2em;
+}
+
+.itemText3IconAltSmol {
+    position: relative;
+    top: 2.35em;
 }
 
 .itemIcon {
@@ -459,10 +487,16 @@ table {
     background-position: bottom right;
 }
 
-.itemBox.originSC, .affixBox.originSC {
+.itemBox.originSC, .affixBox.originSC, .keyBox.originSC {
     background-image: url(../img/bg_sc.png);
     background-repeat: no-repeat;
     background-position: bottom right;
+}
+
+.dungeonID {
+    position: absolute;
+    font-size: 12px;
+    left: 6px;
 }
 
 .hide {
